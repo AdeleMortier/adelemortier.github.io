@@ -1,0 +1,27 @@
+html * {
+  font-family: Consolas, monospace;
+}
+
+header {
+  display: block;
+  text-align: center;
+}
+
+
+
+nav ul {
+  margin: auto;
+  width: 800px;
+  list-style: none;
+}
+
+nav li {
+  display:block;
+  float:left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+article {
+  padding-left: 150px;
+  padding-right: 150px;
+}
