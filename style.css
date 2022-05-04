@@ -7,21 +7,30 @@ header {
   text-align: center;
 }
 
+nav{
+  width: fit-content;
+  margin: auto;
+}
 
 
 nav ul {
-  margin: auto;
-  width: 900px;
   list-style: none;
 }
 
 nav li {
-  display:block;
   float:left;
   padding-left: 15px;
   padding-right: 15px;
 }
+
+
 article {
   padding-left: 150px;
   padding-right: 150px;
+}
+
+#back-to-top {
+  position: fixed;
+  width: fit-content;
+  bottom: 0;
 }
