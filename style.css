@@ -39,6 +39,8 @@ article {
 
   html * {
   font-size: 10pt;
+  font-family: Consolas, monospace;
+
   }
 
   article {
