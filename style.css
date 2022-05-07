@@ -31,7 +31,8 @@ article {
 
 #back-to-top {
   position: fixed;
-  width: fit-content;
+  background-color: #FFFFFF;
+  width: 100%;
   bottom: 0;
 }
 
@@ -47,4 +48,4 @@ article {
     padding-right: 10px;
   }
 
-    }
+}
