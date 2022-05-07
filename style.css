@@ -37,7 +37,7 @@ article {
   bottom: 0;
 }
 
-@media only screen and (max-device-width: 600px) {
+@media only screen and (max-device-width: 700px) {
 
   html * {
   font-size: 10pt;
@@ -47,6 +47,13 @@ article {
   article {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  img {
+    max-width: 100px;
+    max-height: 70px;
+    height: auto;
+    width: auto;
   }
 
 }
