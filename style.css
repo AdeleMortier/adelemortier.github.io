@@ -36,9 +36,15 @@ article {
 }
 
 @media only screen and (max-device-width: 480px) {
+
+  html * {
+  font-family: Verdana, serif;
+  font-size: 10pt;
+  }
+
   article {
     padding-left: 2px;
     padding-right: 2px;
-}
+  }
 
     }
