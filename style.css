@@ -34,3 +34,11 @@ article {
   width: fit-content;
   bottom: 0;
 }
+
+@media only screen and (max-device-width: 480px) {
+  article {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+    }
