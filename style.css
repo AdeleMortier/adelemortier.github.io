@@ -35,7 +35,7 @@ article {
   bottom: 0;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 600px) {
 
   html * {
   font-family: Verdana, serif;
