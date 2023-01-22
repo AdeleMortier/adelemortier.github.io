@@ -8,9 +8,12 @@ header {
 }
 
 nav{ 
-  width: fit-content;
+  display:block;
+  width:fit-content;
+  height: fit-content;
   margin: auto;
 }
+
 .filterLi {
   display: none; /* Hidden by default */
 }
@@ -20,13 +23,14 @@ nav{
 }
 
 nav ul {
+  text-align: center;
   list-style: none;
 }
 
 nav li {
-  float:left;
-  padding-left: 15px;
-  padding-right: 15px;
+  display:inline;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .btn {
@@ -68,13 +72,9 @@ article {
 @media only screen and (max-device-width: 1000px) {
 
   ul, li{
-    margin: 0;
-    padding: 0;
+    margin: 5%;
   }
 
-  nav{
-  display: none;
-  } 
 
   html * {
   font-size: 10pt;
