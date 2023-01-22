@@ -12,7 +12,13 @@ nav{
   width: fit-content;
   margin: auto;
 }
-
+.filterLi {
+  display: none; /* Hidden by default */
+}
+/* The "show" class is added to the filtered elements */
+.show {
+  display: list-item;
+}
 
 nav ul {
   list-style: none;
@@ -23,6 +29,36 @@ nav li {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.btn {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  line-height: 25px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #007c89;
+  transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+  padding: 0px 4px;
+  margin: 0px 0px 10px 0px;
+}
+.btn:hover {
+  color: #ffffff;
+  background-color: #006570;
+}
+.btn.active {
+  background-color: #666;
+  color: white;
+} 
+
+
+
+                  
+                
+
+
 
 
 article {
