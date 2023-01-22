@@ -71,14 +71,15 @@ article {
 
 @media only screen and (max-device-width: 1000px) {
 
-  ul, li{
-    margin: 5px;
+  li{
+    margin: 2px;
   }
 
   nav li {
-  display:inline;
-  padding-left: 5px;
-  padding-right: 5px;
+    margin: 0px;
+    display:inline;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
 
