@@ -67,6 +67,11 @@ article {
 
 @media only screen and (max-device-width: 1000px) {
 
+  ul, li{
+    margin: 0;
+    padding: 0;
+  }
+
   nav{
   display: none;
   } 
