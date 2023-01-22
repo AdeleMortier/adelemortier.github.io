@@ -68,6 +68,11 @@ article {
 
 @media only screen and (max-device-width: 700px) {
 
+  nav{
+  display: block;
+  margin: auto;
+} 
+
   html * {
   font-size: 10pt;
   font-family: Consolas, monospace;
