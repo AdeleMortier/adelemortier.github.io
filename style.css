@@ -68,13 +68,16 @@ article {
 @media only screen and (max-device-width: 1000px) {
 
   nav{
-  display: none;
+  display: block;
   margin: auto;
-} 
+  } 
 
   html * {
   font-size: 10pt;
   font-family: Consolas, monospace;
+  }
+  h1 {
+    font-size:12pt;
   }
 
   article {
