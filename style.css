@@ -69,7 +69,7 @@ article {
 @media only screen and (max-device-width: 700px) {
 
   nav{
-  display: block;
+  display: none;
   margin: auto;
 } 
 
