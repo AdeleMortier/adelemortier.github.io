@@ -8,7 +8,7 @@ header {
 }
 
 nav{ 
- width: fit-content;
+  width: fit-content;
   margin: auto;
 }
 .filterLi {
@@ -68,8 +68,7 @@ article {
 @media only screen and (max-device-width: 1000px) {
 
   nav{
-  display: block;
-  margin: auto;
+  display: none;
   } 
 
   html * {
@@ -86,7 +85,7 @@ article {
   }
 
   img {
-    max-width: 100px;
+    max-width: 25%;
     max-height: 70px;
     height: auto;
     width: auto;
