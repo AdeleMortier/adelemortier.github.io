@@ -1,0 +1,566 @@
+\documentclass[10pt]{beamer}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+\usepackage{gb4e}
+\title{Versatile anti-presuppositions in counterfactual conditionals}
+%\subtitle{A modern beamer theme}
+% \date{\today}
+\date{}
+\author{Adèle Hénot-Mortier}
+\institute{Massachusetts Institute of Technology}
+% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+\begin{document}
+\metroset{block=fill}
+\maketitle
+
+\section[The puzzle]{The puzzle}
+\begin{frame}{O-marked and X-marked conditionals}
+	\begin{exe}
+		\ex
+		\begin{xlist}
+			\ex[] {If it \textbf{is} raining outside, then Sally \textbf{is} inside.}\label{ex:o-marked-cond}
+			\ex[] {If \textbf{was} raining outside, then Sally \textbf{would be} inside.}\label{ex:x-marked-cond}
+		\end{xlist}
+	\end{exe}
+	\begin{itemize}
+		\item Semantically, (\ref{ex:o-marked-cond}) and (\ref{ex:o-marked-cond}) seem to convey different meanings: (\ref{ex:o-marked-cond}) talks about the actual world while (\ref{ex:o-marked-cond}) seems to talk about (plausible) possible worlds.
+		\item Morphosyntactically, (\ref{ex:o-marked-cond}) uses the present indicative while (\ref{ex:x-marked-cond}) uses the simple past and an extra modal auxiliary in the consequent (\textit{woll}).
+		\item Following we call this \textit{morphosyntactic} marking O-marking in the case of (\ref{ex:o-marked-cond}) and X-marking in the case of (\ref{ex:o-marked-cond}).
+		\item Other languages may use other strategies to X-mark, among which special tense, mood, aspect, or special independent markers.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The counterfactual inference}
+	\begin{exe}
+		\exr{ex:x-marked-cond} 
+		{If \textbf{was} raining outside, then Sally \textbf{would be} inside.}
+	\end{exe}
+	\begin{itemize}
+		\item Roughly, (\ref{ex:x-marked-cond}) implies that the closest possible worlds in which it is raining outside are such that Sally is inside.
+		\item But it also conveys something more, namely that it is actually not raining outside. Some evidence that this is not part of the core meaning of (\ref{ex:x-marked-cond}):
+	\end{itemize}
+	\vspace{-2mm}
+		\begin{exe}
+			\small
+			\ex \label{ex:presupposition-tests}
+			\begin{xlist}
+				\ex {It's not the case that if it was raining outside, Sally would be inside. \\$\leadsto$ Not raining.} 
+				\ex {Perhaps if it was raining outside, then Sally would be inside.\\$\leadsto$ Not raining.}
+				\ex {Is it true that if it was raining outside, then Sally would be inside?\\$\leadsto$ Not raining.}
+				\ex {(\ref{ex:x-marked-cond}) --Hey, wait a minute! I did not know it wasn't raining outside!}
+			\end{xlist}
+		\end{exe}
+	\begin{itemize}
+		\item We call this inference the counterfactual inference (CI), which arises in a majority of X-marked conditionals.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The nature of the CI}
+	\begin{itemize}
+		\item The tests in (\ref{ex:presupposition-tests}) suggest that the CI is a presupposition. But why would X-marking (whose realization is variable across languages) be the trigger for such an inference? What is the role of the competing O-marked conditional? Also, why does the CI disappear in sentences like (\ref{ex:anderson}) -- dubbed Anderson Conditionals?
+	\end{itemize}
+	\begin{exe}
+		\ex {If Jones had taken arsenic, he would have shown the same symptoms he is actually showing.}\label{ex:anderson}
+	\end{exe}
+	\begin{itemize}
+		\item In this talk, we want to better understand the source of the CI, by relating the use of X-marked conditionals to the QUD:
+		\begin{itemize}
+			\item We show that the inference pattern of a conditional depends on \textit{how} it answers a given QUD.
+			\item We relate this observation to a constraint stated by Heim about the use of presuppositions in answers to questions.
+			\item We show how this line of reasoning could apply to Anderson conditionals.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Conditionals and the QUD}
+	\begin{itemize}
+		\item A conditional \textit{If P then Q} can answer differ kinds of questions:
+		\begin{itemize}
+			\item Is ``If P then Q'' true?
+			\item Under what conditions is Q true?
+			\item Is P true?
+			\item Is Q true?
+		\end{itemize}
+		\item In te talk, we focus on the last two. For instance, we assume that (\ref{ex:x-marked-cond}) repeated below can answer the QUDs in (\ref{ex:ant-qud}) and (\ref{ex:cons-qud}).
+		\begin{exe}
+			\exr{ex:x-marked-cond} 
+			{If \textbf{was} raining outside, then Sally \textbf{would be} inside.}
+			\ex {Is it raining outside?} \label{ex:ant-qud}
+			\ex {Is Sally inside? (More generally: what about Sally?)}\label{ex:cons-qud}
+		\end{exe}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The CI and the QUD}
+	\begin{exe}
+		\ex{QUD: Is it raining outside?\\
+		If \textbf{was} raining outside, then Sally \textbf{would be} inside.\\
+		Conveyed answer: It is not raining outside, \textit{because sally is not inside}.}\label{ex:qud-ant}
+	\end{exe}
+	\begin{exe}
+		\ex{QUD: What about Sally?\\
+			If \textbf{was} raining outside, then Sally \textbf{would be} inside.\\
+			Conveyed answer (weak): Sally would be inside if if was raining but it's not, draw your own conclusions.\\
+			Conveyed answer (strong): Sally is not inside.}\label{ex:qud-cons}
+	\end{exe}
+	\begin{itemize}
+		\item How is the answer conveyed?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{The CI and the QUD}
+	\begin{exe}
+		\exr{ex:qud-ant}
+		{A: Is it raining outside?\\
+			B: If \textbf{was} raining outside, then Sally \textbf{would be} inside.\\
+			C: Hey wait a minute! I did not know it wasn't raining outside! \hfill \xmark\\
+			C: Hey wait a minute! I did not know Sally wasn't inside! \hfill \cmark}
+	\end{exe}
+	\begin{exe}
+		\exr{ex:qud-cons}
+		{A: What about Sally?\\
+			B: If \textbf{was} raining outside, then Sally \textbf{would be} inside.\\
+			C: Hey wait a minute! I did not know it wasn't raining outside! \hfill \cmark\\
+			C: Hey wait a minute! I did not know Sally wasn't inside! \hfill \xmark}
+	\end{exe}
+	\begin{itemize}
+		\item This pattern makes sense, given the following constraint:
+		\begin{block}{Heim's constraint on asnwering the QUD}
+			Questions cannot be answered by an accommodated presupposition. 
+		\end{block}
+		\item But it also means that if the QUD targets the antecedent of an X-marked conditional, the answer should not be conveyed by the CI!
+	\end{itemize}
+
+\end{frame}
+\begin{frame}{Overview of the analysis}
+	\begin{itemize}
+		\item We want to argue that the CI is ``versatile'' in that it can target either the antecedent of the consequent of the X-marked conditional, depending on the QUD:
+		\begin{itemize}
+			\item If the QUD targets the consequent, then the CI targets the antecedent (as previously assumed).
+			\item If the QUD targets the antecedent, then the CI is derived from the consequent (novelty).
+		\end{itemize}
+	\item The proper answer to the QUD is derived \textit{via} reasoning:
+	\begin{itemize}
+		\item If the QUD was targeting the consequent, the answer is either conditionalized or presented as a strengthened \textit{modus ponens} argument.
+		\item If the QUD was targeting the antecedent, the answer is provided as a \textit{modus tollens} argument.
+	\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\section[Some background]{Some background and assumptions}
+	
+\begin{frame}{The CI as a presupposed implicature}
+	\begin{itemize}
+		\item The nature of the CI is debated:
+		\begin{itemize}
+			\item Implicature \cite{Iatridou2000,Ippolito2003} : supported by the fact that it can be cancelled and reinforced in specific contexts.
+			\item Presupposition \cite{vonFintel1998,Karawani2014} : supported by the classic projection tests and the \textit{Hey, wait a minute!} test.
+			\item Anti-presupposition (\cite{Leahy2011, Leahy2018}, building on \cite{Heim1991,Sauerland2003,Percus2006} a.o.): may allow to account for the mixed behavior of the CI.
+		\end{itemize}
+		\item Here we want to suggest that the CI is a presupposed implicature \cite{Bassi2021}.\footnote{We realized \textit{a posteriori} that this insight was already present in a footnote of \cite{Bassi2021}, although the focus was on testing Downward Entailing contexts.}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Presupposed Implicatures}
+	\begin{itemize}
+		\item A presupposed implicature is just like an implicature computed \textit{via} \textsc{Exh}aust \cite{Fox2007,Spector2008}, except that the extra inferences it creates are treated as non-at issue. 
+		\item \textsc{Pex}, which replaces \textsc{Exh}, inherits the ability  to compute the CIs locally, at the level of the antecedent or consequent.\vspace{2mm}
+	\end{itemize}
+\end{frame}
+\begin{frame}{}
+	\begin{itemize}
+		\item 
+		\item Both the antecedent and the consequent of an O-marked conditional
+		\item CIs in an X-marked conditional are derived by competition with the O-marked alternative.
+		\item In that sense, the CI is an implicature at the presuppositional level.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{CO-related QUD}
+	
+\end{frame}
+
+
+If P M (Q)
+the set of clostest worlds in which P holds are s.t. Q holds
+Q(the(P))
+Q(p)(q)
+
+if p then M q
+q?
+p => q
+not p
+accomodate after antecedent
+==>  does not hold in actual word and in all closest worlds where p holds q holds
+==> could have just said 
+q? not q?
+
+
+
+
+00 1
+01 1
+10 
+11
+\begin{frame}[allowframebreaks]{References}
+	
+	\bibliography{demo}
+	\bibliographystyle{apalike}
+	
+\end{frame}
+
+\begin{frame}{Appendix: on Heim's constraint}
+	\begin{itemize}
+		\item The following example is taken from \cite{Aravind2022} to illustrate the point in the general case:
+	\end{itemize}
+	\begin{exe}
+		\small
+		\ex {\textit{Context: A is visiting a dog shelter and is particularly interested in adopting a Labrador.}\\
+			A: Can I adopt the Labrador?}
+		\begin{xlist}
+			\ex[] {B: Someone from NY just adopted the Lab.\\
+			No presupposition.}
+			\ex[\#] {B: It is someone from NY who just adopted the Lab.\\ $\leadsto$ Someone adopted the Labrador.}
+		\end{xlist}
+	\end{exe}
+	\begin{exe}
+		\small
+		\ex {\textit{Context: A is visiting a dog shelter and is particularly interested in adopting several Labradors.}\\
+			A: Do you have more than one Lab for adoption?}
+		\begin{xlist}
+			\ex[] {B: There is 3 Labradors available for adoption.\\
+			No presupposition.}
+			\ex[\#] {B: There is a Labrador available for adoption.\\ $\leadsto$ There is more than one.}
+		\end{xlist}
+	\end{exe}
+
+\end{frame}
+
+\iffalse
+
+\begin{frame}{Table of contents}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents%[hideallsubsections]
+\end{frame}
+
+\section[Intro]{Introduction}
+
+\begin{frame}[fragile]{Metropolis}
+
+  The \themename theme is a Beamer theme with minimal visual noise
+  inspired by the \href{https://github.com/hsrmbeamertheme/hsrmbeamertheme}{\textsc{hsrm} Beamer
+  Theme} by Benjamin Weiss.
+
+  Enable the theme by loading
+
+  \begin{verbatim}    \documentclass{beamer}
+    \usetheme{metropolis}\end{verbatim}
+
+  Note, that you have to have Mozilla's \emph{Fira Sans} font and XeTeX
+  installed to enjoy this wonderful typography.
+\end{frame}
+\begin{frame}[fragile]{Sections}
+  Sections group slides of the same topic
+
+  \begin{verbatim}    \section{Elements}\end{verbatim}
+
+  for which \themename provides a nice progress indicator \ldots
+  
+\end{frame}
+
+\section{Titleformats}
+
+\begin{frame}{Metropolis titleformats}
+	\themename supports 4 different titleformats:
+	\begin{itemize}
+		\item Regular
+		\item \textsc{Smallcaps}
+		\item \textsc{allsmallcaps}
+		\item ALLCAPS
+	\end{itemize}
+	They can either be set at once for every title type or individually.
+\end{frame}
+
+\subsection{Tricks}
+
+{
+    \metroset{titleformat frame=smallcaps}
+\begin{frame}{Small caps}
+	This frame uses the \texttt{smallcaps} titleformat.
+
+	\begin{alertblock}{Potential Problems}
+		Be aware, that not every font supports small caps. If for example you typeset your presentation with pdfTeX and the Computer Modern Sans Serif font, every text in smallcaps will be typeset with the Computer Modern Serif font instead.
+	\end{alertblock}
+\end{frame}
+}
+
+{
+\metroset{titleformat frame=allsmallcaps}
+\begin{frame}{All small caps}
+	This frame uses the \texttt{allsmallcaps} titleformat.
+
+	\begin{alertblock}{Potential problems}
+		As this titleformat also uses smallcaps you face the same problems as with the \texttt{smallcaps} titleformat. Additionally this format can cause some other problems. Please refer to the documentation if you consider using it.
+
+		As a rule of thumb: Just use it for plaintext-only titles.
+	\end{alertblock}
+\end{frame}
+}
+
+{
+\metroset{titleformat frame=allcaps}
+\begin{frame}{All caps}
+	This frame uses the \texttt{allcaps} titleformat.
+
+	\begin{alertblock}{Potential Problems}
+		This titleformat is not as problematic as the \texttt{allsmallcaps} format, but basically suffers from the same deficiencies. So please have a look at the documentation if you want to use it.
+	\end{alertblock}
+\end{frame}
+}
+
+\section{Elements}
+
+\begin{frame}[fragile]{Typography}
+      \begin{verbatim}The theme provides sensible defaults to
+\emph{emphasize} text, \alert{accent} parts
+or show \textbf{bold} results.\end{verbatim}
+
+  \begin{center}becomes\end{center}
+
+  The theme provides sensible defaults to \emph{emphasize} text,
+  \alert{accent} parts or show \textbf{bold} results.
+\end{frame}
+
+\begin{frame}{Font feature test}
+  \begin{itemize}
+    \item Regular
+    \item \textit{Italic}
+    \item \textsc{SmallCaps}
+    \item \textbf{Bold}
+    \item \textbf{\textit{Bold Italic}}
+    \item \textbf{\textsc{Bold SmallCaps}}
+    \item \texttt{Monospace}
+    \item \texttt{\textit{Monospace Italic}}
+    \item \texttt{\textbf{Monospace Bold}}
+    \item \texttt{\textbf{\textit{Monospace Bold Italic}}}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Lists}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.33\textwidth}
+      Items
+      \begin{itemize}
+        \item Milk \item Eggs \item Potatos
+      \end{itemize}
+
+    \column{0.33\textwidth}
+      Enumerations
+      \begin{enumerate}
+        \item First, \item Second and \item Last.
+      \end{enumerate}
+
+    \column{0.33\textwidth}
+      Descriptions
+      \begin{description}
+        \item[PowerPoint] Meeh. \item[Beamer] Yeeeha.
+      \end{description}
+  \end{columns}
+\end{frame}
+\begin{frame}{Animation}
+  \begin{itemize}[<+- | alert@+>]
+    \item \alert<4>{This is\only<4>{ really} important}
+    \item Now this
+    \item And now this
+  \end{itemize}
+\end{frame}
+\begin{frame}{Figures}
+  \begin{figure}
+    \newcounter{density}
+    \setcounter{density}{20}
+    \begin{tikzpicture}
+      \def\couleur{alerted text.fg}
+      \path[coordinate] (0,0)  coordinate(A)
+                  ++( 90:5cm) coordinate(B)
+                  ++(0:5cm) coordinate(C)
+                  ++(-90:5cm) coordinate(D);
+      \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) --(D) -- cycle;
+      \foreach \x in {1,...,40}{%
+          \pgfmathsetcounter{density}{\thedensity+20}
+          \setcounter{density}{\thedensity}
+          \path[coordinate] coordinate(X) at (A){};
+          \path[coordinate] (A) -- (B) coordinate[pos=.10](A)
+                              -- (C) coordinate[pos=.10](B)
+                              -- (D) coordinate[pos=.10](C)
+                              -- (X) coordinate[pos=.10](D);
+          \draw[fill=\couleur!\thedensity] (A)--(B)--(C)-- (D) -- cycle;
+      }
+    \end{tikzpicture}
+    \caption{Rotated square from
+    \href{http://www.texample.net/tikz/examples/rotated-polygons/}{texample.net}.}
+  \end{figure}
+\end{frame}
+\begin{frame}{Tables}
+  \begin{table}
+    \caption{Largest cities in the world (source: Wikipedia)}
+    \begin{tabular}{lr}
+      \toprule
+      City & Population\\
+      \midrule
+      Mexico City & 20,116,842\\
+      Shanghai & 19,210,000\\
+      Peking & 15,796,450\\
+      Istanbul & 14,160,467\\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\end{frame}
+\begin{frame}{Blocks}
+  Three different block environments are pre-defined and may be styled with an
+  optional background color.
+
+  \begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+      \begin{block}{Default}
+        Block content.
+      \end{block}
+
+      \begin{alertblock}{Alert}
+        Block content.
+      \end{alertblock}
+
+      \begin{exampleblock}{Example}
+        Block content.
+      \end{exampleblock}
+
+    \column{0.5\textwidth}
+
+      \metroset{block=fill}
+
+      \begin{block}{Default}
+        Block content.
+      \end{block}
+
+      \begin{alertblock}{Alert}
+        Block content.
+      \end{alertblock}
+
+      \begin{exampleblock}{Example}
+        Block content.
+      \end{exampleblock}
+
+  \end{columns}
+\end{frame}
+\begin{frame}{Math}
+  \begin{equation*}
+    e = \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^n
+  \end{equation*}
+\end{frame}
+\begin{frame}{Line plots}
+  \begin{figure}
+    \begin{tikzpicture}
+      \begin{axis}[
+        mlineplot,
+        width=0.9\textwidth,
+        height=6cm,
+      ]
+
+        \addplot {sin(deg(x))};
+        \addplot+[samples=100] {sin(deg(2*x))};
+
+      \end{axis}
+    \end{tikzpicture}
+  \end{figure}
+\end{frame}
+\begin{frame}{Bar charts}
+  \begin{figure}
+    \begin{tikzpicture}
+      \begin{axis}[
+        mbarplot,
+        xlabel={Foo},
+        ylabel={Bar},
+        width=0.9\textwidth,
+        height=6cm,
+      ]
+
+      \addplot plot coordinates {(1, 20) (2, 25) (3, 22.4) (4, 12.4)};
+      \addplot plot coordinates {(1, 18) (2, 24) (3, 23.5) (4, 13.2)};
+      \addplot plot coordinates {(1, 10) (2, 19) (3, 25) (4, 15.2)};
+
+      \legend{lorem, ipsum, dolor}
+
+      \end{axis}
+    \end{tikzpicture}
+  \end{figure}
+\end{frame}
+\begin{frame}{Quotes}
+  \begin{quote}
+    Veni, Vidi, Vici
+  \end{quote}
+\end{frame}
+
+{%
+\setbeamertemplate{frame footer}{My custom footer}
+\begin{frame}[fragile]{Frame footer}
+    \themename defines a custom beamer template to add a text to the footer. It can be set via
+    \begin{verbatim}\setbeamertemplate{frame footer}{My custom footer}\end{verbatim}
+\end{frame}
+}
+
+\begin{frame}{References}
+  Some references to showcase [allowframebreaks] \cite{knuth92,ConcreteMath,Simpson,Er01,greenwade93}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}{Summary}
+
+  Get the source of this theme and the demo presentation from
+
+  \begin{center}\url{github.com/matze/mtheme}\end{center}
+
+  The theme \emph{itself} is licensed under a
+  \href{http://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons
+  Attribution-ShareAlike 4.0 International License}.
+
+  \begin{center}\ccbysa\end{center}
+
+\end{frame}
+
+{\setbeamercolor{palette primary}{fg=black, bg=yellow}
+\begin{frame}[standout]
+  Questions?
+\end{frame}
+}
+
+\appendix
+
+\begin{frame}[fragile]{Backup slides}
+  Sometimes, it is useful to add slides at the end of your presentation to
+  refer to during audience questions.
+
+  The best way to do this is to include the \verb|appendixnumberbeamer|
+  package in your preamble and call \verb|\appendix| before your backup slides.
+
+  \themename will automatically turn off slide numbering and progress bars for
+  slides in the appendix.
+\end{frame}
+
+\fi
+
+\end{document}
