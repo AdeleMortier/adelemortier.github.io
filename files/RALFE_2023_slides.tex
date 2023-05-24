@@ -176,15 +176,54 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Presupposed Implicatures}
+\begin{frame}{Presupposed Implicatures \cite{Bassi2021}}
 	\begin{itemize}
-		\item A presupposed implicature is just like an implicature computed \textit{via} \textsc{Exh}aust \cite{Fox2007,Spector2008}, except that the extra inferences it creates are treated as non-at issue. 
-		\item \textsc{Pex}, which replaces \textsc{Exh}, inherits the ability  to compute the CIs locally, at the level of the antecedent or consequent.\vspace{2mm}
+		\item A presupposed implicature (computed \textit{via} the operator \textsc{PEx}), is just like an implicature computed \textit{via} \textsc{Exh} \cite{Fox2007,Chierchia2012}, except that the extra inferences it creates are treated as non-at issue.
+		\item If A denotes a (precomputed) set of excludable alternatives:
+	\end{itemize}
+	\begin{footnotesize}
+		\begin{align*}
+			\textsc{Exh}(p, A) &= \left\lbrace\begin{array}{rl}
+				\text{Presupposed}: & \\
+				\text{At-issue}: & p \wedge \neg A\\
+			\end{array} \right\rbrace\\
+			\textsc{PEx}(p, A) &= \left\lbrace\begin{array}{rl}
+				\text{Presupposed}: & \neg A\\
+				\text{At-issue}: & p \\
+			\end{array} \right\rbrace
+		\end{align*}
+	\end{footnotesize}
+	
+	\begin{itemize}
+		\item In conditionals, we assume the implicature resides in the comparison between X-marking (which introduces quantification over possible worlds) and O-marking (which only talks about the actual world).
+		\item \textsc{Pex} inherits the ability  to be inserted locally; this, plus the fact that both clauses of an X-marked conditional are X-marked, implies that both the antecedent and the consequent can be \textsc{PEx}ed.
 	\end{itemize}
 \end{frame}
+
+\begin{frame}{Back to Heim's constraint}
+	\begin{itemize}
+		\item Recall Heim's constraint prevents questions from being answered \textit{via} accomodation.
+		\item The following example is taken from \cite{Aravind2022} to illustrate this point in the general case:
+	\end{itemize}
+	\begin{exe}
+		\small
+		\ex {\textit{Context: A is visiting a dog shelter and is particularly interested in adopting a Labrador.}\\
+			A: Can I adopt the Labrador?}
+		\begin{xlist}
+			\ex[] {B: Someone from NY just adopted the Lab.\\
+				No presupposition.}
+			\ex[\#] {B: It is someone from NY who just adopted the Lab.\\ $\leadsto$ Someone adopted the Labrador.}
+		\end{xlist}
+	\end{exe}
+	\begin{itemize}
+		\item But what happens with inferences derived \textit{via} \textsc{PEx}?
+	\end{itemize}
+\end{frame}
+
+
+
 \begin{frame}{}
 	\begin{itemize}
-		\item 
 		\item Both the antecedent and the consequent of an O-marked conditional
 		\item CIs in an X-marked conditional are derived by competition with the O-marked alternative.
 		\item In that sense, the CI is an implicature at the presuppositional level.
@@ -224,32 +263,6 @@ q? not q?
 	
 \end{frame}
 
-\begin{frame}{Appendix: on Heim's constraint}
-	\begin{itemize}
-		\item The following example is taken from \cite{Aravind2022} to illustrate the point in the general case:
-	\end{itemize}
-	\begin{exe}
-		\small
-		\ex {\textit{Context: A is visiting a dog shelter and is particularly interested in adopting a Labrador.}\\
-			A: Can I adopt the Labrador?}
-		\begin{xlist}
-			\ex[] {B: Someone from NY just adopted the Lab.\\
-			No presupposition.}
-			\ex[\#] {B: It is someone from NY who just adopted the Lab.\\ $\leadsto$ Someone adopted the Labrador.}
-		\end{xlist}
-	\end{exe}
-	\begin{exe}
-		\small
-		\ex {\textit{Context: A is visiting a dog shelter and is particularly interested in adopting several Labradors.}\\
-			A: Do you have more than one Lab for adoption?}
-		\begin{xlist}
-			\ex[] {B: There is 3 Labradors available for adoption.\\
-			No presupposition.}
-			\ex[\#] {B: There is a Labrador available for adoption.\\ $\leadsto$ There is more than one.}
-		\end{xlist}
-	\end{exe}
-
-\end{frame}
 
 \iffalse
 
