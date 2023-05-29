@@ -7,7 +7,7 @@ header {
   text-align: center;
 }
 
-nav{ 
+nav { 
   display:block;
   width:fit-content;
   height: fit-content;
@@ -21,10 +21,16 @@ nav{
 .show {
   display: list-item;
 }
-
+ul {
+  list-style-type: square;
+}
 nav ul {
   text-align: center;
   list-style: none;
+}
+
+ul > ul {
+  padding: 0;
 }
 
 nav li {
@@ -62,11 +68,40 @@ article {
   padding-right: 150px;
 }
 
+.year {
+  font-size: 14pt;
+  font-weight: bold;
+  list-style-type: none;
+  padding-top: 15px;
+  padding-bottom: 5px;
+
+}
+
 #back-to-top {
   position: fixed;
   background-color: #FFFFFF;
   width: 100%;
   bottom: 0;
+}
+
+/* unvisited link */
+a:link {
+  color: #007c89;
+}
+
+/* visited link */
+a:visited {
+  color: #666;
+}
+
+/* mouse over link */
+a:hover {
+  color: #006570;
+}
+
+/* selected link */
+a:active {
+  color: #666;
 }
 
 @media only screen and (max-device-width: 1000px) {
