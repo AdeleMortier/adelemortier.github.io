@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
-<title>Page Title</title>
+<title>Adèle's personal webpage</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="">
 <style>
@@ -12,9 +12,9 @@
 
 <link rel="stylesheet" href="style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>How to add meta tags to a web page</title>
-    <meta name="description" content="Personal academic webpage of Adèle Hénot-Mortier">
-    <meta name="keywords" content="adele mortier, adele henot-mortier, linguistics, semantics, pragmatics, syntax, NLP, language, academia">
+    <title>Adèle's personal webpage</title>
+    <meta name="description" content="Personal academic webpage of linguist and computer scientist of Adèle Hénot-Mortier">
+    <meta name="keywords" content="adele mortier, adele henot-mortier, linguistics, semantics, pragmatics, syntax, NLP, language, academia, research, theory, modeling, science">
 </head>
 
 <body>
@@ -30,6 +30,7 @@
                     <li><a href="#teaching">Teaching</a></li>
                     <li><a href="#hobbies">Hobbies</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="./files/adele_mortier_cv.pdf" target="_blank">CV</a></li>
                 </ul>
             </nav>
         </main>
@@ -43,70 +44,167 @@
         <article>
             <h1 id="publications">Talks & Publications</h1>
            	<div id="myBtnContainer">
-			  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+			  <button class="btn active" onclick="filterSelection('all')"> Show all</button><br>
+              <button class="btn" onclick="filterSelection('morphology')"> #Morphology</button>
 			  <button class="btn" onclick="filterSelection('syntax')"> #Syntax</button>
-			  <button class="btn" onclick="filterSelection('morphology')"> #Morphology</button>
-			  <button class="btn" onclick="filterSelection('pragmatics')"> #Pragmatics</button>
-			  <button class="btn" onclick="filterSelection('semantics')"> #Semantics</button>
+              <button class="btn" onclick="filterSelection('semantics')"> #Semantics</button>
+			  <button class="btn" onclick="filterSelection('pragmatics')"> #Pragmatics</button><br>
 			  <button class="btn" onclick="filterSelection('experimental')"> #Experimental</button>
 			  <button class="btn" onclick="filterSelection('nlp')"> #NLP</button>
-			  <button class="btn" onclick="filterSelection('not-english')"> #Non English</button>
+              <button class="btn" onclick="filterSelection('math')"> #Math/CS-adjacent</button>
+			  <button class="btn" onclick="filterSelection('not-english')"> #Non English</button><br>
 			  <button class="btn" onclick="filterSelection('talk')"> #Talk</button>
-			  <button class="btn" onclick="filterSelection('poster')"> #Poster</button>
-			  <button class="btn" onclick="filterSelection('proceedings')"> #Proceedings</button>
-			  <button class="btn" onclick="filterSelection('paper')"> #Paper</button>
+			  <button class="btn" onclick="filterSelection('poster')"> #Poster</button><br>
+			  <button class="btn" onclick="filterSelection('proceedings')"> #Proceedings paper</button>
+			  <button class="btn" onclick="filterSelection('paper')"> #Journal Paper</button>
 			  <button class="btn" onclick="filterSelection('manuscript')"> #Manuscript</button>
 
 			</div>
             <ul> <!-- TO INSERT "UPCOOMING" LOGO: <img src="./upcoming.gif" style="width: 2cm; height: auto;"> -->
-                <li class='year filterLi syntax morphology pragmatics semantics nlp not-english talk poster'>2024</li>
+                <li class='year filterLi syntax morphology pragmatics semantics not-english talk poster experimental'>2024</li>
                 <ul>
-                    <img src="./upcoming.gif" style="width: 2cm; height: auto;"><li class='filterLi syntax not-english poster experimental'>(2024, September 26-28). <i>A corpus study of the acquisition of French "se faire" passives</i> [Poster]. 17th Conference on Syntax, Phonology and Language Analysis (SinFonIJA 17), Center for Cognitive Science of Language, Nova Gorica, Slovenia.></li>
-                    <img src="./upcoming.gif" style="width: 2cm; height: auto;"><li class='filterLi semantics pragmatics poster'>(2024, September 20). <i>"One tool to rule them all"? An integrated model of the QuD for Hurford sentences</i> [Talk]. Special Session "Does semantics have a 'too many tools' problem?" of the 29th Sinn und Bedeutung (SuB),  Consorzio Universitario Mediterraneo Orientale (CUMO), Noto, Italy.</li>
-                    <img src="./upcoming.gif" style="width: 2cm; height: auto;"><li class='filterLi semantics poster pragmatics'>(2024, September 17-19). <i>Redundancy under Discussion</i> [Poster]. 29th Sinn und Bedeutung (SuB),  Consorzio Universitario Mediterraneo Orientale (CUMO), Noto, Italy.</li>
-                    <img src="./upcoming.gif" style="width: 2cm; height: auto;"><li class='filterLi semantics poster not-english'>(2024, September 16). <i>Unifying the French evidential construction on di(rai)t que</i> [Poster]. Special Session "Evidentials in non-canonical speech acts" of the 29th Sinn und Bedeutung (SuB),  Consorzio Universitario Mediterraneo Orientale (CUMO), Syracuse, Italy.</li>
-                    <li class='filterLi talk semantics pragmatics'>(2024, June 28). <i>Dealing with relevance and redundancy via a compositional model of QuDs</i> [<a href="./files/BBV_2024_slides.pdf" target="_blank">Talk</a>]. BerlinBrnoVienna Workshop 2024, Masaryk University, Brno, Czech Republic.</li>
-                    <li class='filterLi poster not-english semantics morphology'>(2024, January 26). <i>The French demonstrative paradigm: structurally transparent but semantically intricate</i> [<a href="./files/NELS_2024_poster.pdf" target="_blank">Poster</a>]. 54rd Annual Meeting of the North East Linguistic Society (NELS 54), Massachusetts Institute of Technology, Cambridge, United States. </li>
+                    <li class='filterLi syntax not-english poster experimental'><img src="./upcoming.gif" style="width: 2cm; height: auto;"><br>
+                        <i><b>A corpus study of the acquisition of French "se faire" passives</b></i><br>
+                        September 26-28, 2024<br>
+                        17th Conference on Syntax, Phonology and Language Analysis (SinFonIJA 17), Center for Cognitive Science of Language, Nova Gorica, Slovenia.<br>
+                        [Poster]</li>
+                    <li class='filterLi semantics pragmatics talk'><img src="./upcoming.gif" style="width: 2cm; height: auto;"><br>
+                        <i><b>"One tool to rule them all"? An integrated model of the QuD for Hurford sentences</b></i><br>
+                        September 20, 2024<br>
+                        Special Session "Does semantics have a 'too many tools' problem?" of the 29th Sinn und Bedeutung (SuB), Consorzio Universitario Mediterraneo Orientale (CUMO), Noto, Italy.<br>
+                        [Talk]</li>
+                    <li class='filterLi semantics poster pragmatics'><img src="./upcoming.gif" style="width: 2cm; height: auto;"><br>
+                        <i><b>Redundancy under Discussion</b></i><br>
+                        September 17-19, 2024<br>
+                        29th Sinn und Bedeutung (SuB), Consorzio Universitario Mediterraneo Orientale (CUMO), Noto, Italy.<br>
+                        [Poster]</li>
+                    <li class='filterLi semantics poster not-english'><img src="./upcoming.gif" style="width: 2cm; height: auto;"><br>
+                        <i><b>Unifying the French evidential construction on di(rai)t que</b></i><br>
+                        September 16, 2024<br>
+                        Special Session "Evidentials in non-canonical speech acts" of the 29th Sinn und Bedeutung (SuB), Consorzio Universitario Mediterraneo Orientale (CUMO), Syracuse, Italy.<br>
+                        [Poster]</li>
+                    <li class='filterLi talk semantics pragmatics'><i><b>Dealing with relevance and redundancy via a compositional model of QuDs</b></i><br>
+                        June 28, 2024<br>
+                        BerlinBrnoVienna Workshop 2024, Masaryk University, Brno, Czech Republic.<br>
+                        [<a href="./files/BBV_2024_slides.pdf" target="_blank">Talk</a>]</li>
+                    <li class='filterLi poster not-english semantics syntax morphology'><i><b>The French demonstrative paradigm: structurally transparent but semantically intricate</b></i><br>
+                        January 26, 2024<br>
+                        54rd Annual Meeting of the North East Linguistic Society (NELS 54), Massachusetts Institute of Technology, Cambridge, United States.<br>
+                        [<a href="./files/NELS_2024_poster.pdf" target="_blank">Poster</a>]</li>
                 </ul>
-            	<li class='year filterLi syntax morphology pragmatics semantics nlp not-english talk poster'>2023</li>
+            	<li class='year filterLi syntax morphology pragmatics semantics nlp not-english talk poster math paper proceedings'>2023</li>
             	<ul>
-            		<li class='filterLi morphology not-english talk'>(2022, September 23). <i>Morpho-semantics of the French diminutive suffix -et(te)</i> [Talk]. 16th Conference on Syntax, Phonology and Language Analysis (SinFonIJA 16), Masaryk University, Brno, Czech Republic. </li>
-            		<li class='filterLi smorphology not-english talk'>(2022, September 15). <i>Morpho-semantics of the French diminutive suffix -et(te)</i> [Talk]. International Symposium of Morphology (ISMo) 2023, Université de Lorraine & CNRS, Nancy, France.</li>
-            		<li class='filterLi syntax nlp not-english poster proceedings'>(2023, September 11). <i>Do Language Models discriminate between relatives and pseudorelatives?</i> [Poster][<a href="./files/LSD_2023_paper.pdf" target="_blank">Paper</a>]. Learning with Small Data (LSD) 2023, The Centre for Linguistic Theory and Studies in Probability (CLASP), University of Gothenburg, Gothenburg, Sweden.</li>
-            		<li class='filterLi semantics pragmatics nlp talk proceedings'>(2023, September 7). <i>Shallowly accurate but deeply confused -- how language models deal with antonyms</i> [Talk][<a href="https://colab.research.google.com/drive/19FoKLYFpuQxYZeVb6frdkNzZRRKEVbMn?usp=sharing" target="_blank">Code</a>][<a href="https://adelemortier.github.io/files/data/antonyms.zip" target="_blank">Data</a>][<a href="/files/SuB_2023_paper.pdf" target="_blank">Paper</a>]. Special Session "Big Data in Semantics and Pragmatics" of the 28th Sinn und Bedeutung (SuB),  Ruhr University Bochum, Bochum, Germany.</li>
-            		<li class='filterLi syntax nlp poster'>(2023, September 2). <i>Do Language Models discriminate between relatives and pseudorelatives?</i> [<a href="./files/AMLaP_2023_poster_pseudorelatives.pdf" target="_blank">Poster</a>]. Architectures and Mechanisms of Language Processing 2023 (AMLaP 29), Basque Center on Cognition, Brain and Language, Donostia-San Sebastián, Spain.</li>
-            		<li class='filterLi semantics pragmatics nlp poster'>(2023, September 1). <i>Shallowly accurate but deeply confused -- how language models deal with antonyms</i> [<a href="./files/AMLaP_2023_poster_antonyms.pdf" target="_blank">Poster</a>]. Architectures and Mechanisms of Language Processing 2023 (AMLaP 29), Basque Center on Cognition, Brain and Language, Donostia-San Sebastián, Spain.</li>
-                    <li class='filterLi syntax nlp talk'>(2023, August 31). <i>Do Large Language Models learn the specificity of parasitic gaps?</i> [Talk]. Architectures and Mechanisms of Language Processing 2023 (AMLaP 29), Basque Center on Cognition, Brain and Language, Donostia-San Sebastián, Spain.</li>
-            		<li class='filterLi syntax not-english nlp talk'>(2023, August 18). <i>Do Language Models discriminate between relatives and pseudorelatives?</i> [<a href="./files/ICTEAP_2023_slides.pdf" target="_blank">Talk</a>]. The 4rd International Conference on Theoretical East Asian Psycholinguistics (ICTEAP-4), Dongguk University, Seoul, South Korea.</li>
-            		<li class='filterLi syntax not-english poster proceedings'>(2023, August 15). <i>"Bridging the gap" between French <i>tough</i>-constructions and pseudorelatives</i> [<a href="./files/SICOGG_2023_poster.pdf" target="_blank">Poster</a>][<a href="./files/SICOGG_2023_paper.pdf" target="_blank">Paper</a>]. 25th Seoul International Conference on Generative Grammar (SICOGG 25), Dongguk University, Seoul, South Korea. </li>
-            		<li class='filterLi semantics pragmatics talk'>(2023, May 25). <i>Versatile presuppositions in counterfactual conditionals</i> [<a href="./files/RALFE_2023_slides.pdf" target="_blank">Talk</a>]. Rencontres Autour de la Linguistique Formelle 2023 (RALFE 2023), Université Côte d'Azur, Nice, France. </li>
-            		<li class='filterLi syntax not-english talk proceedings'>(2023, March 19). <i>Superiority effects and the French Plural Pronoun Construction</i> [<a href="./files/PLC_2023_slides.pdf" target="_blank">Talk</a>][<a href="./files/PLC_2023_paper.pdf" target="_blank">Paper</a>]. The 47th Penn Linguistics Conference (PLC 47), University of Pennsylvania, Philadelphia, USA. </li>
-                	<li class='filterLi nlp morphology not-english talk proceedings'>With Benbaji, I., Doron, O., (2023, January 12). <i>Distinguishing levels of morphological derivations in word-embedding models</i> [<a href="./files/NELS_2023_slides.pdf" target="_blank">Talk</a>][<a href="./files/NELS_2023_paper.pdf" target="_blank">Paper</a>]. 53rd Annual Meeting of the North East Linguistic Society (NELS 53), University of Göttingen, Göttingen, Germany. </li>
+                    <li class='filterLi math paper semantics pragmatics'><i><b>On the optimality of vagueness: "around", "between" and the Gricean maxims.</b></i><br>
+                        With Paul Égré, Benjamin Spector, and Steven Verheyen.<br>
+                        2023.<br>
+                        In <i>Linguistics and Philosophy</i> 46 (5):1075-1130.<br>
+                        [Paper]
+                    </li>
+            		<li class='filterLi morphology not-english talk'><i><b>Morpho-semantics of the French diminutive suffix -et(te)</b></i><br>
+                        September 23, 2023<br>
+                        16th Conference on Syntax, Phonology and Language Analysis (SinFonIJA 16), Masaryk University, Brno, Czech Republic.<br>
+                        [Talk]<br>
+                        September 15, 2023<br>
+                        International Symposium of Morphology (ISMo) 2023, Université de Lorraine & CNRS, Nancy, France.<br>
+                        [Talk]</li>
+            		<li class='filterLi syntax nlp not-english poster talk proceedings'><i><b>Do Language Models discriminate between relatives and pseudorelatives?</b></i><br>
+                        September 11, 2023<br>
+                        Learning with Small Data (LSD) 2023, The Centre for Linguistic Theory and Studies in Probability (CLASP), University of Gothenburg, Gothenburg, Sweden.<br>
+                        [Poster][<a href="./files/LSD_2023_paper.pdf" target="_blank">Paper</a>]<br>
+                        September 2, 2023<br>
+                        Architectures and Mechanisms of Language Processing 2023 (AMLaP 29), Basque Center on Cognition, Brain and Language, Donostia-San Sebastián, Spain.<br>
+                        [<a href="./files/AMLaP_2023_poster_pseudorelatives.pdf" target="_blank">Poster</a>]<br>
+                        August 18, 2023<br>
+                        The 4rd International Conference on Theoretical East Asian Psycholinguistics (ICTEAP-4), Dongguk University, Seoul, South Korea.<br>
+                        [<a href="./files/ICTEAP_2023_slides.pdf" target="_blank">Talk</a>]</li>
+            		<li class='filterLi semantics pragmatics nlp talk proceedings poster'><i><b>Shallowly accurate but deeply confused -- how language models deal with antonyms</b></i><br>
+                        September 7, 2023<br>
+                        Special Session "Big Data in Semantics and Pragmatics" of the 28th Sinn und Bedeutung (SuB),  Ruhr University Bochum, Bochum, Germany.<br>
+                        [Talk][<a href="https://colab.research.google.com/drive/19FoKLYFpuQxYZeVb6frdkNzZRRKEVbMn?usp=sharing" target="_blank">Code</a>][<a href="https://adelemortier.github.io/files/data/antonyms.zip" target="_blank">Data</a>][<a href="/files/SuB_2023_paper.pdf" target="_blank">Paper</a>]<br>
+                        September 1, 2023<br>
+                        Architectures and Mechanisms of Language Processing 2023 (AMLaP 29), Basque Center on Cognition, Brain and Language, Donostia-San Sebastián, Spain.<br>
+                        [<a href="./files/AMLaP_2023_poster_antonyms.pdf" target="_blank">Poster</a>]</li>
+                    <li class='filterLi syntax nlp talk'><i><b>Do Large Language Models learn the specificity of parasitic gaps?</b></i><br>
+                        August 31, 2023<br>
+                        Architectures and Mechanisms of Language Processing 2023 (AMLaP 29), Basque Center on Cognition, Brain and Language, Donostia-San Sebastián, Spain.<br>
+                        [Talk]</li>
+            		<li class='filterLi syntax not-english poster proceedings'><i><b>"Bridging the gap" between French <i>tough</i>-constructions and pseudorelatives</b></i><br>
+                        August 15, 2023<br>
+                        25th Seoul International Conference on Generative Grammar (SICOGG 25), Dongguk University, Seoul, South Korea.<br>
+                        [<a href="./files/SICOGG_2023_poster.pdf" target="_blank">Poster</a>][<a href="./files/SICOGG_2023_paper.pdf" target="_blank">Paper</a>]</li>
+            		<li class='filterLi semantics pragmatics talk'><i><b>Versatile presuppositions in counterfactual conditionals</b></i><br>
+                        May 25, 2023<br>
+                        Rencontres Autour de la Linguistique Formelle 2023 (RALFE 2023), Université Côte d'Azur, Nice, France.<br>
+                        [<a href="./files/RALFE_2023_slides.pdf" target="_blank">Talk</a>]</li>
+            		<li class='filterLi syntax not-english talk proceedings'><i><b>Superiority effects and the French Plural Pronoun Construction</b></i><br>
+                        March 19, 2023<br>
+                        The 47th Penn Linguistics Conference (PLC 47), University of Pennsylvania, Philadelphia, USA.<br>
+                        [<a href="./files/PLC_2023_slides.pdf" target="_blank">Talk</a>][<a href="./files/PLC_2023_paper.pdf" target="_blank">Paper</a>]</li>
+                	<li class='filterLi nlp morphology not-english talk proceedings'><i><b>Distinguishing levels of morphological derivations in word-embedding models</b></i><br>
+                        With Ido Benbaji and Omri Doron<br>
+                        January 12, 2023<br>
+                        53rd Annual Meeting of the North East Linguistic Society (NELS 53), University of Göttingen, Göttingen, Germany.<br>
+                        [<a href="./files/NELS_2023_slides.pdf" target="_blank">Talk</a>][<a href="./files/NELS_2023_paper.pdf" target="_blank">Paper</a>]</li>
             	</ul>
-            	<li class='year filterLi proceedings statistics experimental syntax morphology pragmatics semantics nlp not-english talk poster'>2022</li>
+            	<li class='year filterLi proceedings math experimental syntax morphology pragmatics semantics nlp not-english talk poster'>2022</li>
             	<ul>
-            		<li class='filterLi statistics experimental semantics pragmatics poster'>With Egré, P., Spector, B., Hénot-Mortier, A., and Verheyen, S. (2022, December 19) <i>An experimental investigation of the around / between contrast</i> [<a href="./files/AC_2022_poster.pdf" target="_blank">Poster</a>][<a href="./files/AC_2022_lightning.pdf" target="_blank">Lightning</a>]. Amsterdam Colloquium 2022 (AC2022), University of Amsterdam, Amsterdam, Netherlands. </li>
-	                <li class='filterLi syntax talk'>(2022, September 24). <i>An Agree-based account of the gap distribution in tough-constructions vs gapped-degree phrases</i> [Talk]. 15th Conference on Syntax, Phonology and Language Analysis (SinFonIJA 15), University of Udine, Udine, Italy. </li>
-	            	<li class='filterLi pragmatics talk proceedings'>(2022, September 16). <i>A dynamic alternative-pruning account of asymmetries in Hurford disjunctions</i> [<a href="./files/SuB_2022_slides.pdf" target="_blank">Talk</a>][<a href="./files/SuB_2022_paper.pdf" target="_blank">Paper</a>]. 27th Sinn und Bedeutung (SuB), Charles University, Prague, Czech Republic. </li>
-	            	<li class='filterLi poster morphology nlp'>(2022, September 7). <i>Evidence for an encoding of morphological blocking effects within two English word embedding models</i> [<a href="./files/AMLaP_2022_poster.pdf" target="_blank">Poster</a>]. Architectures and Mechanisms of Language Processing 2022 (AMLaP 28), University of York, York, UK. </li>
-	            	<li class='filterLi experimental syntax talk'>With Stacey, R., Torma, C., Aravind, A. (2022, September 7). <i>Two kinds of adjective-infinitive constructions in acquisition</i> [<a href="./files/AMLaP_2022_slides.pdf" target="_blank">Talk</a>]. Architectures and Mechanisms of Language Processing 2022 (AMLaP 28), University of York, York, UK. </li>
-	                <li class='filterLi pragmatics poster proceedings'>(2022, August 18). <i>A dynamic alternative-pruning account of asymmetries in Hurford disjunctions</i> [<a href="./files/ESSLLI_2022_lightning_slides.pdf" target="_blank">Lightning</a>][<a href="./files/esslli_2022_poster.pdf" target="_blank">Poster</a>][<a href="https://uvaauas.figshare.com/articles/conference_contribution/H_not-Mortier_2022_A_dynamic_alternative-pruning_account_of_asymmetries_in_Hurford_Disjunctions/20368194" target="_blank">Paper</a>]. ESSLLI 2022, National University of Ireland, Galway, Ireland. </li>
-	                <li class='filterLi nlp not-english morphology proceedings talk'>With Benbaji, I. and Doron, O. (2022, August 16). <i>Word-embeddings distinguish denominal and root-derived verbs in Semitic</i> [<a href="./files/ESSLLI_2022_workshop_slides.pdf" target="_blank">Talk</a>][<a href="https://arxiv.org/abs/2208.05721" target="_blank">Paper</a>]. End-to-End Compositional Models of Vector-Based Semantics Workshop (E2ECOMPVEC@ESSLLI 2022), National University of Ireland, Galway, Ireland. </li>
-	            	<li class='filterLi syntax talk proceedings'>(2022, August 12). <i>An Agree-based account of the gap distribution in tough-constructions vs gapped-degree phrases</i> [<a href="./files/SICOGG_2022_slides.pdf" target="_blank">Talk</a>][<a href="./files/SICOGG_2022_paper.pdf" target="_blank">Paper</a>]. 24th Seoul International Conference on Generative Grammar (SICOGG 24), Online. </li>
-	                <li class='filterLi statistics experimental semantics pragmatics poster'>With Egré, P., Spector, B., and Verheyen, S. (2022, July 21). <i>Precisifying approximation: Around vs Between</i> [<a href="./files/creteling_2022_poster.pdf" target="_blank">Poster</a>]. CreteLing 2022, University of Crete, Rethymno, Greece. </li>
-	                <li class='filterLi syntax semantics not-english talk'>(2022, April 28). <i>It's tough to be pretty: semantic relatedness between tough and pretty predicates</i> [<a href="./files/GLOW_2022_handout.pdf" target="_blank">Talk</a>]. 45th Generative Linguistics in the Old World (GLOW), Queen Mary University of London, London, UK. </li>
+            		<li class='filterLi math experimental semantics pragmatics poster'><i><b>An experimental investigation of the around / between contrast</b></i><br>
+                        With Paul Egré, Benjamin Spector, and Steven Verheyen.<br>
+                        December 19, 2022<br>
+                        Amsterdam Colloquium 2022 (AC2022), University of Amsterdam, Amsterdam, Netherlands.<br>
+                        [<a href="./files/AC_2022_poster.pdf" target="_blank">Poster</a>][<a href="./files/AC_2022_lightning.pdf" target="_blank">Lightning</a>]<br>
+                        July 21, 2022<br>
+                        Poster Session of CreteLing 2022, University of Crete, Rethymno, Greece.<br>
+                        [<a href="./files/creteling_2022_poster.pdf" target="_blank">Poster</a>]</li>
+                    </li>
+                    <li class='filterLi syntax talk proceedings'><i><b>An Agree-based account of the gap distribution in tough-constructions vs gapped-degree phrases</b></i><br>
+                        September 24, 2022<br>
+                        15th Conference on Syntax, Phonology and Language Analysis (SinFonIJA 15), University of Udine, Udine, Italy.<br>
+                        [Talk]<br>
+                        August 12, 2022<br>
+                        24th Seoul International Conference on Generative Grammar (SICOGG 24), Online.<br>
+                        [<a href="./files/SICOGG_2022_slides.pdf" target="_blank">Talk</a>][<a href="./files/SICOGG_2022_paper.pdf" target="_blank">Paper</a>]</li>
+	            	<li class='filterLi pragmatics talk proceedings'><i><b>Alternatives are blind to some but not all kinds of context: the view from Hurford Disjunctions</b></i><br>
+                        September 16, 2022<br>
+                        27th Sinn und Bedeutung (SuB), Charles University, Prague, Czech Republic.<br>
+                        [<a href="./files/SuB_2022_slides.pdf" target="_blank">Talk</a>][<a href="./files/SuB_2022_paper.pdf" target="_blank">Paper</a>]</li>
+	            	<li class='filterLi poster morphology nlp'><i><b>Evidence for an encoding of morphological blocking effects within two English word embedding models</b></i><br>
+                        September 7, 2022<br>
+                        Architectures and Mechanisms of Language Processing 2022 (AMLaP 28), University of York, York, UK.<br>
+                        [<a href="./files/AMLaP_2022_poster.pdf" target="_blank">Poster</a>]</li>
+	            	<li class='filterLi experimental syntax talk'><i><b>Two kinds of adjective-infinitive constructions in acquisition</b></i><br>
+                        With Rachel Stacey, Cindy Torma, and Athulya Aravind.<br>
+                        September 7, 2022<br>
+                        Architectures and Mechanisms of Language Processing 2022 (AMLaP 28), University of York, York, UK.<br>
+                        [<a href="./files/AMLaP_2022_slides.pdf" target="_blank">Talk</a>]</li>
+	                <li class='filterLi pragmatics poster proceedings'><i><b>A dynamic alternative-pruning account of asymmetries in Hurford disjunctions</b></i><br>
+                        August 18, 2022<br>
+                        Student Session of the ESSLLI 2022, National University of Ireland, Galway, Ireland.<br>
+                        [<a href="./files/ESSLLI_2022_lightning_slides.pdf" target="_blank">Lightning</a>][<a href="./files/esslli_2022_poster.pdf" target="_blank">Poster</a>][<a href="https://uvaauas.figshare.com/articles/conference_contribution/H_not-Mortier_2022_A_dynamic_alternative-pruning_account_of_asymmetries_in_Hurford_Disjunctions/20368194" target="_blank">Paper</a>]</li>
+	                <li class='filterLi nlp not-english morphology proceedings talk'><i><b>Word-embeddings distinguish denominal and root-derived verbs in Semitic</b></i><br>
+                        With Ido Benbaji and Omri Doron.<br>
+                        August 16, 2022<br>
+                        End-to-End Compositional Models of Vector-Based Semantics Workshop (E2ECOMPVEC@ESSLLI 2022), National University of Ireland, Galway, Ireland.<br>
+                        [<a href="./files/ESSLLI_2022_workshop_slides.pdf" target="_blank">Talk</a>][<a href="https://arxiv.org/abs/2208.05721" target="_blank">Paper</a>]</li>
+	                <li class='filterLi syntax semantics not-english talk'><i><b>It's tough to be pretty: semantic relatedness between tough and pretty predicates</b></i><br>
+                        April 28, 2022<br>
+                        45th Generative Linguistics in the Old World (GLOW), Queen Mary University of London, London, UK.<br>
+                        [<a href="./files/GLOW_2022_handout.pdf" target="_blank">Talk</a>]</li>
             	</ul>
-                <li class='year filterLi paper experimental'>2020</li>
+                <li class='year filterLi manuscript math'>2019</li>
                 <ul>
-                	<li class='filterLi statistics paper'>With Egré, P., Spector, B., and Verheyen, S. (2020). On the Optimality of Vagueness: "Around", "Between", and the Gricean Maxims. <i>arXiv preprint <a href="https://arxiv.org/abs/2008.11841" target="_blank">arXiv:2008.11841</a></i>.</li>
+                	<li class='filterLi math experimental manuscript'><i><b>Semantics and pragmatics of approximation expressions.</b></i><br>
+                        August 2019<br>
+                        Master's Thesis, École normale supérieure. Paris.<br>
+                        [Manuscript]</li>
                 </ul>
-                <li class='year filterLi manuscript'>2019</li>
+                <li class='year filterLi proceedings math'>2015</li>
                 <ul>
-                	<li class='filterLi statistics experimental manuscript'>(2019). <i>Semantics and pragmatics of approximation expressions</i> [Master's Thesis, École normale supérieure]. Paris. </li>
-                </ul>
-                <li class='year filterLi proceedings'>2015</li>
-                <ul>
-                	<li class='filterLi proceedings'>With Kabanikhin, S., Krivorotko, O., Voronov, D., and Yermolenko, D. (2015, October). A numerical algorithm of parameter estimation for dynamic model for HIV infection of CD4+ t cells. In <i>2015 International Conference on Biomedical Engineering and Computational Technologies (SIBIRCON) (pp. 180-185)</i>. IEEE. [<a href="https://ieeexplore.ieee.org/abstract/document/7361878" target="_blank">Paper</a>]</li>
+                	<li class='filterLi proceedings math'><i><b>A numerical algorithm of parameter estimation for dynamic model for HIV infection of CD4+ t cells.</b></i><br>
+                        With Sergey Kabanikhin, Olga Krivorotko, Dmitriy Voronov, and Darya Yermolenko.<br>
+                        October 2015.<br>
+                        In <i>2015 International Conference on Biomedical Engineering and Computational Technologies (SIBIRCON) (pp. 180-185)</i>. IEEE.<br>
+                        [<a href="https://ieeexplore.ieee.org/abstract/document/7361878" target="_blank">Paper</a>]</li>
                 </ul>
             </ul>
         </article>
