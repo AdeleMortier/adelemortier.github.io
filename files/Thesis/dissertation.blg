@@ -1,0 +1,70 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: dissertation.aux
+A level-1 auxiliary file: chap1.aux
+A level-1 auxiliary file: chap2.aux
+A level-1 auxiliary file: chap3.aux
+A level-1 auxiliary file: chap4.aux
+A level-1 auxiliary file: chap5.aux
+The style file: chicago.bst
+Database file #1: biblio.bib
+Repeated entry---line 484 of file biblio.bib
+ : @inproceedings{HenotMortier2024a
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 699 of file biblio.bib
+ : @article{Schlenker2009
+ :                       ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "VanKuppevelt1995"
+Warning--I didn't find a database entry for "HenotMortier2024"
+Warning--no number and no volume in Kalomoiros2024
+Warning--no number and no volume in Kroch1972
+Warning--page numbers missing in Kroch1972
+Warning--page numbers missing in Mayr2016
+Warning--page numbers missing in Schlenker2009
+Warning--page numbers missing in Tomioka2021
+Warning--no number and no volume in Zhang2024
+Warning--page numbers missing in Zhang2024
+You've used 51 entries,
+            2861 wiz_defined-function locations,
+            969 strings with 11877 characters,
+and the built_in function-call counts, 30226 in all, are:
+= -- 2613
+> -- 1607
+< -- 10
++ -- 423
+- -- 601
+* -- 2271
+:= -- 5583
+add.period$ -- 162
+call.type$ -- 51
+change.case$ -- 308
+chr.to.int$ -- 48
+cite$ -- 59
+duplicate$ -- 1029
+empty$ -- 2159
+format.name$ -- 637
+if$ -- 5603
+int.to.chr$ -- 4
+int.to.str$ -- 0
+missing$ -- 50
+newline$ -- 261
+num.names$ -- 518
+pop$ -- 255
+preamble$ -- 1
+purify$ -- 617
+quote$ -- 0
+skip$ -- 1023
+stack$ -- 0
+substring$ -- 1749
+swap$ -- 360
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 958
+warning$ -- 8
+while$ -- 552
+width$ -- 0
+write$ -- 696
+(There were 2 error messages)

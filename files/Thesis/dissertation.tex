@@ -1,0 +1,114 @@
+%!TEX TS-program = pdflatex
+\documentclass[12pt]{report}
+\usepackage[T1]{fontenc}
+\usepackage{tgpagella}
+
+\usepackage[margin=1in]{geometry}
+%\setlength{\parindent}{0pt}
+%\setlength{\parskip}{\the\baselineskip}
+%\pagestyle{empty} 
+
+
+
+\usepackage{natbib} 
+
+
+
+\author{Adèle Hénot-Mortier}
+
+\newcommand{\citenp}[1]{\citeauthor{#1}, \citeyear{#1}}
+
+\usepackage{tikz}
+\usepackage{setspace}
+\DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
+\DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
+\DeclareMathSymbol{\vardiamond}{\mathalpha}{extraup}{87}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{centernot}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{marvosym}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{stackengine}
+\usepackage{nicefrac}
+\usepackage{dashbox}
+\usepackage{enumerate}
+\usepackage[linguistics]{forest}
+\usepackage{gb4e}
+\usepackage{wasysym} %for smileys
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\definecolor{orange}{RGB}{213, 94, 0}
+\definecolor{blue}{RGB}{0, 114, 178}
+\definecolor{lightblue}{RGB}{86, 180, 233}
+\definecolor{green}{RGB}{0, 158, 115}
+\definecolor{red}{RGB}{204, 121, 167}
+
+\newcommand{\p}{\textbf{\textcolor{blue}{p}}}
+\newcommand{\q}{\textbf{\textcolor{red}{q}}}
+\newcommand{\s}{\textbf{\textcolor{blue}{s}}}
+\renewcommand{\r}{\textbf{\textcolor{green}{r}}}
+\newcommand{\bfbox}[1]{\textcolor{blue}{\fbox{\textcolor{black}{#1}}}}
+\newcommand{\ofbox}[1]{\textcolor{orange}{\fbox{\textcolor{black}{#1}}}}
+\newcommand{\gfbox}[1]{\textcolor{green}{\fbox{\textcolor{black}{#1}}}}
+\newcommand{\pplus}{\textbf{\textcolor{orange}{p$^+$}}}
+\newcommand{\splus}{\textbf{\textcolor{orange}{s$^+$}}}
+\newcommand{\sbna}{$\exists\wedge\neg\forall$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\textref}[1]{\text{\ref{#1}}}
+
+
+
+% for inverted turnstile
+\makeatletter
+\providecommand*{\Dashv}{%
+	\mathrel{%
+		\mathpalette\@Dashv\vDash
+	}%
+}
+\newcommand*{\@Dashv}[2]{%
+	\reflectbox{$\m@th#1#2$}%
+}
+\makeatother
+
+%for roman numbering of examples in footnotes
+\makeatletter
+\renewcommand{\thexnumi}{\if@noftnote\@xsi{xnumi}\else\roman{xnumi}\fi}
+\makeatother
+
+\begin{document}
+	\tableofcontents
+
+\onehalfspacing
+\include{chap1}
+
+%redundancy under discussion
+%\include{chap2}
+
+% hurford sentences
+%\include{chap3}
+
+% scalarity
+%\include{chap4}
+
+%economy
+%\include{chap5}
+
+\chapter{On the overtness asymmetry between only and exh}
+
+
+\bibliographystyle{chicago}
+\bibliography{biblio}
+
+
+
+
+
+\end{document}

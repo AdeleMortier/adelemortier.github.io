@@ -1,0 +1,7 @@
+\contentsline {chapter}{\numberline {1}Introducing the interplay between questions and assertions}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Assertions provide information in the form of propositions}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Questions indicate which kind of information is worth providing}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Assertions as good answers to questions}{9}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Background assumptions on question semantics}{11}{subsection.1.3.1}%
+\contentsline {section}{\numberline {1.4}Disjunctions, conditionals, and the QuD}{12}{section.1.4}%
+\contentsline {chapter}{\numberline {2}On the overtness asymmetry between only and exh}{14}{chapter.2}%
