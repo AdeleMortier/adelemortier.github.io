@@ -1,297 +1,342 @@
-\chapter{Redundancy under Discussion}\label{chap:redundancy}
+\chapter{Accommodating QuDs: Qtrees}\label{chap:accommodating-quds}
 
-\textbf{Abstract.} This chapter presents novel data derived from a redundant structure ($p\vee p \vee q$) \textit{via} the \textit{or}-to-\textit{if} tautology and core properties of disjunction (commutativity, associativity). The sentences at stake exhibit differing degrees of pragmatic oddness, which represents a challenge for existing theories of redundancy. Building on a new QuD-informed model of pragmatic oddness, we propose a solution covering almost all the cases at stake, and discuss how the remaining problematic cases might be solved assuming an incremental view of redundancy.
+\textbf{Abstract.} This Chapter introduces a model of questions that is more sophisticated than standardly assumed (cf. Chapter \ref{chap:introduction}). Questions are defined as recursive partitions, or parse trees of the Context Set. This model is shown to capture fine-grained information about how questions relate to each other in terms of specificity, and what it means to answer a question. The Chapter then describes how such questions can be ``retro-engineered'' from assertions, in a compositional way--relatively similarly to the \textit{Dynamic Semantics} framework. Lastly, we suggest ways in which this more fine-grained model of questions can eventually make more fine-grained predictions in the domain of pragmatic oddness. 
 
 
-\section{Introduction}
-The disjunctive sentences in (\ref{ex2:double-disjunctions}), which are logically related to each other \textit{via} applications of $\vee$-commutativity and $\vee$-associativity, appear sharply infelicitous.\footnote{More variants could be derived, for instance $q\vee(p\vee p)$. Here, we focus on the less obvious variants where two instances of $p$ do not directly combine together.} Such sentences can be seen as pragmatically odd, because they are all contextually equivalent to their complex disjunct, $p\vee q$ or $q \vee p$
-\citep{Katzir2014}.
+\section{Making sense}
+
+\subsection{Oddness despite relevance and informativeness}
+In Chapter \ref{chap:introduction}, we have seen that assertive sentences should be informative, i.e. lead to an incremental shrinkage of the Context Set (\textbf{CS}) \citep{Stalnaker1978,Heim1982}. We have also seen that they should be relevant, i.e. shrink the CS in a way consistent with what the Question under Discussion (\textbf{QuD}) is \citep{Lewis1988,Roberts2012}. But sometimes, it is unclear what the QuD should be, and how relevance could help. The follow-up sentences in (\ref{ex2:followups}) exemplify this.
+
 \begin{exe}
-	\ex \textit{Context: Ido is supposed to present at Sinn und Bedeutung, but maybe he will not come in person.}\label{ex2:double-disjunctions}
+	\ex {--Have you seen Jo today?\\
+		--No I haven't...}
 	\begin{xlist}
-		\ex[\#] {Either Ido is at SuB, or else he is at SuB or in Cambridge.\\ \hfill $\p\vee (\p \vee \q)$}\label{ex2:pv(pvq)}
-		\ex[\#] {Either Ido is at SuB, or else he is in Cambridge or at SuB.\hfill $\p\vee (\q \vee \p)$}\label{ex2:pv(qvp)}
-		\ex[\#] {Either Ido is at SuB or in Cambridge, or else he is at SuB.\hfill $(\p \vee \q) \vee \p$}\label{ex2:(pvq)vp}
-		\ex[\#] {Either Ido is in Cambridge or at SuB, or else he is at SuB.\hfill $(\q \vee \p) \vee \p$}\label{ex2:(qvp)vp}
-	\end{xlist}
-	
-\end{exe} 
-(\ref{ex2:pv(pvq)-variants}-\ref{ex2:(qvp)vp-variants}) show variants of the sentences in (\ref{ex2:double-disjunctions}) obtained \textit{via} the \textit{or}-to-\textit{if} tautology. In each pair of sentences, the a. instances are derived by modifying the outer disjunction, while the the b. instances are derived by modifying the inner disjunction.\footnote{One could also apply the \textit{or}-to-\textit{if} tautology to \textit{both} the inner and the outer disjunction in the sentences in (\ref{ex2:double-disjunctions}). Nested conditionals however, are hard to judge. That is why we omit them in this introduction.}. Surprisingly, those variants exhibit different degrees of oddness: only (\ref{ex2:pv(nptq)}) and (\ref{ex2:(nptq)vp}) escape infelicity. This is unexpected given that all the sentences in (\ref{ex2:pv(pvq)-variants}-\ref{ex2:(qvp)vp-variants}) have same logical structure as the infelicitous sentences in (\ref{ex2:pv(pvq)}-\ref{ex2:(qvp)vp}), assuming implications are material. Particularly puzzling is the existence of a contrast \textit{between} the different b. examples in (\ref{ex2:pv(pvq)-variants}-\ref{ex2:(qvp)vp-variants}), which are derived from (\ref{ex2:pv(pvq)}-\ref{ex2:(qvp)vp}) using the \textit{same} operation.
-\begin{exe}
-	\ex Derived from (\ref{ex2:pv(pvq)}):
-	\begin{xlist}
-		\ex[\#] {If Ido is not at SuB then he is at SuB or in Cambridge.\\ $\neg \p \rightarrow (\p \vee \q)$}\label{ex2:npt(pvq)}
-		\ex[] {Either Ido is at SuB or if he is not at SuB then he is in Cambridge.\\ \hfill $\p \vee (\neg \p \rightarrow \q)$}\label{ex2:pv(nptq)}
-	\end{xlist}\label{ex2:pv(pvq)-variants}
-	\ex Derived from (\ref{ex2:pv(qvp)}):
-	\begin{xlist}
-		\ex[\#] {If Ido is not at SuB then he is in Cambridge or at SuB.\\ \hfill $\neg \p \rightarrow (\q \vee \p)$}\label{ex2:npt(qvp)}
-		\ex[\#] {Either Ido is at SuB or if he is not in Cambridge then he is at SuB.\\ \hfill $\p \vee (\neg \q \rightarrow \p)$}\label{ex2:pv(nqtp)}
-	\end{xlist}\label{ex2:pv(qvp)-variants}
-	\ex Derived from (\ref{ex2:(pvq)vp}):
-	\begin{xlist}
-		\ex[\#] {If it's not true that Ido is at SuB or in Cambridge, then he is at SuB.\\ \hfill $\neg (\p \vee \q) \rightarrow \p$}\label{ex2:n(pvq)tp}
-		\ex[?] {Either Ido is in Cambridge if not at SuB, or he is at SuB.\\ \hfill $(\neg \p \rightarrow \q) \vee \p$}\label{ex2:(nptq)vp}
-	\end{xlist}\label{ex2:(pvq)vp-variants}
-	\ex Derived from (\ref{ex2:(qvp)vp}):
-	\begin{xlist}
-		\ex[\#] {If it's not true that Ido is in Cambridge or at SuB, then he is at SuB.\\ \hfill $\neg (\q \vee \p) \rightarrow \p$}\label{ex2:n(qvp)tp}
-		\ex[\#] {Either Ido is at SuB if not in Cambridge, or he is at SuB.\\ \hfill $(\neg \q \rightarrow \p) \vee \p$}\label{ex2:(nqtp)vp}
-	\end{xlist}\label{ex2:(qvp)vp-variants}
-\end{exe} 
-
-The intuitive generalization seems to be the following: the sentences in (\ref{ex2:pv(pvq)-variants}-\ref{ex2:(qvp)vp-variants}) that retain an outer disjunction, and whose complex (conditional) disjunct has the negation of their simple disjunct as antecedent, are rescued.\\
-
-In this Chapter, we propose that this descriptive generalization follows from the idea that oddness arises when sentences cannot evoke any well-formed accommodated Questions under Discussion \citep{VanKuppevelt1995,Roberts1996}; and that disjunctions and conditionals give rise to different QuDs. Specifically, disjunctions raise QuDs making both disjuncts at issue \textit{in parallel} \cite{Simons2001,Zhang2022}, while conditionals ``stack'' the QuDs of their antecedent and consequent. This model of accommodated QuDs leads us to define a new notion of redundancy, \textsc{Q-Redundancy}, that applies to pairs formed by LFs and accommodated QuDs -- instead of just LFs. Under this view, sentences like (\ref{ex2:pv(nptq)}) and (\ref{ex2:(nptq)vp}) whose re-occurring material ($p$), each time plays different roles w.r.t. the QuD (typically, as a disjunct, or as a conditional ``restrictor''), can escape \textsc{Q-Redundancy}.\\
-
-Assuming that the sole application $\vee$-commutativity does not affect oddness (generally in line with the data presented here\footnote{We discuss the contrast between (\ref{ex2:pv(nptq)}) and (\ref{ex2:(nptq)vp}) towards the end of this Chapter.}), we now focus on sentences (\ref{ex2:pv(pvq)}), (\ref{ex2:npt(pvq)}), (\ref{ex2:pv(nptq)}), (\ref{ex2:pv(nqtp)}), and (\ref{ex2:n(pvq)tp}), repeated in that order in (\ref{ex2:target-sentences}).
-\begin{exe}
-	\ex \label{ex2:target-sentences}
-	\begin{xlist}
-		\ex[\#] {Either Ido is at SuB, or else he is at SuB or in Cambridge.\\ \hfill $\p\vee (\p \vee \q)$}\label{ex2:pv(pvq)-repeated}
-		\ex[\#] {If Ido is not at SuB then he is at SuB or in Cambridge.\\ \hfill $\neg \p \rightarrow (\p \vee \q)$}\label{ex2:npt(pvq)-repeated}
-		\ex[] {Either Ido is at SuB or if he is not at SuB then he is in Cambridge.\\ \hfill $\p \vee (\neg \p \rightarrow \q)$}\label{ex2:pv(nptq)-repeated}
-		\ex[\#] {Either Ido is at SuB or if he is not in Cambridge then he is at SuB.\\ \hfill $\p \vee (\neg \q \rightarrow \p)$}\label{ex2:pv(nqtp)-repeated}
-		\ex[\#] {If it's not true that Ido is at SuB or in Cambridge, then he is at SuB.\\ \hfill $\neg (\p \vee \q) \rightarrow \p$}\label{ex2:n(pvq)tp-repeated}
-	\end{xlist}
+		\ex[\#] {I heard she is at a conference in Paris or France.}\label{ex2:hurford-followup}
+		\ex[] {Either she is sick, or if she's not sick, she is at a conference.}\label{ex2:non-red-followup}
+		\ex[\#] {Either she is sick, or if she's not at a conference, she is sick.}\label{ex2:red-followup}
+	\end{xlist} \label{ex2:followups}
 \end{exe}
-The rest of this Chapter is structured as follows. In the next Section, we briefly review why some of the sentences in (\ref{ex2:target-sentences}) are problematic for existing accounts of pragmatic oddness. In Section \ref{sec:my-account} we present a model of accommodated QuDs and show how it captures the target asymmetries. In Section \ref{sec:exploration} we explore further predictions of the model in elaborations of the sentences in (\ref{ex2:target-sentences}). Section \ref{sec:conclusion} concludes the Chapter.
 
+In these answers, the explicit question \textit{Have you seen Jo today?} is first settled, so that there is not explicit QuD left to be addressed. Yet, it appears that the follow-up assertions address a different question, along the lines of \textit{Where is Jo?}. But how exactly this question gets derived from the sentences at stake, remains unclear. Additionally, not all follow-up sentences appear felicitous. (\ref{ex2:hurford-followup}) instantiates a Hurford Disjunction \citep{Hurford1974}, i.e., at the descriptive level, a disjunction whose disjuncts are in a relation of contextual entailment (\textit{Paris} $\vdash$ \textit{France}). This disjunction is informative: it says that \textit{Jo is at a conference in France}. It is also relevant to the question that gets intuitively inferred from the exchange: it identifies an event and a country where Jo is at the moment. Yet, (\ref{ex2:hurford-followup}) is sharply odd. There are in fact many successful accounts of (\ref{ex2:hurford-followup})'s oddness, building on constraints independent of the QuD and \textsc{Relevance}.
 
-\section{Previous accounts of pragmatic oddness}\label{sec:previous-accounts}
-In this Section we briefly present three existing accounts of pragmatically odd sentences: Local Redundancy Checking \citep{Katzir2014}, Super-Redundancy \citep{Kalomoiros2024}, and Non-triviality \cite{Mayr2016}. The first two accounts are based on the notion of redundancy, which can be traced back to Grice's Maxim of Manner \cite{Grice1975}. The last account exploits the notion of triviality \cite{Stalnaker1974}. We show that all three accounts straightforwardly capture the double disjunction case (\ref{ex2:pv(pvq)-repeated}), but that the first two fall short in explaining the contrast between the felicitous (\ref{ex2:pv(nptq)-repeated}) vs. (\ref{ex2:npt(pvq)-repeated}), (\ref{ex2:pv(nqtp)-repeated}), and (\ref{ex2:n(pvq)tp-repeated}). We highlight two independent limitations of the third account.
-\subsection{Local Redundancy Checking}
-\citet{Katzir2014} propose that the semantic computation evaluates, at
-certain nodes, whether the composition principle that applies there is non-vacuous. This gives rise to the principle in (\ref{ex2:local-redundancy-checking}).
+But we will see in Chapter \ref{chap:redundancy} that such accounts fall short in explaining the contrast between (\ref{ex2:non-red-followup}) and (\ref{ex2:red-followup}). These two follow-up sentences are both informative: assuming implication is material, they both mean that Jo is sick or at a conference. They also appear intuitively relevant to a QuD along the lines of \textit{Where is Jo?}. Yet, (\ref{ex2:non-red-followup}) makes perfect sense, while (\ref{ex2:red-followup}) does not seem to make any sense. The goal is then to devise a pragmatic model of these sentences in which (i) they package information differently, and (ii) unlike (\ref{ex2:hurford-followup}) and (\ref{ex2:red-followup}), (\ref{ex2:non-red-followup}), packages information in a way that is pragmatically optimal.
+
+\subsection{Overview  and motivation of the Chapter}
+The machinery we introduce in this Chapter aims to account the above datapoints (among others), by relating the oddness of the follow-ups in (\ref{ex2:hurford-followup}) and (\ref{ex2:red-followup}) to the QuD(s) inferred from them. The fundamental principle we want to operationalize is \textit{Question-Answer Congruence} (henceforth \textbf{QAC}), repeated in (\ref{ex2:q-a-congruence}). 
+
 \begin{exe}
-	\ex {\textit{Local Redundancy Checking.} $S$ is deviant if $S$ contains $\gamma$ s.t. $\llbracket \gamma \rrbracket = \llbracket O(\alpha, \beta) \rrbracket \equiv_c \llbracket\zeta \rrbracket, \ \zeta \in \lbrace \alpha, \beta\rbrace$.}\label{ex2:local-redundancy-checking}
+	\ex {\textit{Question-Answer Congruence (\textbf{QAC}, \citenp{Katzir2015}).} A felicitous assertion has to be a good answer to a good question.}\label{ex2:q-a-congruence}
 \end{exe}
-This predicts the double disjunction (\ref{ex2:pv(pvq)-repeated}) to be deviant, because, at the level of the highest disjunction, it is contextually equivalent to its complex disjunct ($p\vee q$). 
-But, assuming conditionals denote material implications, this also predicts (\ref{ex2:npt(pvq)-repeated}-\ref{ex2:n(pvq)tp-repeated}) to be deviant. The felicity of (\ref{ex2:pv(nptq)-repeated}) is therefore not derived.\\
+
+Chapter \ref{chap:introduction} showed that \textsc{Relevance} could rule out a wide range of question-answer pairs, and as such could constitute a partial implementation of QAC. The dissertation will show that, under a certain interpretation of ``good answer'' and ``good question'', many more cases of pragmatic oddness can be understood as an accross-the-board failure of QAC.
+
+In ths Chapter, we will lay out the groundwork for this analysis, by first introducing a more sophisticated model of questions, based on recursive partitions or trees, instead of mere partitions of the CS. This model is building on \citet{Buring2003,Ippolito2019,Zhang2022}, among many others. Additionally, we will suggest that questions can be evoked by assertions in a compositional way, such that more complex sentence tend to give rise to more structurally complex questions, and also, such that sentences involving different operators (specifically, disjunctions and conditionals), give rise to different kinds of questions. In this model, each sentence may be associated with multiple potential questions. In line with QAC, a sentence which cannot be felicitously paired with \textit{any} question will be deemed odd. This can happen if \textit{all} the pairs formed by a sentence and a question it evokes, are themselves ill-formed. This Chapter will focus on what it takes to get there: how questions should be modeled, and how question-answer pairs are generated from simple and more complex sentences. Chapters \ref{chap:redundancy} and \ref{chap:relevance} will introduce specific constraints on question-answer pairs allowing to capture data like (\ref{ex2:followups}).
 
 
-The issue persists if we adopt a non-material analysis of conditionals. Under this assumption, a conditional is never contextually equivalent to its antecedent or consequent, regardless of what they denote. So, one can focus on disjunctive nodes when evaluating (\ref{ex2:local-redundancy-checking}) and computing candidate simplifications potentially leading to redundancy. For (\ref{ex2:npt(pvq)-repeated}-\ref{ex2:pv(nptq)-repeated}) the only possible simplification is then $\neg p \rightarrow q$, and for (\ref{ex2:pv(nqtp)-repeated}-\ref{ex2:n(pvq)tp-repeated}), it is $\neg q \rightarrow p$. This is shown in (\ref{ex2:lrc-simplifications}); we focus on deleting $p$-nodes in these LFs, because deleting the only $q$-node would for sure not lead to the same meaning.
+This kind of machinery is independently motivated by the idea that sentences are never uttered in and of themselves; their purpose is to answer a question, overt or not, and to induce further questions \cite{Roberts1996}. A pragmatic model of assertion therefore needs to integrate what sentences mean, but also what kind of information structure they evoke. Unlike inquisitive semantics \citep{Mascarenhas2008,Ciardelli2009,Groenendijk2009,Ciardelli2018}, which proposes an \textit{unified} view of questions and assertions at the semantic level, what we propose here is a form of inquisitive \textit{pragmatics}: sentences are still assigned ``standard'' extensional/intensional meaning, but also have an inquisitive contribution at the pragmatic level. In fact, the current machinery may be closer in spirit to Dynamic Semantics \citep{Heim1983a,Heim1983b}, where different operators give rise to different incremental updates of the Context Set. Under our view, different operators will give rise to different \textit{parses} of the Context Set, at the inquisitive level. This will eventually allow to capture a contrast between (\ref{ex2:red-followup}) and (\ref{ex2:non-red-followup}). On top of this model, Chapters \ref{chap:redundancy} and \ref{chap:relevance} will introduce constraints on pairs formed by sentences and their accommodated questions, allowing to capture the oddness of e.g. (\ref{ex2:hurford-followup}) and (\ref{ex2:red-followup}). Chapter \ref{chap:redundancy} will discuss (\ref{ex2:non-red-followup}), (\ref{ex2:red-followup}), and variants thereof, arguing that some, but crucially not all variants, appear redundant once inferred QuDs are taken into consideration. Chapter \ref{chap:redundancy} will also cover the case of (\ref{ex2:hurford-followup}), and some of its variants.
+
+We now proceed to define questions, not just as partition, but rather, as parse trees of the Context Set, that we will call Qtrees.
+
+\section{Structure of Question Trees}
+
+\subsection{From partitions to recursive partitions, to parse trees}
+Building on the standard model presented in Chapter \ref{chap:introduction}, we introduce a more sophisticated view of the pragmatics of questions. This model will incorporate the idea that questions have internal structure, and specifically, are hierarchically organized. A question such as (\ref{ex2:city-question}) for instance, appears more \textit{fine-grained}, than a question like (\ref{ex2:country-question}). Alternatively, whatever proposition identifies a cell in (\ref{ex2:city-question}), also identifies a cell in (\ref{ex2:city-question}). This will be accounted for, as part of the internal structure of questions.
 
 \begin{exe}
-	\ex Deriving the only reasonable simplifications of (\ref{ex2:npt(pvq)-repeated}-\ref{ex2:n(pvq)tp-repeated}) under the assumption conditionals are non-material. \label{ex2:lrc-simplifications}
+	\ex 
 	\begin{xlist}
-		\ex {(\ref{ex2:npt(pvq)-repeated}): $\neg \p \rightarrow (\cancel{\p \vee} \q) \leadsto \neg \p \rightarrow \q$}\label{ex2:npt(pvq)-simp}
-		\ex {(\ref{ex2:pv(nptq)-repeated}): $\cancel{\p \vee} (\neg \p \rightarrow \q) \leadsto \neg \p \rightarrow \q$}\label{ex2:pv(nptq)-simp}
-		\ex {(\ref{ex2:pv(nqtp)-repeated}): $\cancel{\p \vee} (\neg \q \rightarrow \p) \leadsto \neg \q \rightarrow \p$}\label{ex2:pv(nqtp)-simp}
-		\ex {(\ref{ex2:n(pvq)tp-repeated}): $\neg (\cancel{\p \vee} \q) \rightarrow \p \leadsto \neg \q \rightarrow \p$}\label{ex2:n(pvq)tp-simp}
+		\ex {In which city did Jo grow up?}\label{ex2:city-question}
+		\ex {In which country did Jo grow up?}\label{ex2:country-question}
 	\end{xlist}
 \end{exe}
 
-
-Under a strict analysis of conditionals, (\ref{ex2:npt(pvq)-repeated}) and (\ref{ex2:n(pvq)tp-repeated}) are equivalent to their respective simplifications and thus deviant, while (\ref{ex2:pv(nptq)-repeated}) and (\ref{ex2:pv(nqtp)-repeated}) are not. This is shown in (\ref{ex2:lrc-strict}). But importantly, this is not the expected contrast. 
+First, let us observe these intuitions about question specificity are \textit{not} readily cashed out by standard partitions or alternative set associated with questions. In the case of (\ref{ex2:city-question}) and (\ref{ex2:country-question}), these two notions coincide--\textit{modulo} intersection with the CS. In partition talk, (\ref{ex2:city-question}) induces a by-city partition of the CS (see (\ref{ex2:city-partition}) and Figure \ref{fig2:city-partition}), while (\ref{ex2:country-question}) induces a by-country partition (see (\ref{ex2:country-partition}) and Figure \ref{fig2:country-partition}). But nothing in (\ref{ex2:city-question})'s partition signals that each of its cells is properly contained in a cell of (\ref{ex2:country-question})'s partition. This property can de derived from the two structures, but is not readily \textit{encoded} by them.
 
 \begin{exe}
-	\ex\label{ex2:lrc-strict} Local Redundancy Checking on (\ref{ex2:npt(pvq)-repeated}-\ref{ex2:n(pvq)tp-repeated}) assuming strict conditionals and the simplifications in (\ref{ex2:lrc-simplifications}).
+	\ex 
 	\begin{xlist}
-		\ex {(\ref{ex2:npt(pvq)-repeated}) $\equiv$ every $\neg \p$-world is a \p- or a \q-world $\equiv$ every $\neg \p$-world is a \q-world $\equiv$ $\neg \p \rightarrow \q$ $\equiv$ (\ref{ex2:npt(pvq)-simp})}
-		\ex {(\ref{ex2:pv(nptq)-repeated}) $\equiv$ \p{} or every $\neg$\p-world is a \q-world $\not\equiv$ every $\neg$\p-world is a \q-world $\equiv$ $\neg \p \rightarrow \q \equiv$ (\ref{ex2:pv(nptq)-simp})}
-		\ex {(\ref{ex2:pv(nqtp)-repeated}) $\equiv$ \p{} or every $\neg$\q-world is a \p-world $\not\equiv$ every $\neg$\q-world is a \p-world $\equiv$ $\neg \q \rightarrow \p \equiv$ (\ref{ex2:pv(nqtp)-simp})}
-		\ex {(\ref{ex2:n(pvq)tp-repeated}) $\equiv$ every $\neg(\p \vee \q)$-world is a \p-world $\equiv$ every $(\neg\p \wedge \neg\q)$-world is a \p-world $\equiv$ every $\neg\q$-world is a \p-world $\equiv$ $\neg \q \rightarrow \p \equiv$ (\ref{ex2:n(pvq)tp-simp})}
+		\ex {$\llbracket$ In which city did Jo grow up?$\rrbracket^w$ =\\$\lbrace p \ | \ \exists l. \ \text{$l$ is a city} \wedge p = \lambda w'. \ \text{Jo grew up in $l$ in $w'$}\rbrace$}\label{ex2:city-partition}
+		\ex {$\llbracket$ In which country did Jo grow up?$\rrbracket^w$ =\\$\lbrace p \ | \ \exists l. \ \text{$l$ is a country} \wedge p = \lambda w'. \ \text{Jo grew up in $l$ in $w'$}\rbrace$}\label{ex2:country-partition}
 	\end{xlist}
 \end{exe}
 
-Under a variably strict analysis, all the cases but (\ref{ex2:npt(pvq)-repeated}) are predicted to be felicitous. Again, this is not the expected contrast.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.48\linewidth}
+		\centering
+		\scalebox{1.25}{
+		\begin{tikzpicture}	
+			\draw [draw=black] (0, 0) rectangle (4,4) ;
+			\draw [draw=orange] (0.2, 2.15) rectangle (0.975, 2.925) node[pos=.5] {\tiny \textcolor{orange}{Nice}};
+			\draw [draw=orange] (1.075, 2.15) rectangle (1.85, 2.925) node[pos=.5] {\tiny \textcolor{orange}{...}};
+			\draw [draw=orange] (0.2, 3.025) rectangle (0.975, 3.8) node[pos=.5] {\tiny \textcolor{orange}{Paris}};
+			\draw [draw=orange] (1.075, 3.025) rectangle (1.85, 3.8) node[pos=.5] {\tiny \textcolor{orange}{Lyon}};
+			\draw [draw=orange] (0.2, 0.2) rectangle (0.975, 0.975) node[pos=.5] {\tiny \textcolor{orange}{Milan}};
+			\draw [draw=orange] (1.075, 0.2) rectangle (1.85, 0.975) node[pos=.5] {\tiny \textcolor{orange}{...}};
+			\draw [draw=orange] (0.2, 1.075) rectangle (0.975, 1.85) node[pos=.5] {\tiny \textcolor{orange}{Rome}};
+			\draw [draw=orange] (1.075, 1.075) rectangle (1.85, 1.85) node[pos=.5] {\tiny \textcolor{orange}{Turin}};
+			
+			\draw [draw=orange] (2.15, 0.2) rectangle (2.925, 0.975) node[pos=.5] {\tiny \textcolor{orange}{...}};
+			\draw [draw=orange] (3.025, 0.2) rectangle (3.8, 0.975) node[pos=.5] {\tiny \textcolor{orange}{...}};
+			\draw [draw=orange] (2.15, 1.075) rectangle (2.925, 1.85) node[pos=.5] {\tiny \textcolor{orange}{...}};
+			\draw [draw=orange] (3.025, 1.075) rectangle (3.8, 1.85) node[pos=.5] {\tiny \textcolor{orange}{...}};
+			
+			\draw [draw=orange] (2.15, 2.15) rectangle (2.925, 2.925) node[pos=.5] {\tiny \textcolor{orange}{Leipzig}};
+			\draw [draw=orange] (3.025, 2.15) rectangle (3.8, 2.925) node[pos=.5] {\tiny \textcolor{orange}{...}};
+			\draw [draw=orange] (2.15, 3.025) rectangle (2.925, 3.8) node[pos=.5] {\tiny \textcolor{orange}{Berlin}};
+			\draw [draw=orange] (3.025, 3.025) rectangle (3.8, 3.8) node[pos=.5] {\tiny \textcolor{orange}{Munich}};
+		\end{tikzpicture}}
+		\caption{By-city partition associated with (\ref{ex2:city-partition}). Cells are ordered on a grid for clarity only.}\label{fig2:city-partition}
+	\end{subfigure}\hfill
+	\begin{subfigure}[t]{.48\linewidth}
+		\centering
+		\scalebox{1.25}{
+		\begin{tikzpicture}	
+			\draw [draw=black] (0, 0) rectangle (4,4);
+			\draw [draw=blue] (0.1, 2.05) rectangle (1.95, 3.9) node[pos=.5] {\tiny \textcolor{blue}{France}};
+			\draw [draw=blue] (2.05, 0.1) rectangle (3.9, 1.95) node[pos=.5] {\tiny \textcolor{blue}{...}};
+			\draw [draw=blue] (0.1, 0.1) rectangle (1.95, 1.95) node[pos=.5] {\tiny \textcolor{blue}{Italy}};
+			\draw [draw=blue] (2.05, 2.05) rectangle (3.9, 3.9) node[pos=.5] {\tiny \textcolor{blue}{Germany}};
+		\end{tikzpicture}}
+		\caption{By-country partition associated with (\ref{ex2:country-partition}). Cells are ordered on a grid for clarity only.}
+	\end{subfigure}
+	\caption{Standard partitions induced by a fine-grained (\ref{ex2:city-partition}) and a coarser-grained question (\ref{ex2:country-partition}).}\label{fig2:country-partition}
+\end{figure}
 
+Intuitively, adding ``brackets'' to (\ref{ex2:city-partition}) grouping together propositions talking about cities belonging to the same country, would help capture the desired property. This is done in (\ref{ex2:city-parse}). (\ref{ex2:city-parse}) then defines a set of sets of propositions. 
 \begin{exe}
-	\ex\label{ex2:lrc-vstrict} Local Redundancy Checking on (\ref{ex2:npt(pvq)-repeated}-\ref{ex2:n(pvq)tp-repeated}) assuming variably strict conditionals and the simplifications in (\ref{ex2:lrc-simplifications}).
-	\begin{xlist}
-		\ex {(\ref{ex2:npt(pvq)-repeated}) $\equiv$ every closest $\neg \p$-world is a \p- or a \q-world $\equiv$ every closest $\neg \p$-world is a \q-world $\equiv$ $\neg \p \rightarrow \q$ $\equiv$ (\ref{ex2:npt(pvq)-simp})}
-		\ex {(\ref{ex2:pv(nptq)-repeated}) $\equiv$ \p{} or every closest $\neg$\p-world is a \q-world $\not\equiv$ every closest $\neg$\p-world is a \q-world $\equiv$ $\neg \p \rightarrow \q \equiv$ (\ref{ex2:pv(nptq)-simp})}
-		\ex {(\ref{ex2:pv(nqtp)-repeated}) $\equiv$ \p{} or every closest $\neg$\q-world is a \p-world $\not\equiv$ every closest $\neg$\q-world is a \p-world $\equiv$ $\neg \q \rightarrow \p \equiv$ (\ref{ex2:pv(nqtp)-simp})}
-		\ex {(\ref{ex2:n(pvq)tp-repeated}) $\equiv$ every closest $\neg(\p \vee \q)$-world is a \p-world $\equiv$ every closest $(\neg\p \wedge \neg\q)$-world is a \p-world $\not\equiv$ every closest $\neg\q$-world is a \p-world $\equiv$ $\neg \q \rightarrow \p \equiv$ (\ref{ex2:n(pvq)tp-simp})}
-	\end{xlist}
+	\ex {$\llbracket$ In which city did Jo grow up?$\rrbracket^w$ =\\$\lbrace\lbrace p \ | \ \exists l. \ \text{$l$ is a city in $l'$} \wedge \ p = \lambda w'. \ \text{Jo grew up in $l$ in $w'$}\rbrace \ | \ l' \text{ is a country} \rbrace$}\label{ex2:city-parse}
 \end{exe}
 
+Grouping together cells within bigger sets (which are cells themselves), amounts to building a \textit{recursive} partition of the CS. In our example, the ``outer'' partition is by-country, and the ``inner'' partition, is by-city. Graphically, this is equivalent to adding the ``blue rectangles'' from Figure \ref{fig2:country-partition}, to Figure \ref{fig2:city-partition}. This operation is performed in Figure \ref{fig2:city-recursive-partition}. The tree in Figure \ref{fig2:city-tree} is yet another, more readable way to represent the same thing. In this tree, each node refers to a proposition of the form \textit{Jo grew up in l}, $l$ denoting a city or a country. Each node is understood as intersected with the CS, which corresponds to the root of the tree. Nodes appearing at the same level (forming a ``layer''),partition the CS. Deeper layers, correspond to finer-grained partitions.
 
-\subsection{Super-Redundancy}
-%HDs feel redundant; while HCs sound locally irrelevant.
-%Talk about repairs: the fact the repairs are differnt suggets the violation stems from a different source.
-\citet{Kalomoiros2024}, elaborating on \citet{Katzir2014}'s view, introduces \textit{Super-Redundancy} to cover a wider variety of cases in the domain of Hurford Sentences \citep{Hurford1974,Marty2022,Mandelkern2018}. Roughly, a sentence is super-redundant if there is no way of strengthening one of its subconstituents that would make the resulting sentence non-redundant. 
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{tikzpicture}	
+			\draw [draw=black] (0, 0) rectangle (4,4) ;
+			\draw [draw=blue] (0.1, 2.05) rectangle (1.95, 3.9);
+				\draw [draw=orange] (0.2, 2.15) rectangle (0.975, 2.925);
+				\draw [draw=orange] (1.075, 2.15) rectangle (1.85, 2.925);
+				\draw [draw=orange] (0.2, 3.025) rectangle (0.975, 3.8);
+				\draw [draw=orange] (1.075, 3.025) rectangle (1.85, 3.8);
+			\draw [draw=blue] (2.05, 0.1) rectangle (3.9, 1.95) node[pos=.5] {\scriptsize \textcolor{blue}{...}};
+			\draw [draw=blue] (0.1, 0.1) rectangle (1.95, 1.95);
+				\draw [draw=orange] (0.2, 0.2) rectangle (0.975, 0.975);
+				\draw [draw=orange] (1.075, 0.2) rectangle (1.85, 0.975);
+				\draw [draw=orange] (0.2, 1.075) rectangle (0.975, 1.85);
+				\draw [draw=orange] (1.075, 1.075) rectangle (1.85, 1.85);
+			\draw [draw=blue] (2.05, 2.05) rectangle (3.9, 3.9);
+				\draw [draw=orange] (2.15, 2.15) rectangle (2.925, 2.925);
+				\draw [draw=orange] (3.025, 2.15) rectangle (3.8, 2.925);
+				\draw [draw=orange] (2.15, 3.025) rectangle (2.925, 3.8);
+				\draw [draw=orange] (3.025, 3.025) rectangle (3.8, 3.8);
+		\end{tikzpicture}
+		\caption{Recursive partition view}\label{fig2:city-recursive-partition}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.5\linewidth}
+		\centering
+		\vspace{-4.4cm}
+		\begin{forest}
+			[{CS\\
+				Jo grew up in...}[\textcolor{blue}{France}[\textcolor{orange}{{Paris}}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}]][\textcolor{blue}{Germany}[\textcolor{orange}{Berlin}][\textcolor{orange}{...}]][\textcolor{blue}{Italy}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]
+		\end{forest}
+		\caption{Tree view}\label{fig2:city-tree}
+	\end{subfigure}
+	\caption{Alternative representations of the CS corresponding to the nested sets of (\ref{ex2:city-parse}).}\label{tree:country-city-parse}
+\end{figure}
 
-
+(\ref{ex2:set-tree-bijection}) formally defines the bijective mapping between recursive sets of propositions (dubbed \textit{inductive propositions}) like (\ref{ex2:city-parse}), and tree structures like Figure \ref{fig2:city-tree}.
 \begin{exe}
-	\ex {\textit{Super-Redundancy.} A sentence $S$ is infelicitous if it contains a subconstituent $C$ combining with a binary operator, s.t. $(S)^-_C$ is defined and for all $D$, $(S)^-_C \equiv S_{Str(C, D)}$.}
-\end{exe}
-Roughly, $(S)^-_C$ in the above definition designates $S$ where $C$ got deleted, while $Str(C, D)$ refers to a strengthening of $C$ with $D$, defined inductively and whose key property is that it commutes with negation: $Str(\neg\alpha, D) = \neg (Str(\alpha, D))$ -- as well as with binary operators $Str(O(\alpha, \beta), D) = O(Str(\alpha, D), Str(\beta, D))$ . $S_{Str(C, D)}$ designates $S$ where $C$ is replaced by $Str(C, D)$.
-
-Because strengthenings project from inside negation, this account predicts that overt negation influences the evaluation of redundancy. More specifically, it predicts that two LFs that have same logical structure \textit{modulo} double-negation introduction and a variable change of the form $p' := \neg p$, may be such that one is Super-Redundant (henceforth \textbf{SR}) while the other is not. However, this account fails to predict any contrast for (\ref{ex2:target-sentences}) assuming conditional are material, precisely because those sentences are logically isomorphic \textit{without} any appeal to double negation introduction. (\ref{ex2:target-sentences-sr}) shows that under the material implication hypothesis, all the sentences in (\ref{ex2:target-sentences}) can have one of their $p$-denoting constituents locally strengthened to yield an expression equivalent to the sentence without this $p$-constituent. In other words, (\ref{ex2:target-sentences}) are all predicted to be SR.
-
-\begin{exe}
-	\ex All the sentences in (\ref{ex2:target-sentences}) are SR for the same reason (material case). \label{ex2:target-sentences-sr}
-	\begin{xlist}
-		\ex {We show (\ref{ex2:pv(pvq)-repeated})=$\p\vee (\p \vee \q)$ is SR.\\
-			Take C = (\ref{ex2:pv(pvq)-repeated})'s 1st disjunct = \p.\\ We then have (\ref{ex2:pv(pvq)-repeated})$^-_C = \p \vee \q$\\
-			$\forall D. \ (\textref{ex2:pv(pvq)-repeated})_{Str(C, D)} =  (\p \wedge D) \vee (\p \vee \q) \equiv (\p \vee \q) \wedge (D \vee \p \vee \q) \equiv \p \vee \q = (\textref{ex2:pv(pvq)-repeated})^-_C$ 
-		}\label{ex2:pv(pvq)-repeated-sr}
-		\ex {We show  (\ref{ex2:npt(pvq)-repeated})=$\neg \p \rightarrow (\p \vee \q)$ is SR.\\
-			Take C = \p{} in (\ref{ex2:npt(pvq)-repeated})'s antecedent.\\
-			We then have (\ref{ex2:npt(pvq)-repeated})$^-_C = \p \vee \q$\\
-			$\forall D. \ (\textref{ex2:npt(pvq)-repeated})_{Str(C, D)} =  \neg(\p \wedge D) \rightarrow (\p \vee \q) \equiv (\p \wedge D) \vee (\p \vee \q) \equiv \p \vee \q = (\textref{ex2:npt(pvq)-repeated})^-_C$}\label{ex2:npt(pvq)-repeated-sr}
-		\ex {We show  (\ref{ex2:pv(nptq)-repeated})=$\p \vee (\neg \p \rightarrow \q)$ is SR.\\
-			Take C = (\ref{ex2:pv(nptq)-repeated})'s first disjunct = \p.\\ We then have (\ref{ex2:pv(nptq)-repeated})$^-_C = \neg\p \rightarrow \q$\\
-			$\forall D. \ (\textref{ex2:pv(nptq)-repeated})_{Str(C, D)} =  (\p \wedge D) \vee (\neg\p \rightarrow \q) \equiv (\p \wedge D) \vee (\p \vee \q) \equiv \p \vee \q = (\textref{ex2:pv(nptq)-repeated})^-_C$
-			}\label{ex2:pv(nptq)-repeated-sr}
-		\ex {We show  (\ref{ex2:pv(nqtp)-repeated})=$\p \vee (\neg \q \rightarrow \p)$ is SR.\\
-			Take C = (\ref{ex2:pv(nqtp)-repeated})'s first disjunct = \p.\\ We then have (\ref{ex2:pv(nqtp)-repeated})$^-_C = \neg\q \rightarrow \p$\\
-			$\forall D. \ (\textref{ex2:pv(nqtp)-repeated})_{Str(C, D)} =  (\p \wedge D) \vee (\neg\q \rightarrow \p) \equiv (\p \wedge D) \vee (\p \vee \q) \equiv \p \vee \q = (\textref{ex2:pv(nqtp)-repeated})^-_C$}\label{ex2:pv(nqtp)-repeated-sr}
-		\ex {We show  (\ref{ex2:n(pvq)tp-repeated})=$\neg (\p \vee \q) \rightarrow \p$ is SR.\\
-			Take C = (\ref{ex2:n(pvq)tp-repeated})'s consequent = \p.\\ We then have  (\ref{ex2:n(pvq)tp-repeated})$^-_C = \neg(\p \vee \q)$\\
-			$\forall D. \ (\textref{ex2:n(pvq)tp-repeated})_{Str(C, D)} = \neg(\p \vee \q) \rightarrow (\p \wedge D) \equiv (\p \vee \q) \vee (\p \wedge D) \equiv \p \vee \q = (\textref{ex2:n(pvq)tp-repeated})^-_C$}\label{ex2:n(pvq)tp-repeated-sr}
-	\end{xlist}
-\end{exe}
-
-The problem persists under a strict analysis of conditionals. In that case, contrasts are predicted, but not between the right sentences: (\ref{ex2:pv(pvq)-repeated}), (\ref{ex2:npt(pvq)-repeated}) and (\ref{ex2:n(pvq)tp-repeated}) are correctly predicted to be SR, (\ref{ex2:pv(nptq)-repeated}) is correctly predicted to be non-SR, but (\ref{ex2:pv(nqtp)-repeated}) is \textit{incorrectly} predicted to be non-SR. This is shown in (\ref{ex2:target-sentences-sr-strict}). It appears that SR does not distinguish between the felicitous case where re-occurring material (\p{} in our case) is in the antecedent of a conditional, and the odd case where it appears in the consequent.
-
-\begin{exe}
-	\ex Super-Redundancy and strict conditionals incorrectly predict (\ref{ex2:pv(nqtp)-repeated}) to be non-SR.\footnote{Note that, to prove (\ref{ex2:pv(nptq)-repeated}) and (\ref{ex2:pv(nqtp)-repeated}) are non-SR, we focus on setting $C$ as the constituent that combines with a binary operator that is not conditional -- typically here, the disjunctive operator. We do this, despite the fact that Super Redundancy in principle has to be checked for every binary operand. But locally strengthening the other possible constituents would lead to compare a (locally strengthened) strict conditional to a disjunction. Such a comparison trivially leads to non-equivalence.} \label{ex2:target-sentences-sr-strict}
-	\begin{xlist}
-		\ex {We show  (\ref{ex2:npt(pvq)-repeated})=$\neg \p \rightarrow (\p \vee \q)$ is SR.\\
-			 Take C = \p{} in (\ref{ex2:npt(pvq)-repeated})'s disjunction.\\ We then have (\ref{ex2:npt(pvq)-repeated})$^-_C = \neg\p \rightarrow \q$\\
-			$\forall D. \ (\textref{ex2:npt(pvq)-repeated})_{Str(C, D)} =  \neg\p \rightarrow ((\p\wedge D) \vee \q) \equiv \neg\p \rightarrow ((\p \vee \q)\wedge(D\vee \q)) \equiv \neg\p \rightarrow (\q\wedge(D\vee \q)) \equiv \neg\p \rightarrow \q =  (\textref{ex2:npt(pvq)-repeated})^-_C$}\label{ex2:npt(pvq)-repeated-sr-strict}
-		\ex {We show  (\ref{ex2:pv(nptq)-repeated})=$\p \vee (\neg \p \rightarrow \q)$ is not SR.\\
-			Take C = (\ref{ex2:pv(nptq)-repeated})'s first disjunct = \p.\\ We then have  (\ref{ex2:pv(nptq)-repeated})$^-_C = \neg\p \rightarrow \q$.\\
-			Take $D=\top$.\\
-			$(\textref{ex2:pv(nptq)-repeated})_{Str(C, D)} =  (\p \wedge D) \vee (\neg\p \rightarrow \q) \equiv \p \vee (\neg\p \rightarrow \q) \not\equiv \neg\p \rightarrow \q = (\textref{ex2:pv(nptq)-repeated})^-_C$
-		}\label{ex2:pv(nptq)-repeated-sr-strict}
-		\ex {We show  (\ref{ex2:pv(nqtp)-repeated})=$\p \vee (\neg \q \rightarrow \p)$ is not SR.\\
-			Take C = (\ref{ex2:pv(nqtp)-repeated})'s first disjunct = \p.\\ We then have  (\ref{ex2:pv(nqtp)-repeated})$^-_C = \neg\q \rightarrow \p$.\\ Take $D=\top$.\\
-			$(\textref{ex2:pv(nqtp)-repeated})_{Str(C, D)} =  (\p \wedge D) \vee (\neg\q \rightarrow \p) \equiv \p \vee (\neg\q \rightarrow \p) \not\equiv \neg\q \rightarrow \p = (\textref{ex2:pv(nqtp)-repeated})^-_C$}\label{ex2:pv(nqtp)-repeated-sr-strict}
-		\ex {We show  (\ref{ex2:n(pvq)tp-repeated})=$\neg (\p \vee \q) \rightarrow \p$ is SR.\\ Take C = \q.\\ We then have  (\ref{ex2:n(pvq)tp-repeated})$^-_C = \neg\p \rightarrow \p = \bot \text{ if } \p \neq \emptyset \text{ else } \top$\\
-			$\forall D. \ (\textref{ex2:n(pvq)tp-repeated})_{Str(C, D)} = \neg (\p \vee (\q \wedge D)) \rightarrow \p \equiv (\neg \p \wedge \neg(\q\wedge D)) \rightarrow \p = \bot \text{ if } \p \neq \emptyset \text{ else } \top = (\textref{ex2:n(pvq)tp-repeated})^-_C$}\label{ex2:n(pvq)tp-repeated-sr}
-	\end{xlist}
-\end{exe}
-
-
-Testing the predictions of SR on our sentences, under the assumption that conditionals are variably strict, would not fundamentally help, given that \citet{Kalomoiros2024} observed that SR coupled with variably strict conditionals fails to capture Hurford Sentences -- the sentences SR was originally designed to account for.
-
-
-
-\iffalse
-\subsection{Logical Integrity}
-
-\citet{Anvari2018} proposed a principle forcing the logical relation between a sentence and its non-weaker alternatives to be preserved once contextual information is considered.
-
-\begin{exe}
-	\ex {\textit{Logical Integrity.} Let $S$ be a sentence and $S'$ be one of its alternatives. $S$ is infelicitous in a context $c$ if $S$ does not logically entail $S'$, but $S$ contextually entails $S'$ in $c$.}
-\end{exe}
-
-This predicts the double disjunction (\ref{ex2:pv(pvq)-repeated}) to be fine, because none of its alternatives is only contextually entailed (in particular, $p\vee q$ is both logically and contextually entailed).
-\fi
-
-
-
-
-\subsection{Non-triviality}
-A different line of work (\citeauthor{Mayr2016}, \citeyear{Mayr2016} i.a.), building on the notion of local contexts \citep{Schlenker2009}, associates redundancy with triviality in the sense of \citep{Stalnaker1999}. This view is summarized in (\ref{ex2:non-triviality}).
-\begin{exe}
-	\ex {\textit{Non-triviality.} A sentence $S$ cannot be used in a context $c$ if some part $\pi$ of $S$ is entailed or contradicted by the local context of $\pi$ in $c$ (abbreviated LC($\pi$, $c$)).}\label{ex2:non-triviality}
-	\ex {\textit{Local context. } The local context of an expression $\pi$ in a sentence $S$ is the smallest domain that one may restrict attention to when assessing E without jeopardizing the truth conditions of $S$. Let $c$ be the global context of $S$.
-	\begin{xlist}
-		\ex {If $S$ is a conditional of the form $\Phi \rightarrow \Psi$, LC($\Phi$, $c$) = $c$ and LC($\Psi$, $c$) = $c\cap\Phi$.}\label{ex2:lc-cond}
-		\ex {If $S$ is a disjunction of the form $\Phi \vee \Psi$, and LCs are assumed to be computed incrementally (left-to-right), LC($\Phi$, $c$) = $c$ and LC($\Psi$, $c$) = $c\cap\neg\Phi$}\label{ex2:lc-disj-incr}
-		\ex {If $S$ is a disjunction of the form $\Phi \vee \Psi$, and LCs are assumed to be computed symmetrically (left-to-right and right-to-left), LC($\Phi$, $c$) = $c\cap\neg\Psi$ and LC($\Psi$, $c$) = $c\cap\neg\Phi$.}\label{ex2:lc-disj-sym}
-		\end{xlist}}
-\end{exe}
-
-Assuming LCs are computed incrementally for disjunctions (cf. (\ref{ex2:lc-disj-incr})), (\ref{ex2:non-triviality}) correctly predicts (\ref{ex2:pv(nptq)-repeated}) to be non-trivial, and the other sentences to be deviant. This is detailed in (\ref{ex2:target-sentences-non-triviality}).
-
-\begin{exe}
-	\ex All the sentences in (\ref{ex2:target-sentences}) are locally trivial, for the same reason (assuming asymmetric local contexts for $\vee$). \label{ex2:target-sentences-non-triviality}
-	\begin{xlist}
-		\ex {We show  (\ref{ex2:pv(pvq)-repeated})=$\p\vee (\p \vee \q)$ is locally trivial.\\
-			Take $\pi = \p$ in (\ref{ex2:pv(pvq)-repeated})'s inner disjunction.\\
-			LC($\pi$, $c$) = LC($\p$, $c$)= $c\cap\neg$\p{} (negation of 1st disjunct), contradiction.}\label{ex2:pv(pvq)-repeated-nt}
-		\ex {We show  (\ref{ex2:npt(pvq)-repeated})=$\neg \p \rightarrow (\p \vee \q)$  is locally trivial.\\
-			Take $\pi = \p$ in (\ref{ex2:pv(pvq)-repeated})'s disjunction.\\ LC($\pi$, $c$) = LC($\p$, $c$)= $c\cap\neg$\p{} (antecedent), contradiction.}\label{ex2:npt(pvq)-repeated-nt}
-		\ex {We show  (\ref{ex2:pv(nptq)-repeated})=$\p \vee (\neg \p \rightarrow \q)$   is not locally trivial.\\
-		Take $\pi =$ (\ref{ex2:pv(pvq)-repeated})'s 1st disjunct  = \p. LC($\pi$, $c$) = $c$, consistent.\\
-		Take $\pi =$ (\ref{ex2:pv(pvq)-repeated})'s antecedent  = $\neg$\p. LC($\pi$, $c$) = LC($\neg \p$, $c$) = $\neg$\p{} (negation of 1st disjunct), consistent. \\
-		Take $\pi =$ (\ref{ex2:pv(pvq)-repeated})'s consequent  = \q. LC($\pi$, $c$) = LC($\q$, $c$) = $\neg$\p{} (negation of 1st disjunct / antecedent), consistent. 
-		}\label{ex2:pv(nptq)-repeated-nt}
-		\ex {We show  (\ref{ex2:pv(nqtp)-repeated})=$\p \vee (\neg \q \rightarrow \p)$ is locally trivial.\\
-			Take $\pi = $ (\ref{ex2:pv(pvq)-repeated})'s consequent = \p.\\ LC($\pi$, $c$) = LC($\p$, $c$)= $c\cap\neg\p\cap\neg\q$ (negation of 1st disjunct and antecedent), contradiction.}\label{ex2:pv(nqtp)-repeated-nt}
-		\ex {We show  (\ref{ex2:n(pvq)tp-repeated})=$\neg (\p \vee \q) \rightarrow \p$ is locally trivial.\\
-			Take $\pi = $ (\ref{ex2:pv(pvq)-repeated})'s consequent = \p.\\ LC($\pi$, $c$) = LC($\p$, $c$)= $c\cap\neg(\p\vee\q)$ = $c\cap\neg\p \wedge\neg\q$ (antecedent), contradiction.}\label{ex2:n(pvq)tp-repeated-nt}
-	\end{xlist}
-\end{exe}
-
-There are two caveats with this result. First, it is not maintained if we assume LCs are computed symmetrically (cf. (\ref{ex2:target-sentences-non-triviality-sym})). 
-
-\begin{exe}
-	\ex {Assuming symmetric local contexts, we show (\ref{ex2:pv(nptq)-repeated})=$\p \vee (\neg \p \rightarrow \q)$ is locally trivial.\\
-		Take $\pi =$ (\ref{ex2:pv(pvq)-repeated})'s 1st disjunct  = \p.\\
-		LC($\pi$, $c$) = $c\cap\neg(\neg\p\rightarrow\q)$ = $c\cap(\neg\p\wedge\neg\q)$, contradiction with \p.
-	}\label{ex2:target-sentences-non-triviality-sym}
-\end{exe}
-
-But making such an assumption is independently needed to account for Hurford Disjunctions \citep{Hurford1974}, which appear infelicitous regardless of the linear order of the disjuncts. Strong-to-weak Hurford Disjunctions such as (\ref{ex2:hd-sw}) in particular, require symmetric local contexts when evaluating non-triviality, so that the stronger disjunct gets interpreted in a context entailing the negation of the weaker one -- leading to a contradiction. This is shown in (\ref{ex2:hurford-non-triviality-sym}).
-
-\begin{exe}
-	\ex \label{ex2:hd}
-	\begin{xlist}
-		\ex[\#] {Ido is in Cambridge or in Massachusetts. \hfill \pplus{} $\vee$ \p}\label{ex2:hd-sw}
-		\ex[\#] {Ido is in Massachusetts or in Cambridge.\hfill \pplus{} $\vee$ \p}\label{ex2:hd-ws}
-	\end{xlist}
-\end{exe}
-
-\begin{exe}
-	\ex {Assuming asymmetric local contexts, we show Hurford Sentences of the form \pplus{}$\vee$ \p{} are incorrectly predicted to be felicitous.\\
-		Take $\pi =$ (\ref{ex2:hd-sw})'s 1st disjunct  = \pplus.\\
-		LC($\pi$, $c$) = $c$, consistent.\\
-		Take $\pi =$ (\ref{ex2:hd-sw})'s 2nd disjunct  = \p.\\
-		LC($\pi$, $c$) = $c\cap(\neg\pplus)$, consistent.\\
-	}\label{ex2:hurford-non-triviality-sym}
-	\ex {Assuming symmetric local contexts, we show Hurford Sentences of the form \pplus{}$\vee$ \p{} are correctly predicted to be felicitous.\\
-		Take $\pi =$ (\ref{ex2:hd-sw})'s 1st disjunct  = \pplus.\\
-		LC($\pi$, $c$) = $c\cap(\neg\p)$, contradiction.\\
-	}\label{ex2:hurford-non-triviality-asym}
-\end{exe}
-
-In brief, non-triviality makes correct predictions for the sentences we focus on in this Chapter, \textit{modulo} assumptions on the computation of local contexts that cannot be maintained once additional data is considered.
-
- 
-In the next Section, we lay out a framework accounting for the sentences in (\ref{ex2:target-sentences}), as well as the Hurford Sentences presented in Chapter \ref{chap:hurford-sentences}.
-
-
-
-
-
-
-\section{A QuD-based account}\label{sec:my-account}
-\subsection{Overview}
-To capture the sentences at stake in this Chapter, as well as the Hurford Sentences presented in Chapter \ref{chap:hurford-sentences}, we propose a compositional machinery linking the Logical Forms of assertive sentences to the implicit questions such structures may answer. A sentence might be associated with multiple potential questions. In line with \citet{Katzir2015}'s insight, a sentence that cannot be felicitously paired with \textit{any} question is deemed odd. This can happen, when specific constraints (e.g. a updated version of redundancy, introduced in Section \ref{sec:q-redundancy}), filter out all possible LF-QuD pairs.\\
-
-For the present case study, we will need two key ingredients from this framework: that disjunctions and conditionals give rise to distinct kinds of QuDs, and that derived QuD-LFs pairs are subject to a redundancy constraint dubbed \textsc{Q-Redundancy}, stating that a QuD evoked by a LF is suboptimal if it is also evoked by a simplification of this LF. The interaction between these two ingredients predicts that the QuDs evoked by (\ref{ex2:pv(pvq)-repeated}) are Q-redundant given $p\vee q$, those evoked by
-(\ref{ex2:npt(pvq)-repeated}) are Q-redundant given $p \vee q$/$\neg p \rightarrow q$, the one evoked by (\ref{ex2:pv(nqtp)-repeated}) is Q-redundant given $p$, and the one evoked by (\ref{ex2:n(pvq)tp-repeated}) is problematic because answerless. (\ref{ex2:pv(nptq)-repeated}) will be correctly ruled-in.\\
-
-This kind of machinery is independently motivated by the idea that sentences are never uttered in and of themselves; their purpose is to answer a question, overt or not, and to induce further questions \cite{Roberts1996}. A pragmatic model of assertion therefore needs to integrate what sentences mean, but also what kind of information structure they evoke. Unlike inquisitive semantics \citep{Mascarenhas2008,Ciardelli2009,Groenendijk2009,Ciardelli2018}, which proposes an \textit{unified} view of questions and assertions at the semantic level, what we propose here is a form of inquisitive \textit{pragmatics}: sentences are still assigned ``standard'' truth-conditional/intensional meaning, but at also have an inquisitive contribution at the pragmatic level.\\
-
-This Chapter presents simple version of this framework that is sufficient to cover the data at stake. Chapter \ref{chap:hurford-sentences} introduces a more complete version, while emphasizing the notion of QuD-granularity. We will proceed inductively: we start by defining questions evoked by simplex LFs, containing no operator, quantifier or connective. Once this is done, we extend the model inductively, by assigning an inquisitive pragmatics to the logical fragment of the language including negation, disjunction, and implication.
-
-
-
-\subsection{Question Trees}
-
-Based on the background Section on questions from Chapter \ref{chap:introduction}, we define a more elaborate model of questions, which incorporates the idea that questions are hierarchically organized, which allows them to be fused, or chained/stacked. This will eventually reflect the intuition that logically equivalent sentences, like those in \ref{ex2:target-sentences}, may ``package'' information differently, and therefore exhibit different degrees of oddness. Building on \citet{Buring2003,Riester2019,Onea2016,Zhang2022}, we take questions to denote \textit{parse trees} of the Context Set (\citenp{Stalnaker1974}; henceforth \textbf{CS}), i.e. structures that hierarchically organize the worlds of the CS. Such trees (abbreviated \textbf{Qtrees}) are defined in (\ref{ex2:qtree-def}).
-
-\begin{exe}
-	\ex {\textit{Structure of Question-trees (Qtrees).} Qtrees are trees whose nodes are all subsets of the CS and s.t.:
+	\ex {\textit{Set-to-tree bijection. } To define this bijection, we first define inductive propositions, and their propositional content. $S$ is an inductive proposition if either:
 		\begin{itemize}
-			\item Their root generally denotes the CS;
-			\item Any intermediate node is partitioned by the set of its children.
+			\item $S$ is a set of worlds (i.e. a proposition);
+			\item $S$ is a set of inductive propositions.
+		\end{itemize}
+		The propositional content of an inductive proposition is then defined as:
+		\begin{itemize}
+			\item If $S$ is a proposition: $S$;
+			\item If $S$ is a set of inductive propositions: the grand union of the propositional contents of $S$'s elements.
+		\end{itemize}
+		Any inductive proposition $S$ is in a bijection with a tree structure whose nodes are propositions, and defined as:
+		\begin{itemize}
+			\item If $S$ is a proposition: the tree node denoting $S$;
+			\item If $S$ is a set of inductive propositions: the tree whose root denotes $S$'s propositional content, and whose children are the tree structures induced by each of $S$'s elements. 
+	\end{itemize}}\label{ex2:set-tree-bijection}
+\end{exe}
+
+We now generalize these observations, which, in fact, are not new. Building on \citet{Buring2003,Riester2019,Onea2016,Ippolito2019,Zhang2022} (among others), we take questions to denote \textit{parse trees} of the CS, i.e. structures that hierarchically organize the worlds of the CS. Such trees (abbreviated \textbf{Qtrees}) are defined in (\ref{ex2:qtree-def}). 
+%(\ref{ex2:parse-def}) provide a more general definition of a parse.\footnote{This slightly differs from the notion of parse defined for sentences for instance, in which linear precedence must be preserved.} 
+\begin{exe}
+	\ex {\textit{Structure of Question-trees (\textbf{Qtrees}).} Qtrees are rooted trees whose nodes are all subsets of the CS and s.t.:
+		\begin{itemize}
+			\item Their root generally\footnote{In the case of sentences carrying presuppositions, the root will be assumed to correspond to the intersection between the CS and the sentence's presupposition. In fact, the whole Qtree will be nodewise intersected with the presupposition. This will be put to use in Chapters \ref{chap:scalarity} and \ref{chap:exh-incr}. But the examples we will see before this, will all involve Qtree rooted in the CS.} refers to the CS;
+			\item Any intermediate node is a proposition, which is partitioned by the set of its children.
 		\end{itemize}
 	}\label{ex2:qtree-def}
 \end{exe}
+%	\ex {\textit{Parse.} Let $S$ be a set. A parse of $S$ is a rooted tree whose nodes are subsets of $S$ and s.t.:
+%		\begin{itemize}
+%			\item The root is $S$;
+%			\item Any intermediate node is partitioned by the set of its children.
+%		\end{itemize}
+%	}\label{ex2:parse-def}
+
+Before investigating the interpretation and the structural properties of this more sophisticated model of questions, the next Section covers a few core concepts from graph theory that will be useful in the rest of the Chapter and beyond.
 
 
-The nodes of such trees can be assigned the following interpretation. The root denotes a tautology over the CS, and any other node, a possible answer to the global question denoted by the tree. Intermediate nodes can generally be seen as non-maximal answers, while leaves can be seen as maximal answers. By construction, the leaves of such trees form a partition of the CS, and as such denote ``standard'' questions. Any subtree rooted in a node $N$ can be understood as conditional question taking for granted the proposition denoted by $N$. Finally, a path from the root to any node $N$ can be seen as a strategy of inquiry (or a sequence of conditional questions) leading to the answer denoted by $N$.\\
+\subsection{A brief refresher on graph theory (and a few useful concepts for Qtrees)}
 
-We assume that out-of-the-blue LFs trigger a Qtree accommodation process that ``retro-engineers'' a Qtree from the sentence's structure.\footnote{Here, we do not cover the case of assertive sentences that are direct answers to an overt QuD. There is in fact an interesting line of work showing that overt QuDs can influence pragmatic oddness, especially when it comes to matters of redundancy \citep{Haslinger2023}.} When evoking a Qtree, a given LFs is assumed to ``flag'' specific nodes on the tree as maximal true answers. These nodes, that we dub \textit{verifying nodes}, are typically the leaves of the Qtree which are subsets (i.e. entail) the proposition denoted by the LF. Those verifying nodes, just like the structure of the Qtree, are compositionally derived. Moreover, an accommodated Qtree should allow the sentence evoking it to properly answer it; that is why we assume that any well-formed Qtree derived from a sentence should come with a non-empty set of verifying nodes.(cf. (\ref{ex2:vacuous-flagging})). More generally, we assume that oddness results from the fact that a given sentence, through its LF, cannot give rise to any well-formed Qtree. This is summarized in (\ref{ex2:oddness-tree-sentence}) and (\ref{ex2:oddness-sentence}).
+(\ref{ex2:qtree-def}) defines questions as rooted trees. Here, we precisify what it means to be a tree, and moreover, what is means to be a \textit{rooted} tree (\ref{ex:rooted-tree}). Let us unpack  (\ref{ex:rooted-tree}), and, first, disregard the ``rooted'' aspect of it. A tree is a kind of graph. A graph is a way to represent a binary relation, which by default will be symmetric (\textit{directed} graphs implement asymmetric relations). Elements in the domain of the relation are modeled as nodes, and unordered pairs of nodes are connected with and edge, iff they verify the relation. A graph therefore amounts to a set of nodes, and a set of edges between these nodes. This is summarized in (\ref{ex:graph}), and illustrated in Figure \ref{fig:basic-graph}.
+
+\begin{exe}
+	\ex {\textit{Rooted tree.} A rooted tree is a graph that is connected and acyclic, and features a distinguished node called root.}\label{ex:rooted-tree}
+	\ex {\textit{(Undirected) Graph.} An undirected graph (or just a graph) is defined by a set of nodes $\mathcal{N}$ and by a set of edges $\mathcal{E}$ between elements of $\mathcal{N}$. Edges are defined as unordered pairs of nodes: $\mathcal{E} \subseteq \lbrace \lbrace N_1, N_2\rbrace \ | \ (N_1, N_2) \in \mathcal{N}^2\rbrace$}\label{ex:graph}
+\end{exe}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\node[shape=circle,draw=black] (A) at (0,0) {A};
+		\node[shape=circle,draw=black] (B) at (0,3) {B};
+		\node[shape=circle,draw=black] (C) at (2.5,4) {C};
+		\node[shape=circle,draw=black] (D) at (2.5,1) {D};
+		\node[shape=circle,draw=black] (F) at (5,3) {F} ;
+		\node[shape=circle,draw=black] (E) at (-2,2) {E} ;
+		
+		\path [-] (A) edge node[left] {} (B);
+		\path [-](B) edge node[left] {} (C);
+		\path [-](A) edge node[left] {} (D);
+		\path [-](D) edge node[left] {} (C);
+		\path [-](D) edge node[right] {} (F);   
+	\end{tikzpicture}
+	\caption{An (undirected) graph $G=(\mathcal{N}, \mathcal{E})$, with $\mathcal{N}=\lbrace A, B, C, D, E, F\rbrace$ and $\mathcal{E}=\lbrace \lbrace A, B\rbrace, \lbrace A, D\rbrace, \lbrace B, C\rbrace, \lbrace C, D\rbrace, \lbrace D, F\rbrace\rbrace$.}\label{fig:basic-graph}
+\end{figure}
+
+In graphs, sequences of adjacent edges form paths. For instance, in Figure \ref{fig:basic-graph}, the sequence $[\lbrace A, B\rbrace, \lbrace A, D\rbrace, \lbrace D, F\rbrace]$ forms a path, between node $A$ and node $F$. This is generalized in (\ref{ex:graph-path}).
+
+\begin{exe}
+	\ex {\textit{Path.} Let $G = (\mathcal{N}, \mathcal{E})$ be a graph. Let $(N_1, N_2) \in \mathcal{N}^2$ be two nodes of $G$. There is a path in $G$ between $N_1$ and $N_2$ (abbreviated $N_1 \stackrel{G}{\leadsto}  N_2$) iff $N_1$ and $N_2$ can be connected by a series of edges in $G$, i.e. $\exists (e_1, ... e_k) \in \mathcal{E}^k. \ N_1 \in e_1 \wedge N_2 \in e_k \wedge \forall i \in [1; k-1]. \  |e_i \cap e_{i+1}|  = 1$, where $|.|$ is the cardinality operator.}\label{ex:graph-path}
+\end{exe}
+
+In Figure \ref{fig:basic-graph}, it is easy to see that nodes $A$, $B$, $C$, $D$ and $F$ are all connected to each other by at least one path (in fact, infinitely many of them). Node $E$ on the other hand, is isolated. So, Figure \ref{fig:basic-graph} represents a graph that is \textit{not} connected. If $E$ were removed from the set of nodes, and the edges remained the same, the resulting graph would be connected. This concept of connectivity is generalized in (\ref{ex:graph-connectivity}). If a graph is a tree, then, it is connected.
+\begin{exe}
+	\ex {\textit{Connectivity.} Let $G = (\mathcal{N}, \mathcal{E})$ be a graph. $G$ is connected, iff there is a path in $G$ between any pair of nodes in $\mathcal{N}$, i.e. $\forall (N_1, N_2) \in \mathcal{N}^2. \ N_1 \stackrel{G}{\leadsto} N_2$.}\label{ex:graph-connectivity}
+\end{exe}
+
+Another thing to note about Figure \ref{fig:basic-graph}, is that nodes $A$, $B$, $C$, and $D$ form a ``cycle'', there is a path that starts at one of these nodes (e.g., $C$), and ends at this very same node, \textit{via} $B$, $A$, and $D$. Because of this cycle, there are infinitely many paths between $A$, $B$, $C$, and $D$, and also between each of these nodes, and $F$. Removing the edge between, say, $A$ and $B$, would break the cycle (yet, interestingly, maintain connectivity between $A$, $B$, $C$, and $D$). The resulting graph would be acyclic. The general definition of an acyclic graph, is given in (\ref{ex:graph-acyclic}). If a graph is a tree, then, it is acyclic. Moreover, connectivity and acyclicity, are necessary and sufficient for a graph to be a tree.
+
+\begin{exe}
+	\ex {\textit{Acyclicity.} Let $G = (\mathcal{N}, \mathcal{E})$ be a graph. $G$ is acyclic, iff no node $N$ of $\mathcal{N}$ is s.t. there is a path starting and ending at $N$ in $G$, i.e. $\neg\exists N \in \mathcal{N}. \ N \stackrel{G}{\leadsto} N$.}\label{ex:graph-acyclic}
+\end{exe}
+
+We now have a definition of what kind of data structure a tree is. But why do we need  Qtrees to be ``rooted'' then? To understand why, let us go back to the tree in Figure \ref{fig2:city-tree}, repeated in Figure \ref{fig2:city-tree-repeated} below. The way this tree is represented on paper, is somehow misleading. Recall that a tree is just an undirected graph, with a few extra properties constraining its edges. If Figure \ref{fig2:city-tree-repeated} were not ``rooted'', nothing would prevent us to represent it in the form of Figure \ref{fig2:city-tree-france-root}: the nodes and edges are strictly the same, but in Figure \ref{fig2:city-tree-france-root}, \textit{France} ``appears'' to be the root of the tree, because it is represented at the top. To avoid this confusion, the fact that the CS node should be ``at the top'' is made part of the representation of the tree--which then becomes a \textit{rooted} tree. So, a rooted tree is just a tree, plus one distinguished node that serves as root.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[{CS\\
+				Jo grew up in...}[\textcolor{blue}{France}[\textcolor{orange}{{Paris}}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}]][\textcolor{blue}{Germany}[\textcolor{orange}{Berlin}][\textcolor{orange}{...}]][\textcolor{blue}{Italy}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]
+		\end{forest}
+		\caption{Tree view of (\ref{ex2:city-question})}\label{fig2:city-tree-repeated}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[\textcolor{blue}{France}[\textcolor{orange}{Paris}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}][CS[\textcolor{blue}{Germany}[\textcolor{orange}{Berlin}][\textcolor{orange}{...}]][\textcolor{blue}{Italy}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]]
+		\end{forest}
+		\caption{Alternative tree view of (\ref{ex2:city-question}), assuming Qtrees were not rooted}\label{fig2:city-tree-france-root}
+	\end{subfigure}
+\end{figure}
+
+
+The notion of a distinguished root in fact allows to define a few interesting properties on trees, that will be used throughout the dissertation. First, once a tree is rooted, it is possible to define a measure of distance between each node of the tree, and the root. This is the concept of depth defined in (\ref{ex:tree-node-depth}). In Figure \ref{fig2:city-tree-repeated} for instance, the CS has depth $0$, \textit{Germany} depth $1$, and \textit{Lyon} depth $2$. This also allows to define the global ``size'' of the tree, in the form of its maximal depth; see (\ref{ex:tree-depth}). Figure \ref{fig2:city-tree-repeated} for instance, is a tree of depth $2$.
+
+\begin{exe}
+	\ex
+	\begin{xlist}	
+		\ex {\textit{Depth of a node in a rooted tree.} Let $T = (\mathcal{N}, \mathcal{E}, R)$ be a rooted tree, with root $R$. Let $N \in \mathcal{N}$. The depth of $N$ in $T$ ($d(N, T)$) corresponds to the length of the minimal path between $R$ and $N$ if $N \neq R$,\footnote{This path can be determined using a simple Depth-First Search algorithm starting from the root.} and is set to $0$ if $N = R$.}\label{ex:tree-node-depth}
+		\ex {\textit{Depth of a rooted tree.} Let $T = (\mathcal{N}, \mathcal{E}, R)$ be a rooted tree, with root $R$. The depth of $T$ ($d(T)$) is the maximal depth of a node in $T$: $d(T) = max_{N \in \mathcal{N}}(d(N, T))$.}\label{ex:tree-depth}
+	\end{xlist}
+\end{exe}
+
+Lastly, we will extensively use the concept of \textit{layer}, that we define as a the maximal set of same-depth nodes in a rooted tree; see (\ref{ex:tree-layer}). Figure \ref{fig2:city-tree-repeated} features a country-layer at depth $1$, and a city-layer at depth $2$. Layers therefore reflect an intuitive notion of granularity.
+
+\begin{exe}
+	\ex {\textit{Depth-$k$ layer of a rooted tree.} Let $T = (\mathcal{N}, \mathcal{E}, R)$ be a rooted tree, with root $R$. Let $k$ be an integer s.t. $0\geq k<d(T)$. The depth-$k$ layer of $T$ is the set of nodes in $\mathcal{N}$ whose depth is $k$, i.e. $\lbrace N \in \mathcal{N} \ | \ d(N, T)=k\rbrace$.}\label{ex:tree-layer}
+\end{exe}
+
+Now that we have defined the core structure of Qtrees and a few related properties and metrics, we proceed to assign an interpretation to this kind of data structure.
+
+\subsection{Interpreting Qtrees}
+
+It is easy to see that the tree in Figure \ref{tree:country-city-parse}/\ref{fig2:city-tree-repeated} , repeated in Figure \ref{fig2:city-qtree}, is a Qtree according to (\ref{ex2:qtree-def}). We use this Qtree as an example, and assign an interpretation to nodes and paths in such structures.
+
+\begin{figure}[H]
+	\centering
+	\begin{forest}
+		[{CS\\
+			Jo grew up in...}[\textcolor{blue}{France}[\textcolor{orange}{{Paris}}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}]][\textcolor{blue}{Germany}[\textcolor{orange}{Berlin}][\textcolor{orange}{...}]][\textcolor{blue}{Italy}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]
+	\end{forest}
+	\caption{``Intuitive'' Qtree for \textit{Which city did Jo grow up in?}}\label{fig2:city-qtree}
+\end{figure}
+
+Nodes, like \textit{France}, \textit{Paris}, or $CS$ in Figure \ref{fig2:city-qtree}, can be assigned a ``static'' and a recursive interpretation. The static interpretation amounts to seeing a node just as what is it: an entity denoting a proposition that forms a subset of the CS. This is defined in (\ref{ex2:static-interpretation}).
+
+\begin{exe}
+	\ex {\textit{``Static'' interpretation of tree nodes}. Let $T = (\mathcal{N}, \mathcal{E}, R)$ be a rooted tree. Let $N \in \mathcal{N}$ be a node of $T$. $N$'s ``static'' interpretation is simply $N$'s denotation. If $T$ is a Qtree, then $N$'s static interpretation, is the proposition that $N$ denotes.}\label{ex2:static-interpretation}
+\end{exe}
+
+Under this interpretation, the root, which denotes the whole $CS$, defines a tautology.\footnote{That is, an uninformative proposition that is Lewis-relevant but not Roberts-relevant, as defined in Chapter \ref{chap:introduction}}. Leaves, like \textit{Paris}, \textit{Lyon}, \textit{Berlin} in Figure \ref{fig2:city-qtree}, correspond to the ``smallest'' cells of the recursive partition that the Qtree defines. They can therefore be seen as maximal answer to the underlying question, e.g., \textit{In which city did Jo grow up?}. Intermediate nodes like \textit{France} or \textit{Germany} in Figure \ref{fig2:city-qtree}, form cells of ``intermediate'' size, and can always be seen as unions of leaves. They therefore correspond to non-maximal answers. Because Qtrees can be made of many layers, they induce a hierarchy between non-maximal answers: an non-maximal answer $p$ is ``more maximal'' than another non-maximal answer $q$, iff the node denoting $p$ is located deeper in the Qtree than the node denoting $q$. This is formalized in (\ref{ex2:answer-gran}).
+
+\begin{exe}
+	\ex {\textit{Answer granularity.} $T$ be a Qtree and $(N_1, N_2)$ be two nodes in $T$. $N_1$'s static interpretation constitutes a finer-grained answer than $N_2$'s static interpretation iff $d(N_1, T) > d(N_2, T)$. By definition, leaves of $T$ denotes the finest-grained answers to the question $T$ represents.}\label{ex2:answer-gran}
+\end{exe}
+
+Nodes can also receive a recursive interpretation that incorporates everything the node dominates. Under this interpretation, a node $N$ in a Qtree is not only what $N$ denotes; it is the whole subtree ($\sim$subquestion) rooted in $N$. For instance, the recursive interpretation of the \textit{France}-node in Figure \ref{fig2:city-qtree}, would be that of the subtree of Figure \ref{fig2:city-qtree} rooted in \textit{France}. This subtree amount to the question \textit{In which city did Jo grow up?}, granted that \textit{Jo lives in France}, since its root correspond to the CS, intersected with the proposition that \textit{Jo lives in France}. This is generalized in (\ref{ex2:recursive-interpretation}). (\ref{ex2:recursive-interpretation-cs}) further specifies the relation between a node's recursive interpretation in a Qtree, and the effect of a CS update on this Qtree.
+
+\begin{exe}
+	\ex {\textit{Recursive interpretation of tree nodes}. Let $T = (\mathcal{N}, \mathcal{E}, R)$ be a rooted tree. Let $N \in \mathcal{N}$ be a node of $T$. $N$'s recursive interpretation corresponds to:
+		\begin{itemize}
+			\item $N$'s static interpretation if $N$ is a leaf.
+			\item  The nodewise static interpretation of the subtree of $T$ rooted in $N$, otherwise. 
+	\end{itemize}
+ 	If $T$ is a Qtree, then $N$'s recursive interpretation will be the Qtree rooted in $N$, defined on a ``local'' CS updated with $N$'s static interpretation.}\label{ex2:recursive-interpretation}
+ 	\ex {\textit{Recursive interpretation and CS update.} Let $T$ be a Qtree. Let $N$ be a node of $T$. $N$'s recursive interpretation corresponds to the nodewise intersection of $T$ with the proposition $N$ denotes, removing empty nodes and trivial edges.}\label{ex2:recursive-interpretation-cs}
+\end{exe}
+
+
+
+refinement
+
+
+Under the static interpretation, a path between the root and 
+
+
+
+
+
+
+Starting with nodes, they can assigned the following interpretation. The root denotes a tautology over the CS, and any other node, a possible answer to the global question denoted by the tree. Intermediate nodes can generally be seen as non-maximal answers, while leaves can be seen as maximal answers. By construction, the leaves of such trees form a partition of the CS, and as such denote ``standard'' questions. Any subtree rooted in a node $N$ can be understood as conditional question taking for granted the proposition denoted by $N$. Finally, a path from the root to any node $N$ can be seen as a strategy of inquiry (or a sequence of conditional questions) leading to the answer denoted by $N$.\\
+
+answer granularity
+
+
+
+This will eventually allow questions evoked by simple sentences to be ``fused'', or ``chained/stacked'' with each other, in order to generate questions evoked by more complex sentences. This will also allow to capture the intuition that logically related sentences may ``package'' information differently, and therefore exhibit different degrees of oddness.
+
+\subsection{Flagging Qtrees}
+We assume that out-of-the-blue LFs trigger a Qtree accommodation process that ``retro-engineers'' a Qtree from the sentence's structure.\footnote{Here, we do not cover the case of assertive sentences that are direct answers to an overt QuD. There is in fact an interesting line of work showing that overt QuDs can influence pragmatic oddness, especially when it comes to matters of redundancy \citep{Haslinger2023}.} When evoking a Qtree, a given LFs is assumed to ``flag'' specific nodes on the tree as maximal true answers. These nodes, that we dub \textit{verifying nodes}, are typically the leaves of the Qtree which are subsets (i.e. entail) the proposition denoted by the LF. Those verifying nodes, just like the structure of the Qtree, are compositionally derived. Moreover, an accommodated Qtree should allow the sentence evoking it to properly answer it; that is why we assume that any well-formed Qtree derived from a sentence should come with a non-empty set of verifying nodes.(see (\ref{ex2:vacuous-flagging})). More generally, we assume that oddness results from the fact that a given sentence, through its LF, cannot give rise to any well-formed Qtree. This is summarized in (\ref{ex2:oddness-tree-sentence}) and (\ref{ex2:oddness-sentence}).
+
+
+
+
 
 \begin{exe}
 	\ex {\textit{Empty labeling of verifying nodes.} If a sentence $S$ evokes a Qtree $T$ but does not flag any node as verifying on $T$, then $T$ is deemed odd given $S$.}\label{ex2:vacuous-flagging}
@@ -317,7 +362,14 @@ Before defining Qtrees for simplex LFs, let us clarify that all Qtrees will be d
 
 
 
-\subsection{Questions evoked by simplex LFs}\label{sec:simplex}
+\section{Compositional Qtrees: base case}\label{sec:simplex}
+
+
+
+
+We can then define the questions evoked by a proposition $p$ as the partitions evoked either by $p$ alone ($P=\lbrace p \rbrace$), or by $p$ and relevant focus alternatives to $p$ ($P=\mathcal{A}_p$) \citep{Rooth1992}. If $p$ is not settled in the CS, the former kind of partition has the form $\lbrace p, \neg p\rbrace$ and amounts to the question of \textit{whether p}. If $\mathcal{A}_p$ contains mutually exclusive, possible propositions covering the CS, then the partition induced by $\mathcal{A}_p$ on the CS is simply $\mathcal{A}_p$, and can be interpreted as a \textit{wh}-question inquiring about $p$'s focus material.
+
+
 We assume that a simplex LF denoting a proposition $p$ can give rise to two types of Qtree:\footnote{This is a simplification; Chapter \ref{chap:hurford-sentences} will assume that even simplex LFs can give rise to layered Qtrees, whose layers are ordered by some notion of granularity. But this assumption is not relevant here, because we implicitely assume $p$ and $q$ are same-granularity alternatives.} a ``polar-question'' depth-1 Qtree whose leaves are the $p$ and $\neg p$ worlds respectively; and a ``\textit{wh}-question'' depth-1 Qtree whose leaves are $p$ and relevant, mutually exclusive alternatives to $p$. Moreover, verifying nodes are defined on such trees as the leaves entailing $p$.
 
 \begin{exe}
@@ -331,63 +383,63 @@ We assume that a simplex LF denoting a proposition $p$ can give rise to two type
 \end{exe}
 
 
-This predicts a simplex LF denoting a tautology (e.g. a proposition entailed by the CS) to only be compatible with one Qtree, namely the Qtree whose root and unique (verifying) leaf is the whole CS. This also predicts a simplex LF denoting a contradiction (e.g. a proposition contradicted by the CS) to be compatible with Qtrees whose leaves are non-contradictory alternatives to the prejacent proposition, and whose set of verifying nodes is empty. In other words, contradictions cannot answer any suitable question and as such should be odd (cf. condition (\ref{ex2:vacuous-flagging})).\\
+This predicts a simplex LF denoting a tautology (e.g. a proposition entailed by the CS) to only be compatible with one Qtree, namely the Qtree whose root and unique (verifying) leaf is the whole CS. This also predicts a simplex LF denoting a contradiction (e.g. a proposition contradicted by the CS) to be compatible with Qtrees whose leaves are non-contradictory alternatives to the prejacent proposition, and whose set of verifying nodes is empty. In other words, contradictions cannot answer any suitable question and as such should be odd (see condition (\ref{ex2:vacuous-flagging})).\\
 
 
 
 Looking back at (\ref{ex2:pv(pvq)-repeated}-\ref{ex2:n(pvq)tp-repeated}), where $S_p=$ \textit{Ido is at SuB} denotes $p$ and $S_q=$ \textit{Ido is in Cambridge} denotes $q$, it is reasonable to think $S_p$ and $S_q$ are exclusive mutual alternatives. Other similar alternatives may be $S_r=$ \textit{Ido is in Paris}, $S_s=$ \textit{Ido is in Chicago} etc. As a result, the Qtrees compatible with $S_p$ and $S_q$ are given in Figures \ref{fig2:qtrees-p} and \ref{fig2:qtrees-q}. Figures \ref{fig2:qtree-p-polar} and \ref{fig2:qtree-q-polar}, derived from principle (\ref{ex2:qtree-simplex-def-simple}.\ref{pt:simplex-qtree-polar-simple}), respectively model polar questions of the form: \textit{Is Ido at SuB?} \textit{Is Ido in Cambridge?} Figures \ref{fig2:qtree-p-wh} and \ref{fig2:qtree-q-wh}, derived from principle (\ref{ex2:qtree-simplex-def-simple}.\ref{pt:simplex-qtree-wh-simple}), model a \textit{wh}-question of the form: \textit{Where is Ido?}.\footnote{Chapter \ref{chap:hurford-sentences} will argue that such questions are too vague to be included in Qtrees; a \textit{where} question has to be decomposed into a series of stacked \textit{which}-questions of increasing degrees of granularity from the top down. But assuming a \textit{where}-question is enough for our purposes in this Chapter.} At that point, it is worth observing that the ``\textit{wh}'' Qtrees raised by $S_p$ and $S_q$ have similar structures (ignoring verifying nodes); while the corresponding ``polar'' Qtrees do not.
 
 
-	\begin{figure}[H]
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{.3\linewidth}
 		\centering
-		\begin{subfigure}[b]{.3\linewidth}
-			\centering
-			\scalebox{1}{
-				\begin{forest}
-					[CS [\fbox{$\p$}][$\neg \p$]]
-				\end{forest}
-			}
-			\caption{``Polar'' Qtree obtained from principle (\ref{ex2:qtree-simplex-def-simple}.\ref{pt:simplex-qtree-polar-simple})}\label{fig2:qtree-p-polar}
-		\end{subfigure}\qquad
-		\begin{subfigure}[b]{.3\linewidth}
-			\centering
-			\scalebox{1}{
-				\begin{forest}
-					[CS [\fbox{$\p$}][$\q$][$\r$][...]]
-				\end{forest}
-			}
-			\caption{``\textit{Wh}'' Qtree obtained from principle (\ref{ex2:qtree-simplex-def-simple}.\ref{pt:simplex-qtree-wh-simple})}\label{fig2:qtree-p-wh}
-		\end{subfigure}
-		\caption{Qtrees for $S\protect_{\p}=$ \textit{Ido is at SuB}. \setlength{\fboxsep}{1pt}\fbox{Boxed} nodes are verifying.}
-		\label{fig2:qtrees-p}
-	\end{figure}
-	
-	\begin{figure}[H]
+		\scalebox{1}{
+			\begin{forest}
+				[CS [\fbox{$\p$}][$\neg \p$]]
+			\end{forest}
+		}
+		\caption{``Polar'' Qtree obtained from principle (\ref{ex2:qtree-simplex-def-simple}.\ref{pt:simplex-qtree-polar-simple})}\label{fig2:qtree-p-polar}
+	\end{subfigure}\qquad
+	\begin{subfigure}[b]{.3\linewidth}
 		\centering
-		\begin{subfigure}[b]{.3\linewidth}
-			\centering
-			\scalebox{1}{
-				\begin{forest}
-					[CS [\fbox{$\q$}][$\neg \q$]]
-				\end{forest}
-			}
-			\caption{``Polar'' Qtree obtained from principle (\ref{ex2:qtree-simplex-def-simple}.\ref{pt:simplex-qtree-polar-simple})}\label{fig2:qtree-q-polar}
-		\end{subfigure}\qquad
-		\begin{subfigure}[b]{.3\linewidth}
-			\centering
-			\scalebox{1}{
-				\begin{forest}
-					[CS [$\p$][\fbox{$\q$}][$\r$][...]]
-				\end{forest}
-			}
-			\caption{``\textit{Wh}'' Qtree obtained from principle (\ref{ex2:qtree-simplex-def-simple}.\ref{pt:simplex-qtree-wh-simple})}\label{fig2:qtree-q-wh}
-		\end{subfigure}
-		\caption{Qtrees for $S\protect_{\q}=$ \textit{Ido is in Cambridge}. \setlength{\fboxsep}{1pt}\fbox{Boxed} nodes are verifying.}
-		\label{fig2:qtrees-q}
-	\end{figure}
+		\scalebox{1}{
+			\begin{forest}
+				[CS [\fbox{$\p$}][$\q$][$\r$][...]]
+			\end{forest}
+		}
+		\caption{``\textit{Wh}'' Qtree obtained from principle (\ref{ex2:qtree-simplex-def-simple}.\ref{pt:simplex-qtree-wh-simple})}\label{fig2:qtree-p-wh}
+	\end{subfigure}
+	\caption{Qtrees for $S\protect_{\p}=$ \textit{Ido is at SuB}. \setlength{\fboxsep}{1pt}\fbox{Boxed} nodes are verifying.}
+	\label{fig2:qtrees-p}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\scalebox{1}{
+			\begin{forest}
+				[CS [\fbox{$\q$}][$\neg \q$]]
+			\end{forest}
+		}
+		\caption{``Polar'' Qtree obtained from principle (\ref{ex2:qtree-simplex-def-simple}.\ref{pt:simplex-qtree-polar-simple})}\label{fig2:qtree-q-polar}
+	\end{subfigure}\qquad
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\scalebox{1}{
+			\begin{forest}
+				[CS [$\p$][\fbox{$\q$}][$\r$][...]]
+			\end{forest}
+		}
+		\caption{``\textit{Wh}'' Qtree obtained from principle (\ref{ex2:qtree-simplex-def-simple}.\ref{pt:simplex-qtree-wh-simple})}\label{fig2:qtree-q-wh}
+	\end{subfigure}
+	\caption{Qtrees for $S\protect_{\q}=$ \textit{Ido is in Cambridge}. \setlength{\fboxsep}{1pt}\fbox{Boxed} nodes are verifying.}
+	\label{fig2:qtrees-q}
+\end{figure}
 
 
-
+\section{Compositional Qtrees: inductive step}
 \subsection{Questions evoked by negated LFs}\label{sec:neg}
 We assume negated LFs evoke questions that are structurally similar to those evoked by their non-negated counterpart. The only difference resides in the set of verifying nodes, which is flipped by negation. This is formalized in (\ref{ex2:qtree-neg-def}).\footnote{This approach is perhaps a bit naive; uttering $p$ vs. $\neg p$, does not seem to preferentially answer the same kind of question, i.e. evoke the same kind of Qtree structure. More specifically, it seems that uttering negative statements in general conveys the idea that the original question was a polar question of the form \textit{whether p?} -- more than a \textit{wh} kind of question. We discuss this more in the context of Chapter \ref{chap:scalarity}.}
 
@@ -402,55 +454,53 @@ We assume negated LFs evoke questions that are structurally similar to those evo
 
 Note that, if all verifying nodes are leaves, the above definition is simplified: $\mathbb{N}^+(T')$ = $\lbrace N' | N' \notin \mathbb{N}^+(T) \wedge \textit{leaf}(N') \rbrace$. Determining the verifying nodes of a Qtree $T'$ evoked by $\neg X$, amounts to ``swapping'' the verifying node of its structural counterpart $T$ evoked by $X$. Qtrees for $\neg S_p$ and $\neg S_q$, derived using this simple recipe, are given in Figures \ref{fig2:qtrees-np} and \ref{fig2:qtrees-nq}.
 
-	\begin{figure}[H]
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{.3\linewidth}
 		\centering
-		\begin{subfigure}[b]{.3\linewidth}
-			\centering
-			\scalebox{1}{
-				\begin{forest}
-					[CS [{$\p$}][\fbox{$\neg \p$}]]
-				\end{forest}
-			}
-			\caption{Derived from Tree \ref{fig2:qtree-p-polar}}\label{fig2:qtree-np-polar}
-		\end{subfigure}\qquad
-		\begin{subfigure}[b]{.3\linewidth}
-			\centering
-			\scalebox{1}{
-				\begin{forest}
-					[CS [{$\p$}][\fbox{$\q$}][\fbox{$\r$}][\fbox{...}]]
-				\end{forest}
-			}
-			\caption{Derived from Tree \ref{fig2:qtree-p-wh}}\label{fig2:qtree-np-wh}
-		\end{subfigure}
-		\caption{Qtrees for $\neg S\protect_{\p}=$ \textit{Ido is \textbf{not} at SuB}. \setlength{\fboxsep}{1pt}\fbox{Boxed} nodes are verifying.}
-		\label{fig2:qtrees-np}
-	\end{figure}
-	
-	\begin{figure}[H]
+		\scalebox{1}{
+			\begin{forest}
+				[CS [{$\p$}][\fbox{$\neg \p$}]]
+			\end{forest}
+		}
+		\caption{Derived from Tree \ref{fig2:qtree-p-polar}}\label{fig2:qtree-np-polar}
+	\end{subfigure}\qquad
+	\begin{subfigure}[b]{.3\linewidth}
 		\centering
-		\begin{subfigure}[b]{.3\linewidth}
-			\centering
-			\scalebox{1}{
-				\begin{forest}
-					[CS [{$\q$}][\fbox{$\neg \q$}]]
-				\end{forest}
-			}
-			\caption{Derived from Tree \ref{fig2:qtree-q-polar}}\label{fig2:qtree-nq-polar}
-		\end{subfigure}\qquad
-		\begin{subfigure}[b]{.3\linewidth}
-			\centering
-			\scalebox{1}{
-				\begin{forest}
-					[CS [\fbox{$\p$}][{$\q$}][\fbox{$\r$}][\fbox{...}]]
-				\end{forest}
-			}
-			\caption{Derived from Tree \ref{fig2:qtree-q-wh}}\label{fig2:qtree-nq-wh}
-		\end{subfigure}
-		\caption{Qtrees for $\neg S\protect_{\q}=$ \textit{Ido is \textbf{not} in Cambridge}. \setlength{\fboxsep}{1pt}\fbox{Boxed} nodes are verifying.}
-		\label{fig2:qtrees-nq}
-	\end{figure}
+		\scalebox{1}{
+			\begin{forest}
+				[CS [{$\p$}][\fbox{$\q$}][\fbox{$\r$}][\fbox{...}]]
+			\end{forest}
+		}
+		\caption{Derived from Tree \ref{fig2:qtree-p-wh}}\label{fig2:qtree-np-wh}
+	\end{subfigure}
+	\caption{Qtrees for $\neg S\protect_{\p}=$ \textit{Ido is \textbf{not} at SuB}. \setlength{\fboxsep}{1pt}\fbox{Boxed} nodes are verifying.}
+	\label{fig2:qtrees-np}
+\end{figure}
 
-
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\scalebox{1}{
+			\begin{forest}
+				[CS [{$\q$}][\fbox{$\neg \q$}]]
+			\end{forest}
+		}
+		\caption{Derived from Tree \ref{fig2:qtree-q-polar}}\label{fig2:qtree-nq-polar}
+	\end{subfigure}\qquad
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\scalebox{1}{
+			\begin{forest}
+				[CS [\fbox{$\p$}][{$\q$}][\fbox{$\r$}][\fbox{...}]]
+			\end{forest}
+		}
+		\caption{Derived from Tree \ref{fig2:qtree-q-wh}}\label{fig2:qtree-nq-wh}
+	\end{subfigure}
+	\caption{Qtrees for $\neg S\protect_{\q}=$ \textit{Ido is \textbf{not} in Cambridge}. \setlength{\fboxsep}{1pt}\fbox{Boxed} nodes are verifying.}
+	\label{fig2:qtrees-nq}
+\end{figure}
 
 
 
@@ -464,7 +514,7 @@ This assumption introduces an asymmetry between antecedent and consequent. Toget
 \begin{exe}
 	\ex {\textit{Qtrees for conditional LFs.} A Qtree $T$ for $X \rightarrow Y$ is obtained from a Qtree $T_X$ for $X$ and a Qtree $T_Y$ for $Y$ by:
 		\begin{itemize}
-			\item replacing each node $N$ of $T_X$ that is in $\mathbb{N}^+(T_X)$ with $N \cap T_Y$ (cf. (\ref{ex2:n-t-inter}));
+			\item replacing each node $N$ of $T_X$ that is in $\mathbb{N}^+(T_X)$ with $N \cap T_Y$ (see (\ref{ex2:n-t-inter}));
 			\item returning the result only if it is a Qtree.
 		\end{itemize}
 		In other words, $Qtrees(X \rightarrow Y) = \lbrace T_X \cup \bigcup_{N\in \mathbb{N}^+(T_X)}(N\cap T_Y) | (T_X, T_Y) \in Qtrees(X) \times Qtrees(Y) \wedge T_X \cup \bigcup_{N\in \mathbb{N}^+(T_X)}(N\cap T_Y) \text{verifies (\ref{ex2:qtree-def})}  \rbrace$, and $\mathbb{N}^+(T_X \rightarrow T_Y) = \lbrace N\cap N' | (N, N') \in \mathbb{N}^+(T_X) \times \mathbb{N}^+(T_Y) \wedge N\cap N' \neq \emptyset \rbrace$.}\label{ex2:cond-qtree}
@@ -499,8 +549,8 @@ The Node-Qtree intersection operation is schematized in (\ref{fig2:node-qtree-in
 	\end{center}
 	\caption{Node-Qtree intersection.}\label{fig2:node-qtree-inter}
 \end{figure}
-	
-	
+
+
 There are two additional things to note about this operation.
 First, the verifying nodes of a conditional Qtree are inherited from its input \textit{consequent} Qtree; meaning, verifying nodes contributed by the antecedent Qtree are \textit{disregarded}. This is in line with the idea that, when checking the truth of natural language conditionals, speaker tend to overlook the possible the falsity of the antecedent. The whole operation is schematized in Figure \ref{fig2:conditional-qtree-schema}.
 
@@ -548,7 +598,7 @@ First, the verifying nodes of a conditional Qtree are inherited from its input \
 \end{figure} 
 
 
-Second, the Node-Qtree intersection operation ($N\cap T$), which is part of the conditional Qtree formation process, is ``vacuous'' iff $N$ entails a specific leaf in $T$. We call the operation $N \cap T$ vacuous if it outputs $N$; the status of $N$ as verifying still depends on $T$'s verifying nodes. This is exemplified in Figure (\ref{fig2:vacuous-tree-node-inter}) assuming the node $N$ intersecting the Qtree entails (i.e. is a subset of) the leaf labeled $L$ in $T$. What happens is the following. The definition of a Qtree (cf. (\ref{ex2:qtree-def})) states that each intermediate node is partitioned by the set of its children. A corollary of this definition, is that, given a leaf $L$, all the nodes present on the path from $L$ to the root will be supersets of $L$, while all the other nodes will have no overlap with $L$. So, if $N \subseteq L$, $N$ will be a subset of all the nodes in $L$'s path to the root, and have no overlap with the other nodes, as well. Performing $N \cap T$ will thus initially yield a tree with same structure as the input Qtree $T$, but with nodes equal to $N$ along the path between the root and $L$'s original position, and empty nodes in all other positions. The Qtree reduction process devised in (\ref{ex2:qtree-reduction}) then removes all these empty nodes, and collapses the path made of $N$-nodes into one single node, namely, $N$. The whole operation therefore returns the input node $N$. Because the status of being a verifying node percolates when reduction takes place, as per (\ref{ex2:n-t-inter}), the output $N$ will be verifying iff $L$ was in $T$.
+Second, the Node-Qtree intersection operation ($N\cap T$), which is part of the conditional Qtree formation process, is ``vacuous'' iff $N$ entails a specific leaf in $T$. We call the operation $N \cap T$ vacuous if it outputs $N$; the status of $N$ as verifying still depends on $T$'s verifying nodes. This is exemplified in Figure (\ref{fig2:vacuous-tree-node-inter}) assuming the node $N$ intersecting the Qtree entails (i.e. is a subset of) the leaf labeled $L$ in $T$. What happens is the following. The definition of a Qtree (see (\ref{ex2:qtree-def})) states that each intermediate node is partitioned by the set of its children. A corollary of this definition, is that, given a leaf $L$, all the nodes present on the path from $L$ to the root will be supersets of $L$, while all the other nodes will have no overlap with $L$. So, if $N \subseteq L$, $N$ will be a subset of all the nodes in $L$'s path to the root, and have no overlap with the other nodes, as well. Performing $N \cap T$ will thus initially yield a tree with same structure as the input Qtree $T$, but with nodes equal to $N$ along the path between the root and $L$'s original position, and empty nodes in all other positions. The Qtree reduction process devised in (\ref{ex2:qtree-reduction}) then removes all these empty nodes, and collapses the path made of $N$-nodes into one single node, namely, $N$. The whole operation therefore returns the input node $N$. Because the status of being a verifying node percolates when reduction takes place, as per (\ref{ex2:n-t-inter}), the output $N$ will be verifying iff $L$ was in $T$.
 
 
 
@@ -664,14 +714,14 @@ At that point, we can already observe that Qtrees built from $\neg S_{p} \righta
 Building on \cite{Simons2001,Zhang2022}, we assume disjunctive LFs evoke questions pertaining to both disjuncts \textit{in parallel}. In other words, disjuncts should mutually address each-other's questions. This is modeled in (\ref{ex2:disj-qtree}), by assuming that disjunctions return all possible unions of the Qtrees evoked by both disjuncts, filtering out the outputs that do not qualify at Qtrees.
 
 \begin{exe}
-\ex {\textit{Qtrees for disjunctive LFs.} A Qtree $T$ for $X \vee Y$ is obtained from a Qtree $T_X$ for $X$ and a Qtree $T_Y$ for $Y$ by:
-	\begin{itemize}
-		\item unioning the nodes, edges, and verifying nodes of $T_X$ and $T_Y$;
-		\item returning the output only if it is a Qtree.
-	\end{itemize}
-	In other words, $Qtrees(X \vee Y) = \lbrace T_X \cup T_Y | T_X \cup T_Y \text{verifies (\ref{ex2:qtree-def})} \wedge (T_X, T_Y) \in Qtrees(X) \times Qtrees(Y) \rbrace$}\label{ex2:disj-qtree}
-	\end{exe}
-	
+	\ex {\textit{Qtrees for disjunctive LFs.} A Qtree $T$ for $X \vee Y$ is obtained from a Qtree $T_X$ for $X$ and a Qtree $T_Y$ for $Y$ by:
+		\begin{itemize}
+			\item unioning the nodes, edges, and verifying nodes of $T_X$ and $T_Y$;
+			\item returning the output only if it is a Qtree.
+		\end{itemize}
+		In other words, $Qtrees(X \vee Y) = \lbrace T_X \cup T_Y | T_X \cup T_Y \text{verifies (\ref{ex2:qtree-def})} \wedge (T_X, T_Y) \in Qtrees(X) \times Qtrees(Y) \rbrace$}\label{ex2:disj-qtree}
+\end{exe}
+
 A prediction of this definition is that two Qtrees sharing the same CS can be properly disjoined only iff they appear structurally parallel up to a certain level, and any further partitionings they independently introduce do not ``clash'' with each other.\footnote{We assume two Q-trees $T$ and $T'$ feature a bracketing clash iff there is $N \in T$ and $N' \in T'$ s.t. $N=N'$ but the sets of children of $N$ and $N'$ differ. We show that if $T$ and $T'$ exhibit such a clash, their disjunction is not a Q-tree. Let's call $C$ and $C'$ the sets of nodes of resp. $T$ and $T'$ that induce a bracketing clash; by assumption, $C$ and $C'$ are s.t. $C\neq C'$, and have mothers $N$ and $N'$ s.t. $N=N'$. Because $\vee$ achieves graph-union, $T\vee T'$ will have a node $N$ with $C\cup C'$ as children, and because $C\neq C'$, $C\cup C' \supset C, C'$. Given that both $C$ and $C'$ are partitions of $N$, $C\cup C'$ cannot be a partition of $N$. Conversely, if two Q-trees $T$ and $T'$ sharing the same CS as root are s.t. their union $T \cup T'$ is not a Qtree, it must be because $T$ and $T'$ had a bracketing clash. Indeed, under those assumptions, $T \cup T'$ not being a Qtree means one node $N$ in $T \cup T'$ is not partitioned by its children. Given $N$ is in $T \cup T'$, $N$ is also in $T$, $T'$, or both. If $N$ was only in, say, $T$, then it means $N$'s children are also only in $T$, but then, $T$ itself would have had a node not partitionned by its children, contrary to the assumption $T$ is a Qtree. The same holds \textit{mutatis mutandis} for $T'$, so, $N$ must come from \textit{both} $T$ and $T'$. Let us call $C$ and $C'$ the partitioning introduced by $N$ in resp. $T$ and $T'$. The fact $C$, $C'$, but not $C \cup C'$ partition $N$ entails $C\neq C'$, i.e. $T$ and $T'$ feature a bracketing clash.}
 
 The only possible Qtree for $S_p \vee S_q$ / $S_q \vee S_p$ is given in Figure \ref{fig2:qtree-pvq}. It is obtained from Qtrees \ref{fig2:qtree-p-wh} and \ref{fig2:qtree-q-wh}, which, as previously observed, have similar structures. As intuitively expected, it is a Qtree that inquires about $p$ and about $q$ \textit{at the same time} (i.e., as part of the same subquestion), since the $p$ and $q$ nodes appear at the same level of the tree. Other possible unions of Qtrees are shown in Figure \ref{fig2:qtree-pvq-ill-formed} but appear ill-formed, because the leaves of such Qtrees do not properly partition the CS. Following a similar line of reasoning, one can use the Qtrees in Figures \ref{fig2:qtree-p-wh} (for $p$) and \ref{fig2:qtree-pvq} (for $p\vee q$), to derive the only possible Qtree for (\ref{ex2:pv(pvq)-repeated}) = $p\vee(p\vee q)$. Because Qtrees \ref{fig2:qtree-p-wh} and  \ref{fig2:qtree-pvq} have same structure, and are s.t. the former Qtree's set of verifying nodes is a subset of the latter Qtree's set of verifying nodes, Qtree union simply returns Qtree \ref{fig2:qtree-pvq} as output. So Qtree \ref{fig2:qtree-pvq} turns out to be compatible with both $p \vee q$ and (\ref{ex2:pv(pvq)-repeated}).
@@ -687,8 +737,8 @@ The only possible Qtree for $S_p \vee S_q$ / $S_q \vee S_p$ is given in Figure \
 \end{figure}
 
 Figure (\ref{fig2:qtree-pvq}) already gives us a hint as to why (\ref{ex2:pv(pvq)-repeated}) is degraded: there is an expression, namely $p \vee q$, that is strictly simpler than (\ref{ex2:pv(pvq)-repeated}) (and in fact, a proper simplification of (\ref{ex2:pv(pvq)-repeated})), that accommodates the exact same Qtree (including verifying nodes). In that sense, (\ref{ex2:pv(pvq)-repeated}) appears suboptimal. This will be formalized in the next Section.
- 
- 
+
+
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{.3\linewidth}
@@ -722,271 +772,7 @@ Figure (\ref{fig2:qtree-pvq}) already gives us a hint as to why (\ref{ex2:pv(pvq
 	\label{fig2:qtree-pvq-ill-formed}
 \end{figure}
 
-\section{Capturing the target cases}
 
-
-\subsection{Accommodated Qtrees for (\ref{ex2:npt(pvq)-repeated}-\ref{ex2:n(pvq)tp-repeated})}
-It now becomes possible to derive the accommodated QuD of sentences (\ref{ex2:npt(pvq)-repeated}-\ref{ex2:n(pvq)tp-repeated}), using the ``helper'' Qtrees already derived, and our semantics for negated, disjunctive and conditional Qtrees. We start with (\ref{ex2:npt(pvq)-repeated}), whose Qtrees are given in Figure \ref{fig2:qtrees-npt(pvq)}. Those two Qtrees are derived using Figure \ref{fig2:qtrees-np} (for $\neg p$) and \ref{fig2:qtree-pvq} (for $p\vee q$), as well as the combination rule for conditional Qtrees (\ref{ex2:cond-qtree}). Note that in both cases, the output Qtrees are the same as Qtrees associated with other ``simpler'' expressions, $\neg p \rightarrow q$ and $q$ respectively.
-
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{.45\linewidth}
-		\centering
-		\scalebox{1}{
-		\begin{forest}
-			[CS [$\p$] [\dbox{$\neg \p$} [\fbox{$\q$}] [$\r$] [...]]]
-		\end{forest}}
-	\caption{Figure \ref{fig2:qtree-np-polar} $\rightarrow$ Figure \ref{fig2:qtree-pvq}. \textbf{This Qtree is the same as Qtree \ref{fig2:qtree-nptq-polar-wh}}.}
-	\end{subfigure}\hfill
-	\begin{subfigure}[b]{.45\linewidth}
-		\centering
-		\scalebox{1}{
-		\begin{forest}
-			[CS [$\p$] [\fbox{$\q$}] [\dbox{$\r$}] [\dbox{...}] ]
-		\end{forest}}
-	\caption{Figure \ref{fig2:qtree-np-polar} $\rightarrow$ Figure \ref{fig2:qtree-pvq}.\footnotemark \textbf{This Qtree is the same as Qtree \ref{fig2:qtree-q-wh}}.}
-	\end{subfigure}
-	\caption{Qtrees for (\ref{ex2:npt(pvq)-repeated}) $= \neg \p \rightarrow (\p\vee \q)$}\label{fig2:qtrees-npt(pvq)}
-\end{figure}
-\footnotetext{This Qtree, just like the ones in Figures \ref{fig2:qtree-nptq-wh} and \ref{fig2:qtree-nqtp-wh}, is derived \textit{via} intersection, followed by reduction. Before reduction, the Qtree looked like Qtree (\ref{fig2:qtree-nptq-wh-before-reduc}) in footnote \ref{fn:qtree-reduc}.}
-
-For (\ref{ex2:pv(nptq)-repeated}), the relevant Qtrees, shown in Figure \ref{fig2:qtrees-pv(nptq)}, are obtained using Figures \ref{fig2:qtrees-p} (for $p$) and \ref{fig2:qtrees-nptq} (for $\neg p \rightarrow q$), using the combination rule for disjunctive Qtrees (\ref{ex2:disj-qtree}). Note that, because the Qtrees evoked by $p$ that are properly disjoinable with those evoked by $\neg p \rightarrow q$, are structurally contained in them, the Qtrees in Figure \ref{fig2:qtrees-pv(nptq)} are structurally identical to those evoked by $\neg p \rightarrow q$ from Figure \ref{fig2:qtrees-nptq}. Crucially though, the Qtree in Figure \ref{fig2:qtrees-pv(nptq)} involve an extra verifying $p$-leaf (contributed by the Qtree for the $p$-disjunct). There are thus eventually \textit{distinct} from Qtrees evoked by $\neg p \rightarrow q$. Additionally, the Qtrees in Figures \ref{fig2:qtree-pv(nptq)-polar-polar} and \ref{fig2:qtree-pv(nptq)-polar-wh} appear distinct from the Qtree evoked by $p \vee q$, and, in fact, any other simplification of (\ref{ex2:pv(nptq)-repeated}). This suggests that (\ref{ex2:pv(nptq)-repeated}) evokes possible Qtrees that are efficient in conveying specific questions; namely questions that first ask about $p$, (and are answered by $p$), and then, ask about $q$ in the $\neg p$ worlds (and are answered by $q$). 
-
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{.3\linewidth}
-		\centering
-		\scalebox{1}{
-			\begin{forest}
-				[CS [{\fbox{$\p$}}][{$\neg \p$} [\fbox{$\q$}][$\neg \q \cap \neg \p$]]]
-			\end{forest}
-		}
-		\caption{Figure \ref{fig2:qtree-p-polar} $\vee$ Figure \ref{fig2:qtree-nptq-polar-polar}}\label{fig2:qtree-pv(nptq)-polar-polar}
-	\end{subfigure}\hfill
-	\begin{subfigure}[b]{.3\linewidth}
-		\centering
-		\scalebox{1}{
-			\begin{forest}
-				[CS [{\fbox{$\p$}}][{$\neg \p$} [\fbox{$\q$}][$\r$][...]]]
-			\end{forest}
-		}
-		\caption{Figure \ref{fig2:qtree-p-polar} $\vee$ Figure \ref{fig2:qtree-nptq-polar-wh}}\label{fig2:qtree-pv(nptq)-polar-wh}
-	\end{subfigure}\hfill
-	\begin{subfigure}[b]{.33\linewidth}
-		\centering
-		\scalebox{1}{
-			\begin{forest}
-				[CS [{\fbox{$\p$}}][\fbox{$\q$}][{$\r$}][...]]
-			\end{forest}
-		}
-		\caption{Figure \ref{fig2:qtree-p-wh} $\vee$ Figure \ref{fig2:qtree-nptq-wh}. \textbf{This Qtree is the same as Qtree \ref{fig2:qtree-pvq}} for \p$\vee$\q}\label{fig2:qtree-pv(nptq)-wh}
-	\end{subfigure}
-	\caption{Qtrees for (\ref{ex2:pv(nptq)-repeated}) $= p \vee (\neg p \rightarrow q)$}\label{fig2:qtrees-pv(nptq)}
-\end{figure}
-
-For (\ref{ex2:pv(nqtp)-repeated}), the only possible Qtree, shown in Figure \ref{fig2:qtree-pv(nqtp)}, is obtained using Figures \ref{fig2:qtrees-p} (for $p$) and \ref{fig2:qtrees-nqtp} (for $\neg q \rightarrow p$). Because both input Qtrees are the same, the output Qtree is also similar. This makes it inefficient if paired with (\ref{ex2:pv(nqtp)-repeated}), since it is also evoked by (\ref{ex2:pv(nqtp)-repeated})'s simplification $p$.
-
-
-	\begin{figure}[H]
-		\centering
-		\begin{subfigure}[b]{.22\linewidth}
-			\centering
-			\scalebox{1}{
-				\begin{forest}
-					[CS [{\fbox{$\p$}}][{$\q$}][{$\r$}][...]]
-				\end{forest}
-			}
-			
-		\end{subfigure}
-		\caption{Only possible Qtree for (\ref{ex2:pv(nqtp)-repeated}) $= \p{}  \vee  (\neg \q{} \rightarrow \p)$, obtained by disjoining a ``\textit{wh}'' Qtree for $p$ (\ref{fig2:qtree-p-wh}) and the conditional Qtree \ref{fig2:qtree-nqtp-wh}. \textbf{Note that this Qtree is the same as Qtree \ref{fig2:qtree-p-wh}}.}\label{fig2:qtree-pv(nqtp)}
-	\end{figure}
-	
-Finally, the only possible Qtree associated with (\ref{ex2:n(pvq)tp-repeated}), given in Figure \ref{fig2:qtree-n(pvq)tp-wh}, ends up being structurally similar to a disjunctive Qtree for $p\vee q$ (Figure \ref{fig2:qtree-pvq}), except that no verifying nodes remains after conditionalization. This Qtree is thus considered ill-formed, as per (\ref{ex2:vacuous-flagging}).	
-
-
-\begin{multicols}{2}
-	\begin{figure}[H]
-		\centering
-		\scalebox{1}{
-			\begin{forest}
-				[CS [{$\p$}] [{$\q$}] [\fbox{\r}] [\fbox{...}]]
-			\end{forest}
-		}
-		\caption{Only well-formed Qtree evoked by $\neg(S\protect_{\p} \vee S\protect_{\q})$ obtained from Qtree \ref{fig2:qtree-pvq}.}\label{fig2:qtree-n(pvq)}
-	\end{figure}\columnbreak
-	\begin{figure}[H]
-		\centering
-		\scalebox{1}{
-			\begin{forest}
-				[CS [{{$\p$}}][{$\q$}][\dbox{$\r$}][\dbox{...}]]
-			\end{forest}
-		}
-		\caption{Only possible Qtree for (\ref{ex2:n(pvq)tp-repeated}) $= \neg (p \vee q ) \rightarrow p$, obtained by Qtree \ref{fig2:qtree-n(pvq)} as antecedent and any Qtree for $p$ as consequent.}\label{fig2:qtree-n(pvq)tp-wh}
-	\end{figure}
-	
-\end{multicols}
-	
-
-
-\subsection{Rephrasing Redundancy}\label{sec:q-redundancy}
-In the previous Section, we noted cases where the Qtrees derived from our target sentences turned out to be identical to Qtrees evoked by other, ``simpler'' sentences. Here, we argue that those cases are in fact problematic and constitute violations of a specific implementation of \textsc{Redundancy}, inspired from \citet{Katzir2014,Meyer2013,Mayr2016}. More specifically, we use a simplified notion of the \textsc{Redundancy} constraint on Qtree-LF pairs introduced in \citet{HenotMortier2024}. This constraint is sensitive to how accommodated QuDs package information, allowing us to introduce a contrast between $\vee$ and $\rightarrow$. More specifically, if a question is evoked by a sentence $S$ and also by one the sentence's formal simplifications $S'$; then the question is redundant w.r.t. $S$, and as such should be ruled out from the set of possible Qtrees of $S$. This is spelled out in (\ref{ex2:q-redundancy}-\ref{ex2:q-equivalence}). We will say that a sentence $S$ is \textsc{Q-Redundant} if all the Qtrees it gives rise to, are \textsc{Q-Redundant} given $S$. \textsc{Q-Redundancy} (as defined on sentences) is thus a variety of oddness (as defined in (\ref{ex2:oddness-sentence})).
-
-\begin{exe}
-	\ex 
-	\begin{xlist}
-		\ex {\textsc{Q-Redundancy}. (to be revised in Chapter \ref{chap:hurford-sentences}). Let $X$ be a LF and let $Qtrees(X)$ be the set of the Qtrees compatible with $X$. For any $T \in Qtrees(X)$, $T$ is deemed \textsc{Q-Redundant} with respect to $X$ iff there exists a formal simplification of $X$, $X'$, and $T' \in Qtrees(X')$, such that $T=T'$.}\label{ex2:q-redundancy}
-		\ex {\textit{Formal simplification}. $X$ is a formal simplification of $X$ if $X'$ can be derived from $X$ \textit{via} a series of constituent-to-subconstituent substitutions.}\label{ex2:formal-simplification}
-		\ex {\textit{Qtree equality}. $T = T'$ iff $T$ and $T'$ have same structure and same set of verifying nodes.}\label{ex2:q-equivalence}
-	\end{xlist}
-\end{exe}
-
-Regarding (\ref{ex2:pv(pvq)-repeated})$ = p\vee(p \vee q)$, we noted that its only possible Qtree, shown in Figure \ref{fig2:qtree-pvq}, was also compatible with $p\vee q$, which is a simplification of $p\vee(p \vee q)$. So, after checking \textsc{Q-Redundancy}, (\ref{ex2:pv(pvq)-repeated}) is no longer compatible with any Qtree and correctly deemed odd.
-
-Regarding (\ref{ex2:npt(pvq)-repeated})$ = \neg p\rightarrow(p \vee q)$, we noted that its two possible Qtrees, shown in Figure \ref{fig2:qtrees-npt(pvq)}, were also compatible with $\neg p\rightarrow q$, and $q$, respectively. And both $\neg p\rightarrow q$ and $q$ are simplifications of $\neg p\rightarrow(p \vee q)$. So, after checking \textsc{Q-Redundancy}, (\ref{ex2:npt(pvq)-repeated}) is no longer compatible with any Qtree and correctly deemed odd.
-
-Regarding (\ref{ex2:pv(nptq)-repeated})$ = p\vee(\neg p \rightarrow q)$, we noted that one of its three possible Qtrees, shown in Figure \ref{fig2:qtrees-pv(nptq)}, was also compatible with $p \vee q$, which is a simplification of $\neg p\rightarrow(p \vee q)$. What about the two other trees, represented in Figures \ref{fig2:qtree-pv(nptq)-polar-polar} and \ref{fig2:qtree-pv(nptq)-polar-wh}? The six possible simplifications of (\ref{ex2:pv(nptq)-repeated}) are $p$, $\neg p \rightarrow q$, $p \rightarrow q$, $p \vee \neg p$, $p \vee q$, and $p \vee p$. First, $p$, $p \vee p$, and $p \vee \neg p$, give rise to Qtrees whose structures are shown by Figure (\ref{fig2:qtrees-p}). Those are obviously different from the structures in Figures \ref{fig2:qtree-pv(nptq)-polar-polar} and \ref{fig2:qtree-pv(nptq)-polar-wh}. Second, $\neg p \rightarrow q$ and $p \rightarrow q$, give rise to Qtrees whose structures are equal to, or analog to, those in Figure \ref{fig2:qtree-nptq-wh}, but crucially, do not treat the $p$-leaf as verifying -- unlike the Qtrees in Figures \ref{fig2:qtree-pv(nptq)-polar-polar} and \ref{fig2:qtree-pv(nptq)-polar-wh}. Lastly, $p \vee q$ gives rise to the Qtree in Figure \ref{fig2:qtree-pvq}, which is obviously different from those in Figures \ref{fig2:qtree-pv(nptq)-polar-polar} and \ref{fig2:qtree-pv(nptq)-polar-wh}. Therefore, there is no simplification of (\ref{ex2:pv(nptq)-repeated}) giving rise to Qtrees like \ref{fig2:qtree-pv(nptq)-polar-polar} and \ref{fig2:qtree-pv(nptq)-polar-wh}, and, as a result, those Qtrees remain compatible with the sentence after checking \textsc{Q-Redundancy}. This means that (\ref{ex2:npt(pvq)-repeated}) should not be deemed odd, in line with (\ref{ex2:npt(pvq)-repeated})'s felicity profile.
-
-Regarding (\ref{ex2:pv(nqtp)-repeated}) $ = p \vee (\neg q \rightarrow p)$, we noted that its only possible Qtree, shown in Figure \ref{fig2:qtree-pv(nqtp)}, was also compatible with $p$, which is a simplification of $p\vee(p \vee q)$. So, after checking \textsc{Q-Redundancy}, (\ref{ex2:pv(nqtp)-repeated}) is no longer compatible with any Qtree and correctly deemed odd.
-
-Finally, we already settled the case of (\ref{ex2:n(pvq)tp-repeated}) in the previous Section: because this sentence only gives rise to a tree without any verifying leaf, it should be deemed odd as per conditions (\ref{ex2:vacuous-flagging}) and (\ref{ex2:oddness-sentence}).
-
-To sum up, we accounted for te pattern in (\ref{ex2:pv(pvq)-repeated}-\ref{ex2:n(pvq)tp-repeated}) by appealing to a model of compositional QuDs assigning disjunctions and conditionals different contributions, and by redefining \textsc{Redundancy} on QuD-LF pairs. In the next Section, we discuss how this new model relates to previous or alternative approaches to redundancy phenomena.
-
-
-\section{Taking stock}
-
-\subsection{The Maxim of Manner at the inquisitive level?}
-Earlier definitions of \textsc{Redundancy} were linking this notion to Grice's Maxim of \textsc{Manner}
-\begin{exe}
-	\ex {\textit{Maxim of Manner \cite{Grice1989}}. Avoid obscurity of expression; avoid ambiguity; be brief (avoid prolixity); be orderly.
-	}
-\end{exe}
-This Maxim may be rephrased in more modern terms, by stating that if two sentences have the same logical contribution, then the more concise one should be preferred. Is \textsc{Q-Redundancy} a proper extension of this principle at the inquisitive level? At first blush, not exactly. In particular, \textsc{Q-Redundancy} does not state that, for a sentence $S$ to be \textsc{Q-Redundant}, \textit{all} Qtrees compatible with $S$ should be identified (\textit{via} a bijective operation) to \textit{all} Qtrees compatible with a simplification of $S$ -- which would have been the most intuitive extension of Brevity as the QuD level, and is depicted in Figure \ref{fig2:redundancy-intuitive-extension}. Instead, \textsc{Q-Redundancy} says that for a sentence $S$ to be \textsc{Q-Redundant}, \textit{all} Qtrees compatible with $S$ should be identified with \textit{some} Qtree generated by \textit{some} simplification of $S$. This configuration, depicted in Figure \ref{fig2:q-redundancy}, is significantly less strong, i.e. predicts \textit{more} sentences to be redundant than the more ``intuitive'' extension of Brevity. For instance, we concluded that (\ref{ex2:npt(pvq)-repeated}) was \textsc{Q-Redundant} because each of its Qtrees could be identified with Qtrees coming from \textit{distinct} simplifications of (\ref{ex2:npt(pvq)-repeated}) -- namely $q$ and $\neg p \rightarrow q$. Moreover, $q$ and $\neg p \rightarrow q$ themselves led to Qtrees that (\ref{ex2:npt(pvq)-repeated}) was \textit{not} compatible with.
-
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{.3\linewidth}
-		\centering
-	\scalebox{.55}{
-	\begin{tikzpicture}
-		\draw[rounded corners] (0, 0) rectangle (8, 2) {};
-		\draw[rounded corners] (-.1, -.1) rectangle (8.1, 2.1) {};
-		\node[] at(4,1) {\LARGE Qtrees($S$) = Qtrees($S'$)};
-	\end{tikzpicture}}
-	\caption{What a more ``intuitive'' (but inaccurate) version of \textsc{Q-Redundancy} could have been ($S'$ is supposed to be a simplification of $S$).}\label{fig2:redundancy-intuitive-extension}
-	\end{subfigure}\hfill
-	\begin{subfigure}[b]{.65\linewidth}
-		\centering
-	\scalebox{.8}{
-	\begin{tikzpicture}
-		\draw[rounded corners] (0, 0) rectangle (8, 2) {};
-		\draw[rounded corners] (-1, -1) rectangle (2, 3) {};
-		\draw[rounded corners] (6, -1) rectangle (9, 3) {};
-		\draw[rounded corners] (4, -1.6) rectangle (6, 2.6) {};
-		\draw[rounded corners] (2, -.6) rectangle (4, 3.6) {};
-		\node[] at(.5,2.5) {Qtrees($S'$)};
-		\node[] at(3,3.1) {Qtrees($S''$)};
-		\node[] at(5,-1.1) {Qtrees($S'''$)};
-		\node[] at(7.5,2.5) {Qtrees($S''''$)};
-		\node[] at(4,1) {\LARGE Qtrees($S$)};
-	\end{tikzpicture}}
-	\caption{What it takes for $S$ to be odd solely due to \textsc{Q-Redundancy} ($S'$, $S''$, $S'''$, and $S''''$ are supposed to be simplifications of $S$).}\label{fig2:q-redundancy}
-	\end{subfigure}
-	\caption{Comparing \textsc{Q-Redundancy} to a more ``intuitive'' extension of \textsc{Redundancy} to the QuD domain.}
-\end{figure}
-
-Our definition of \textsc{Q-Redundancy} also leaves space for other Qtree well-formedness constraints to contribute to a sentence's oddness. For instance, if we also assume, following \citet{HenotMortier2024a}, that \textsc{Relevance} (in the form of \textsc{Q-Relevance}) should filter out Qtrees evoked by sentences, then a sentence may be deemed odd because \textit{some} Qtrees compatible with $S$ can be identified with \textit{some} Qtree generated by \textit{some} simplification of $S$, and the other Qtrees compatible with $S$ are ruled-out by \textsc{Q-Relevance}. This mixed-oddness profile is schematized in Figure \ref{fig2:q-redundancy-relevance}.
-
-
-
-\begin{figure}[H]
-	\centering
-	\scalebox{.8}{
-		\begin{tikzpicture}
-			\draw[rounded corners] (0, 0) rectangle (8, 2) {};
-			\draw[rounded corners] (-1, -1) rectangle (2, 3) {};
-			\draw[rounded corners] (4, -1.6) rectangle (6, 2.6) {};
-			\draw[rounded corners] (2, -.6) rectangle (4, 3.6) {};
-			\draw[-] (6,0) -- (8,2);
-			\draw[-] (6,2) -- (8,0);
-			\node[] at(.5,2.5) {Qtrees($S'$)};
-			\node[] at(3,3.1) {Qtrees($S''$)};
-			\node[] at(5,-1.1) {Qtrees($S'''$)};
-			\node[] at(4,1) {\LARGE Qtrees($S$)};
-			\node[] at(7,1.6) {{ruled out}};
-			\node[] at(7,1.2) {{by other}};
-			\node[] at(7,.8) {{Qtree}};
-			\node[] at(7,.4) {{constraint}};
-	\end{tikzpicture}}
-	\caption{What it means for $S$ to be odd partly due to \textsc{Q-Redundancy}, partly due to other Qtree well-formedness constraints, e.g. \textsc{Q-Relevance}.}\label{fig2:q-redundancy-relevance}
-\end{figure}
-
-If \textsc{Q-Redundancy} at the sentential level is not a proper extension of Brevity, \textsc{Q-Redundancy} defined on LF-Qtree pairs (cf. \ref{ex2:q-redundancy}), is. To see this, one must define the simplification of an LF-Qtree pair ($S$, $T$), as a pair ($S'$, $T'$) where $S'$ is a formal simplification of $S$ in the sense of (\ref{ex2:formal-simplification}). Additionally, one must define equivalence between LF-Qtree pairs as equivalence between their Qtree-component. This yields a definition of \textsc{Q-Relevance}-as-Brevity, given in (\ref{ex2:q-redundancy-as-brevity}) that is set as a two-dimensional optimization problem on both LFs (which define conciseness) and Qtrees (which define informativeness).
-
-\begin{exe}
-	\ex 
-	\begin{xlist}
-		\ex {\textit{\textsc{Q-Redundancy} as Brevity on LF-Qtree pairs.} If ($S$, $T$) and ($S'$, $T'$) are two LF-Qtree pairs that are equivalent to each other, then prefer the most concise of the two.}
-		\ex {\textit{Conciseness of a LF-Qtree pair.} If ($S$, $T$) and ($S'$, $T'$) are two LF-Qtree pairs, ($S'$, $T'$) is more concise than ($S$, $T$) iff $S'$ is a formal simplification of $S$ as per (\ref{ex2:formal-simplification}).}
-		\ex {\textit{Equivalence of a LF-Qtree pair.} If ($S$, $T$) and ($S'$, $T'$) are two LF-Qtree pairs, ($S'$, $T'$) is equivalent to ($S$, $T$) iff $T = T'$.\footnote{This is simplified for the purposes of this paper: equality could be replaced by any more elaborate relation between Qtrees.}}
-	\end{xlist}\label{ex2:q-redundancy-as-brevity}
-\end{exe}
-
-
-
-
-
-
-
-
-
-
- 
-\iffalse
-(\ref{ex2:pv(pvq)-repeated}-\ref{ex2:n(pvq)tp-repeated})
-(\ref{ex2:pv(pvq)-repeated})
-(\ref{ex2:npt(pvq)-repeated})
-(\ref{ex2:pv(nptq)-repeated})
-(\ref{ex2:pv(nqtp)-repeated})
-(\ref{ex2:n(pvq)tp-repeated})
-\fi
-\section{Exploring extensions and elaborations of the target sentences}\label{sec:exploration}
-
-Before exploring other variations obtained from (\ref{ex2:double-disjunctions}), let us have a word on the slight contrast between (\ref{ex2:pv(nptq)}) and (\ref{ex2:(nptq)vp}), repeated below.
-
-\begin{exe}
-	\exr{ex2:pv(nptq)}[] {Either Ido is at SuB or if he is not at SuB then he is in Cambridge.\\ \hfill $\p \vee (\neg \p \rightarrow \q)$}
-	\exr{ex2:(nptq)vp}[?] {Either Ido is in Cambridge if not at SuB, or he is at SuB.\\ \hfill $(\neg \p \rightarrow \q) \vee \p$}
-\end{exe}
-
-Our account does not predict a contrast between (\ref{ex2:pv(nptq)}) and (\ref{ex2:(nptq)vp}), because disjunction is assumed to have a purely symmetric effect. However, it is possible to assume that, if two forms have same complexity and same accommodated QuDs, the form whose evoked QuD gets incrementally more complex in the course of its computation, should be preferred.
-
-\begin{exe}
-	\ex{}
-\end{exe}
-
-Q-Redundancy is non-incremental, not only structural. A more surface level redundancy, may be incremental, and structural.
-
-
-
-\begin{exe}
-	\ex Double \textit{or}-to-\textit{if}
-	\begin{xlist}
-		\ex[\#] {If Ido is not at SuB then, if he is not at SuB then he is in Cambridge.\hfill $\neg p \rightarrow (\neg p \rightarrow q)$}\label{ex2:nptnptq}
-		\ex[\#] {If Ido is not at SuB then, if he is not in Cambridge then he is at SuB.\hfill $\neg p \rightarrow (\neg q \rightarrow p)$}\label{ex2:nptnqtp}
-		\ex[] {If it's not that Ido is in Cambridge if not at SuB, then Ido is not at SuB.\hfill $\neg (\neg p \rightarrow q) \rightarrow p$}\label{ex2:nptnqtp}
-		\ex[\#] {If it's not that Ido is at SuB if not in Cambridge, then Ido is at SuB.\hfill $\neg (\neg q \rightarrow p) \rightarrow p$}\label{ex2:nptnqtp}
-	\end{xlist}
-\end{exe}
-
-
-ido had dessert or cheese and dessert
-if ido did not have dessert he had cheese and dessert
-if ido did not have cheese and dessert he had dessert
-
-\section{Conclusion and outlook}\label{sec:conclusion}
-We presented a set of data based on variation of the redundant structure $p \vee p \vee q$, and showed that the felicity profiles of these sentences was hard to account for, in conjunction with other well known redundant sentences,  
-Stress the fact the Hurford Senteces covered by other paper did not allow to deriectly tease apart my account from Kalomoiros' but the sentences at stake in this paper can.
 
 
 

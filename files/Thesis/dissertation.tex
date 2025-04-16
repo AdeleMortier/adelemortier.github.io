@@ -19,6 +19,10 @@
 \newcommand{\citenp}[1]{\citeauthor{#1}, \citeyear{#1}}
 
 \usepackage{tikz}
+\usetikzlibrary{patterns}
+
+
+
 \usepackage{setspace}
 \DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
 \DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
@@ -85,26 +89,28 @@
 
 \begin{document}
 	\tableofcontents
-
+\sloppy
 \onehalfspacing
 \include{chap1}
 
-%redundancy under discussion
-%\include{chap2}
+
+\include{chap2} %defines qtrees inductively
+\include{chap3} %compared previous chapter to existing accounts
+%\include{chap4} %redundancy under discussion
 
 % hurford sentences
-%\include{chap3}
-
-% scalarity
-%\include{chap4}
-
-%economy
 %\include{chap5}
 
-\chapter{On the overtness asymmetry between only and exh}
+% scalarity
+%\include{chap6}
+
+%economy
+%\include{chap7}
+
+%\chapter{On the overtness asymmetry between only and exh}
 
 
-\bibliographystyle{chicago}
+\bibliographystyle{apalike}
 \bibliography{biblio}
 
 

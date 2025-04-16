@@ -6,65 +6,81 @@ A level-1 auxiliary file: chap2.aux
 A level-1 auxiliary file: chap3.aux
 A level-1 auxiliary file: chap4.aux
 A level-1 auxiliary file: chap5.aux
-The style file: chicago.bst
+A level-1 auxiliary file: chap6.aux
+A level-1 auxiliary file: chap7.aux
+The style file: apalike.bst
 Database file #1: biblio.bib
-Repeated entry---line 484 of file biblio.bib
+I was expecting a `,' or a `}'---line 33 of file biblio.bib
+ :  
+ :  editor={Benz, Anton Benz and Jäger, Gerhard},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 98 of file biblio.bib
+ :  
+ :  publisher={MIT},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 271 of file biblio.bib
+ : @incollection{Groenendijk1999
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 452 of file biblio.bib
+ : @article{Fox2018
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 593 of file biblio.bib
  : @inproceedings{HenotMortier2024a
  :                                 ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 699 of file biblio.bib
+Repeated entry---line 808 of file biblio.bib
  : @article{Schlenker2009
  :                       ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "VanKuppevelt1995"
 Warning--I didn't find a database entry for "HenotMortier2024"
-Warning--no number and no volume in Kalomoiros2024
-Warning--no number and no volume in Kroch1972
-Warning--page numbers missing in Kroch1972
-Warning--page numbers missing in Mayr2016
-Warning--page numbers missing in Schlenker2009
-Warning--page numbers missing in Tomioka2021
-Warning--no number and no volume in Zhang2024
-Warning--page numbers missing in Zhang2024
-You've used 51 entries,
-            2861 wiz_defined-function locations,
-            969 strings with 11877 characters,
-and the built_in function-call counts, 30226 in all, are:
-= -- 2613
-> -- 1607
-< -- 10
-+ -- 423
-- -- 601
-* -- 2271
-:= -- 5583
-add.period$ -- 162
-call.type$ -- 51
-change.case$ -- 308
-chr.to.int$ -- 48
-cite$ -- 59
-duplicate$ -- 1029
-empty$ -- 2159
-format.name$ -- 637
-if$ -- 5603
+Warning--to sort, need author or key in Heim1983b
+Warning--empty author in Heim1983b
+Warning--empty booktitle in Hulstijn1997
+Warning--empty publisher in Heim2023
+You've used 60 entries,
+            1935 wiz_defined-function locations,
+            885 strings with 11969 characters,
+and the built_in function-call counts, 21599 in all, are:
+= -- 2161
+> -- 556
+< -- 69
++ -- 179
+- -- 162
+* -- 1577
+:= -- 3694
+add.period$ -- 189
+call.type$ -- 60
+change.case$ -- 360
+chr.to.int$ -- 57
+cite$ -- 65
+duplicate$ -- 1007
+empty$ -- 1707
+format.name$ -- 237
+if$ -- 4388
 int.to.chr$ -- 4
 int.to.str$ -- 0
-missing$ -- 50
-newline$ -- 261
-num.names$ -- 518
-pop$ -- 255
+missing$ -- 59
+newline$ -- 305
+num.names$ -- 193
+pop$ -- 333
 preamble$ -- 1
-purify$ -- 617
+purify$ -- 373
 quote$ -- 0
-skip$ -- 1023
+skip$ -- 802
 stack$ -- 0
-substring$ -- 1749
-swap$ -- 360
-text.length$ -- 10
+substring$ -- 1539
+swap$ -- 192
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 958
-warning$ -- 8
-while$ -- 552
+type$ -- 346
+warning$ -- 4
+while$ -- 181
 width$ -- 0
-write$ -- 696
-(There were 2 error messages)
+write$ -- 786
+(There were 6 error messages)
