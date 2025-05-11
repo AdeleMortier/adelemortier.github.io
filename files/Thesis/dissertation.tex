@@ -81,6 +81,9 @@
 	\reflectbox{$\m@th#1#2$}%
 }
 \makeatother
+%%for alpha numbering in Figures
+%\renewcommand\thefigure{\Alph{figure}}
+%\numberwithin{figure}{chapter}
 
 %for roman numbering of examples in footnotes
 \makeatletter
@@ -95,7 +98,7 @@
 
 
 \include{chap2} %defines qtrees inductively
-\include{chap3} %compared previous chapter to existing accounts
+%\include{chap3} %compared previous chapter to existing accounts
 %\include{chap4} %redundancy under discussion
 
 % hurford sentences
