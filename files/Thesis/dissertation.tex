@@ -17,6 +17,9 @@
 \author{Adèle Hénot-Mortier}
 
 \newcommand{\citenp}[1]{\citeauthor{#1}, \citeyear{#1}}
+\newcommand{\citetoappear}[1]{\citeauthor{#1}, to appear}
+\newcommand{\citeptoappear}[1]{(\citeauthor{#1}, to appear)}
+\newcommand{\citettoappear}[1]{\citeauthor{#1} (to appear)}
 
 \usepackage{tikz}
 \usetikzlibrary{patterns}
@@ -31,6 +34,7 @@
 \usepackage{wrapfig}
 \usepackage{graphicx}
 \usepackage{cancel}
+\usepackage{booktabs}
 \usepackage{centernot}
 \usepackage{multicol}
 \usepackage{amsmath}
@@ -40,28 +44,48 @@
 \usepackage{float}
 \usepackage{stackengine}
 \usepackage{nicefrac}
+\usepackage[normalem]{ulem}
 \usepackage{dashbox}
 \usepackage{enumerate}
+\usepackage[table,xcdraw]{xcolor}
 \usepackage[linguistics]{forest}
 \usepackage{gb4e}
 \usepackage{wasysym} %for smileys
+\usepackage[justification=centering]{caption}
+
 \usepackage{subcaption}
 \usepackage{adjustbox}
-\definecolor{orange}{RGB}{213, 94, 0}
-\definecolor{blue}{RGB}{0, 114, 178}
-\definecolor{lightblue}{RGB}{86, 180, 233}
-\definecolor{green}{RGB}{0, 158, 115}
-\definecolor{red}{RGB}{204, 121, 167}
+
+
+\definecolor{orange}{HTML}{ff7f0e}
+\definecolor{blue}{HTML}{1f77b4}
+\definecolor{green}{HTML}{2ca02c}
+\definecolor{red}{HTML}{d62728}
+\definecolor{purple}{HTML}{9467bd}
+
+\definecolor{brown}{HTML}{8c564b}
+\definecolor{pink}{HTML}{e377c2}
+\definecolor{gray}{HTML}{7f7f7f}
+\definecolor{olive}{HTML}{bcbd22}
+\definecolor{cyan}{HTML}{17becf}
+
 
 \newcommand{\p}{\textbf{\textcolor{blue}{p}}}
+\newcommand{\pplus}{\textbf{\textcolor{orange}{p$^+$}}}
+
 \newcommand{\q}{\textbf{\textcolor{red}{q}}}
-\newcommand{\s}{\textbf{\textcolor{blue}{s}}}
-\renewcommand{\r}{\textbf{\textcolor{green}{r}}}
+\newcommand{\qplus}{\textbf{\textcolor{green}{q$^+$}}}
+
+\newcommand{\s}{\textbf{\textcolor{pink}{s}}}
+\newcommand{\splus}{\textbf{\textcolor{cyan}{s$^+$}}}
+
+\renewcommand{\r}{\textbf{\textcolor{brown}{r}}}
+
+
 \newcommand{\bfbox}[1]{\textcolor{blue}{\fbox{\textcolor{black}{#1}}}}
 \newcommand{\ofbox}[1]{\textcolor{orange}{\fbox{\textcolor{black}{#1}}}}
 \newcommand{\gfbox}[1]{\textcolor{green}{\fbox{\textcolor{black}{#1}}}}
-\newcommand{\pplus}{\textbf{\textcolor{orange}{p$^+$}}}
-\newcommand{\splus}{\textbf{\textcolor{orange}{s$^+$}}}
+
 \newcommand{\sbna}{$\exists\wedge\neg\forall$}
 \usepackage{pifont}
 \newcommand{\cmark}{\ding{51}}%
@@ -90,6 +114,11 @@
 \renewcommand{\thexnumi}{\if@noftnote\@xsi{xnumi}\else\roman{xnumi}\fi}
 \makeatother
 
+\usepackage{alphalph}
+\renewcommand{\thefigure}{\AlphAlph{\value{figure}}}
+\renewcommand{\thesubfigure}{\arabic{subfigure}}
+%\renewcommand{\thefigure}{\Roman{figure}}
+
 \begin{document}
 	\tableofcontents
 \sloppy
@@ -97,23 +126,23 @@
 \include{chap1}
 
 
+%there are seven chapter like the horcruxes
 \include{chap2} %defines qtrees inductively
-%\include{chap3} %compared previous chapter to existing accounts
-%\include{chap4} %redundancy under discussion
+\include{chap3} %compared previous chapter to existing accounts
+\include{chap4} %redundancy under discussion
 
+\include{chap5}%\label{chap:hurford-disj}
 % hurford sentences
-%\include{chap5}
+\include{chap6}%\label{chap:hurford-sentences}
 
-% scalarity
-%\include{chap6}
+% scalarity and economy
+\include{chap7}%\label{chap:scalarity}
 
-%economy
-%\include{chap7}
 
 %\chapter{On the overtness asymmetry between only and exh}
 
 
-\bibliographystyle{apalike}
+\bibliographystyle{chicago}
 \bibliography{biblio}
 
 

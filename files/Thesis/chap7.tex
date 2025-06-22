@@ -1,1 +1,1082 @@
-\chapter{A QuD-driven approach to incremental constraints on exhaustification}\label{chap:exh-incr}
+\chapter[Some but not all redundant sentences escape infelicity: oddness and scalarity]{Some but not all redundant sentences escape infelicity: oddness and scalarity\footnotemark}\label{chap:scalarity}
+\footnotetext{This Chapter constitutes a longer and hopefully more readable adaptation of \citettoappear{HenotMortier2024c}. I would like to thank the audience and reviewers of the Harvard Language \& Cognition Talk Series, the 2024 HeimFest at MIT, the 2024 Amsterdam Colloquium and SALT35, in particular Jonathan Bobaljik, Ivano Ciardelli, Alexandre Cremers, Kate Davidson, Lisa Hofmann, Manfred Krifka, Jesse Snedecker, Benjamin Spector, for questions, datapoints and suggestions regarding earlier iterations of this project. I also thank my colleagues Omri Doron, Nina Haslinger, and Jad Wehbe.}
+
+
+This Chapter focuses on Hurford Disjunctions and Conditionals featuring logically entailing \textit{scalar} items, like \textit{some} and \textit{all} (\citenp{Gazdar1979};\citenp{Singh2008a};\citenp{Singh2008b};\citenp{Fox2018a} i.a.). It will be divided into three clearly distinct components. First, we will introduce scalar Hurford Disjunctions, along with an experimental assessment of the ordering asymmetry they supposedly display. Second, we will propose a new account of the observed asymmetry, which unlike previous accounts, directly recycles independent assumptions about the nature of (c)overt exhaustification and constraints on question answering. Lastly, we will introduce Hurford Conditionals and show that they may receive a treatment solely based on \textsc{Incremental Q-Relevance}, as defined in Chapter \ref{chap:hurford-sentences}.
+
+\section{Experimentally assessing asymmetries in scalar Hurford Disjunctions}\label{sec7:asym-exp}
+
+\subsection{The data}
+Recall that Hurford Disjunctions (henceforth \textbf{HD}s, \cite{Hurford1974}), already introduced in Chapter \ref{chap:hurford-disj}, typically involve entailing disjuncts and appear infelicitous regardless of the linear order of the disjuncts. This is shown in (\ref{ex7:hd}).
+
+
+\begin{exe}
+	\ex\label{ex7:hd}
+	\begin{xlist}
+		\ex[\#] {SALT35 will take place in the United States or Massachusetts. \hfill \p{} $\vee$ \pplus}\label{ex7:hd-ws}
+		\ex[\#] {SALT35 will take place in Massachusetts or the United States. \hfill \pplus{} $\vee$ \p}\label{ex7:hd-sw}
+	\end{xlist}
+\end{exe}
+
+However, \citet{Gazdar1979} observed that HDs can become felicitous if the disjuncts are the same \textit{modulo} scalemates, like $\langle s, s^+ \rangle = \langle \textit{some}, \textit{all} \rangle$. This is exemplified in (\ref{ex7:shd-ws0}).
+
+
+\begin{exe}
+	\ex[] {Jo read some or all of the books. \hfill \s{} $\vee$ \splus}\label{ex7:shd-ws0}
+\end{exe}
+
+\citeauthor{Singh2008}, (\citeyear{Singh2008a}, \citeyear{Singh2008b}) later observed that this apparent obviation of Hurford's Constraint, is dependent on the order of the two disjuncts. If the order of the two disjuncts is reversed, as in (\ref{ex7:shd-sw}), infelicity tends to remain. We will call the two HDs in (\ref{ex7:shd}), \textbf{bare scalar HDs} (or simply scalar HDs). Descriptively, it seems that scalar HDs can be rescued from infelicity, only if the weaker disjunct precedes the stronger one.
+
+
+\begin{exe}
+	\ex\label{ex7:shd}
+	\begin{xlist}
+		\ex[] {Jo read some or all of the books. \hfill \s{} $\vee$ \splus}\label{ex7:shd-ws}
+		\ex[??] {Jo read all or some of the books. \hfill \splus{} $\vee$ \s}\label{ex7:shd-sw}
+	\end{xlist}
+\end{exe}
+
+Additionally, \citeauthor{Singh2008} noticed that scalar HDs can be overtly rescued \textit{via} \textit{only}. Note that (\ref{ex7:shdo-ws}) may sounds weirder, just because it appears equivalent to its variant without \textit{only}, (\ref{ex7:shd-ws}), which simpler, ad felicitous.
+
+\begin{exe}
+	\ex\label{ex7:shdo}
+	\begin{xlist}
+		\ex[?] {Jo read only some or all of the books. \hfill $O(\s)\vee\splus$}\label{ex7:shdo-ws}
+		\ex[] {Jo read all or only some of the books. \hfill $\splus\vee O(\s)$}\label{ex7:shdo-sw}
+	\end{xlist}
+\end{exe}
+
+This dataset is challenging, because, first, one must come up with a story explaining why bare scalar HDs like those in (\ref{ex7:hd}) are asymmetrically rescued, in a completely covert way; and, second, why \textit{only}, seen as an overt rescuer, is not influenced by liner order. Section \ref{sec7:asym-account} will actually present a novel solution to these two puzzles. For now let us review the mainstream approach to such data. The specifics of the analysis will not be relevant to the experiment subsequently presented in this Section. This experiment is only intended to clarify the initially murky empirical picture: is the observation that bare scalar HDs are asymmetrically rescued a robust fact tied to pragmatics? What about scalar HDs involving \textit{only}? 
+
+\subsection{Previous accounts}
+
+The asymmetry in (\ref{ex7:shd}) has received several accounts (\cite{Singh2008a,Fox2018,Tomioka2021,Ippolito2019,HenotMortier2023} i.a.). Most of these accounts specifically focused on the pair in (\ref{ex7:shd}) -- leaving (\ref{ex7:shdo}) aside (\citenp{Singh2008b} and \citenp{Ippolito2019} being the two notable exceptions). All these accounts capitalize on the idea that (\ref{ex7:shd-ws}) can be rescued \textit{via} a local scalar implicature of the form \textit{some $\leadsto$ \textit{some but not all}}, targeting the first disjunct. This would allow the two disjuncts in (\ref{ex7:shd-ws}) to become incompatible. Therefore,  (\ref{ex7:shd-ws}) would avoid violating Hurford's Constraint, or, for that matter, any implementation of Hurford's Constraint we reviewed in this dissertation.\\
+
+Local scalar implicatures are permitted by the covert operator \textit{exh}, which stands for \textit{exhaustification} (\citenp{Fox2007};\citenp{Spector2008} i.a.). A definition of \textit{exh} is given in (\ref{ex7:exh-simple}).\footnote{This definition does not cover cases in which non-weaker alternatives are included \citep{BarLev2017}, but is enough for our purposes here.} This operator non-arbitrarily conjoins the proposition it attaches to, called prejacent, with the negation non-weaker alternatives, while making sure the resulting strengthened meaning is maximally informative and non-contradictory. Ensuring the final result is non-contradictory and maximally informative, amounts to computing the set $MaxExcl(Q, p)$ of maximal ``candidate'' sets of alternatives which can be negated and conjoined with the prejacent without a contradiction. Ensuring the final result is not obtained in an arbitrary way, amounts to actually negating only the alternatives that belong to \textit{all} candidate sets in $MaxExcl(Q, p)$. There alternatives form the set of so-called Innocently Excludable alternatives $IE(Q, p)$. Ensuring non-arbitrariness in exhaustification appears crucial when it comes to sets of alternatives to a prejacent that properly partition it. This is known as the Symmetry Problem \citep{Kroch1972,Fox2007} and will be briefly discussed at the end of this Section. 
+
+
+\begin{exe}
+	\ex {\textit{Exhaustification. } Let $p$ be a proposition and let $Q$ be a set of relevant alternatives to $p$ that are at most as complex as $p$, in the sense of \citet{Katzir2007}.\\
+		The exhaustification of $p$ (prejacent) given $Q$, corresponds to $p$, conjoined with the negation of all Innocently Excludable alternatives in $Q$. In other words, exh($Q$, $p$) = $p \wedge \bigwedge_{p' \in IE(Q, p)} \neg p'$.}\label{ex7:exh-simple}
+	\ex {\textit{Innocent Exclusion. } $p'$ is Innocently Excludable given $Q$ and $p$ ($p' \in IE(Q, p)$), iff $p'$ belongs to the intersection of the maximal subsets of $Q$ whose grand negation is consistent with $p$. In other words, $p' \in IE(Q, p) \iff p' \in \bigcap MaxExcl(Q, p)$, where $MaxExcl(Q, p) = Max_{\subseteq}(\lbrace Q' \subset Q. \ p \wedge \bigwedge_{p' \in Q'} \neg p' \not\vDash \bot \rbrace)$.}\label{ex7:ie}
+\end{exe}
+
+\textit{Exh} has an effect that is very close to that of overt \textit{only}. When applied to the first disjunct of (\ref{ex7:shd-ws}) for instance, it typically leads to the strengthening \textit{Jo read some but not all of the books}, which is synonymous with \textit{Jo read only some of the books}. This is because, \textit{some} typically only has one non-weaker alternative, \textit{all}, which is trivially Innocently Excludable.\\
+
+However, without additional assumptions this theory predicts that \textit{exh} can be inserted in both (\ref{ex7:shd-ws}) and (\ref{ex7:shd-sw}). Both variants would in turn be predicted to be felicitous. This is illustrated in (\ref{ex7:shd-exh}).
+
+\begin{exe}
+	\ex\label{ex7:shd-exh}
+	\begin{xlist}
+		\ex[] {Jo read \textit{exh}(some) or all of the books. \hfill $\textit{exh}(\s)\vee\splus$\\
+			$\equiv$ Jo read some but not all or all of the books. \hfill $(\s\wedge\neg\splus)\vee\splus$
+		}\label{ex7:shd-ws-exh}
+		\ex[??] {Jo read all or \textit{exh}(some) of the books. \hfill $\splus\vee\textit{exh}(\s)$\\
+			$\equiv$ Jo read all or some but not all of the books. \hfill $\splus\vee (\s\wedge\neg\splus)$}\label{ex7:shd-sw-exh}
+	\end{xlist}
+\end{exe}
+
+Therefore, assuming covert and local exhaustification allows to correctly predict the felicity of (\ref{ex7:shd-ws-exh}), but also mispredicts the felicity of (\ref{ex7:shd-sw-exh}). The challenge then shifts to explaining why (\ref{ex7:shd-sw}) cannot be rescued by \textit{exh} in the same way as (\ref{ex7:shd-ws}). Meaning, one must explain \textit{exh} cannot be inserted (or at least do its job) in the second disjunct of (\ref{ex7:shd-sw-exh}).\\
+
+Although the implementations vary, the asymmetry between (\ref{ex7:shd-sw}) and (\ref{ex7:shd-ws}) in terms of covert exhaustification, ends up being modeled as an interaction between the meaning of the first disjunct, and the licensing/timing of \textit{exh} in the second disjunct. One prominent account, due to \citet{Fox2018}, suggests \textit{exh} should not be applied to an expression $E$ if it turns out to be Incrementally Weakening (abbreviated \textbf{IW}). Very roughly, \textit{exh} is IW in a sentence if it leads to an equivalent/weaker meaning no matter how the sentence is finished. The constraint is spelled out in (\ref{ex7:economy}); (\ref{ex7:economy-incr-wk}-\ref{ex7:economy-prec}) unpack the definition.
+
+\begin{exe}
+	\ex\label{ex7:economy} {\textit{Economy Condition on Exhaustification. } Let \textit{exh}$(Q, p)$ be the exhaustification of $p$ given a set of alternatives $Q$. *$S$[\textit{exh}$(Q, p)$], if \textit{exh}$(Q, q)$ is incrementally weakening in $S$.}
+	\ex\label{ex7:economy-incr-wk} {\textit{Incremental Weakening. }An occurrence of \textit{exh} taking $p$ as argument is incrementally weakening in $S$ if it is globally weakening for every continuation of $S$ at point $p$.}
+	\ex\label{ex7:economy-gl-wk} {\textit{Global Weakening. }Let \textit{IE}$(p, Q)$ be the set of Innocently Excludable alternatives to $p$ that belong to $Q$ (see (\ref{ex7:ie})). An occurrence of \textit{exh}$(Q, p)$ is globally weakening in a sentence S[\textit{exh}$(Q, p)$], if $S[p] \vDash S[\textit{exh}(Q, p)]$.\footnote{The more complex constraint spelled out in \citet{Fox2018}, is: $\exists Q'. \ \text{IE}(Q', p) \subset \text{IE}(Q, p) \wedge S[\textit{exh}(Q', p)] \vDash S[\textit{exh}(Q, p)]$. If $Q'$ can only be the empty set, the condition becomes $\text{IE}(\emptyset, p) \subset \text{IE}(Q, p) \wedge S[\textit{exh}(\emptyset, p)] \vDash S[\textit{exh}(Q, p)]$, i.e. $S[A] \vDash S[\textit{exh}(Q, p)]$; as given in the main text here.}}
+	\ex\label{ex7:economy-cont} {$S'$ is a continuation of $S$ at point $A$ if $S'$ can be derived from $S$ by replacement of constituents that follow $A$.}
+	\ex\label{ex7:economy-prec} {$Y$ follows $A$ if all the terminals of $Y$ are pronounced after those of $A$.}
+\end{exe}
+%
+%A special case of interest is the following: if $C'$ is taken to be empty, $\textit{exh}_{C'}(A) = A$. This necessarily happens if $C$ is already a singleton, e.g. $C = \lbrace \forall \rbrace$: reducing it further to form $C'$ necessarily results in the empty set. An empty $C'$ then corresponds to the following subcase of (\ref{ex7:economy-gl-wk}): \textit{exh} is globally weakening if deleting it from the sentence altogether leads to an equivalent or stronger meaning. \textit{exh} will in turn be IW if deleting it from the sentence leads to an equivalent or weaker meaning, \textit{no matter the continuation} after the point of deletion. This gives rise to the simplified constraint in (\ref{ex7:economy-simple}).
+%
+%\begin{exe}
+%	\ex\label{ex7:economy-simple} \textit{Economy Condition on Exhaustification (simplified version).} *$S$[\textit{exh}$_C(A)$], if \textit{exh}$_C$ is incrementally weakening in $S$.
+%	\begin{xlist}
+%		\ex {An occurrence of \textit{exh}$_C$ is globally weakening in a sentence S[\textit{exh}$_C(A)$] if $S[A] \vDash S[\textit{exh}_C(A)]$}
+%		\ex {see (\ref{ex7:economy-incr-wk})}
+%		\ex {see (\ref{ex7:economy-cont})}
+%		\ex {see (\ref{ex7:economy-prec})}
+%	\end{xlist}
+%\end{exe}
+
+%We focus on this subcase here, given that the most salient set of innocently excludable alternatives to \textit{some} is already a singleton ($\lbrace \forall \rbrace$), whose only strict subset ($C'$) is thus $\emptyset$.\\
+
+Given IW, the contrast in (\ref{ex7:shd}) then boils down to the fact \textit{exh} is not IW in the first disjunct of (\ref{ex7:shd-ws}) (see (\ref{ex7:iw-hd-ws})), while it is in the second disjunct of (\ref{ex7:shd-sw}) (see (\ref{ex7:iw-hd-sw})).
+
+
+\begin{exe}
+	\ex\label{ex7:iw-hd-scalar}
+	\begin{xlist}
+		\ex{\textit{exh}($\lbrace\s, \splus\rbrace$, \s) = $\s\wedge\neg\splus$ is not IW in the first disjunct of (\ref{ex7:shd-ws}).\\
+			We have $S[\textit{exh}(\lbrace\s, \splus\rbrace, \s)] = \textit{exh}(\lbrace\s, \splus\rbrace, \s) \vee \splus$, and $S[\s] = \s \vee \splus$.\\
+			Take $S'$ to be $\textit{exh}(\lbrace\s, \splus\rbrace, \s) \vee \bot$. $S'$ is a continuation of $S$ after \textit{exh}($\lbrace\s, \splus\rbrace$, \s), because it can be derived from $S$ by replacing its second disjunct with a contradiction. $\textit{exh}(\lbrace\s, \splus\rbrace, \s)$ is not globally weakening in $S'$:\\
+			$\textit{exh}(\lbrace\s, \splus\rbrace, \s) \vee \bot \equiv \textit{exh}(\lbrace\s, \splus\rbrace, \s)$\\
+			\phantom{$\textit{exh}(\lbrace\s, \splus\rbrace, \s) \vee \bot$} $\equiv \s\wedge\neg\splus$\\
+			\phantom{$\textit{exh}(\lbrace\s, \splus\rbrace, \s) \vee \bot$} $\not\Dashv \s$\\
+			\phantom{$\textit{exh}(\lbrace\s, \splus\rbrace, \s) \vee \bot$} $\not\Dashv \s\wedge\splus$\\
+			\phantom{$\textit{exh}(\lbrace\s, \splus\rbrace, \s) \vee \bot$} $\not\Dashv S[\s]$\\
+			Thus, $\textit{exh}(\lbrace\s, \splus\rbrace, \s)$ is not incrementally weakening in $S$, and \textit{exh} can be inserted in the first disjunct of (\ref{ex7:shd-ws}).\\ }\label{ex7:iw-hd-ws}
+		\ex{\textit{exh}($\lbrace\s, \splus\rbrace$, \s) = $\s\wedge\neg\splus$ is IW in the second disjunct of (\ref{ex7:shd-sw}).\\
+			We have $S[\textit{exh}(\lbrace\s, \splus\rbrace, \s)] = \splus \vee \textit{exh}(\lbrace\s, \splus\rbrace, \s)$, and $S[\s] = \splus \vee \s$.\\
+			Let $S'$ be a continuation of $S$ after \textit{exh}($\lbrace\s, \splus\rbrace$, \s). Because $S'$ must result from the replacement of a constituent \textit{following} \textit{exh}($\lbrace\s, \splus\rbrace$, \s) in $S$, $S'$ can only be $S$. $\textit{exh}(\lbrace\s, \splus\rbrace, \s)$ is globally weakening in $S'=S$:\\
+			$\splus \vee \textit{exh}(\lbrace\s, \splus\rbrace, \s) \equiv \splus \vee \textit{exh}(\lbrace\s, \splus\rbrace, \s)$\\
+			\phantom{$\textit{exh}(\lbrace\s, \splus\rbrace, \s) \vee \bot$ } $\equiv \splus \vee (\s\wedge\neg\splus)$\\
+			\phantom{$\textit{exh}(\lbrace\s, \splus\rbrace, \s) \vee \bot$ } $\equiv \splus \vee\s$\\
+			\phantom{$\textit{exh}(\lbrace\s, \splus\rbrace, \s) \vee \bot$ } $\equiv S[\s]$\\
+			Thus, $\textit{exh}(\lbrace\s, \splus\rbrace, \s)$ is incrementally weakening in $S$, and \textit{exh} cannot be inserted in the second disjunct of (\ref{ex7:shd-sw}).\\ }\label{ex7:iw-hd-sw}
+	\end{xlist}
+\end{exe}
+
+As a result, \textit{exh} can be inserted in the first disjunct of (\ref{ex7:shd-ws}), which breaks the entailment between the two disjuncts. By contrast, \textit{exh} cannot be applied to the second disjunct of (\ref{ex7:shd-sw}), and the problematic entailment between disjuncts remains. This is illustrated in (\ref{ex7:shd-exh}).
+
+
+\begin{exe}
+	\ex\label{ex7:shd-exh2}
+	\begin{xlist}
+		\ex[] {Jo read \textit{exh}(some) or all of the books. \hfill $\textit{exh}(\s)\vee\splus$\\
+			$\equiv$ Jo read some but not all or all of the books. \hfill $(\s\wedge\neg\splus)\vee\splus$
+		}\label{ex7:shd-ws-exh2}
+		\ex[??] {Jo read all or *\textit{exh}(some) of the books. \hfill $\splus\vee\s$\\
+			$\equiv$ Jo read all or some of the books. \hfill $\splus\vee \s$}\label{ex7:shd-sw-exh2}
+	\end{xlist}
+\end{exe}
+
+
+Lastly, note that this does not overgenerate in the case of non-scalar HDs like those in (\ref{ex7:hd}). In particular, (\ref{ex7:hd-ws}) cannot be rescued like (\ref{ex7:shd-ws}), either because \textit{Massachusetts} is not a natural alternative to \textit{the United States} out-of-the blue, or, because \textit{Massachusetts} is not an Innocently Excludable alternative to \textit{the United States}. Let us further decompose the second option. If \textit{Massachusetts} can be considered a relevant alternative to \textit{the United States}, all other US states most likely can, too. Such alternatives properly partition the prejacent; thus negating them all together, would create a contradiction with the prejacent. However, negating any strict subset of these alternative, would allow to maintain consistency with the prejacent. For instance, negating \textit{Massachusetts} would lead to a strengthened meaning along the lines of \textit{the United States, but not Massachusetts}. More drastically even, negating all US states but \textit{Massachusetts}, would lead to assert \textit{Massachusetts}. But notice that all of these options are arbitrary: negating any subset of the relevant alternatives, prevents us from negating other, equally legitimate alternatives. This is addressed by the concept of Innocent Exclusion, which forces Innocently Excludable alternatives to belong to \textit{all} maximal candidate sets of excludable alternatives. In the case of (\ref{ex7:hd-ws}), and considering state alternatives to \textit{the United States}, the maximal candidate sets of excludable alternatives, are made of all states, but one. So their intersection, which corresponds to the set of Innocently Excludable alternatives, is predicted to be empty. Therefore, exhaustification is vacuous in (\ref{ex7:hd-ws}) (and (\ref{ex7:hd-ws}), for similar reasons), and as a result, both HDs in (\ref{ex7:hd}) are still correctly predicted to be infelicitous.\\
+
+In this Section, we have described one prominent account of the asymmetry in (\ref{ex7:shd}), However, the subtleness of the contrast in (\ref{ex7:shd}), casts doubts on whether such an elaborate approach is needed in the first place.\footnote{It is still worth mentioning that the approach presented here comes with a range of good predictions, when it comes to more complex variants of (\ref{ex7:shd})-- however characterized by equally subtle judgments -- but also beyond HDs. We do not cover all these predictions here, for reasons of space.}
+\subsection{Experiment}
+The experiment presented in this Section aims at answering two questions. First, is the contrast between (\ref{ex7:shd-sw}) and (\ref{ex7:shd-ws}) real and robust? Second, is it really based on pragmatic factors? The first question, originates from a small-scale corpus study performed by \citeauthor{Fox2018}, which showed that, although the contrast between (\ref{ex7:shd-ws}) and (\ref{ex7:shd-sw}) was clearly a trend, infelicitous instances of the form (\ref{ex7:shd-ws}), were anyway attested. The second question, is motivated by accounts of linear asymmetries in (conjoined) ``binomials'', like \textit{salt and pepper} vs. \textit{pepper and salt} \citep{Benor2006}. It was shown that crisp ordering preferences in such binomials arise from a variety of extra-pragmatic factors, including metrical and frequency constraints. Is \textit{some or all} preferable to \textit{all or some} for similar reasons?\footnote{There are \textit{a priori} three arguments against this hypothesis. The first argument, is that there is no obvious metrical or frequency-based difference between \textit{some} and \textit{all}, so it is hard to see which order an analysis like \citet{Benor2006} would predict to be the best. However, one could in turn argue that additional \textit{semantic} factors (e.g., likelihood, informativity) are at play in such pairs. The second, perhaps stronger argument, is that under a multivariate analysis of \textit{some or all} disjunctions \textit{à la} \citet{Benor2006}, one might expect some cross-linguistic variation in the preferred ordering of \textit{some} and \textit{all}. But it does not seem to be the case (although, one could in turn argue that languages tend to assign \textit{some} and \textit{all} similar extra-pragmatic features, metrical, frequency, etc.). The third argument, is that the ordering asymmetry in (\ref{ex7:shd}) was argued to disappear when such disjunctions are embedded in certain environments, for instance, under universal modals, or universal quantifiers \citep{Fox2018}. This obviation of the asymmetry is unexpected under \citet{Benor2006}'s analysis, because the features of the scalemates and their immediate environment, are not affected by embedding under universals. Of course, the robustness of the data, could also be questioned. Our experiment intends to bring more empirical arguments to the table, in order to better figure out the division of labor between the aforementioned pragmatic and extra-pragmatic factors.} To answer these questions, we propose to assess the felicity of the sentences in (\ref{ex7:shd}) and (\ref{ex7:shdo}), repeated below, along with their ``long'' variants, in (\ref{ex7:shdl}) and (\ref{ex7:shdlo}).
+
+\begin{exe}
+	\exr{ex7:shd}{``Short'' disjuncts, no \textit{only}}
+	\begin{xlist}
+		\ex[] {Jo read some or all of the books. \hfill \s{} $\vee$ \splus}
+		\ex[??] {Jo read all or some of the books. \hfill \splus{} $\vee$ \s}
+	\end{xlist}
+	\exr{ex7:shdo}{``Short'' disjuncts, \textit{only}}
+	\begin{xlist}
+		\ex[?] {Jo read only some or all of the books. \hfill $O(\s)\vee\splus$}
+		\ex[] {Jo read all or only some of the books. \hfill $\splus\vee O(\s)$}
+	\end{xlist}
+\end{exe}
+\begin{exe}
+	\ex\label{ex7:shdl}{``Long'' disjuncts, no \textit{only}}
+	\begin{xlist}
+		\ex[] {Jo read some of the books or all of them. \hfill \s{} $\vee$ \splus}\label{ex7:shdl-ws}
+		\ex[??] {Jo read all of the books or some of them. \hfill \splus{} $\vee$ \s}\label{ex7:shdl-sw}
+	\end{xlist}
+	\ex\label{ex7:shdlo}{``Long'' disjuncts, \textit{only}}
+	\begin{xlist}
+		\ex[?] {Jo read only some of the books or all of them. \hfill $O(\s)\vee\splus$}\label{ex7:shdlo-ws}
+		\ex[] {Jo read all of the books or only some of them. \hfill $\splus\vee O(\s)$}\label{ex7:shdlo-sw}
+	\end{xlist}
+\end{exe}
+
+As discussed in the previous Section, such sentences have been discussed extensively in the theoretical pragmatics literature, but the robustness of the judgments reported in the above was never systematically assessed in an
+experimental setting. The only notable exception is \citet{Chemla2013}\footnote{The full paper that came out of this presentation \citep{Chemla2016}, was focusing on ``scalar'' tautological sentences of the form \textit{Jo read some or none of the books}, instead of scalar HDs. The methodology was however similar.}, however, this study focused on the felicitous weak-to-strong ordering (\ref{ex7:shdl-ws}), with the goal of better understanding the fined-grained processing signature of covert exhaustification. Additionally, little emphasis has been put on potential differences between the ``short''variants (\ref{ex7:shd}) and the ``long'' variants (\ref{ex7:shdl}), and on the effect of \textit{overt} exhasutification with \textit{only} in (\ref{ex7:shdo}) and (\ref{ex7:shdlo}). The study presented thus intends to fill these gaps, and specifically, to determine what kind of pragmatic theory is sufficient to account for the above data.
+
+
+Hypothesis 1:
+If covert exhaustification (of the form "some" ~> "some but not all") is possible at the embedded level
+and the only way to rescue the above disjunctions from redundancy, a sentence like (1a) Jo read some or
+all of the books, should be felicitous. Felicity should be maintained even if the two scalemates are more
+linearly distant, as in (1a') Jo read some of the books or all of them. Sentences like (2a) Jo read only some
+or all of the books, or (2a') Jo read only some of the books or all of them, should be degraded by
+competition with the simpler (1a)/(1a').
+Hypothesis 1.A:
+If covert exhaustification is moreover influenced by linear order, a sentence like (1b) Jo read all or some
+of the books, should be less felicitous than (1a). This contrast should be maintained when considering
+linearly "distant" scalemates, i.e. (1b') Jo read all of the books or or some of them, vs. (1a').
+Hypothesis 1.B:
+If covert exhaustification is *not* influenced by linear order, a sentence like (1b) Jo read all or some of
+the books, should be as felicitous as (1a). This should also hold when considering linearly "distant"
+scalemates, i.e. (1b') Jo read all of the books or or some of them, vs. (1a'). Sentences like (2b) Jo read all
+or only some of the books, or (2b') Jo read all of the books or only some of them, should be degraded by
+competition with the simpler (1b)/(1b').
+PREDICTIONS ASSUMING EMBEDDED EXHAUSTIFICATION (Hypothesis 1):
+-If incremental: (2a)~(1b) < (1a)~(2b); (2a')~(1b') < (1a')~(2b').
+==> Same interaction between order of the scalemates and presence of only, regardless of disjunct size.
+-If not incremental: (2a)~(2b) < (1b)~(1a); (2a')~(2b') < (1b')~(1a')
+==> Effect of only, regardless of disjunct size.
+Hypothesis 2:
+Alternatively, if covert exhaustification is *not* possible at the embedded level, a sentence like (1a) Jo
+read some or all of the books, may still be felicitous because "some or all" can be interpreted as some
+kind of frozen expression determined by other, extra-semantic factors (like e.g. "salt and pepper" vs.
+"pepper and salt"). (2b) is expected to pattern like (1a) because its competitor (1b) is expected to be
+degraded. There is no clear prediction for (2a), given that the status of "frozen" expressions when it
+comes to pragmatic competition is a bit unclear. In any case felicity should *not* be maintained if the
+two scalemates are made more linearly distant ((1a'), (1b')). This in turn predicts their variants with only
+((2a'), (2b')), to be better
+
+
+PREDICTIONS ASSUMING NO EMBEDDED EXHAUSTIFICATION:
+(1b) < (1a)~(2b); (1b')~(1a') < (2a')~(2b').
+==> Interaction between order of the scalemates and presence of only with short disjuncts, effect of only
+with long disjuncts
+In effect, we may expect a mixture of Hypothesis 1 (purely pragmatic) and 2 (purely extra-pragmatic).
+PREDICTIONS ASSUMING EMBEDDED EXHAUSTIFICATION AND EXTRA-PRAGMATIC FACTORS:
+-If incremental: (2a)~(1b) < (1a)~(2b); (1b') < (2a')~(1a') < (2b')
+==> Interaction between order of the scalemates and presence of only, modulated by disjunct size
+-If not incremental: some contrast between the (1) and (2) sentences; directionality depends on the
+weight of pragmatic vs. extra-pragmatic factors
+
+
+Participants will be presented with a short scenario involving 3 individuals, A, B, and C (real names used
+in the scenarios). A asks something about C to B when C is away/unavailable. B then answers to A a
+critical sentence that the participant has to read one word at a time in a self-paced fashion, and then has
+to rate on a scale from 0 to 100 (no precise label/score displayed on screen).
+The critical sentences follow a 2x2x2 design:
+"only"-factor: Presence/absence of only outscoping some
+"order"-factor: "some" before "all"/"all" before "some"
+"disjunct size"-factor: short (see e.g. (1a)) or long (see e.g. (1a'))
+only is between group
+order and disjunct size are within-group
+Each participant is exposed to 4 randomized practice items:
+- the practice items involve critical sentences that are disjunctive but do not make use of scalemates. 2
+practice items are redundant ("Hurford") disjunctions (e.g. "a book or a novel'), 2 practice items are non-
+redundant (e.g. "a cat or a rabbit"). Participants receive positive/negative feedback if they are
+
+
+below/above score of 25 in the redundant case, and above/below a score of 75 in the non-redundant
+case.
+Each participant is then exposed to 4 blocks, each containing 8 items (4 targets, 4 fillers):
+- targets correspond to the two possible orders and the two possible disjunct sizes.
+- fillers are 2 non-redundant structures (all or the books / some of the books), and 2 sharply redundant
+structures (all or all of the books / some or some of the books). The sharply redundant structures give
+rise to the same kind of feedback as the one given during practice on the redundant disjunctions.
+Target items (2x2=4 treatments) and sentence frames/scenarios follow a Latin Square design, so each
+group (only/no only), is subdivided into 4 subgroups, s.t. each treatment gets paired with a given
+frame/scenario once across 4 subgroups.
+Filler are interspersed within each block, s.t.:
+Each block contains exactly 4 fillers, one of each type;
+How the fillers gets randomly inserted changes between block 1, 2, 3, and 4;
+How the fillers gets randomly inserted for a given block (e.g. block 1), does *not* change across groups
+(only/no only) or subgroups (as generated by the Latin Square design).
+
+Participants will be recruited through Prolific. Participants will be paid TODO for agreeing to participate.
+SEE CONDITIONS WITH KATE
+
+3 variables:
+-"only" (between-subjects): whether or not "only" occurs before "some" in the target sentences.
+-"order" (within-subjects): whether the "some" disjunct is presented before the "all" disjunct, or vice-
+versa.
+-"disjunct size" (within-subjects): whether the disjunction has the form X Ved some/all or all/some of the
+Ys (short disjuncts), or X Ved some/all of the Ys or all/some of them (long disjuncts)
+
+
+For the main analysis, we will analyze the score assigned by the participants to the target sentences. The
+score is between 0 and 100. Participants will not have access to the specific values of the scores ("blind"
+Likert scale).
+For exploratory analyses, reaction times (between the full display of the target sentence and the
+submission of a score), and well as reading times (as recorded during the self-paced reading stage), will
+be analyzed.
+
+
+We will use a linear mixed effect linear regression model (R lmer/lmertest package), to evaluate if the
+felicity score assigned to a sentence depends on an interaction between the presence/absence of "only"
+and the order of the scalemates (some<all or all<some). We will include the maximum random effect
+structure supported by the data.
+No files selected
+Transformations
+No response
+Inference criteria
+Using the anova function in R (lme4 package), we will compare a model with an order*only interaction
+term, to models with only as main effect and a model with a three way interaction of the form
+
+order*only*disjunct-size.
+We will use the p-values returned by anova, based on likelihood ratio test comparisons (chi-square).
+Data exclusion
+Participants who have failed at all 4 practice items (i.e., assigned a score higher than 25 to redundant
+disjunctions, and a score lower than 75 to non-redundant disjunctions), will be excluded.
+Participants who have failed at more than 4/16 fillers (i.e., assigned a score higher than 25 to redundant
+fillers, and a score lower than 75 to non-redundant fillers), will be excluded.
+Participants who at the end of the study reported that the native language is not English will be
+excluded.
+Missing data
+No response
+Exploratory analysis
+Exploratory analyses will include:
+-group-by-group analyses (only/no only): check the effect of order and disjunct size
+-group-by-group analyses (long/short disjuncts): check the effect of order and only
+-analyses of reaction times (time between the full completion of the self-paced reading step, and the
+submission of a score): check if lower ratings correlate with higher RTs; check if RTs can be predicted by
+LMER using the same formulas a the main analysis.
+-analyses of reading times (at the self-paced reading stage): does "some" take longer to read than "all"?
+Is the reading time for "some"/"all" differentially influenced by the ordering of the disjuncts/the
+presence of only? To do this, we check if the word reading times of scalar items can be predicted by
+LMER, using item type ("some" vs. "all"), disjunct position (1st vs. 2nd), presence of "only", and disjunct
+size as potential factors.
+
+\section{A novel account account of the asymmetries in scalar Hurford Disjunctions}\label{sec7:asym-account}
+
+\subsection{Qtrees of simplex LFs: scalar vs. non-scalar case}
+Chapter \ref{chap:hurford-sentences} defined the set of possible Qtrees evoked by a simplex LF $X$ denoting $p$. Roughly, we assumed that a Qtree for $X$ may be a depth-1 Qtree whose leaves denote $p$ and $\neg p$; a depth-1 Qtree whose leaves correspond to the Hamblin partition of the CS generated by $p$ and same-granularity alternatives to $p$; or a ``tiered'' Qtrees whose layers are each generated from a set of same-granularity alternatives to an alternative to $p$ entailed by $p$. We also assumed that in each case, Qtrees derived from simplex LFs get ``flagged'' by defining their verifying nodes as the set of nodes entailing $p$.
+
+
+\subsubsection{Defining the same-granularity relation}
+So far we took granularity as a primitive. We now submit that scalemates such as \textit{some} and \textit{all} \textit{may} be seen as same granularity alternatives to each other, while non-scalemates, like \textit{Paris} and \textit{France}, \textit{cannot} be considered being so, at least out-of-the blue. From this, it follows that \textit{some} and \textit{all} may answer the same QuD (partitioning the CS into the \textit{none}, \textit{some but not all}, and \textit{all} worlds), while \textit{Paris} and \textit{France} never do.
+
+At the intuitive level, the difference between \textit{some}/\textit{all} and \textit{France}/\textit{Paris} seems to be related to the symmetry problem \citep{Kroch1972,Fox2007} that arises with the latter kind of alternatives. If \textit{Paris} and all other cities are considered to be same-granularity alternatives, and if, on top of this, \textit{Paris} and \textit{France} are considered same-granularity, then by transitivity \textit{France} and any city in France should be considered same-granularity. This appears counter-intuitive, given that at a certain level of abstraction, all French cities together cover France. This intuition leads us to define same-granularity alternatives as in (\ref{ex7:same-gran-alt}). (\ref{ex7:same-gran-alt-unpacking}) clarifies some of the terms introduced in (\ref{ex7:same-gran-alt}).
+
+\begin{exe}
+	\ex {\textit{Set of same granularity alternatives to q. } Let $X$ be a LF denoting $p$ and $\mathcal{A}_{p, X}$ be the set of all possible alternatives to $p$, obtained by the replacement of focused material in $X$ by relevant, same-complexity and same-type constituents. Let $\mathcal{H}(\mathcal{A}_{p, X})$ be the Hasse diagram generated by $\vDash$ on $\mathcal{A}_{p, X}$, directed from top (logically stronger) to bottom (logically weaker). For any $q \in \mathcal{A}_{p, X}$, a set of same-granularity alternatives to $q$ ($\mathcal{A}_{p, X}^q$) is obtained by:
+		\begin{enumerate}
+			\item\label{ex7:same-gran-same-level} (obligatory) adding all same-level alternatives to $q$ in $\mathcal{H}(\mathcal{A}_{p, X})$ to $\mathcal{A}_{p, X}^q$;
+			\item\label{ex7:same-gran-higher-level} (optional) for each level higher than $q$'s level in $\mathcal{H}(\mathcal{A}_{p, X})$ (from the lowest to the highest level), adding to $\mathcal{A}_{p, X}^q$ all the alternatives that are not yet covered by a subset of $\mathcal{A}_{p, X}^q$. A set $\mathcal{S}$ of sets covers another set $s$ is $\bigcup\mathcal{S} = s$.
+			\item\label{ex7:same-gran-lower-level} (optional) for each level lower than $q$'s level in $\mathcal{H}(\mathcal{A}_{p, X})$ (from the highest to the lowest level), adding to $\mathcal{A}_{p, X}^q$ the grand intersection of the maximal sets of alternatives that together do not cover any subset of $\mathcal{A}_{p, X}^q$.\footnote{Note that this relates to \citet{Fox2007}'s notion of Innocent Exclusion: the goal here is to non-arbitrarily \textit{include} (rather than \textit{exclude}) a subset of alternatives that together do not already cover a union of alternatives in $\mathcal{A}_{p, X}^q$. In particular, if the set of alternatives considered at a given level is symmetric w.r.t. some alternative already present in $\mathcal{A}_{p, X}^q$, then, none of these alternatives will be added to $\mathcal{A}_{p, X}^q$.}
+	\end{enumerate} }\label{ex7:same-gran-alt}
+	The three steps are ordered, and steps (\ref{ex7:same-gran-alt}.\ref{ex7:same-gran-higher-level}-\ref{ex7:same-gran-lower-level}) are optional.
+\end{exe}
+
+\begin{exe}
+	\ex \label{ex7:same-gran-alt-unpacking}
+	\begin{xlist}
+		\ex {\textit{Same-level nodes in a Hasse diagram.} $p$ and $q$ are same-level nodes in a Hasse diagram $\mathcal{H}$ if $\exists r \in \mathcal{H}. \ \exists n \in \mathbb{N}. \ p \ \text{\MVRightarrow}^n \ r \wedge q \ \text{\MVRightarrow}^n \ r$, where $\text{\MVRightarrow}^n$ represents $n$ iterations of the accessibility relation in $\mathcal{H}$.}
+		\ex {\textit{Level in a Hasse diagram.} $\mathcal{L}$ is a level in a Hasse diagram $\mathcal{H}$ iff $\exists p \in \mathcal{H}. \ \mathcal{L} = \lbrace q \in \mathcal{H} \ | \ \text{$p$ and $q$ are same-level nodes in } \mathcal{H}\rbrace$}
+		\ex {\textit{Level higher/lower than a node in a Hasse diagram.} A level $\mathcal{L}$ in a Hasse diagram $\mathcal{H}$ is higher than a node $p$ if $\exists q \in \mathcal{L}. \ p \ \text{\MVRightArrow}^* \ q$. It is lower than a node $p$ if $\exists q \in \mathcal{L}. \ q \ \text{\MVRightArrow}^* \ p$.}
+	\end{xlist}
+\end{exe}
+
+
+Let us now see how these definitions works when considering same-granularity alternatives to LFs containing \textit{Paris}, \textit{some}, and \textit{all}.
+
+\subsubsection{Non-scalar items}
+Starting with \textit{Paris}, one should consider $\mathcal{A}_{\textit{Paris}}$ to be a set of locations organized in a Hasse diagram like Figure \ref{fig7:paris-hasse}.
+
+\begin{figure}[H]
+	\centering
+	\begin{forest}
+		[World[Europe[France[Île-de-France[Paris [Ier][...][XXème]][Versailles [...]]][Grand Ouest[...]][...]][UK[...]][...]][Asia[China[...]][India[...]][...]][...][Antarctica]]
+	\end{forest}
+	\caption{Hasse diagram generated by alternatives to \textit{Paris}. Entailment goes upward. Nodes that are vertically aligned are same-level.}
+	\label{fig7:paris-hasse}
+\end{figure}
+
+In this diagram, \textit{Paris} is at a level that typically involves other cities. Applying (\ref{ex7:same-gran-alt}.\ref{ex7:same-gran-same-level}) then adds all those cities to the set of same-granularity alternatives to \textit{Paris}; so at this point, $\mathcal{A}_{\textit{Paris}}^{\textit{Paris}}$ = $\lbrace \textit{Paris}, \textit{Versailles}, \textit{Lyon}, \textit{London} ...\rbrace$. Figure \ref{fig7:paris-hasse} shows that some higher-level locations, like \textit{Antarctica}, may not be subdivided into cities. Applying (\ref{ex7:same-gran-alt}.\ref{ex7:same-gran-higher-level}) then adds \textit{Antarctica} to $\mathcal{A}_{\textit{Paris}}^{\textit{Paris}}$, since no subset of cities that are already part of $\mathcal{A}_{\textit{Paris}}^{\textit{Paris}}$ covers it. Countries like \textit{France} and \textit{Germany} cannot be added to $\mathcal{A}_{\textit{Paris}}^{\textit{Paris}}$ in the same way, because they are covered by a subset of cities that are already part of $\mathcal{A}_{\textit{Paris}}^{\textit{Paris}}$. So at this point, $\mathcal{A}_{\textit{Paris}}^{\textit{Paris}} = \lbrace \textit{Paris}, \textit{Versailles}, \textit{Lyon}, \textit{London}, ...  \textit{Antarctica}\rbrace$. Assuming any city comes with a set of districts that fully partition it (i.e. districts are symmetric w.r.t their respective cities), (\ref{ex7:same-gran-alt}.\ref{ex7:same-gran-lower-level}) applies vacuously, since for no city already present in $\mathcal{A}_{\textit{Paris}}^{\textit{Paris}}$ is it possible to non-arbitrarily add to $\mathcal{A}_{\textit{Paris}}^{\textit{Paris}}$ a set of districts that does not fully cover the given city. In sum, we derive that same-granularity alternatives to \textit{Paris} are typically cities, but may also involve intuitively coarser-grained alternatives that cannot be reasonably subdivided into cities (\textit{e.g.} \textit{Antarctica}). Crucially, no location that is subdivided into cities is part of this set.
+
+This reasoning easily extends to an intuitively coarser-grained alternative to \textit{Paris} like \textit{France}. Same-granularity alternatives to \textit{France} are typically countries, but may also involve intuitively coarser-grained alternatives that cannot be reasonably subdivided into countries (\textit{e.g.} \textit{Antarctica}). Just like districts (which tend to partition cities) could not be added to the set of same-granularity alternatives to \textit{Paris}, cities (which tend to partition countries) cannot be added to the set of same-granularity alternatives to \textit{France}. A consequence of this, is that non-scalemates like \textit{Paris} and \textit{France} have inherently distinct sets of same-granularity alternatives -- and in turn, will be predicted to give rise to inherently distinct sets of Qtrees.
+
+
+\subsubsection{Scalar items}
+Now turning to \textit{some} and \textit{all}. We assume that the set of alternatives for such items is typically made of $\forall$ (\textit{all}), $\exists$ (\textit{some}), and $\neg\exists$ (\textit{none}), but does not contain, e.g. $\neg\forall$ or $\exists\wedge\neg\forall$, because such logical meanings correspond to expressions (\textit{not all}, \textit{some but not all}) that are strictly more complex. So, $\mathcal{A}_{\textit{some}}=\mathcal{A}_{\textit{all}}=\lbrace \neg\exists, \exists, \forall\rbrace$. The resulting Hasse diagram for both \textit{some} and \textit{all} is given in Figure \ref{fig7:some-all-hasse}.
+
+\begin{figure}[H]
+	\centering
+	\begin{forest}
+		[$\exists$[$\forall$]]
+	\end{forest}
+	\begin{forest}
+		[$\neg\exists$]
+	\end{forest}
+	\caption{Hasse diagram generated by alternatives to \textit{some}/\textit{all}. Entailment goes upward. Each node belongs to a different level.}
+	\label{fig7:some-all-hasse}
+\end{figure}
+
+In this diagram, $\exists$ and $\forall$ are at different levels, since $\forall$ strictly entails $\exists$. To build a set of same-granularity alternatives to $\exists$ ($\mathcal{A}_{\textit{some}}^{\textit{some}}$=$\mathcal{A}_{\textit{all}}^{\textit{some}}$), we start by applying (\ref{ex7:same-gran-alt}.\ref{ex7:same-gran-same-level}), which adds $\exists$ to $\mathcal{A}_{\textit{some}}^{\textit{some}}$/$\mathcal{A}_{\textit{all}}^{\textit{some}}$. Applying (\ref{ex7:same-gran-alt}.\ref{ex7:same-gran-higher-level}) is vacuous, since there is no higher level above $\exists$. Applying (\ref{ex7:same-gran-alt}.\ref{ex7:same-gran-lower-level}) then adds $\forall$ to $\mathcal{A}_{\textit{some}}^{\textit{some}}$/$\mathcal{A}_{\textit{all}}^{\textit{some}}$, because doing so is non-arbitrary (only possibility), and $\forall$ does not cover $\exists$ ($\forall$ is strictly contained in $\exists$). Note that the absence of $\exists\wedge\neg\forall$ from the Hasse diagram is crucial to derive this: had $\exists\wedge\neg\forall$ been present, $\exists\wedge\neg\forall$ and $\forall$ would have been symmetric w.r.t. $\exists$, and none of these alternatives could have been non-arbitrarily added to $\mathcal{A}_{\textit{some}}^{\textit{some}}$/$\mathcal{A}_{\textit{all}}^{\textit{some}}$. In sum, $\mathcal{A}_{\textit{some}}^{\textit{some}}$=$\mathcal{A}_{\textit{all}}^{\textit{some}} = \lbrace\exists\rbrace$ (by only applying step (\ref{ex7:same-gran-alt}.\ref{ex7:same-gran-same-level})) or $\lbrace\exists, \forall\rbrace$ (by applying all steps).\\
+
+To build a set of same-granularity alternatives to $\forall$ ($\mathcal{A}_{\textit{some}}^{\textit{all}}$=$\mathcal{A}_{\textit{all}}^{\textit{all}}$), we start by applying (\ref{ex7:same-gran-alt}.\ref{ex7:same-gran-same-level}), which adds $\forall$ to $\mathcal{A}_{\textit{some}}^{\textit{all}}$/$\mathcal{A}_{\textit{all}}^{\textit{all}}$. Applying (\ref{ex7:same-gran-alt}.\ref{ex7:same-gran-higher-level}) then adds $\exists$ to $\mathcal{A}_{\textit{some}}^{\textit{all}}$/$\mathcal{A}_{\textit{all}}^{\textit{all}}$, because $\forall$ does not cover $\exists$. Applying (\ref{ex7:same-gran-alt}.\ref{ex7:same-gran-lower-level}) is vacuous, because $\forall$ already forms the lowest level of the diagram. In sum, $\mathcal{A}_{\textit{some}}^{\textit{all}}$=$\mathcal{A}_{\textit{all}}^{\textit{all}} = \lbrace\forall\rbrace$ (by only applying step (\ref{ex7:same-gran-alt}.\ref{ex7:same-gran-same-level})) or $\lbrace\exists, \forall\rbrace$ (by applying all steps).\\
+
+
+We therefore derive that \textit{some} and \textit{all} \textit{may} give rise to the same set of same-granularity alternatives, namely, $\lbrace \exists, \forall\rbrace$. This will eventually predict that \textit{some} and \textit{all} may give rise to the same kind of Qtree, namely, a Qtree partitioning the CS into $\neg\exists$-, (\sbna)-, and $\forall$-worlds. Note however that \textit{some} and \textit{all} may also give rise to distinct sets of same-granularity alternatives, respectively $\lbrace \exists\rbrace$ and $\lbrace\forall\rbrace$ -- if we assume that only step (\ref{ex7:same-gran-alt}.\ref{ex7:same-gran-same-level}) is applied. Zooming out, definition (\ref{ex7:same-gran-alt}) allowed to model a crucial distinction between non-scalemates like \textit{Paris} and \textit{France}, and scalemates like \textit{some} and \textit{all}: the former will never give rise to the same sets of same-granularity alternatives, while the latter can. Because Qtrees for simplex LFs were defined layer-by-layer based on the notion of same-granularity alternatives back in Chapter \ref{chap:hurford-sentences}, we derive that non-scalemates will never give rise to identical Qtrees, while scalemates may do so.
+
+\subsubsection{Deriving Qtrees for scalemates and non-scalemates}\label{sec:qtrees-scalemates-non-scalemates}
+
+Now that same-granularity alternatives are defined for scalar and non-scalar items, we are in a position to apply the recipe (\ref{ex7:qtree-simplex-def}) from Chapter \ref{chap:hurford-sentences} to derive Qtrees for sentences like \textit{SALT35 will take place in Paris} or \textit{Jo read some of the books}.
+
+Starting with the LF \textit{X$^+$ = SALT35 will take place in Paris}. Following principle (\ref{ex7:qtree-simplex-def}.\ref{pt:simplex-qtree-polar}), a ``polar'' Qtree can be built out of \textit{X}$^+$ from the partition $\lbrace$\textit{Paris}, $\neg$\textit{Paris}$\rbrace$. This is done in Figure \ref{tree:paris-polar}. Following principle (\ref{ex7:qtree-simplex-def}.\ref{pt:simplex-qtree-wh}), one must generate a Hamblin partition out of a set of same-granularity alternatives to \textit{X}$^+$. We just saw that same-granularity alternatives to \textit{X}$^+$ form a set $\lbrace$\textit{Paris}, \textit{Nice}, \textit{London}, ...$\rbrace$ containing cities (and intuitively coarser-grained locations that are not partitioned by cities). This set happens to be equal to its Hamblin partition, given that the alternatives it contains are already mutually exclusive. Applying principle (\ref{ex7:qtree-simplex-def}.\ref{pt:simplex-qtree-wh}) using this Hamblin partition then generates the Qtree in Figure \ref{tree:paris-wh}. Lastly, according to principle (\ref{ex7:qtree-simplex-def}.\ref{pt:simplex-qtree-tiered}), \textit{X}$^+$ can give rise to a chain of entailing propositions of the form \textit{SALT35 will take place in Paris}, \textit{SALT35 will take place in France}, \textit{SALT35 will take place in Europe} etc. Restricting ourselves to the \textit{Paris}-\textit{France} chain, a ``tiered'' Qtree can be created by generating Hamblin partitions from same-granularity alternatives to \textit{Paris} and \textit{France}. We just saw that the Hamblin partition obtained for \textit{SALT35 will take place in Paris} takes the form $\lbrace$\textit{Paris}, \textit{Nice}, \textit{London}, ...$\rbrace$. Similarly for \textit{SALT35 will take place in France}, the relevant Hamblin partition corresponds to country alternatives (and potentially intuitively coarser grained alternatives that are not subdivided by countries), i.e. $\lbrace$\textit{France}, \textit{UK}, ...$\rbrace$. Following principle (\ref{ex7:qtree-simplex-def}.\ref{pt:simplex-qtree-tiered}), a ``tiered'' Qtree for \textit{X}$^+$ is then built by ``stacking'' the \textit{Paris} and \textit{France} partitions, as done in Figure \ref{tree:paris-tiered}. Of course, principle (\ref{ex7:qtree-simplex-def}.\ref{pt:simplex-qtree-tiered}) may generate more than one ``tiered'' Qtree, e.g., a Qtree with a continent tier on top of a country tier. We omit these extra Qtrees for simplicity.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\scalebox{1}{
+			\begin{forest}
+				for tree={s sep=2mm, inner sep=0, l=0}
+				[CS[\ofbox{Paris}][$\neg$Paris]]
+		\end{forest}}
+		\caption{}\label{tree:paris-polar}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\scalebox{1}{
+			\begin{forest}
+				for tree={s sep=2mm, inner sep=0, l=0}
+				[CS[\ofbox{Paris}][Nice][London][...]]
+		\end{forest}}
+		\caption{}\label{tree:paris-wh}
+	\end{subfigure}\hfill
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\scalebox{1}{
+			\begin{forest}
+				for tree={s sep=2mm, inner sep=0, l=0}
+				[CS[France[\ofbox{Paris}][Nice]][UK[London][...]][...]]
+		\end{forest}}
+		\caption{}\label{tree:paris-tiered}
+	\end{subfigure}
+	
+	
+	\caption{Qtrees for \textit{SALT35 will take place in \textbf{Massachusetts}.}}\label{fig7:city-partition}
+\end{figure}
+
+Constructing Qtrees for the LF \textit{X = SALT35 will take place in France} follows a very similar line of reasoning. Following principle (\ref{ex7:qtree-simplex-def}.\ref{pt:simplex-qtree-polar}), a ``polar'' Qtree can be built out of \textit{X} from the partition $\lbrace$\textit{France}, $\neg$\textit{France}$\rbrace$. This is done in Figure \ref{tree:france-polar}.
+
+
+
+Following principle (\ref{ex7:qtree-simplex-def}.\ref{pt:simplex-qtree-wh}), one must generate a Hamblin partition out of a set of same-granularity alternatives to $X$. We just saw that same-granularity alternatives to \textit{X} form a set $\lbrace$\textit{France}, \textit{UK}, ...$\rbrace$ containing countries (and intuitively coarser-grained locations that are not partitioned by countries); and that this set happens to be equal to its Hamblin partition. Applying principle (\ref{ex7:qtree-simplex-def}.\ref{pt:simplex-qtree-wh}) using this Hamblin partition then generates the Qtree in Figure \ref{tree:france-wh}. Lastly, according to principle (\ref{ex7:qtree-simplex-def}.\ref{pt:simplex-qtree-tiered}), \textit{X} can give rise to a chain of entailing propositions of the form \textit{SALT35 will take place in France}, \textit{SALT35 will take place in Europe}, etc. For simplicity, and to remain consistent with how we dealt with \textit{X}$^+$=\textit{SALT35 will take place in Paris}, we omit the tiered Qtrees generated from this kind of chain.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\begin{forest}
+			[CS[\bfbox{France}][$\neg$France]]
+		\end{forest}
+		\caption{}\label{tree:france-polar}
+	\end{subfigure}
+	\qquad
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\begin{forest}
+			[CS[\bfbox{France}][UK][...]]
+		\end{forest}
+		\caption{}\label{tree:france-wh}
+	\end{subfigure}
+	\caption{Qtrees for \textit{SALT35 will take place in \textbf{the United States}}.}
+\end{figure}
+
+We can now turn to the scalar case, with \textit{Y}$^+$=\textit{Jo read all of the books}, and \textit{Y}=\textit{Jo read some of the books}.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{.2\linewidth}
+		\centering
+		\begin{forest}
+			[CS[Paris][$\neg$Paris]]
+		\end{forest}
+		\caption{If $\mathcal{A}_{\textit{Paris}} = \lbrace \textit{Paris}\rbrace$}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\begin{forest}
+			[CS[Paris][Lyon][Berlin][...]]
+		\end{forest}
+		\caption{If $\mathcal{A}_{\textit{Paris}} = \lbrace \textit{Paris}, \textit{Lyon}, \textit{Berlin}, ...\rbrace$}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[CS[France[Paris][Lyon][...]][Germany[Berlin][...]][...]]
+		\end{forest}
+		\caption{If $\mathcal{A}_{\textit{Paris}}^{\textit{Paris}} = \lbrace \textit{Paris}\rbrace$ and  $\mathcal{A}_{\textit{Paris}}^{\textit{France}} = \lbrace \textit{France}, \textit{Germany}, ...\rbrace$}
+	\end{subfigure}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{.2\linewidth}
+		\centering
+		\begin{forest}
+			[CS[$\exists$][$\neg\exists$]]
+		\end{forest}
+		\caption{If $\mathcal{A}_{\textit{some}} = \lbrace\exists\rbrace$}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\begin{forest}
+			[CS[$\neg\exists$][\sbna][$\forall$]]
+		\end{forest}
+		\caption{If $\mathcal{A}_{\textit{some}} = \lbrace \exists, \forall\rbrace$}
+	\end{subfigure}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{.2\linewidth}
+		\centering
+		\begin{forest}
+			[CS[$\forall$][$\neg\forall$]]
+		\end{forest}
+		\caption{If $\mathcal{A}_{\textit{all}} = \lbrace\forall\rbrace$}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\begin{forest}
+			[CS[$\neg\exists$][\sbna][$\forall$]]
+		\end{forest}
+		\caption{If $\mathcal{A}_{\textit{all}} = \lbrace \exists, \forall\rbrace$}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\begin{forest}
+			[CS[$\exists$[$\forall$][\sbna]][$\neg\exists$]]
+		\end{forest}
+		\caption{If $\mathcal{A}_{\textit{all}}^{\textit{all}} = \lbrace \exists, \forall\rbrace$ or $\lbrace\forall\rbrace$  and $\mathcal{A}_{\textit{all}}^{\textit{some}} = \lbrace \exists\rbrace$}
+	\end{subfigure}
+\end{figure}
+
+
+
+
+
+
+
+Intuitively, this renders the intuition that non-scalemates like \textit{Paris} and \textit{France} will answer different kinds of questions -- finer-grained \textit{which city?} question (\ref{ex7:which-city}), vs. coarser-grained \textit{which country?} question (\ref{ex7:which-country}) -- while scalemates \textit{may} answer similar questions -- \textit{e.g.} \textit{how much/many?} (\ref{ex7:how-many}).
+
+
+
+
+
+In (\ref{ex7:which-city}), a hedges like \textit{all I know is that...} allows to shift the question and be less informative than originally expected (\ref{ex7:which-city-aik}). Being more informative a
+
+\begin{exe}
+	\ex {In which city does Jo study?}\label{ex7:which-city}
+	\begin{xlist}
+		\ex[] {SALT35 will take place in Paris.}
+		\ex [\#] {SALT35 will take place in France.}
+		\ex [] {All I know is that SALT35 will take place in France.}\label{ex7:which-city-aik}
+	\end{xlist}
+	\ex {In which country does Jo study?}\label{ex7:which-country}
+	\begin{xlist}
+		\ex[] {SALT35 will take place in France.}
+		\ex [??] {SALT35 will take place in Paris.}
+		\ex [\#] {All I know is that SALT35 will take place in Paris.}
+	\end{xlist}
+	\ex {How many students passed the class?}\label{ex7:how-many}
+	\begin{xlist}
+		\ex[] {All passed.}
+		\ex [] {Some passed.}
+		\ex [] {All I know is that some passed.}
+	\end{xlist}
+\end{exe}
+
+One might argue that \textit{Paris} and \textit{France} may in fact answer the same, more general question: \textit{where?}. We think this kind of question can be coerced by the answerer into a more specific question (e.g. \textit{which city?}), depending on how informed they are. That kind of coercion does not seem to be needed in the case of \textit{how much/many?} questions answered by \textit{some} or \textit{all}.
+
+
+
+
+\iffalse
+. They can also be seen as belonging to different tiers,\textit{some} being less granular than \textit{all}.
+; and whose (potential) intermediate layers corresponds to the Hamblin partition of the CS generated by $q$ (an alternative to $p$ entailed by $p$) and same-granularity alternatives to $q$. Such tiered Qtrees can be interpreted as a stack of \textit{wh}-questions answered by $p$, and whose specificity increases from top to bottom.
+\begin{minipage}{.26\linewidth}
+	\centering
+	\begin{figure}[H]
+		\centering
+		\scalebox{.8}{
+			\begin{forest}
+				[CS[$\neg\exists$][$\exists$[\sbna][\ofbox{$\forall$}]]]
+		\end{forest}}
+		\caption{``Wh'' Qtree for \textit{Jo read \textit{\textcolor{orange}{all}} of the books}.}\label{fig7:all-not-all-some-not-some}
+	\end{figure}
+\end{minipage}\hfill
+\hfill
+\scalebox{.8}{
+	\begin{forest}
+		for tree={s sep=2mm, inner sep=0, l=0}
+		[CS[FR[\ofbox{Paris}][Nice][...]][UK[London][...]][...]]
+\end{forest}}
+\fi
+
+According to this definition, \textit{Jo read all of the books} gets paired with a ``polar'' Qtree corresponding to whether or not she read all the books (see Fig. \ref{fig7:all-not-all}); and a ``wh'' Qtree corresponding to whether she read none, only some, or all of the books (generated by Alt($\exists$) = $\lbrace \exists, \forall\rbrace$, see Fig. \ref{fig7:none-sbna-all}). Same can be done for \textit{Jo read some of the books}, except the ``polar'' Qtree is different (see Fig. \ref{fig7:some-not-some}). For \textit{SALT35 will take place in Paris} (resp. \textit{France}), \textit{wh}-Qtrees are generated by city (resp. country) alternatives, see Fig. \ref{fig7:city-partition} and \ref{fig7:country-partition}. Verifying nodes are boxed.
+
+\hspace*{-6mm}\begin{minipage}{.25\linewidth}
+	\centering
+	\begin{figure}[H]
+		\centering
+		\scalebox{.8}{
+			\begin{forest}
+				for tree={s sep=2mm, inner sep=0, l=0}
+				[CS[$\neg\forall$][\ofbox{$\forall$}]]
+		\end{forest}}
+		\caption{``Polar'' Qtree for \textit{Jo read \textbf{\textcolor{orange}{all}} of the books}}\label{fig7:all-not-all}
+	\end{figure}
+\end{minipage}\hfill
+\begin{minipage}{.3\linewidth}
+	\centering
+	\begin{figure}[H]
+		\centering
+		\scalebox{.8}{
+			\begin{forest}
+				for tree={s sep=2mm, inner sep=0, l=0}
+				[CS[$\neg\exists$][\bfbox{\sbna}][\bfbox{\ofbox{$\forall$}}]]
+		\end{forest}}
+		\caption{``Wh'' Qtree for \textit{Jo read $\lbrace$\textbf{\textcolor{blue}{some}}/\textbf{\textcolor{orange}{all}}$\rbrace$ of the books}.}\label{fig7:none-sbna-all}
+	\end{figure}
+\end{minipage}\hfill
+\begin{minipage}{.25\linewidth}
+	\centering
+	\begin{figure}[H]
+		\centering
+		\scalebox{.8}{
+			\begin{forest}
+				for tree={s sep=2mm, inner sep=0, l=0}
+				[CS[$\neg\exists$][\bfbox{$\exists$}]]
+		\end{forest}}
+		\caption{``Polar'' Qtree for \textit{Jo read \textbf{\textcolor{blue}{some}} of the books}}\label{fig7:some-not-some}
+	\end{figure}
+\end{minipage}
+
+
+
+\begin{minipage}{.4\linewidth}
+	\centering
+	\begin{figure}[H]
+		\centering
+		\scalebox{.8}{
+			\begin{forest}
+				for tree={s sep=2mm, inner sep=0, l=0}
+				[CS[\bfbox{FR}][$\neg$FR]]
+		\end{forest}}\hfill
+		\scalebox{.8}{
+			\begin{forest}
+				for tree={s sep=2mm, inner sep=0, l=0}
+				[CS[\bfbox{FR}][UK][...]]
+		\end{forest}}
+		\caption{Qtrees for \textit{SALT35 will take place in \textbf{the United States}.}}\label{fig7:country-partition}
+	\end{figure}
+\end{minipage}\vspace{3mm}
+
+\subsection{Getting compositional}
+Just like the meanings of simple sentences are incrementally composed, their sets of candidate Qtrees get incrementally combined. The Qtrees compatible with a negated LF $\neg X$, are Qtrees for $X$ in which the set of compatible nodes is ``flipped'' on a layer-by-layer basis. \textit{Jo did not read all of the books} is thus linked to the Qtrees in Fig. \ref{fig7:all-neg} and \textit{Jo didn't study in Paris} to those in Fig. \ref{fig7:city-partition-neg}. The Qtrees compatible a disjunctive LF $X \vee Y$, are all the Qtrees that result from the union of a tree for $X$, and a tree for $Y$. The union operation -- understood as union over sets of nodes, sets of edges, and sets of verifying nodes -- ensures that the Qtree of a disjunction addresses the QuDs evoked by \textit{both} disjuncts in parallel (\cite{Simons2001,Zhang2024}). \textit{Jo read some or all of the books} is therefore only compatible with Tree \ref{fig7:none-sbna-all} because all the other unions obtained from of Trees \ref{fig7:all-not-all}, \ref{fig7:some-not-some} and \ref{fig7:none-sbna-all} fail to generate proper Qtrees. The HDs (\ref{ex7:hd}) are compatible with no Qtree, because the Qtrees for \textit{Paris} and those for \textit{France} always subdivide the CS differently.\footnote{\citet{HenotMortier2024a,HenotMortier2024b} predict that (\ref{ex7:hd-ws}-\ref{ex7:shd-w}) do create proper Qtrees, but that such Qtrees (paired with their LFs) are \textsc{Q-Redundant}.} The Qtrees compatible with a conditional LF $X\rightarrow Y$ are Qtrees for $X$, where each verifying node is replaced by its intersection with a Qtree for $Y$. Verifying nodes are inherited from the consequent Qtree (in line with the observations in (\ref{ex7:depending-on})). (\ref{ex7:hc-scalar-w-ns}) is then compatible with the Tree in Fig. \ref{fig7:if-some-then-not-all}; (\ref{ex7:hc-scalar-ns-w}), with Fig. \ref{fig7:if-not-all-then-some}, (\ref{ex7:hc-w-ns}) with Fig. \ref{fig7:hc-non-scalar-w-ns} and (\ref{ex7:hc-ns-w}) with Fig. \ref{fig7:hc-non-scalar-ns-w}. We proceed to show that both trees associated with (\ref{ex7:hc-ns-w}) violate some notion of relevance; while no trees associated with (\ref{ex7:hc-scalar-w-ns}), (\ref{ex7:hc-scalar-ns-w}), and (\ref{ex7:hc-w-ns}) do. Roughly, the issue is that none of the trees evoked by (\ref{ex7:hc-ns-w}) fully preserve the answer conveyed by its consequent (the \textit{France}-node); while those evoked by (\ref{ex7:hc-scalar-w-ns}), (\ref{ex7:hc-scalar-ns-w}) and (\ref{ex7:hc-w-ns}) do.
+
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\scalebox{1}{
+			\begin{forest}
+				for tree={s sep=2mm, inner sep=0, l=0}
+				[CS[\fbox{$\neg\forall$}][$\forall$]]
+		\end{forest}}
+		\caption{}\label{fig7:all-neg-polar}
+	\end{subfigure}
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\scalebox{1}{
+			\begin{forest}
+				for tree={s sep=2mm, inner sep=0, l=0}
+				[CS[\fbox{$\neg\exists$}][\fbox{\sbna}][$\forall$]]
+		\end{forest}}
+		\caption{}\label{fig7:all-neg-wh}
+	\end{subfigure}
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\scalebox{1}{
+			\begin{forest}
+				for tree={s sep=2mm, inner sep=0, l=0}
+				[CS[$\exists$[$\forall$][\fbox{\sbna}]][$\neg\exists$]]
+		\end{forest}}
+		\caption{}\label{fig7:all-neg-tiered}
+	\end{subfigure}
+	\caption{Qtrees for\textit{Jo did\textbf{n't} read \textbf{\textcolor{orange}{all}} of the books}, derived from Fig. \ref{fig7:all-not-all}\&\ref{fig7:none-sbna-all}}\label{fig7:all-neg}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\scalebox{.8}{
+			\begin{forest}
+				for tree={s sep=2mm, inner sep=0, l=0}
+				[CS[{Paris}][\fbox{$\neg$Paris}]]
+		\end{forest}}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\scalebox{.8}{
+			\begin{forest}
+				for tree={s sep=2mm, inner sep=0, l=0}
+				[CS[{Paris}][\fbox{Nice}][\fbox{London}][\fbox{...}]]
+		\end{forest}}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{.3\linewidth}
+		\centering
+		\scalebox{.8}{
+			\begin{forest}
+				for tree={s sep=2mm, inner sep=0, l=0}
+				[CS[France[Paris][\fbox{Lyon}][\fbox{...}]][UK[\fbox{London}][\fbox{...}]]]
+		\end{forest}}
+	\end{subfigure}
+	\caption{Qtrees for \textit{Jo did\textbf{n't} study in \textbf{Massachusetts}}, derived from Fig. \ref{fig7:city-partition}.}\label{fig7:city-partition-neg}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\scalebox{.8}{
+		\begin{forest}
+			for tree={s sep=2mm, inner sep=0, l=0}
+			[CS[$\neg\exists$][$\exists$[\fbox{\sbna}][$\forall$]]]
+	\end{forest}}
+	\scalebox{.8}{
+		\begin{forest}
+			for tree={s sep=2mm, inner sep=0, l=0}
+			[CS[$\neg\exists$][\fbox{\sbna}][$\forall$]]
+	\end{forest}}
+	\caption{Qtrees compatible with (\ref{ex7:hc-scalar-w-ns}) derived from Fig. \ref{fig7:some-not-some}\&\ref{fig7:all-neg-polar}/\ref{fig7:all-neg-wh}}\label{fig7:if-some-then-not-all}%=\textit{If Jo read \textbf{\textcolor{blue}{some}} of the books she has\textbf{n't} read \textbf{\textcolor{orange}{all}}}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\scalebox{.8}{
+		\begin{forest}
+			for tree={s sep=2mm, inner sep=0, l=0}
+			[CS[$\neg\forall$[$\neg\exists$][\fbox{\sbna}]][$\forall$]]
+	\end{forest}}
+	\scalebox{.8}{
+		\begin{forest}
+			for tree={s sep=2mm, inner sep=0, l=0}
+			[CS[$\neg\exists$][\fbox{\sbna}][$\forall$]]
+	\end{forest}}
+	\caption{Qtrees compatible with (\ref{ex7:hc-scalar-ns-w}) derived from Fig. \ref{fig7:all-neg-polar}\&\ref{fig7:none-sbna-all}}\label{fig7:if-not-all-then-some}%=\textit{If Jo hasn't read \textbf{\textcolor{orange}{all}} of the books she has read \textbf{\textcolor{blue}{some}}}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\scalebox{.8}{
+		\begin{forest}
+			for tree={s sep=2mm, inner sep=0, l=0}
+			[CS[FR[Paris][\fbox{Nice}][\fbox{Lyon}][\fbox{...}]][$\neg$FR/UK]]
+	\end{forest}}
+	\caption{Qtree for (\ref{ex7:hc-w-ns}), derived from Fig. \ref{fig7:country-partition}\&\ref{fig7:city-partition-neg}.}\label{fig7:hc-non-scalar-w-ns}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\scalebox{.8}{
+		\begin{forest}
+			for tree={s sep=2mm, inner sep=0, l=0}
+			[CS[$\neg$Paris[\fbox{\begin{tabular}{c}
+					FR$\wedge$$\neg$Paris\\
+					\textcolor{red}{$\subset$ FR}
+			\end{tabular}}][UK/$\neg$FR]][Paris]]
+	\end{forest}}
+	\scalebox{.8}{
+		\begin{forest}
+			for tree={s sep=2mm, inner sep=0, l=0}
+			[CS[Paris][\fbox{\begin{tabular}{c}
+					FR$\wedge$Nice\\
+					\textcolor{red}{$\subset$ FR}
+			\end{tabular}}][London][...]]
+	\end{forest}}
+	\caption{Qtree for (\ref{ex7:hc-ns-w}), derived from Fig. \ref{fig7:city-partition-neg}\&\ref{fig7:country-partition}.}\label{fig7:hc-non-scalar-ns-w}
+\end{figure}
+
+\section{The case of scalar Hurford Conditionals}
+
+Hurford Conditionals (HCs) involving scalemates appear felicitous, despite the fact that \textit{exh} is not predicted to rescue such structures from redundancy constraints previously introduced in the literature. We show that \textsc{Q-Relevance}, as introduced in Chapter \ref{chap:hurford-sentences}, can explain this pattern, modulo the intuitive assumption that scalar items can evoke fine-grained enough questions (generated by their scalemates) out-of-the-blue, while non-scalar items conveying different degrees of granularity cannot.
+
+In Chapter \ref{chap:hurford-sentences} we investigated Hurford Conditionals such as \textit{\# If Jo did not study in Paris, she studied in France}. In this Chapter, we investigate Hurford Conditionals involving exhaustifiable scalemates
+
+
+\subsubsection{The problem}
+Does the pattern exhibited by scalar HDs in (\ref{ex7:shd}) extend to structures isomorphic to these HDs assuming material implication? \citet{Mandelkern2018} observed that an asymmetry arises in so-called Hurford Conditionals (henceforth \textbf{HCs}, see Chapter \ref{chap:hurford-sentences}), when the antecedent and consequent are \textit{not} natural scalemates, as in (\ref{ex7:hc-ns}). Interestingly, we observe that the asymmetry \textit{disappears}\footnote{Some speakers I consulted reported that (\ref{ex7:hc-scalar-w-ns}) was hard to make sense of in English (it is fine in my French). We discuss this \textit{caveat} towards the end of this Chapter.} in HCs involving scalemates, as shown in (\ref{ex7:hc-s}). We call such structures \textbf{scalar HCs}.
+
+\begin{exe}
+	\ex\label{ex7:hc-ns}
+	\begin{xlist}
+		\ex[]{If SALT35 will take place in the United States she did not study in Massachusetts.\hfill \p{} $\rightarrow$ $\neg$\pplus}\label{ex7:hc-w-ns}
+		\ex[\#]{If Jo did not study in Massachusetts she studied in the United States.\hfill $\neg$\pplus{} $\rightarrow$ \p}\label{ex7:hc-ns-w}
+	\end{xlist}
+\end{exe}
+
+
+%note: peter cannot make sense of the some then not all case...... which is weird bc this should be GOOD
+%peter could make sense of the not all then some case... which is predicted to be bad without forcing exh.
+
+\begin{exe}
+	\ex\label{ex7:hc-s}
+	\begin{xlist}
+		\ex{If Jo has read \textcolor{blue}{some} of the books she hasn't read \textcolor{orange}{all}.\hfill \s{} $\rightarrow$ $\neg$\splus}\label{ex7:hc-scalar-w-ns}
+		\ex{If Jo hasn't read \textcolor{orange}{all} of the books she has read \textcolor{blue}{some}.\hfill $\neg$\splus{} $\rightarrow$ \s}\label{ex7:hc-scalar-ns-w}
+	\end{xlist}
+\end{exe}
+
+
+
+HDs and HCs therefore pattern differently, in both the scalar and the non-scalar case. \citet{Kalomoiros2024} proposed a constraint called \textsc{Super Redundancy} accounting for (\ref{ex7:hc-ns}), that we introduced in Chapter \ref{chap:hurford-sentences} and repeat here in (\ref{ex7:sr}).
+
+\begin{exe}
+	\ex \textsc{Super Redundancy}. A sentence $S$ is infelicitous if it contains a subconstituent $C$ combining with a binary operator, such that $(S)^-_C$ is defined and for all $D$, $(S)^-_C \equiv S_{Str(C, D)}$. In this definition, $(S)^-_C$ designates $S$ where $C$ got deleted. $Str(C, D)$ refers to a strengthening of $C$ with $D$, which commutes with negation ($Str(\neg\alpha, D) = \neg (Str(\alpha, D))$) and with binary operators ($Str(O(\alpha, \beta), D) = O(Str(\alpha, D), Str(\beta, D))$). $S_{Str(C, D)}$ designates $S$ where $C$ is replaced by $Str(C, D)$.\label{ex7:sr}
+\end{exe}
+
+Let us briefly summarize how (\ref{ex7:hc-ns}) is captured by \textsc{Super Redundancy}. (\ref{ex7:hc-ns-w}) is Super Redundant (abbreviated \textbf{SR}), because any local strengthening of its antecedent (\textit{not Paris}) yields a conditional expression equivalent to its consequent (\textit{France}). This is proved in (\ref{ex7:sr-hc-sw}). (\ref{ex7:hc-w-ns}) on the other hand, is not SR: its antecedent (resp. consequent), can be strenghtened in such a way that the entire conditional becomes logically non-equivalent to its consequent (resp. antecedent). This is shown in (\ref{ex7:sr-hc-ws}). SR can also cover the HDs in (\ref{ex7:hd}), and, together with IW, the scalar HDs in (\ref{ex7:shd}).
+
+\begin{exe}
+	\ex
+	\begin{xlist}
+		\ex {(\ref{ex7:hc-ns-w}) is SR.\\
+			C = $\neg$ \pplus. $\forall D.$ $\neg$(\pplus{} $\wedge$ $D$) $\rightarrow$ \p{} $\equiv$ (\pplus{} $\wedge$ $D$) $\vee$ \p{} $\equiv$ \p} \label{ex7:sr-hc-sw}
+		\ex {(\ref{ex7:hc-w-ns}) is not SR.\\C = $\neg$ \pplus. Take $D = \top$. \p{} $\rightarrow$ $\neg$(\pplus $\wedge$ $D$) $\equiv$ \p{} $\rightarrow$ $\neg$(\pplus $\wedge$ $\top$) $\equiv$ \p{} $\rightarrow$ $\neg$\pplus{} $\not\equiv$ \p\\
+			C = \p. Take $D = \bot$. (\p{} $\wedge$ $D$) $\rightarrow$ $\neg$\pplus{} $\equiv$ (\p{} $\wedge$ $\bot$) $\rightarrow$ $\neg$\pplus{} $\equiv$ $\bot$ $\rightarrow$ $\neg$\pplus{} $\equiv$ $\top$ $\not\equiv$ $\neg$\pplus} \label{ex7:sr-hc-ws}
+	\end{xlist} 
+	
+\end{exe}
+
+What about (\ref{ex7:hc-scalar-w-ns}) vs. (\ref{ex7:hc-scalar-ns-w})? (\ref{ex7:hc-s-w-ns-iw}) shows that that \textit{exh} is IW in the antecedent and the consequent of (\ref{ex7:hc-scalar-w-ns}), whether the conditional is seen as material or as strict. (\ref{ex7:hc-scalar-w-ns}) is therefore isomorphic to (\ref{ex7:hc-w-ns}), and so is correctly predicted to be non-SR, like (\ref{ex7:hc-w-ns}).
+
+
+
+
+\begin{exe}
+	\ex\label{ex7:hc-s-w-ns-iw}
+	\begin{xlist}
+		\ex\textit{exh} is IW in the antecedent of (\ref{ex7:hc-scalar-w-ns}); material case.\\ $\forall \Gamma.$ exh(\s) $\rightarrow$ $\Gamma$ $\equiv$ $\neg$(\s$\wedge$$\neg$\splus) $\vee$ $\Gamma$ $\equiv$ $\neg$\s{} $\vee$ \splus{} $\vee$ $\Gamma$ $\Dashv$ $\neg$\s{} $\vee$ $\Gamma$ $\equiv$ \s{} $\rightarrow$ $\Gamma$
+		\ex\textit{exh} is IW in the antecedent of (\ref{ex7:hc-scalar-w-ns}); non-material case.\\ $\forall \Gamma.$ $\forall w: \text{exh}(\s)(w). \ \Gamma \equiv \forall w: \s(w) \wedge \neg\splus(w). \ \Gamma \Dashv \forall w: \s(w). \ \Gamma \equiv \s{} \rightarrow \Gamma$
+		\ex\textit{exh} is IW in the consequent of (\ref{ex7:hc-scalar-w-ns}); material case.\\
+		$\forall \Gamma.$ (\s{} $\rightarrow$ exh($\neg$\splus)) $\Gamma$ $\equiv$ ($\neg$\s{} $\vee$ ($\neg$\splus $\wedge$ \s)) $\Gamma$ $\equiv$ ($\neg$\s{} $\vee$ $\neg$\splus) $\Gamma$ $\equiv$ (\s{} $\rightarrow$ $\neg$\splus) $\Gamma$
+		\ex\textit{exh} is IW in the consequent of (\ref{ex7:hc-scalar-w-ns}); non-material case.\\$\forall \Gamma.$ $\forall w: \s(w). \ \text{exh}(\neg\splus)(w) \equiv \forall w: \s(w). \ \neg\splus(w) \wedge \s(w) \Dashv \forall w: \s(w). \ \splus(w) \equiv \s{} \rightarrow \splus$
+	\end{xlist}
+\end{exe}
+
+
+(\ref{ex7:hc-s-ns-w-iw}) shows that this reasoning incorrectly extends to (\ref{ex7:hc-scalar-ns-w}): \textit{exh} is IW in both the antecedent and the consequent of (\ref{ex7:hc-scalar-ns-w}), so SR incorrectly predicts (\ref{ex7:hc-scalar-ns-w}) to pattern like (\ref{ex7:hc-ns-w}), i.e. to be infelicitous.
+
+\begin{exe}
+	\ex\label{ex7:hc-s-ns-w-iw}
+	\begin{xlist}
+		\ex\textit{exh} is IW in the consequent of (\ref{ex7:hc-scalar-ns-w}); material case.\\ $\forall \Gamma.$ ($\neg$\splus{} $\rightarrow$ exh(\s)) $\Gamma$ $\equiv$ (\splus{} $\vee$ (\s$\wedge$$\neg$\splus)) $\Gamma$ $\equiv$ (\splus{} $\vee$ \s) $\Gamma$ $\equiv$ ($\neg$\splus{} $\rightarrow$ \s) $\Gamma$
+		\ex\textit{exh} is IW in the consequent of (\ref{ex7:hc-scalar-ns-w}); non-material case.\\ $\forall \Gamma.$ $\forall w: \neg\splus(w). \ \text{exh}(\s)(w) \equiv \forall w: \neg\splus(w). \ \s(w) \wedge \neg \splus(w) \equiv \forall w: \neg\splus(w). \ \s(w) \equiv$ $\neg$\splus $\rightarrow$ \s
+		\ex\textit{exh} is IW in the antecedent of (\ref{ex7:hc-scalar-ns-w}); material case.\\
+		$\forall \Gamma.$ (exh($\neg$\splus) $\rightarrow$ \s{}) $\Gamma$ $\equiv$ ($\neg$($\neg$\splus $\wedge$ \s) $\vee$ \s{}) $\Gamma$ $\equiv$ (\splus $\vee$ $\neg$\s{} $\vee$ \s) $\Gamma$ $\Dashv$ ($\neg$\splus{} $\rightarrow$ \s) $\Gamma$
+		\ex\textit{exh} is IW in the antecedent of (\ref{ex7:hc-scalar-ns-w}); non-material case.\\$\forall \Gamma.$ $\forall w: \text{exh}(\neg\splus)(w). \ \s(w) \equiv \forall w: \neg\splus(w) \wedge \s(w). \ \s(w) \equiv \top \Dashv \splus \rightarrow \s$
+	\end{xlist}
+\end{exe}
+
+\subsubsection{Exploring a potential solution}\label{sec:sr-iw-tentative-solution}
+At this point, one might want to revise IW, or SR. If SR is maintained and IW is assumed to be inactive in conditionals, then both HCs in (\ref{ex7:hc-s}) would be correctly predicted to be felicitous, due to \textit{exh} being licensed in the consequent of (\ref{ex7:hc-scalar-ns-w}). This is shown in (\ref{ex7:sr-wo-iw}).
+
+\begin{exe}
+	\ex\label{ex7:sr-wo-iw} {(\ref{ex7:hc-scalar-ns-w}) with \textit{exh} in the consequent is not SR.\\
+		C = $\neg$ \splus. Take D = $\top$. $\neg$(\splus{} $\wedge$ $D$) $\rightarrow$ exh(\s) $\equiv$ \splus{} $\vee$ (\s{} $\wedge$ $\neg$\splus) $\equiv$ \s{} $\not\equiv$ exh(\s)\\
+		C = exh(\s). Take D = $\bot$. $\neg$\splus{} $\rightarrow$ (exh(\s) $\wedge$ $D$) $\equiv$ $\neg$\splus{} $\rightarrow$ $\bot$ $\equiv$ \splus{} $\not\equiv$ $\neg$\splus}
+\end{exe}
+
+A possible argument against this view comes from a ``Long-Distance'', non-scalar variant of (\ref{ex7:hc-scalar-ns-w}). At the end of Chapter \ref{chap:hurford-sentences}, we discussed two kinds of LDHDs derived from HDs by further disjoining the stronger disjunct with a proposition incompatible with the weaker one; and we observed that the infelicity of such LDHDs persists once the outer disjunction is changed into a conditional \textit{via} the \textit{or-to-if} tautology, as shown in (\ref{ex7:ldhc}).
+
+This is problematic for the hypothesis that SR is the only constraint at stake in conditionals: under this view, and because \textit{exh} is inactive in the sentences in (\ref{ex7:ldhc}), SR would be expected to rule them out beyond repair. But, if SR correctly rules out (\ref{ex7:ldhc-pos}), it incorrectly rules in (\ref{ex7:ldhc-neg}).
+
+\begin{exe}
+	\ex \label{ex7:ldhc}
+	\begin{xlist}
+		\ex[\#] {If Jo did not study in \textcolor{blue}{Europe}, she studied in \textcolor{orange}{France} or in \textcolor{green}{New York}.\\ $\neg$\p{} $\rightarrow$ (\pplus{} $\vee$ \r)}\label{ex7:ldhc-pos}
+		\ex[\#] {If SALT35 will take place in the United States, she did not study \textcolor{orange}{in Europe} or she studied in \textcolor{green}{Paris}.\\ $\neg$\textbf{\textcolor{blue}{q}} $\rightarrow$ (\textcolor{orange}{\textbf{q}$^+$} $\vee$ \r)
+			with: \textbf{\textcolor{blue}{q}} := $\neg$\pplus; \textcolor{orange}{\textbf{q}$^+$} := $\neg$\p }\label{ex7:ldhc-neg}
+	\end{xlist}
+\end{exe}
+
+This suggests that our original problem in the scalar HC (\ref{ex7:hc-scalar-ns-w}) cannot be easily alleviated by maintaining SR and relaxing IW, since in environments where IW plays no role, such as in (\ref{ex7:ldhd-neg}) and (\ref{ex7:ldhc-neg}), SR alone makes unexpected predictions.
+
+
+%also think about chap 3: p or p or q and scalar variants thereof. we want one involving a conditional, where exh is capital to ensure non SR.
+
+
+
+To capture the scalar HCs in (\ref{ex7:hc-s}) and (\ref{ex7:ldhc}) while retaining the right predictions for the HDs in (\ref{ex7:hd}), (\ref{ex7:shd}) and the non-scalar HC in (\ref{ex7:hc-ns}), we thus suggest to maintain IW, and propose an alternative to SR based on three ideas:
+\begin{itemize}
+	\item Questions under Discussion (\textbf{QuD}, \cite{VanKuppevelt1995,Roberts1996}) are compositionally accommodated when processing out-of-the-blue declaratives (see previous chapters);
+	\item QuD computation is constrained by \textsc{Q-Relevance} (see Chapter \ref{chap:hurford-sentences});
+	\item scalemates may answer same-granularity QuDs, while non-scalemates with different levels of granularity cannot (new claim).
+\end{itemize}
+The scalar HCs in (\ref{ex7:hc-s}) can then escape a violation of \textsc{Q-Relevance}, because their consequent can evoke a question of the form \textit{none, some but not all, or all?} that is fine-grained enough to ``fit'' a question introduced by their antecedent. In the non-scalar case, (\ref{ex7:hc-w-ns}) can do the same (\textit{not Paris} evokes a proper subdivision of \textit{France}), but crucially not (\ref{ex7:hc-ns-w}) (\textit{France} cannot evoke a proper subdivision of \textit{not Paris}).
+
+
+
+\section{Scalarity and accommodated QuDs}
+We use the two core ideas we entertained in the previous chapters of this thesis: that out-of-the-blue declaratives evoke the potential QuDs they may answer; and that the derivation of such implicit QuDs is compositional and (incrementally) constrained. In line with \citet{Katzir2015}'s insights, we take that  a sentence is odd if it is compatible with no reasonable implicit QuD. Chapter \ref{chap:hurford-sentences} already used this formalism to capture the non-scalar HD in (\ref{ex7:hd}) and the non-scalar HC in (\ref{ex7:hc-ns}). We now focus on explaining the scalar HCs in (\ref{ex7:hc-s}). The core claim we introduce in this section in order to capture (\ref{ex7:hc-s}), is that scalemates \textit{may} evkoe similar QuDs, while non-scalemates like \textit{Paris} and \textit{France} cannot. Chapter \ref{chap:exh-incr} will cover the case of scalar HDs (\ref{ex7:shd}) building on this assumption, while also presenting a possible alternative to IW.
+
+\subsection{Qtree recap}
+Let us briefly summarize the basis of the formalism presented in Chapter \ref{chap:hurford-sentences}. Building on \citet{Buring2003,Riester2019,Onea2016,Zhang2024}, we took QuDs to be trees (\textbf{Qtrees}), that have the Context Set (\textbf{CS}, \cite{Stalnaker1974}) as their root, and are such that each intermediate node is a subset of the CS, partitioned by its children nodes. Thus, the set of leaves of a Qtree forms a partition of the CS, and correspond to the standard denotation of questions (\citenp{Hamblin1958},\citenp{Groenendijk1999}). Any subtree rooted in $N$ can be seen as a conditional question, granted $N$. A proposition answers a Qtree if it can be identified with the union of a strict subset of the Qtree's nodes.
+
+\begin{figure}[H]
+	\begin{multicols}{2}
+		\begin{forest}
+			[CS[A$_1$ [B$_1$][B$_2$]][A$_2$][A$_3$[B$_3$[C$_1$][C$_2$]][B$_4$]][A$_4$[B$_5$][B$_6$][B$_7$]]]
+		\end{forest}
+		\columnbreak
+		\begin{small}
+			
+			The Tree on the left is a Qtree iff...
+			\begin{itemize}
+				\item $\lbrace A_1, A_2, A_3, A_4\rbrace$ partitions CS;
+				\item $\lbrace B_1, B_2\rbrace$ partitions $A_1$;
+				\item  $\lbrace B_3, B_4\rbrace$ partitions $A_3$;
+				\item $\lbrace B_5, B_6, B_7\rbrace$ partitions $A_4$;
+				\item $\lbrace C_1, C_2\rbrace$ partitions $B_3$.
+			\end{itemize}
+		\end{small}
+	\end{multicols}
+	\small
+	It follows from this that...
+	\begin{itemize}
+		\item $\lbrace B_1, B_2, A_2, C_1, C_2, B_4, B_5, B_6, B_7\rbrace$ (leaves) partitions CS;
+		\item $\lbrace B_1, B_2, A_2, B_3, B_4, B_4, B_5, B_6, B_7\rbrace$ partitions CS (because $\lbrace C_1, C_2\rbrace$ partitions $B_3$);
+		\item $\lbrace B_1, B_2, A_2, C_1, C_2, B_4, A_4\rbrace$ partitions CS (because $\lbrace B_5, B_6, B_7\rbrace$ partitions $A_4$);
+		\item etc.
+	\end{itemize}
+	\caption{Illustration of some Qtree properties.}
+\end{figure}
+
+Building on \citet{Katzir2015,HenotMortier2024a,HenotMortier2024b}, we take that any out-of-the-blue declarative sentence denoting a proposition \textit{p} gets paired with the set of salient Qtrees \textit{p} may answer. Such Qtrees additionally carry information about how $p$ answers them, in the form of specific nodes entailing $p$ (\textbf{verifying nodes}). We refer to the structure formed by Qtrees, along with their verifying nodes, as ``flagged Qtrees'' (or sometimes just Qtrees). The pairing between LF and flagged Qtrees is compositional, meaning, the flagged Qtrees evoked by a complex LF, are derived from the flagged Qtrees derived from its parts, and from how these parts combine. 
+
+
+
+\section{Capturing scalar HCs via Q-Relevance}
+Chapter \ref{chap:hurford-sentences} defined \textsc{Q-Relevance} as a constraint on Qtree computation: when combining Qtrees incrementally, none of the verifying nodes of the input Qtree should be cut across (i.e. be strictly entailed by some node) in the output Qtree. The constraint is repeated in (\ref{ex7:q-relevance}).
+
+
+\begin{exe}
+	\exr{ex7:q-relevance} {\textsc{Q-Relevance}.  Let $X$ and $Y$ be LFs and let $Qtrees(X)$ and $Qtrees(Y)$ be the sets of Qtrees compatible with $X$ and $Y$. Let $\circ$ be a Qtree-level operation, e.g. $\neg$, $\vee$, or $\rightarrow$. Let $C$ be a non-empty partial LF (incremental context). Two cases:
+		\begin{itemize}
+			\item $C=\circ$, with $\circ$ a unary operation. For any $T \in Qtrees(X)$, $\circ T$ is \textsc{Q-Relevant} with respect to $\circ X$ iff $\forall N \in \mathbb{N}^+(T). \ \neg\exists N' \in \mathbb{N}(\circ T). \ N' \subset N$.
+			\item $C = X \circ$, with $\circ$ a binary operation. For any $T \in Qtrees(Y)$, $T_X \circ T_Y$ is \textsc{Q-Relevant} with respect to $X \circ Y$ iff $\forall N \in \mathbb{N}^+(T_Y). \ \neg\exists N' \in \mathbb{N}(T_x \circ T_Y). \ N' \subset N$.
+	\end{itemize}}
+\end{exe}
+
+\begin{exe}
+	\ex {\textsc{Q-Relevance} \textit{(applied to conditionals)}.  Let $X$ and $Y$ be LFs and let $Qtrees(X)$ and $Qtrees(Y)$ be the sets of Qtrees compatible with $X$ and $Y$. For any $T \in Qtrees(Y)$, $T_X \rightarrow T_Y$ is \textsc{Q-Relevant} with respect to $X \rightarrow Y$ iff $\forall N \in \mathbb{N}^+(T_Y). \ \neg\exists N' \in \mathbb{N}(T_x \rightarrow T_Y). \ N' \subset N$.}
+	\label{ex7:q-relevance-conditional}
+\end{exe}
+
+This allowed to account for the contrast in (\ref{ex7:hc-ns}). Let us briefly summarize the argument. (\ref{ex7:hc-w-ns}) corresponds to the Qtree in Fig. \ref{fig7:hc-non-scalar-w-ns}, which is obtained from a country-level antecedent Qtree and a city-level consequent Qtree; therefore, all verifying leaves of the consequent (city nodes different from Paris) are contained in some leaf of the antecedent Qtree, and can thus ``fit'' into the output Qtree without being cut across. \textsc{Q-Relevance} is thus satisfied.  (\ref{ex7:hc-ns-w}) corresponds to the Qtrees in Fig. \ref{fig7:hc-non-scalar-ns-w}, which are obtained from a city-level antecedent Qtree and a country-level consequent Qtree; in such trees, the \textit{France} verifying leaves are always cut across, either by \textit{not Paris}, or by individual city-nodes different from \textit{Paris}. \textsc{Q-Relevance} is thus violated.
+
+The same kind of reasoning shows that the Qtrees corresponding to (\ref{ex7:hc-scalar-w-ns}) and (\ref{ex7:hc-scalar-ns-w}), in resp. Fig. \ref{fig7:if-some-then-not-all} and \ref{fig7:if-not-all-then-some}, verify \textsc{Q-Relevance}. Starting with Qtree \ref{fig7:if-some-then-not-all}: it can be built by incrementally combining  Qtree \ref{fig7:some-not-some} (antecedent Qtree), with Qtree \ref{fig7:all-neg-wh} (consequent Qtree). Qtree \ref{fig7:all-neg-wh} has $\neg\exists$ and $\exists\wedge\neg\forall$ as verifying nodes; in the output Qtree \ref{fig7:if-some-then-not-all}, both nodes are fully preserved. So (\ref{ex7:hc-scalar-w-ns}) is compatible with a Qtree and is thus felicitous. As for (\ref{ex7:hc-scalar-ns-w}), its Qtree \ref{fig7:if-not-all-then-some} can be built by incrementally combining  Qtree \ref{fig7:all-not-all} (antecedent Qtree), with Qtree \ref{fig7:all-neg-wh} (consequent Qtree). Qtree \ref{fig7:all-neg-wh} has $\neg\exists$ and $\exists\wedge\neg\forall$ as verifying nodes; in the output Qtree \ref{fig7:if-some-then-not-all}, both nodes are fully preserved. So (\ref{ex7:hc-scalar-ns-w}) is compatible with a Qtree and is thus felicitous. In brief, (\ref{ex7:hc-ns-w}) and (\ref{ex7:hc-w-ns}) are both rescued by the fact their consequent can evoke a Qtree whose verifying nodes are fine-grained enough to properly ``fit'' the structure already introduced by the antecedent Qtree.
+
+
+\subsection{Interim conclusion}
+We proposed an account of (scalar) HCs exploiting the intuitive idea that conditionals evoke ``restricted'' questions whose composition is constrained by the new notion of relevance presented back in Chapter \ref{chap:hurford-sentences}, \textsc{Q-Relevance}. The contrast between scalar and non-scalar HCs was thus captured, not \textit{via} \textit{exh} \textit{per se}, but instead by appealing to how scalar vs. non-scalar pairs of items differ information-structurally. Specifically, it was assumed scalar items could evoke fine-grained enough questions (generated by their scalemates) out-of-the-blue, while non-scalar items with different granularities could not.\\
+
+
+Before moving on to more complex cases in which scalarity and \textsc{Q-Relevance} also appear relevant(!), let us discuss the felicity profile of the scalar HCs in (\ref{ex7:hc-s}), repeated below.
+
+\begin{exe}
+	\exr{ex7:hc-s}
+	\begin{xlist}
+		\ex{If Jo has read \textcolor{blue}{some} of the books she hasn't read \textcolor{orange}{all}.\hfill \s{} $\rightarrow$ $\neg$\splus}
+		\ex{If Jo hasn't read \textcolor{orange}{all} of the books she has read \textcolor{blue}{some}.\hfill $\neg$\splus{} $\rightarrow$ \s}
+	\end{xlist}
+\end{exe}
+
+In consulting with various speakers, judgments for (\ref{ex7:hc-scalar-w-ns}) and (\ref{ex7:hc-scalar-ns-w}) varied quite a bit. In particular, some speakers reported that (\ref{ex7:hc-scalar-w-ns}) was hard to make sense of. This potential infelicity appears problematic for all accounts of Hurford Sentences -- in particular the current account, and \citet{Kalomoiros2024}'s SR. Here is however the sketch of a solution within the current framework. Recall that \textsc{Q-Relevance} imposes that some QuD evoked by the consequent of a conditional ``fit'' the information structure already introduced by the antecedent. One noticeable difference between (\ref{ex7:hc-scalar-w-ns}) and (\ref{ex7:hc-scalar-ns-w}), is that (\ref{ex7:hc-scalar-w-ns}), unlike (\ref{ex7:hc-scalar-ns-w}), features a \textit{negated} scalemate within its consequent. So far, our model of accommodated QuDs was assumed to handle negation quite transparently; specifically, we made the assumption that negation preserves Qtree structure, and only affects verifying nodes. But this might be too simplistic, and does not account for the intuition that negated expressions (e.g. \textit{not all}) may more saliently evoke ``polar'' QuDs (e.g. $\forall$/$\neg\forall$) as opposed to other QuDs (e.g. $\forall$/$\exists\wedge\neg\forall$/$\neg\exists$). If this is the case, then \textit{not all} in (\ref{ex7:hc-scalar-w-ns}) may be less likely to evoke the kind of tripartite Qtree that rescued both scalar HCs in (\ref{ex7:hc-s}). When combined with an antecedent QuD for \textit{some}, the polar QuD evoked by \textit{not all} then ends up violating \textsc{Q-Relevance}. The subtleness of the subsequent infelicity may be explained by the fact that negated expression \textit{preferentially} (but not always) evoke polar Qtrees.\\
+
+This observation can be related to informativity: uttering $\neg p$ when the question is \textit{whether p?}, is maximally informative, because it identifies one single cell -- the $\neg p$-cell. Uttering $\neg p$ when the questions is e.g. \textit{p, q, or r?}, is underinformative, because it does \textit{not} identify a single cell. To account for this, one might want to say that Qtrees ar ranked according to how well they are addressed by the assertion evoking them -- Qtree with smaller sets of verifying nodes should be preferred.
+
+The last section of the Chapter focuses on extensions of the current account, and in particular, explores predictions of \textsc{Q-Relevance} together with the intuition that scalemates may answer the same QuD.
+
+
+
+
+
+\iffalse
+
+\ex.[\Vref{ex7:shd}{$'$}]
+\a.{Jo read (only) \textcolor{blue}{some} (but not all) or \textcolor{orange}{all} of the books.}\label{ex7:shdcalar-w-s-repaired}
+\b.{Jo read \textcolor{orange}{all} or ${}^\#$(only) \textcolor{blue}{some} ${}^\#$(but not all) of the books.}\label{ex7:hcd-scalar-s-w-repaired}
+
+\ex.[\Vref{ex7:hc-s}{$'$}]
+\a.{If Jo read (${}^\#$only) \textcolor{blue}{some} (${}^\#$but not all) of the books she hasn't read \textcolor{orange}{all}.}\label{ex7:hc-scalar-w-ns-repaired}
+\b.{If Jo hasn't read \textcolor{orange}{all} of the books she's read (${}^\#$only) \textcolor{blue}{some} (${}^\#$but not all).}\label{ex7:hc-scalar-ns-w-repaired}
+
+\fi
+
+
+
+
+
+also talk about negated HDs...
+Jo did not read all of the book or she did not read some of them
+<=>Jo read some but not all or she read none
+==> should be ok but is not
+
+
+The case of Long-Distance scalar  talk plans to dive into
+\noindent\textit{Context: Cafeteria Xor's meal plan is all you can eat starter XOR main dish XOR desserts.}
+\begin{exe}
+	\ex {If Jo didn't have all starters or the main dish then she had some starters. \hfill $\neg$(\splus$\vee$\r)$\rightarrow$\s}
+	\ex {?If Jo had some starters then she didn't have all starters or the main dish.\hfill \s$\rightarrow$$\neg$(\splus$\vee$\r)}
+\end{exe}
+
+if not all of the S or the main dish then some of the S fine
+if some of the S then not all of the S or the main dish sounds trivial but fine
+==> exh vacuous there (at least under material implication... just use commutativity and the fact exh is vacuous under neg)
+==> should pattern like 11 and 12... not the case!
+==> kalomoiros predicts them correctly to be fine
+
+
+(1) m has read some of the books if not all of them fine 
+(2) m has not read all of the books, if she has *(even) read some of them badish should be fine if no exh
+
+what do linear fs say
+(1) can be parsed as
+m has read sbna of the books if not all of them
+if not all then sbna not super redundant
+
+(2) must be parsed as 
+if some then not all
+analog to if france then not paris should be good
+
+
+what do hierarchical fs say
+(1) can be parsed as
+m has read some of the books if not all of them
+if not all then some not super redundant
+
+(2) must be parsed as 
+if some then not all
+analog to if france then not paris should be good
+
+
+
+m did not study in paris, if she studied in france fine
+m studied in france, if she did not study in p bad
+==> with non scalar hc reversal did not affect judgment
+
+
+\begin{exe}
+	\ex{Jo did not study in Paris, if she studied in France.}
+	\ex{SALT35 will take place in France, if she did not study in Paris.} still bad
+	\ex{?Jo has not read all of the books, if she has read some.}
+	\ex{Jo has read some of the books, if she has not read all.}
+\end{exe}
+5 - not paris then france
+(not paris or not D) then france
+(paris and D) or france === france
+7, no exh - if not all then some
+(not all or not d) then some
+(all and d) or some === some 
+7, with exh - if not all then sbna
+(not all or not d) then sbna
+(all and d) or sbna =/= sbna
+==> having exh makes 7 not super redundant
+
+what about 6 with exh?
+some then (not all and some)
+(some and D) then (not all and some)
+not some or not D or (sbna)  =/= sbna 
+
+(some) then (sbna and D)
+not some or (sbna and D) =?= not some
+=> having exh makes 6 not super redundant too!
+
+if we buy super redundancy, then we have to say something about exh-licensing
+6 == not p or not p+
+not p or (not p+ and p)
+not p or not p+ and not p or p
+not p or not p+
+==> exh vacuous
+7 == p+ or p
+p+ or (p and not p+)
+(p+ or p) and (p+ or not p+)
+p+ or p
+==> exh vacuous
+
+All I have to do is update exh-licensing to make it ok in conditionals

@@ -1,347 +1,451 @@
+ \newcommand{\noop}[1]{}
 \begin{thebibliography}{}
 
-\bibitem[Hei, 1983]{Heim1983b}
- (1983).
-\newblock On the projection problem for presuppositions.
-\newblock In Barlow, M., Flickinger, D.~P., and Wescoat, M.~T., editors, {\em
-  Proceedings of the Second West Coast Conference on Formal Linguistics}, pages
-  114--126, Stanford, CA. Stanford University Department of Lingustics.
-
-\bibitem[Aloni, 2022]{Aloni2022}
-Aloni, M. (2022).
+\bibitem[\protect\citeauthoryear{Aloni}{Aloni}{2022}]{Aloni2022}
+Aloni, M. (2022, June).
 \newblock Logic and conversation: The case of free choice.
-\newblock {\em Semantics and Pragmatics}, 15(5):1–60.
+\newblock {\em Semantics and Pragmatics\/}~{\em 15\/}(5), 1–60.
 
-\bibitem[B\"{u}ring, 2003]{Buring2003}
+\bibitem[\protect\citeauthoryear{Bar-Lev and Fox}{Bar-Lev and
+  Fox}{2017}]{BarLev2017}
+Bar-Lev, M.~E. and D.~Fox (2017, October).
+\newblock Universal free choice and innocent inclusion.
+\newblock {\em Semantics and Linguistic Theory\/}~{\em 27}, 95.
+
+\bibitem[\protect\citeauthoryear{Benbaji-Elhadad and Doron}{Benbaji-Elhadad and
+  Doron}{2024}]{Benbaji2024}
+Benbaji-Elhadad, I. and O.~Doron (2024).
+\newblock Relevance as a dynamic constraint.
+\newblock In {\em Proceedings of the 42nd West Coast Conference on Formal
+  Linguistics (WCCFL42}.
+
+\bibitem[\protect\citeauthoryear{Benor and Levy}{Benor and
+  Levy}{2006}]{Benor2006}
+Benor, S. and R.~Levy (2006, June).
+\newblock The chicken or the egg? a probabilistic analysis of english
+  binomials.
+\newblock {\em Language\/}~{\em 82\/}(2), 233–278.
+
+\bibitem[\protect\citeauthoryear{B\"{u}ring}{B\"{u}ring}{2003}]{Buring2003}
 B\"{u}ring, D. (2003).
 \newblock On {D}-{T}rees, {B}eans, and {B}-{A}ccents.
-\newblock {\em Linguistics and Philosophy}, 26(5):511--545.
+\newblock {\em Linguistics and Philosophy\/}~{\em 26\/}(5), 511--545.
 
-\bibitem[Chierchia et~al., 2009]{Chierchia2009}
-Chierchia, G., Fox, D., and Spector, B. (2009).
+\bibitem[\protect\citeauthoryear{Chemla, Cummins, and Singh}{Chemla
+  et~al.}{2013}]{Chemla2013}
+Chemla, E., C.~Cummins, and R.~Singh (2013).
+\newblock Reading hurford disjunctions: Processing evidence for embedded
+  implicatures.
+\newblock Poster presented at XPRAG 2013.
+
+\bibitem[\protect\citeauthoryear{Chemla, Cummins, and Singh}{Chemla
+  et~al.}{2016}]{Chemla2016}
+Chemla, E., C.~Cummins, and R.~Singh (2016, May).
+\newblock Training and timing local scalar enrichments under global pragmatic
+  pressures.
+\newblock {\em Journal of Semantics\/}, ffw006.
+
+\bibitem[\protect\citeauthoryear{Chierchia, Fox, and Spector}{Chierchia
+  et~al.}{2009}]{Chierchia2009}
+Chierchia, G., D.~Fox, and B.~Spector (2009).
 \newblock Hurford's constraint and the theory of scalar implicatures: Evidence
   for embedded implicatures.
-\newblock In Egré, P., , and Magri, G., editors, {\em Presuppositions and
-  implicatures}, pages 47--62, Cambridge, MA. MIT Press.
+\newblock In P.~Egré, , and G.~Magri (Eds.), {\em Presuppositions and
+  implicatures}, Cambridge, MA, pp.\  47--62. MIT Press.
 
-\bibitem[Ciardelli, 2009]{Ciardelli2009}
+\bibitem[\protect\citeauthoryear{Ciardelli}{Ciardelli}{2009}]{Ciardelli2009}
 Ciardelli, I. (2009).
 \newblock Inquisitive semantics and intermediate logics.
 \newblock Master's thesis, University of Amsterdam.
 
-\bibitem[Ciardelli et~al., 2018]{Ciardelli2018}
-Ciardelli, I., Groenendijk, J., and Roelofsen, F. (2018).
+\bibitem[\protect\citeauthoryear{Ciardelli, Groenendijk, and
+  Roelofsen}{Ciardelli et~al.}{2018}]{Ciardelli2018}
+Ciardelli, I., J.~Groenendijk, and F.~Roelofsen (2018).
 \newblock {\em {Inquisitive Semantics}}.
 \newblock Oxford University Press.
 
-\bibitem[Cosmides, 1989]{Cosmides1989}
-Cosmides, L. (1989).
-\newblock The logic of social exchange: Has natural selection shaped how humans
-  reason? studies with the wason selection task.
-\newblock {\em Cognition}, 31(3):187–276.
+\bibitem[\protect\citeauthoryear{Ciardelli and Roelofsen}{Ciardelli and
+  Roelofsen}{2017}]{Ciardelli2017}
+Ciardelli, I. and F.~Roelofsen (2017).
+\newblock Hurford’s constraint, the semantics of disjunction, and the nature
+  of alternatives.
+\newblock {\em Natural Language Semantics\/}~{\em 25\/}(3), 199--222.
 
-\bibitem[Fox, 2007]{Fox2007}
+\bibitem[\protect\citeauthoryear{Dayal}{Dayal}{1996}]{Dayal1996}
+Dayal, V. (1996).
+\newblock {\em Locality in WH Quantification}.
+\newblock Springer Netherlands.
+
+\bibitem[\protect\citeauthoryear{Enguehard}{Enguehard}{2021}]{Enguehard2021}
+Enguehard, {\'E}. (2021).
+\newblock Explaining presupposition projection in (coordinations of) polar
+  questions.
+\newblock {\em Natural Language Semantics\/}~{\em 29\/}(4), 527--578.
+
+\bibitem[\protect\citeauthoryear{Evans}{Evans}{1977}]{Evans1977}
+Evans, G. (1977).
+\newblock Pronouns, quantifiers, and relative clauses (l).
+\newblock {\em Canadian Journal of Philosophy\/}~{\em 7\/}(3), 467--536.
+
+\bibitem[\protect\citeauthoryear{Flachs}{Flachs}{2023}]{Flachs2023}
+Flachs, B.~L. (2023).
+\newblock Neglect-{Z}ero {E}ffects on {I}ndicative {C}onditionals: {E}xtending
+  {BSML} and {BiUS} with an implication.
+\newblock Master's thesis, University of Amsterdam.
+\newblock Available at \url{https://eprints.illc.uva.nl/id/eprint/2235/}.
+
+\bibitem[\protect\citeauthoryear{Fox}{Fox}{2007}]{Fox2007}
 Fox, D. (2007).
-\newblock {\em Free {C}hoice and the {T}heory of {S}calar {I}mplicatures}, page
-  71–120.
+\newblock {\em Free {C}hoice and the {T}heory of {S}calar {I}mplicatures}, pp.\
+   71–120.
 \newblock Palgrave Macmillan UK.
 
-\bibitem[Fox, 2018]{Fox2018}
-Fox, D. (2018).
+\bibitem[\protect\citeauthoryear{Fox}{Fox}{2018}]{Fox2018}
+Fox, D. (2018, January).
 \newblock Partition by exhaustification: comments on dayal 1996.
-\newblock {\em ZAS Papers in Linguistics}, 60:403–434.
+\newblock {\em ZAS Papers in Linguistics\/}~{\em 60}, 403–434.
 
-\bibitem[Fox and Katzir, 2011]{Fox2011}
-Fox, D. and Katzir, R. (2011).
+\bibitem[\protect\citeauthoryear{Fox and Katzir}{Fox and
+  Katzir}{2011}]{Fox2011}
+Fox, D. and R.~Katzir (2011).
 \newblock On the characterization of alternatives.
-\newblock {\em Natural Language Semantics}, 19(1):87--107.
+\newblock {\em Natural Language Semantics\/}~{\em 19\/}(1), 87--107.
 
-\bibitem[Gazdar, 1979]{Gazdar1979}
+\bibitem[\protect\citeauthoryear{Fox and Spector}{Fox and
+  Spector}{2018}]{Fox2018a}
+Fox, D. and B.~Spector (2018, January).
+\newblock Economy and embedded exhaustification.
+\newblock {\em Natural Language Semantics\/}~{\em 26\/}(1), 1–50.
+
+\bibitem[\protect\citeauthoryear{Gazdar}{Gazdar}{1979}]{Gazdar1979}
 Gazdar, G. (1979).
 \newblock Pragmatics, {I}mplicature, {P}resuposition and {L}ogical {F}orm.
-\newblock {\em Critica}, 12(35):113--122.
+\newblock {\em Critica\/}~{\em 12\/}(35), 113--122.
 
-\bibitem[Ginzburg, 1996]{Ginzburg1996}
+\bibitem[\protect\citeauthoryear{Ginzburg}{Ginzburg}{1996}]{Ginzburg1996}
 Ginzburg, J. (1996).
 \newblock Dynamics and the semantics of dialogue.
-\newblock In Seligman, J. and Westerstahl, D., editors, {\em Language, Logic,
-  and Computation}, volume~1, Stanford, CA: CSLI. University of Chicago Press.
+\newblock In J.~Seligman and D.~Westerstahl (Eds.), {\em Language, Logic, and
+  Computation}, Volume~1, Stanford, CA: CSLI. University of Chicago Press.
 
-\bibitem[Grice, 1975]{Grice1975}
+\bibitem[\protect\citeauthoryear{Grice}{Grice}{1975}]{Grice1975}
 Grice, H.~P. (1975).
 \newblock Logic and conversation.
-\newblock In Davidson, D., editor, {\em The logic of grammar}, pages 64--75.
+\newblock In D.~Davidson (Ed.), {\em The logic of grammar}, pp.\  64--75.
   Dickenson Pub. Co.
 
-\bibitem[Grice, 1989]{Grice1989}
-Grice, H.~P. (1989).
-\newblock {\em Studies in the Way of Words}.
-\newblock Harvard University Press, Cambridge, MA.
-
-\bibitem[Groenendijk, 1999]{Groenendijk1999}
-Groenendijk, J. (1999).
+\bibitem[\protect\citeauthoryear{Groenendijk}{Groenendijk}{1999}]{Groenendijk1999}
+Groenendijk, J. (1999, November).
 \newblock The logic of interrogation: Classical version.
-\newblock {\em Semantics and Linguistic Theory}, 9:109.
+\newblock {\em Semantics and Linguistic Theory\/}~{\em 9}, 109.
 
-\bibitem[Groenendijk and Roelofsen, 2009]{Groenendijk2009}
-Groenendijk, J. and Roelofsen, F. (2009).
+\bibitem[\protect\citeauthoryear{Groenendijk and Roelofsen}{Groenendijk and
+  Roelofsen}{2009}]{Groenendijk2009}
+Groenendijk, J. and F.~Roelofsen (2009).
 \newblock {Inquisitive Semantics and Pragmatics}.
-\newblock In {\em Workshop on Language, Communication and Rational Agency}.
+\newblock In {\em Workshop on {L}anguage, {C}ommunication and {R}ational
+  {A}gency}.
 
-\bibitem[Groenendijk and Stokhof, 1984]{Groenendijk1984}
-Groenendijk, J. and Stokhof, M. (1984).
+\bibitem[\protect\citeauthoryear{Groenendijk and Stokhof}{Groenendijk and
+  Stokhof}{1984}]{Groenendijk1984}
+Groenendijk, J. and M.~Stokhof (1984).
 \newblock {\em Studies in the semantics of questions and the pragmatics of
   answers}.
-\newblock PhD thesis, University of Amsterdam.
+\newblock Ph.\ D. thesis, University of Amsterdam.
 \newblock (Unpublished doctoral dissertation).
 
-\bibitem[Hamblin, 1958]{Hamblin1958}
+\bibitem[\protect\citeauthoryear{Haim}{Haim}{1983}]{Heim1983b}
+Haim, I. (1983).
+\newblock On the projection problem for presuppositions.
+\newblock In M.~Barlow, D.~P. Flickinger, and M.~T. Wescoat (Eds.), {\em
+  Proceedings of the Second West Coast Conference on Formal Linguistics},
+  Stanford, CA, pp.\  114--126. Stanford University Department of Lingustics.
+
+\bibitem[\protect\citeauthoryear{Hamblin}{Hamblin}{1958}]{Hamblin1958}
 Hamblin, C.~L. (1958).
 \newblock Questions.
-\newblock {\em Australasian Journal of Philosophy}, 36(3):159--168.
+\newblock {\em Australasian Journal of Philosophy\/}~{\em 36\/}(3), 159--168.
 
-\bibitem[Hamblin, 1973]{Hamblin1973}
+\bibitem[\protect\citeauthoryear{Hamblin}{Hamblin}{1973}]{Hamblin1973}
 Hamblin, C.~L. (1973).
 \newblock Questions in montague english.
-\newblock {\em Foundations of Language}, 10(1):41--53.
+\newblock {\em Foundations of Language\/}~{\em 10\/}(1), 41--53.
 
-\bibitem[Haslinger, 2023]{Haslinger2023}
+\bibitem[\protect\citeauthoryear{Haslinger}{Haslinger}{2023}]{Haslinger2023}
 Haslinger, N. (2023).
 \newblock {\em Pragmatic constraints on imprecision and homogeneity}.
-\newblock PhD thesis, Georg-August-Universität Göttingen.
+\newblock Ph.\ D. thesis, Georg-August-Universität Göttingen.
 
-\bibitem[Heim, 1982]{Heim1982}
+\bibitem[\protect\citeauthoryear{Heim}{Heim}{1982}]{Heim1982}
 Heim, I. (1982).
 \newblock {\em The Semantics of Definite and Indefinite Noun Phrases}.
-\newblock PhD thesis, UMass Amherst.
+\newblock Ph.\ D. thesis, UMass Amherst.
 
-\bibitem[Heim, 1983]{Heim1983a}
-Heim, I. (1983).
+\bibitem[\protect\citeauthoryear{Heim}{Heim}{1983}]{Heim1983a}
+Heim, I. (1983, December).
 \newblock {\em File Change Semantics and the Familiarity Theory of
-  Definiteness}, page 164–189.
+  Definiteness}, pp.\  164–189.
 \newblock DE GRUYTER.
 
-\bibitem[Hulstijn, 1997]{Hulstijn1997}
+\bibitem[\protect\citeauthoryear{Hulstijn}{Hulstijn}{1997}]{Hulstijn1997}
 Hulstijn, J. (1997).
 \newblock Structured information states: Raising and resolving issues.
 
-\bibitem[Hurford, 1974]{Hurford1974}
+\bibitem[\protect\citeauthoryear{Hurford}{Hurford}{1974}]{Hurford1974}
 Hurford, J.~R. (1974).
 \newblock Exclusive or {I}nclusive {D}isjunction.
-\newblock {\em Foundations of Language}, 11(3):409--411.
+\newblock {\em Foundations of Language\/}~{\em 11\/}(3), 409--411.
 
-\bibitem[Hénot-Mortier, 2023]{HenotMortier2022}
-Hénot-Mortier, A. (2023).
+\bibitem[\protect\citeauthoryear{Hénot-Mortier}{Hénot-Mortier}{2023}]{HenotMortier2023}
+Hénot-Mortier, A. (2023, Nov.).
 \newblock Alternatives are blind to some but not all kinds of context: the view
   from {H}urford {D}isjunctions.
-\newblock {\em Proceedings of Sinn und Bedeutung}, 27:291--308.
+\newblock {\em Proceedings of Sinn und Bedeutung\/}~{\em 27}, 291--308.
 
-\bibitem[Hénot-Mortier, 2024a]{HenotMortier2024a}
-Hénot-Mortier, A. (2024a).
+\bibitem[\protect\citeauthoryear{Hénot-Mortier}{Hénot-Mortier}{2024}]{HenotMortier2024c}
+Hénot-Mortier, A. (2024).
+\newblock Scalarity, information structure and relevance in varieties of
+  hurford conditionals.
+\newblock In {\em Proceedings of the 2024 Amsterdam Colloquium}.
+
+\bibitem[\protect\citeauthoryear{Hénot-Mortier}{Hénot-Mortier}{peara}]{HenotMortier2024a}
+Hénot-Mortier, A. (\noop{3001}to appeara).
 \newblock "{O}ne tool to rule them all"? {A}n integrated model of the {QuD} for
   {H}urford sentences.
 \newblock In {\em Proceedings of the 29th {S}inn und {B}edeutung}.
 \newblock Draft
-  (\url{https://adelemortier.github.io/files/SuB_2024_TMT_paper.pdf}), to
-  appear.
+  (\url{https://adelemortier.github.io/files/SuB_2024_TMT_paper.pdf}).
 
-\bibitem[Hénot-Mortier, 2024b]{HenotMortier2024b}
-Hénot-Mortier, A. (2024b).
+\bibitem[\protect\citeauthoryear{Hénot-Mortier}{Hénot-Mortier}{pearc}]{HenotMortier2025a}
+Hénot-Mortier, A. (\noop{3001}to appearc).
+\newblock Repairing bad questions makes for good sentences: the case of but and
+  at least.
+\newblock In {\em Proceedings of the 61st {A}nnual meeting of the {C}hicago
+  {L}inguistic {S}ociety}.
+
+\bibitem[\protect\citeauthoryear{Hénot-Mortier}{Hénot-Mortier}{pearb}]{HenotMortier2024b}
+Hénot-Mortier, A. (\noop{3002}to appearb).
 \newblock Redundancy under {D}iscussion.
 \newblock In {\em Proceedings of the 29th {S}inn un {B}edeutung}.
 \newblock Draft
-  (\url{https://adelemortier.github.io/files/SuB_2024_main_session_paper.pdf}),
-  to appear.
+  (\url{https://adelemortier.github.io/files/SuB_2024_main_session_paper.pdf}).
 
-\bibitem[Ippolito, 2019]{Ippolito2019}
-Ippolito, M. (2019).
+\bibitem[\protect\citeauthoryear{Ippolito}{Ippolito}{2019}]{Ippolito2019}
+Ippolito, M. (2019, October).
 \newblock Varieties of sobel sequences.
-\newblock {\em Linguistics and Philosophy}, 43(6):633–671.
+\newblock {\em Linguistics and Philosophy\/}~{\em 43\/}(6), 633–671.
 
-\bibitem[Jäger, 1996]{Jager1996}
+\bibitem[\protect\citeauthoryear{Jäger}{Jäger}{1996}]{Jager1996}
 Jäger, G. (1996).
 \newblock Only updates: On the dynamics of the focus particle only.
 \newblock In {\em Proceedings of the 10th Amsterdam Colloquium}.
 
-\bibitem[Kalomoiros, 2024]{Kalomoiros2024}
-Kalomoiros, A. (2024).
+\bibitem[\protect\citeauthoryear{Kalomoiros}{Kalomoiros}{2024}]{Kalomoiros2024}
+Kalomoiros, A. (2024, January).
 \newblock An approach to {H}urford {C}onditionals.
-\newblock {\em Semantics and Linguistic Theory}, page 724–743.
+\newblock {\em Semantics and Linguistic Theory\/}, 724–743.
 
-\bibitem[Karttunen, 1977]{Karttunen1977}
-Karttunen, L. (1977).
+\bibitem[\protect\citeauthoryear{Karttunen}{Karttunen}{1977}]{Karttunen1977}
+Karttunen, L. (1977, January).
 \newblock Syntax and semantics of questions.
-\newblock {\em Linguistics and Philosophy}, 1(1):3–44.
+\newblock {\em Linguistics and Philosophy\/}~{\em 1\/}(1), 3–44.
 
-\bibitem[Katzir, 2007]{Katzir2007}
-Katzir, R. (2007).
+\bibitem[\protect\citeauthoryear{Katzir}{Katzir}{2007}]{Katzir2007}
+Katzir, R. (2007, December).
 \newblock Structurally-defined alternatives.
-\newblock {\em Linguistics and Philosophy}, 30(6):669–690.
+\newblock {\em Linguistics and Philosophy\/}~{\em 30\/}(6), 669–690.
 
-\bibitem[Katzir and Singh, 2014]{Katzir2014}
-Katzir, R. and Singh, R. (2014).
+\bibitem[\protect\citeauthoryear{Katzir and Singh}{Katzir and
+  Singh}{2014}]{Katzir2014}
+Katzir, R. and R.~Singh (2014, May).
 \newblock Hurford disjunctions: embedded exhaustification and structural
   economy.
-\newblock In {\em Proceedings of {S}inn und {B}edeutung}, volume~18, pages
+\newblock In {\em Proceedings of {S}inn und {B}edeutung}, Volume~18, pp.\
   201--216.
 
-\bibitem[Katzir and Singh, 2015]{Katzir2015}
-Katzir, R. and Singh, R. (2015).
+\bibitem[\protect\citeauthoryear{Katzir and Singh}{Katzir and
+  Singh}{2015}]{Katzir2015}
+Katzir, R. and R.~Singh (2015, 5).
 \newblock Economy of structure and information: Oddness, questions, and
   answers.
-\newblock {\em Proceedings of Sinn und Bedeutung}, 19:322–339.
+\newblock {\em Proceedings of Sinn und Bedeutung\/}~{\em 19}, 322–339.
 
-\bibitem[Kaufmann, 2016]{Kaufmann2016}
+\bibitem[\protect\citeauthoryear{Kaufmann}{Kaufmann}{2016}]{Kaufmann2016}
 Kaufmann, M. (2016).
 \newblock Free {C}hoice is a {F}orm of {D}ependence.
-\newblock {\em Natural Language Semantics}, 24(3):247--290.
+\newblock {\em Natural Language Semantics\/}~{\em 24\/}(3), 247--290.
 
-\bibitem[Kroch, 1972]{Kroch1972}
+\bibitem[\protect\citeauthoryear{Kroch}{Kroch}{1972}]{Kroch1972}
 Kroch, A. (1972).
 \newblock Lexical and inferred meanings for some time adverbs.
 \newblock {\em Quarterly Progress Report of the Research Laboratory of
-  Electronics 104}.
+  Electronics 104\/}.
 
-\bibitem[Lewis, 1988]{Lewis1988}
+\bibitem[\protect\citeauthoryear{Lewis}{Lewis}{1988}]{Lewis1988}
 Lewis, D. (1988).
 \newblock Relevant {I}mplication.
-\newblock {\em Theoria}, 54(3):161--174.
+\newblock {\em Theoria\/}~{\em 54\/}(3), 161--174.
 
-\bibitem[Mandelkern and Romoli, 2018]{Mandelkern2018}
-Mandelkern, M. and Romoli, J. (2018).
+\bibitem[\protect\citeauthoryear{Mandelkern and Romoli}{Mandelkern and
+  Romoli}{2018}]{Mandelkern2018}
+Mandelkern, M. and J.~Romoli (2018, March).
 \newblock Hurford {C}onditionals.
-\newblock {\em Journal of Semantics}, 35(2):357–367.
+\newblock {\em Journal of Semantics\/}~{\em 35\/}(2), 357–367.
 
-\bibitem[Marty and Romoli, 2022]{Marty2022}
-Marty, P. and Romoli, J. (2022).
+\bibitem[\protect\citeauthoryear{Marty and Romoli}{Marty and
+  Romoli}{2022}]{Marty2022}
+Marty, P. and J.~Romoli (2022, February).
 \newblock Varieties of {H}urford disjunctions.
-\newblock {\em Semantics and Pragmatics}, 15(3):1–25.
+\newblock {\em Semantics and Pragmatics\/}~{\em 15\/}(3), 1–25.
 
-\bibitem[Mascarenhas, 2008]{Mascarenhas2008}
+\bibitem[\protect\citeauthoryear{Mascarenhas}{Mascarenhas}{2008}]{Mascarenhas2008}
 Mascarenhas, S. (2008).
 \newblock Inquisitive semantics and logic.
 \newblock Master's thesis, University of Amsterdam.
 \newblock Manuscript, University of Amsterdam.
 
-\bibitem[Mayr and Romoli, 2016]{Mayr2016}
-Mayr, C. and Romoli, J. (2016).
-\newblock A puzzle for theories of redundancy: Exhaustification,
+\bibitem[\protect\citeauthoryear{Mayr and Romoli}{Mayr and
+  Romoli}{2016}]{Mayr2016}
+Mayr, C. and J.~Romoli (2016, November).
+\newblock A puzzle for theories of redundancy: {Exhaustification},
   incrementality, and the notion of local context.
-\newblock {\em Semantics and Pragmatics}, 9(7).
+\newblock {\em Semantics and Pragmatics\/}~{\em 9\/}(7), 1--48.
 
-\bibitem[Meyer, 2013]{Meyer2013}
+\bibitem[\protect\citeauthoryear{Meyer}{Meyer}{2013}]{Meyer2013}
 Meyer, M.-C. (2013).
 \newblock {\em Ignorance and Grammar}.
-\newblock PhD thesis, Massachusetts Institute of Technology.
+\newblock Ph.\ D. thesis, Massachusetts Institute of Technology.
 
-\bibitem[Onea, 2016]{Onea2016}
-Onea, E. (2016).
+\bibitem[\protect\citeauthoryear{Nicolae, Petrenco, Tsilia, and Marty}{Nicolae
+  et~al.}{2025}]{Nicolae2025}
+Nicolae, A.~C., A.~Petrenco, A.~Tsilia, and P.~Marty (2025).
+\newblock Exclusivity and exhaustivity of disjunction(s): a cross-linguistic
+  study.
+\newblock {\em Proceedings of Sinn und Bedeutung\/}.
+
+\bibitem[\protect\citeauthoryear{Onea}{Onea}{2016}]{Onea2016}
+Onea, E. (2016, February).
 \newblock {\em Potential {Q}uestions at the {S}emantics-{P}ragmatics
   {I}nterface}.
 \newblock BRILL.
 
-\bibitem[Riester, 2019]{Riester2019}
-Riester, A. (2019).
-\newblock {\em Constructing {QUD} {T}rees}, page 164–193.
+\bibitem[\protect\citeauthoryear{Riester}{Riester}{2019}]{Riester2019}
+Riester, A. (2019, March).
+\newblock {\em Constructing {QUD} {T}rees}, pp.\  164–193.
 \newblock BRILL.
 
-\bibitem[Roberts, 1996]{Roberts1996}
+\bibitem[\protect\citeauthoryear{Roberts}{Roberts}{1996}]{Roberts1996}
 Roberts, C. (1996).
 \newblock Information structure in discourse: Towards an integrated formal
   theory of pragmatics.
-\newblock In Yoon, J.~H. and Kathol, A., editors, {\em Ohio State University
-  Working Papers in Linguistics}, volume~49. Ohio State University.
+\newblock In J.~H. Yoon and A.~Kathol (Eds.), {\em Ohio State University
+  Working Papers in Linguistics}, Volume~49. Ohio State University.
 
-\bibitem[Roberts, 2012]{Roberts2012}
-Roberts, C. (2012).
-\newblock Information structure in discourse: Towards an integrated formal
+\bibitem[\protect\citeauthoryear{Roberts}{Roberts}{2012}]{Roberts2012}
+Roberts, C. (2012, December).
+\newblock Information structure in discourse: {T}owards an integrated formal
   theory of pragmatics.
-\newblock {\em Semantics \& Pragmatics}, 5:1--69.
+\newblock {\em Semantics and Pragmatics\/}~{\em 5\/}(6), 1--69.
 
-\bibitem[Rooth, 1992]{Rooth1992}
-Rooth, M. (1992).
+\bibitem[\protect\citeauthoryear{Rooth}{Rooth}{1992}]{Rooth1992}
+Rooth, M. (1992, February).
 \newblock A theory of focus interpretation.
-\newblock {\em Natural Language Semantics}, 1(1):75–116.
+\newblock {\em Natural Language Semantics\/}~{\em 1\/}(1), 75–116.
 
-\bibitem[Schlenker, 2009]{Schlenker2009}
-Schlenker, P. (2009).
+\bibitem[\protect\citeauthoryear{Schlenker}{Schlenker}{2009}]{Schlenker2009}
+Schlenker, P. (2009, July).
 \newblock Local contexts.
-\newblock {\em Semantics and Pragmatics}, 2.
+\newblock {\em Semantics and Pragmatics\/}~{\em 2}.
 
-\bibitem[Simons, 2001]{Simons2001}
+\bibitem[\protect\citeauthoryear{Simons}{Simons}{2001}]{Simons2001}
 Simons, M. (2001).
 \newblock Disjunction and {A}lternativeness.
-\newblock {\em Linguistics and Philosophy}, 24(5):597--619.
+\newblock {\em Linguistics and Philosophy\/}~{\em 24\/}(5), 597--619.
 
-\bibitem[Singh, 2008a]{Singh2008b}
+\bibitem[\protect\citeauthoryear{Singh}{Singh}{2008a}]{Singh2008b}
 Singh, R. (2008a).
 \newblock {\em Modularity and locality in interpretation}.
-\newblock PhD thesis, MIT.
+\newblock Ph.\ D. thesis, MIT.
 
-\bibitem[Singh, 2008b]{Singh2008a}
-Singh, R. (2008b).
+\bibitem[\protect\citeauthoryear{Singh}{Singh}{2008b}]{Singh2008a}
+Singh, R. (2008b, April).
 \newblock On the interpretation of disjunction: asymmetric, incremental, and
   eager for inconsistency.
-\newblock {\em Linguistics and Philosophy}, 31(2):245–260.
+\newblock {\em Linguistics and Philosophy\/}~{\em 31\/}(2), 245–260.
 
-\bibitem[Spector et~al., 2009]{Spector2008}
-Spector, B., Fox, D., and Chierchia, G. (2009).
+\bibitem[\protect\citeauthoryear{Singh}{Singh}{2008c}]{Singh2008}
+Singh, R. (2008c, April).
+\newblock On the interpretation of disjunction: asymmetric, incremental, and
+  eager for inconsistency.
+\newblock {\em Linguistics and Philosophy\/}~{\em 31\/}(2), 245–260.
+
+\bibitem[\protect\citeauthoryear{Spector, Fox, and Chierchia}{Spector
+  et~al.}{2009}]{Spector2008}
+Spector, B., D.~Fox, and G.~Chierchia (2009).
 \newblock Hurford's {C}onstraint and the {T}heory of {S}calar {I}mplicatures:
   {E}vidence for embedded implicatures.
-\newblock In Égré, P. and Magri, G., editors, {\em Presuppositions and
+\newblock In P.~Égré and G.~Magri (Eds.), {\em Presuppositions and
   {I}mplicatures: {P}roceedings of the {MIT}-{P}aris {W}orkshop}.
 
-\bibitem[Stalnaker, 1974]{Stalnaker1974}
+\bibitem[\protect\citeauthoryear{Stalnaker}{Stalnaker}{1974}]{Stalnaker1974}
 Stalnaker, R. (1974).
 \newblock Pragmatic {P}resuppositions.
-\newblock In Munitz, M.~K. and Unger, P.~K., editors, {\em Semantics and
-  {P}hilosophy}, page 197–213. New York University Press, New York.
+\newblock In M.~K. Munitz and P.~K. Unger (Eds.), {\em Semantics and
+  {P}hilosophy}, pp.\  197–213. New York: New York University Press.
 
-\bibitem[Stalnaker, 1978]{Stalnaker1978}
+\bibitem[\protect\citeauthoryear{Stalnaker}{Stalnaker}{1978}]{Stalnaker1978}
 Stalnaker, R. (1978).
 \newblock Assertion.
-\newblock {\em Syntax and Semantics}, 9:315--332.
+\newblock {\em Syntax and Semantics\/}~{\em 9}, 315--332.
 
-\bibitem[Stalnaker, 1999]{Stalnaker1999}
+\bibitem[\protect\citeauthoryear{Stalnaker}{Stalnaker}{1999}]{Stalnaker1999}
 Stalnaker, R. (1999).
 \newblock Pragmatic presuppositions.
-\newblock In Stalnaker, R., editor, {\em Context and Content: Essays on
-  Intentionality in Speech and Thought}, pages 47--62. Oxford University Press
+\newblock In R.~Stalnaker (Ed.), {\em Context and Content: Essays on
+  Intentionality in Speech and Thought}, pp.\  47--62. Oxford University Press
   UK.
 
-\bibitem[Tomioka, 2021]{Tomioka2021}
+\bibitem[\protect\citeauthoryear{Tomioka}{Tomioka}{2021}]{Tomioka2021}
 Tomioka, S. (2021).
 \newblock Scalar {I}mplicature, {H}urford's {C}onstraint, {C}ontrastiveness and
   {H}ow {T}hey {A}ll {C}ome {T}ogether.
-\newblock {\em Frontiers in Communication}, 5.
+\newblock {\em Frontiers in Communication\/}~{\em 5}.
 
-\bibitem[van Kuppevelt, 1995a]{VanKuppevelt1995a}
+\bibitem[\protect\citeauthoryear{van Kuppevelt}{van
+  Kuppevelt}{1995a}]{VanKuppevelt1995a}
 van Kuppevelt, J. (1995a).
 \newblock Discourse structure, topicality and questioning.
-\newblock {\em Journal of Linguistics}, 31(1):109--147.
+\newblock {\em Journal of Linguistics\/}~{\em 31\/}(1), 109--147.
 
-\bibitem[van Kuppevelt, 1995b]{VanKuppevelt1995b}
+\bibitem[\protect\citeauthoryear{van Kuppevelt}{van
+  Kuppevelt}{1995b}]{VanKuppevelt1995b}
 van Kuppevelt, J. (1995b).
 \newblock Main structure and side structure in discourse.
-\newblock {\em Linguistics}, 33(4):809–833.
+\newblock {\em Linguistics\/}~{\em 33\/}(4), 809–833.
 
-\bibitem[von Fintel and Heim, 2023]{Heim2023}
-von Fintel, K. and Heim, I. (2023).
+\bibitem[\protect\citeauthoryear{von Fintel and Heim}{von Fintel and
+  Heim}{2023}]{Heim2023}
+von Fintel, K. and I.~Heim (2023).
 \newblock {\em Intensional Semantics}.
 
-\bibitem[Wason, 1968]{Wason1968}
-Wason, P.~C. (1968).
+\bibitem[\protect\citeauthoryear{Wason}{Wason}{1968}]{Wason1968}
+Wason, P.~C. (1968, August).
 \newblock Reasoning about a rule.
-\newblock {\em Quarterly Journal of Experimental Psychology}, 20(3):273–281.
+\newblock {\em Quarterly Journal of Experimental Psychology\/}~{\em 20\/}(3),
+  273–281.
 
-\bibitem[Zhang, 2022]{Zhang2022}
+\bibitem[\protect\citeauthoryear{Westera}{Westera}{2018}]{Westera2018}
+Westera, M. (2018).
+\newblock A pragmatic approach to hurford disjunctions.
+
+\bibitem[\protect\citeauthoryear{Zhang}{Zhang}{2022}]{Zhang2022}
 Zhang, Y. (2022).
 \newblock {\em New Perspectives on Inquisitive Semantics}.
-\newblock PhD thesis, University of Maryland.
+\newblock Ph.\ D. thesis, University of Maryland.
 
-\bibitem[Zhang, 2024]{Zhang2024}
-Zhang, Y. (2024).
-\newblock A questions-under-discussion-based account of redundancy.
-\newblock {\em Unpublished manuscript}.
+\bibitem[\protect\citeauthoryear{Zhang}{Zhang}{pear}]{Zhang2024}
+Zhang, Y. (\noop{3001}to appear).
+\newblock {QUD}-mediated redundancy.
+\newblock In {\em Proceedings of the 29th {S}inn und {B}edeutung}.
 
 \end{thebibliography}

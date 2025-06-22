@@ -1,33 +1,128 @@
-\contentsline {chapter}{\numberline {1}Assertions and Questions}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Assertions provide information in the form of propositions}{3}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Extension and intension of assertions}{3}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Assertions in conversation}{4}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Dynamic Semantics}{6}{subsection.1.1.3}%
-\contentsline {section}{\numberline {1.2}Questions indicate which kind of information is worth providing}{9}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Questions as answerhood conditions}{9}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Questions as partitions of the Context Set}{11}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}Assertions as good answers to questions}{15}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Relevance mediate questions and assertions}{15}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}A few conceptual shortcomings of \textsc {Relevance}}{18}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Relevance and the packaging of information}{19}{subsection.1.3.3}%
-\contentsline {section}{\numberline {1.4}Roadmap of the dissertation}{20}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Appendix: computing questions from propositions}{21}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Accommodating QuDs: Qtrees}{23}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Making sense}{23}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Oddness despite relevance and informativeness}{23}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Overview and motivation of the Chapter}{24}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Structure of Question Trees}{25}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}From partitions to recursive partitions, to parse trees}{25}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}A brief refresher on graph theory (and a few useful concepts for Qtrees)}{29}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Interpreting Qtrees}{33}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Flagging Qtrees}{39}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Compositional Qtrees: base case}{41}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Alternatives}{41}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Alternatives and granularity}{45}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Leveraging alternatives to generate Qtrees}{46}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Applying the recipe to two simple sentences}{49}{subsection.2.3.4}%
-\contentsline {section}{\numberline {2.4}Compositional Qtrees: inductive step}{54}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Questions evoked by negated LFs}{54}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Questions evoked by disjunctive LFs}{56}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Questions evoked by conditional LFs}{64}{subsection.2.4.3}%
-\contentsline {section}{\numberline {2.5}Conclusion}{71}{section.2.5}%
+\contentsline {chapter}{\numberline {1}Assertions and Questions}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Assertions provide information in the form of propositions}{6}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Extension and intension of assertions}{6}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Assertions in conversation}{7}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Dynamic Semantics}{9}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}Questions indicate which kind of information is worth providing}{12}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Questions as answerhood conditions}{12}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Questions as partitions of the Context Set}{14}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Assertions as good answers to questions}{18}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Relevance mediates questions and assertions}{18}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}A few conceptual shortcomings of \textsc {Relevance}}{21}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Relevance and the packaging of information}{22}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}Roadmap of the dissertation}{23}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Appendix: computing questions from propositions}{24}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Accommodating QuDs: Qtrees}{26}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Making sense}{26}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Oddness despite relevance and informativeness}{26}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Overview and motivation of the Chapter}{28}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Structure of Question Trees}{29}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}From partitions to recursive partitions, to parse trees}{29}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}A brief refresher on graph theory (and a few useful concepts for Qtrees)}{32}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Interpreting Qtrees}{36}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Flagging Qtrees}{42}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Compositional Qtrees: base case}{44}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Alternatives}{44}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Alternatives and granularity}{47}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Leveraging alternatives to generate Qtrees}{49}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Applying the recipe to two simple sentences}{52}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Compositional Qtrees: inductive step}{56}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Questions evoked by negated LFs}{57}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Questions evoked by disjunctive LFs}{59}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Questions evoked by conditional LFs}{66}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Conclusion}{73}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Comparison of the Qtree model to earlier similar approaches}{75}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Inquisitive Semantics}{75}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Ippolito's contribution}{75}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}The data}{76}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Structured Sets of Alternatives}{77}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}The Specificity Constraint}{78}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Zhang's }{79}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Redundancy under Discussion}{80}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A problematic dataset}{80}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Previous accounts of oddness, and their shortcomings}{83}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Global Non-Redundancy}{83}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Local Non-Redundancy}{86}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Super-Redundancy}{87}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Non-Triviality}{90}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}A QuD-based approach to the data at stake}{93}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Overview}{93}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}General structure and interpretation of Question Trees}{94}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Simplex Qtrees}{95}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Negated Qtrees}{96}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Disjunctive Qtrees}{96}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6}Conditional Qtrees}{98}{subsection.4.3.6}%
+\contentsline {section}{\numberline {4.4}Capturing the target cases}{100}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Non-Redundancy as a constraint on LF-Qtree pairs}{100}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Ruling out the infelicitous (\ref {ex4:npt(pvq)-repeated}), (\ref {ex4:pv(nqtp)-repeated}), and (\ref {ex4:n(pvq)tp-repeated})}{102}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Ruling in (\ref {ex4:pv(nptq)-repeated})}{104}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Taking stock}{106}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Comparison with similar approaches}{106}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}An ``inquisitive'' Maxim of Manner?}{108}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6}Exploring elaborations of the target sentences}{110}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Effect of disjunct ordering in the felicitous case}{110}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Double or-to-if}{112}{subsection.4.6.2}%
+\contentsline {section}{\numberline {4.7}Conclusion and outlook}{115}{section.4.7}%
+\contentsline {chapter}{\numberline {5}All the paths lead to Noto: oddness in non-scalar Hurford Disjunctions}{116}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introducing Huford Disjunctions}{116}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Previous accounts of oddness, and their shortcomings}{118}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Global Non-Redundancy}{118}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Local Non-Redundancy}{119}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Super-Redundancy}{120}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Non-Triviality}{122}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Q-Non-Redundancy}{124}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Summary of the current account}{124}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}An issue with the current account}{125}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Should we update the rule for disjunctive Qtrees?}{128}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Updating \textsc {Q-Non-Redundancy}}{130}{subsection.5.3.4}%
+\contentsline {section}{\numberline {5.4}Capturing three varieties of Hurford Disjunctions}{132}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Hurford Disjunctions}{132}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Long-Distance Hurford Disjunctions}{133}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Compatible Hurford Disjunctions}{136}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}Taking stock}{139}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}A ``conservative'' extension}{139}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Comparison with previous Redundancy-based approaches to Hurford Disjunctions}{141}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Comparison with previous tree-based accounts of HDs}{141}{subsection.5.5.3}%
+\contentsline {section}{\numberline {5.6}Conclusion}{144}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Appendix: a more thorough analysis of CHDs}{145}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Crossing countries: oddness in non-scalar Hurford Conditionals}{151}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introducing Hurford Conditionals}{152}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Existing account}{154}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Super-Redundancy}{155}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Is overt negation really the culprit in HCs?}{157}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}QuDs evoked by Hurford Conditionals}{161}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Qtrees for the antecedent and consequent of HCs}{161}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Conditional Qtrees, and one useful result}{164}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Qtrees for the HCs in (\ref {ex6:hc})}{166}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Hurford Conditionals and \textsc {Relevance}}{169}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Do we actually need an extra constraint?}{169}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Can earlier notions of \textsc {Relevance} help?}{172}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}\textsc {Incremental Q-Relevance}}{174}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Capturing the contrast in Hurford Conditionals}{178}{subsection.6.4.4}%
+\contentsline {subsection}{\numberline {6.4.5}Taking stock}{181}{subsection.6.4.5}%
+\contentsline {section}{\numberline {6.5}Extensions}{184}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}``Compatible'' Hurford Conditionals}{184}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}``Long-Distance'' HCs derived from LDHDs}{191}{subsection.6.5.2}%
+\contentsline {section}{\numberline {6.6}Conclusion and outlook}{200}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Appendix: granularity-sensitivity in question-answer pairs}{202}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Appendix: \citeauthor {Lewis1988}'s view of \textsc {Relevance} between questions}{203}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Appendix: DNCHDs, DNLDHDs and Super-Redundancy}{204}{section.6.9}%
+\contentsline {chapter}{\numberline {7}Some but not all redundant sentences escape infelicity: oddness and scalarity}{206}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Experimentally assessing asymmetries in scalar Hurford Disjunctions}{206}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}The data}{206}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Previous accounts}{207}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Experiment}{211}{subsection.7.1.3}%
+\contentsline {section}{\numberline {7.2}A novel account account of the asymmetries in scalar Hurford Disjunctions}{216}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Qtrees of simplex LFs: scalar vs. non-scalar case}{216}{subsection.7.2.1}%
+\contentsline {subsubsection}{Defining the same-granularity relation}{216}{section*.129}%
+\contentsline {subsubsection}{Non-scalar items}{217}{section*.130}%
+\contentsline {subsubsection}{Scalar items}{219}{section*.132}%
+\contentsline {subsubsection}{Deriving Qtrees for scalemates and non-scalemates}{220}{section*.134}%
+\contentsline {subsection}{\numberline {7.2.2}Getting compositional}{224}{subsection.7.2.2}%
+\contentsline {section}{\numberline {7.3}The case of scalar Hurford Conditionals}{226}{section.7.3}%
+\contentsline {subsubsection}{The problem}{226}{section*.150}%
+\contentsline {subsubsection}{Exploring a potential solution}{228}{section*.151}%
+\contentsline {section}{\numberline {7.4}Scalarity and accommodated QuDs}{229}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Qtree recap}{229}{subsection.7.4.1}%
+\contentsline {section}{\numberline {7.5}Capturing scalar HCs via Q-Relevance}{230}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Interim conclusion}{232}{subsection.7.5.1}%

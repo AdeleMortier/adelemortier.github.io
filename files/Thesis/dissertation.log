@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  27 APR 2025 22:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  22 JUN 2025 02:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -529,29 +529,49 @@ Package: wrapfig 2003/01/31  v 3.6
 (/usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen263
+\lightrulewidth=\dimen264
+\cmidrulewidth=\dimen265
+\belowrulesep=\dimen266
+\belowbottomsep=\dimen267
+\aboverulesep=\dimen268
+\abovetopsep=\dimen269
+\cmidrulesep=\dimen270
+\cmidrulekern=\dimen271
+\defaultaddspace=\dimen272
+\@cmidla=\count300
+\@cmidlb=\count301
+\@aboverulesep=\dimen273
+\@belowrulesep=\dimen274
+\@thisruleclass=\count302
+\@lastruleclass=\count303
+\@thisrulewidth=\dimen275
+)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/centernot.sty
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
-\c@tracingmulticols=\count300
+\c@tracingmulticols=\count304
 \mult@box=\box63
-\multicol@leftmargin=\dimen263
-\c@unbalance=\count301
-\c@collectmore=\count302
-\doublecol@number=\count303
-\multicoltolerance=\count304
-\multicolpretolerance=\count305
-\full@width=\dimen264
-\page@free=\dimen265
-\premulticols=\dimen266
-\postmulticols=\dimen267
+\multicol@leftmargin=\dimen276
+\c@unbalance=\count305
+\c@collectmore=\count306
+\doublecol@number=\count307
+\multicoltolerance=\count308
+\multicolpretolerance=\count309
+\full@width=\dimen277
+\page@free=\dimen278
+\premulticols=\dimen279
+\postmulticols=\dimen280
 \multicolsep=\skip53
 \multicolbaselineskip=\skip54
 \partial@page=\box64
 \last@line=\box65
 \mc@boxedresult=\box66
-\maxbalancingoverflow=\dimen268
+\maxbalancingoverflow=\dimen281
 \mult@rightbox=\box67
 \mult@grightbox=\box68
 \mult@firstbox=\box69
@@ -592,15 +612,15 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box104
 \@tempa=\box105
 \@tempa=\box106
-\c@minrows=\count306
-\c@columnbadness=\count307
-\c@finalcolumnbadness=\count308
-\last@try=\dimen269
-\multicolovershoot=\dimen270
-\multicolundershoot=\dimen271
+\c@minrows=\count310
+\c@columnbadness=\count311
+\c@finalcolumnbadness=\count312
+\last@try=\dimen282
+\multicolovershoot=\dimen283
+\multicolundershoot=\dimen284
 \mult@nat@firstbox=\box107
 \colbreak@box=\box108
-\mc@col@check@num=\count309
+\mc@col@check@num=\count313
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
@@ -613,23 +633,23 @@ Package: amstext 2021/08/26 v2.01 AMS text
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks32
-\ex@=\dimen272
+\ex@=\dimen285
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen273
+\pmbraise@=\dimen286
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count310
+\inf@bad=\count314
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count311
-\leftroot@=\count312
+\uproot@=\count315
+\leftroot@=\count316
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count313
-\DOTSCASE@=\count314
+\classnum@=\count317
+\DOTSCASE@=\count318
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -639,30 +659,30 @@ LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
 LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen274
+\big@size=\dimen287
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count315
+\macc@depth=\count319
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count316
+\c@MaxMatrixCols=\count320
 \dotsspace@=\muskip17
-\c@parentequation=\count317
-\dspbrk@lvl=\count318
+\c@parentequation=\count321
+\dspbrk@lvl=\count322
 \tag@help=\toks33
-\row@=\count319
-\column@=\count320
-\maxfields@=\count321
+\row@=\count323
+\column@=\count324
+\maxfields@=\count325
 \andhelp@=\toks34
-\eqnshift@=\dimen275
-\alignsep@=\dimen276
-\tagshift@=\dimen277
-\tagwidth@=\dimen278
-\totwidth@=\dimen279
-\lineht@=\dimen280
+\eqnshift@=\dimen288
+\alignsep@=\dimen289
+\tagshift@=\dimen290
+\tagwidth@=\dimen291
+\totwidth@=\dimen292
+\lineht@=\dimen293
 \@envbody=\toks35
 \multlinegap=\skip56
 \multlinetaggap=\skip57
@@ -694,7 +714,7 @@ LaTeX Font Info:    Redeclaring math symbol \boxdot on input line 44.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count322
+\c@float@type=\count326
 \float@exts=\toks37
 \float@box=\box111
 \@float@everytoks=\toks38
@@ -706,26 +726,26 @@ ways
 
 (/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.sty
 (/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.tex
-\loi_cnt_foreach_nest=\count323
-\loi_nestcnt=\count324
+\loi_cnt_foreach_nest=\count327
+\loi_nestcnt=\count328
 )
 Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified 
 sep char (CT)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count325
-\calc@Bcount=\count326
-\calc@Adimen=\dimen281
-\calc@Bdimen=\dimen282
+\calc@Acount=\count329
+\calc@Bcount=\count330
+\calc@Adimen=\dimen294
+\calc@Bdimen=\dimen295
 \calc@Askip=\skip58
 \calc@Bskip=\skip59
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count327
+\calc@Ccount=\count331
 \calc@Cskip=\skip60
 )
-\c@@stackindex=\count328
+\c@@stackindex=\count332
 \@boxshift=\skip61
 \stack@tmplength=\skip62
 \temp@stkl=\skip63
@@ -736,7 +756,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \se@backgroundbox=\box116
 \stackedbox=\box117
 \@centerbox=\box118
-\c@ROWcellindex@=\count329
+\c@ROWcellindex@=\count333
 )
 (/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
@@ -747,26 +767,59 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 ))
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box119
+\UL@hyphenbox=\box120
+\UL@skip=\skip68
+\UL@hook=\toks39
+\UL@height=\dimen296
+\UL@pe=\count334
+\UL@pixel=\dimen297
+\ULC@box=\box121
+Package: ulem 2019/11/18
+\ULdepth=\dimen298
+)
 (/usr/share/texlive/texmf-dist/tex/latex/dashbox/dashbox.sty
 Package: dashbox 2001/12/11 v1.14 Dashed and layered boxes
-\dashlength=\skip68
-\dashdash=\skip69
-\layersize=\skip70
-\d@shedsavebox=\box119
-\d@shedboxwidth=\skip71
-\d@shedboxtotalheight=\skip72
-\l@yersavebox=\box120
-\l@yerwidth=\skip73
-\l@yerboxwidth=\skip74
-\l@yertotalheight=\skip75
-\l@yerlineheight=\skip76
-\l@yervoffset=\skip77
-\c@l@yercount=\count330
+\dashlength=\skip69
+\dashdash=\skip70
+\layersize=\skip71
+\d@shedsavebox=\box122
+\d@shedboxwidth=\skip72
+\d@shedboxtotalheight=\skip73
+\l@yersavebox=\box123
+\l@yerwidth=\skip74
+\l@yerboxwidth=\skip75
+\l@yertotalheight=\skip76
+\l@yerlineheight=\skip77
+\l@yervoffset=\skip78
+\c@l@yercount=\count335
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
-\@enLab=\toks39
+\@enLab=\toks40
 )
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen299
+\ar@mcellbox=\box124
+\extrarowheight=\dimen300
+\NC@list=\toks41
+\extratabsurround=\skip79
+\backup@length=\skip80
+\ar@cellbox=\box125
+)
+\everycr=\toks42
+\minrowclearance=\skip81
+\rownum=\count336
+)
+
+LaTeX Warning: Package "xcolor" has already been loaded: ignoring load-time
+(LaTeX)        option "xcdraw".
+
 (/usr/share/texlive/texmf-dist/tex/latex/forest/forest.sty
 Package: forest 2017/07/14 v2.1.5 Drawing (linguistic) trees
 
@@ -817,26 +870,26 @@ File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
 s.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodepartlowerbox=\box121
-\pgfnodeparttwobox=\box122
-\pgfnodepartthreebox=\box123
-\pgfnodepartfourbox=\box124
-\pgfnodeparttwentybox=\box125
-\pgfnodepartnineteenbox=\box126
-\pgfnodeparteighteenbox=\box127
-\pgfnodepartseventeenbox=\box128
-\pgfnodepartsixteenbox=\box129
-\pgfnodepartfifteenbox=\box130
-\pgfnodepartfourteenbox=\box131
-\pgfnodepartthirteenbox=\box132
-\pgfnodeparttwelvebox=\box133
-\pgfnodepartelevenbox=\box134
-\pgfnodeparttenbox=\box135
-\pgfnodepartninebox=\box136
-\pgfnodeparteightbox=\box137
-\pgfnodepartsevenbox=\box138
-\pgfnodepartsixbox=\box139
-\pgfnodepartfivebox=\box140
+\pgfnodepartlowerbox=\box126
+\pgfnodeparttwobox=\box127
+\pgfnodepartthreebox=\box128
+\pgfnodepartfourbox=\box129
+\pgfnodeparttwentybox=\box130
+\pgfnodepartnineteenbox=\box131
+\pgfnodeparteighteenbox=\box132
+\pgfnodepartseventeenbox=\box133
+\pgfnodepartsixteenbox=\box134
+\pgfnodepartfifteenbox=\box135
+\pgfnodepartfourteenbox=\box136
+\pgfnodepartthirteenbox=\box137
+\pgfnodeparttwelvebox=\box138
+\pgfnodepartelevenbox=\box139
+\pgfnodeparttenbox=\box140
+\pgfnodepartninebox=\box141
+\pgfnodeparteightbox=\box142
+\pgfnodepartsevenbox=\box143
+\pgfnodepartsixbox=\box144
+\pgfnodepartfivebox=\box145
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryfit.code.tex
@@ -850,11 +903,11 @@ File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 s.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
 )
-\pgf@intersect@solutions=\count331
+\pgf@intersect@solutions=\count337
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
-\pgfopts@list@add@a@toks=\toks40
-\pgfopts@list@add@b@toks=\toks41
+\pgfopts@list@add@a@toks=\toks43
+\pgfopts@list@add@b@toks=\toks44
 )
 (/usr/share/texlive/texmf-dist/tex/latex/elocalloc/elocalloc.sty
 Package: elocalloc 2016/12/15 v0.03 local allocation for LaTeX 2015+ (DPC)
@@ -871,90 +924,90 @@ Package: expl3 2024-01-22 L3 programming layer (loader)
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count332
-\l__pdf_internal_box=\box141
+\l__color_backend_stack_int=\count338
+\l__pdf_internal_box=\box146
 ))
 Package: xparse 2023-10-10 L3 Experimental document command parser
 )
 (/usr/share/texlive/texmf-dist/tex/latex/inlinedef/inlinedef.sty
 Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
-\ID@toks=\toks42
-\ID@count=\count333
+\ID@toks=\toks45
+\ID@count=\count339
 )
-\ID@usercommands=\toks43
-\safeloop@depth=\count334
-\safeRKloop@depth=\count335
-\forest@temp@dimen=\dimen283
-\forest@temp@count=\count336
-\forest@n=\count337
-\forest@temp@global@count=\count338
-\forest@temp@toks=\toks44
-\forest@temparray@M=\count339
-\forest@temparray@N=\count340
-\forest@global@temparray@M=\count341
-\forest@global@temparray@N=\count342
-\forest@isnum@count=\count343
-\forest@isdim@nonintpart=\count344
-\forest@isdim@dimen=\dimen284
-\forest@sort@m=\count345
-\forest@sort@k=\count346
-\forest@sort@p=\count347
-\bracket@content=\toks45
-\bracket@afterthought=\toks46
-\forest@node@maxid=\count348
-\forest@process@left@M=\count349
-\forest@process@left@N=\count350
-\forest@process@right@M=\count351
-\forest@process@right@N=\count352
-\forest@process@saved@M=\count353
-\forest@process@saved@N=\count354
-\forest@process@result@M=\count355
-\forest@process@result@N=\count356
-\forest@process@n=\count357
-\forest@nodewalk@branch@toks=\toks47
-\forest@nodewalk@shortsteps@resolution=\toks48
-\forest@do@dynamics=\toks49
-\forest@box=\box142
-\forest@xg=\dimen285
-\forest@yg=\dimen286
-\forest@xs=\dimen287
-\forest@ys=\dimen288
-\forest@pi@toks=\toks50
-\forest@segment@toks=\toks51
-\forest@PIi@toks=\toks52
-\forest@PIii@toks=\toks53
+\ID@usercommands=\toks46
+\safeloop@depth=\count340
+\safeRKloop@depth=\count341
+\forest@temp@dimen=\dimen301
+\forest@temp@count=\count342
+\forest@n=\count343
+\forest@temp@global@count=\count344
+\forest@temp@toks=\toks47
+\forest@temparray@M=\count345
+\forest@temparray@N=\count346
+\forest@global@temparray@M=\count347
+\forest@global@temparray@N=\count348
+\forest@isnum@count=\count349
+\forest@isdim@nonintpart=\count350
+\forest@isdim@dimen=\dimen302
+\forest@sort@m=\count351
+\forest@sort@k=\count352
+\forest@sort@p=\count353
+\bracket@content=\toks48
+\bracket@afterthought=\toks49
+\forest@node@maxid=\count354
+\forest@process@left@M=\count355
+\forest@process@left@N=\count356
+\forest@process@right@M=\count357
+\forest@process@right@N=\count358
+\forest@process@saved@M=\count359
+\forest@process@saved@N=\count360
+\forest@process@result@M=\count361
+\forest@process@result@N=\count362
+\forest@process@n=\count363
+\forest@nodewalk@branch@toks=\toks50
+\forest@nodewalk@shortsteps@resolution=\toks51
+\forest@do@dynamics=\toks52
+\forest@box=\box147
+\forest@xg=\dimen303
+\forest@yg=\dimen304
+\forest@xs=\dimen305
+\forest@ys=\dimen306
+\forest@pi@toks=\toks53
+\forest@segment@toks=\toks54
+\forest@PIi@toks=\toks55
+\forest@PIii@toks=\toks56
 \forest@copy@in=\read3
 \forest@copy@out=\write4
-\forest@externalize@max@outer@n=\count358
-\forest@externalize@inner@n=\count359
+\forest@externalize@max@outer@n=\count364
+\forest@externalize@inner@n=\count365
 )
 (/usr/share/texlive/texmf-dist/tex/latex/forest/forest-lib-linguistics.sty
 Package: forest-lib-linguistics 2017/07/14 v0.1.2
-\standardnodestrutbox=\box143
+\standardnodestrutbox=\box148
 )
 (/usr/share/texlive/texmf-dist/tex/latex/gb4e/gb4e.sty
 (/usr/share/texlive/texmf-dist/tex/latex/gb4e/cgloss4e.sty
-\lineone=\box144
-\linetwo=\box145
-\linethree=\box146
-\wordone=\box147
-\wordtwo=\box148
-\wordthree=\box149
-\gline=\box150
-\glossglue=\skip78
+\lineone=\box149
+\linetwo=\box150
+\linethree=\box151
+\wordone=\box152
+\wordtwo=\box153
+\wordthree=\box154
+\gline=\box155
+\glossglue=\skip82
 )
-\c@fnx=\count360
-\@xnumdepth=\count361
-\c@xnumi=\count362
-\c@xnumii=\count363
-\c@xnumiii=\count364
-\c@xnumiv=\count365
-\c@exx=\count366
-\c@rxnumi=\count367
-\c@rxnumii=\count368
-\c@rxnumiii=\count369
-\c@rxnumiv=\count370
-\lcommentsep=\skip79
+\c@fnx=\count366
+\@xnumdepth=\count367
+\c@xnumi=\count368
+\c@xnumii=\count369
+\c@xnumiii=\count370
+\c@xnumiv=\count371
+\c@exx=\count372
+\c@rxnumi=\count373
+\c@rxnumii=\count374
+\c@rxnumiii=\count375
+\c@rxnumiv=\count376
+\lcommentsep=\skip83
 )
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/wasysym.sty
 Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
@@ -962,34 +1015,33 @@ Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
-
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen289
-\captionmargin=\dimen290
-\caption@leftmargin=\dimen291
-\caption@rightmargin=\dimen292
-\caption@width=\dimen293
-\caption@indent=\dimen294
-\caption@parindent=\dimen295
-\caption@hangindent=\dimen296
+\caption@tempdima=\dimen307
+\captionmargin=\dimen308
+\caption@leftmargin=\dimen309
+\caption@rightmargin=\dimen310
+\caption@width=\dimen311
+\caption@indent=\dimen312
+\caption@parindent=\dimen313
+\caption@hangindent=\dimen314
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count371
-\c@continuedfloat=\count372
+\c@caption@flags=\count377
+\c@continuedfloat=\count378
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count373
+\c@subfigure=\count379
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count374
+\c@subtable=\count380
 )
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
@@ -999,10 +1051,10 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks54
-\XKV@tempa@toks=\toks55
+\XKV@toks=\toks57
+\XKV@tempa@toks=\toks58
 )
-\XKV@depth=\count375
+\XKV@depth=\count381
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
@@ -1014,36 +1066,36 @@ Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 
 (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-\collectedbox=\box151
+\collectedbox=\box156
 )
-\tc@llx=\dimen297
-\tc@lly=\dimen298
-\tc@urx=\dimen299
-\tc@ury=\dimen300
+\tc@llx=\dimen315
+\tc@lly=\dimen316
+\tc@urx=\dimen317
+\tc@ury=\dimen318
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen301
-\adjbox@Height=\dimen302
-\adjbox@Depth=\dimen303
-\adjbox@Totalheight=\dimen304
-\adjbox@pwidth=\dimen305
-\adjbox@pheight=\dimen306
-\adjbox@pdepth=\dimen307
-\adjbox@ptotalheight=\dimen308
+\adjbox@Width=\dimen319
+\adjbox@Height=\dimen320
+\adjbox@Depth=\dimen321
+\adjbox@Totalheight=\dimen322
+\adjbox@pwidth=\dimen323
+\adjbox@pheight=\dimen324
+\adjbox@pdepth=\dimen325
+\adjbox@ptotalheight=\dimen326
 
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count376
+\c@checkoddpage=\count382
 )
 (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box152
-\sift@deathcycles=\count377
-\@vwid@loff=\dimen309
-\@vwid@roff=\dimen310
+\@vwid@box=\box157
+\sift@deathcycles=\count383
+\@vwid@loff=\dimen327
+\@vwid@roff=\dimen328
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/pifont.sty
 Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
@@ -1058,28 +1110,39 @@ LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/upsy.fd
 File: upsy.fd 2001/06/04 font definitions for U/psy.
-)) (./dissertation.aux
-(./chap1.aux) (./chap2.aux))
+))
+(/usr/share/texlive/texmf-dist/tex/generic/alphalph/alphalph.sty
+Package: alphalph 2019/12/09 v2.6 Convert numbers to letters (HO)
+)
+(./dissertation.aux (./chap1.aux) (./chap2.aux) (./chap3.aux
+
+LaTeX Warning: Label `ex2:focus-alternatives' multiply defined.
+
+) (./chap4.aux
+
+LaTeX Warning: Label `ex4:n(pvq)tp-repeated-sr' multiply defined.
+
+) (./chap5.aux) (./chap6.aux) (./chap7.aux))
 \openout1 = `dissertation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1117,17 +1180,17 @@ LaTeX Font Info:    ... okay on input line 93.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count378
-\scratchdimen=\dimen311
-\scratchbox=\box153
-\nofMPsegments=\count379
-\nofMParguments=\count380
-\everyMPshowfont=\toks56
-\MPscratchCnt=\count381
-\MPscratchDim=\dimen312
-\MPnumerator=\count382
-\makeMPintoPDFobject=\count383
-\everyMPtoPDFconversion=\toks57
+\scratchcounter=\count384
+\scratchdimen=\dimen329
+\scratchbox=\box158
+\nofMPsegments=\count385
+\nofMParguments=\count386
+\everyMPshowfont=\toks59
+\MPscratchCnt=\count387
+\MPscratchDim=\dimen330
+\MPnumerator=\count388
+\makeMPintoPDFobject=\count389
+\everyMPtoPDFconversion=\toks60
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1137,7 +1200,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 93.
+Package hyperref Info: Link coloring OFF on input line 122.
 
 (./dissertation.out) (./dissertation.out)
 \@outlinefile=\write5
@@ -1171,21 +1234,22 @@ LaTeX Font Info:    Trying to load font information for U+wasy on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
-))
-\tf@toc=\write6
-\openout6 = `dissertation.toc'.
-
- [1
+) [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/tex-gyre/q-ec.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}
-]
+] [2] [3])
+\tf@toc=\write6
+\openout6 = `dissertation.toc'.
+
+
+[4]
 \openout2 = `chap1.aux'.
 
  (./chap1.tex
 Chapter 1.
-[2
+[5
 
 
 ]
@@ -1193,37 +1257,13 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
 0.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [3{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
-[]\T1/qpl/m/n/10.95 (a) |In-for-ma-tive
- []
+) [6{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [7] [8] [9] [1
+0]
 
+LaTeX Warning: Reference `ex1:accommodating -quds' on page 11 undefined on inpu
+t line 163.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
-\T1/qpl/m/n/10.95 up-date ($\OML/cmm/m/it/10.95 p$ \T1/qpl/m/n/10.95 strictly
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--88
-[]\T1/qpl/m/n/10.95 (b) |In-for-ma-tive
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--88
-\T1/qpl/m/n/10.95 up-date ($\OML/cmm/m/it/10.95 p$ \T1/qpl/m/n/10.95 strictly
- []
-
-
-Underfull \hbox (badness 1735) in paragraph at lines 95--95
-\T1/qpl/m/n/10.95 date ($\OML/cmm/m/it/10.95 p$ \T1/qpl/m/n/10.95 equal to the
- []
-
-[5] [6] [7]
-
-LaTeX Warning: Reference `ex1:accommodating -quds' on page 8 undefined on input
- line 163.
-
-[8] [9] [10]
+[11] [12] [13]
 LaTeX Font Info:    Trying to load font information for TS1+qpl on input line 2
 33.
  (/usr/share/texmf/tex/latex/tex-gyre/ts1qpl.fd
@@ -1234,7 +1274,7 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 240
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [11{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [12]
+) [14{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [15]
 Underfull \hbox (badness 10000) in paragraph at lines 262--265
 \T1/qpl/m/n/12 Alternatives ($\OML/cmm/m/it/12 P$\T1/qpl/m/n/12 ): $\OMS/cmsy/m
 /n/12 f$$\U/stmry/m/n/12 J$\T1/qpl/m/n/12 Jo passed$\U/stmry/m/n/12 K$\T1/qpl/m
@@ -1242,434 +1282,962 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--265
 y/m/n/12 g$ \T1/qpl/m/n/12 =
  []
 
-[13] [14] [15]
-Underfull \hbox (badness 1331) in paragraph at lines 436--436
-[]\T1/qpl/m/n/10.95 (a) |QuD for \T1/qpl/m/it/10.95 In which
- []
+[16] [17] [18] [19] [20]
 
+LaTeX Warning: Reference `chap:relevance' on page 21 undefined on input line 57
+1.
 
-Underfull \hbox (badness 2126) in paragraph at lines 470--470
-[]\T1/qpl/m/n/10.95 (d) |Ut-ter-ance: ([]30c[]),
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 518--518
-[]\T1/qpl/m/n/10.95 (a) |In-for-ma-tive, Lewis-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 536--536
-[]\T1/qpl/m/n/10.95 (c) |Un-in-for-ma-tive, Lewis-
- []
-
-
-Underfull \hbox (badness 1062) in paragraph at lines 558--558
-[]\T1/qpl/m/n/10.95 (e) |In-for-ma-tive, not Lewis-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
-[]\T1/qpl/m/n/10.95 (f) |In-for-ma-tive, not Lewis-
- []
-
-[17]
-
-LaTeX Warning: Reference `chap:relevance' on page 18 undefined on input line 57
-2.
-
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 595--596
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 594--595
 
  []
 
 
-LaTeX Warning: Reference `ex1:hc-ns-w' on page 19 undefined on input line 597.
+LaTeX Warning: Reference `ex1:hc-ns-w' on page 22 undefined on input line 596.
 
 
-LaTeX Warning: Reference `ex1:ldhc-ns-w' on page 19 undefined on input line 597
+LaTeX Warning: Reference `ex1:ldhc-ns-w' on page 22 undefined on input line 596
 .
 
 
-LaTeX Warning: Reference `ex1:hc-ns-w' on page 19 undefined on input line 597.
+LaTeX Warning: Reference `ex1:hc-ns-w' on page 22 undefined on input line 596.
 
 
-LaTeX Warning: Reference `ex1:hc-ns-w' on page 19 undefined on input line 597.
+LaTeX Warning: Reference `ex1:hc-ns-w' on page 22 undefined on input line 596.
 
 
-LaTeX Warning: Reference `ex1:ldhc-ns-w' on page 19 undefined on input line 597
+LaTeX Warning: Reference `ex1:ldhc-ns-w' on page 22 undefined on input line 596
 .
 
 
-LaTeX Warning: Reference `ex1:hc-ns-w' on page 19 undefined on input line 603.
+LaTeX Warning: Reference `ex1:hc-ns-w' on page 22 undefined on input line 602.
 
 
-LaTeX Warning: Reference `ex1:ldhc-ns-w' on page 19 undefined on input line 603
+LaTeX Warning: Reference `ex1:ldhc-ns-w' on page 22 undefined on input line 602
 .
 
-[19]
-Underfull \hbox (badness 1173) in paragraph at lines 617--617
+[22]
+Underfull \hbox (badness 1173) in paragraph at lines 616--616
 []\T1/qpl/b/n/12 if \T1/qpl/m/n/12 Jo didn't grow up in France \T1/qpl/b/n/12 o
 r \T1/qpl/m/n/12 Bel-gium, she grew up in Québec.
  []
 
-[20] [21]
+[23] [24]
 
-LaTeX Warning: Reference `ex1:partition-from-propositions' on page 22 undefined
- on input line 700.
+LaTeX Warning: Reference `ex1:partition-from-propositions' on page 25 undefined
+ on input line 699.
 
-) [22]
+) [25]
 \openout2 = `chap2.aux'.
 
  (./chap2.tex
 Chapter 2.
-[23
+[26
 
 
 
 
-] [24] [25]
-Underfull \hbox (badness 2173) in paragraph at lines 102--102
-[]\T1/qpl/m/n/10.95 (a) |By-city par-ti-tion as-so-ci-ated with ([]49a[]).
- []
-
-[26]
-Overfull \hbox (8.15514pt too wide) in paragraph at lines 158--159
+] [27] [28] [29]
+Overfull \hbox (8.15503pt too wide) in paragraph at lines 158--159
  [][] 
  []
 
-[27] [28]
+[30] [31]
 
-LaTeX Warning: Reference `chap:scalarity' on page 29 undefined on input line 19
-1.
-
-
-LaTeX Warning: Reference `chap:exh-incr' on page 29 undefined on input line 191
+LaTeX Warning: Reference `chap:exh-incr' on page 32 undefined on input line 191
 .
 
-[29]
-Underfull \hbox (badness 3930) in paragraph at lines 251--251
-[]\T1/qpl/m/n/12 Figure 2.3: |A graph $\OML/cmm/m/it/12 G \OT1/cmr/m/n/12 = (\O
-MS/cmsy/m/n/12 N\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 E\OT1/cmr/m/n/12 )$\T1/qpl/
-m/n/12 , with $\OMS/cmsy/m/n/12 N \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/
-m/it/12 A; B; C; D; E; F\OMS/cmsy/m/n/12 g$ \T1/qpl/m/n/12 and $\OMS/cmsy/m/n/1
-2 E \OT1/cmr/m/n/12 =
- []
-
-[30]
-Overfull \hbox (31.64432pt too wide) in paragraph at lines 286--287
+[32] [33]
+Overfull \hbox (31.64421pt too wide) in paragraph at lines 286--287
  [][] 
  []
 
-[31] [32] [33] [34] [35]
-Overfull \hbox (0.84373pt too wide) in paragraph at lines 412--413
+[34] [35] [36] [37] [38]
+Overfull \hbox (0.8436pt too wide) in paragraph at lines 412--413
  [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 421--421
-[]\T1/qpl/m/n/10.95 (c) |...Af-ter re-mov-ing
- []
-
-
-Underfull \hbox (badness 1132) in paragraph at lines 421--421
-\T1/qpl/m/n/10.95 empty nodes and re-sult-
- []
-
-[36]
-Overfull \hbox (31.64432pt too wide) in paragraph at lines 464--465
+[39]
+Overfull \hbox (31.64421pt too wide) in paragraph at lines 464--465
  [][] 
  []
 
-[37] [38] [39]
-Overfull \hbox (38.4443pt too wide) in paragraph at lines 542--543
+[40] [41] [42]
+Overfull \hbox (38.4442pt too wide) in paragraph at lines 542--543
  [][] 
  []
 
-[40] [41]
-Underfull \hbox (badness 10000) in paragraph at lines 651--651
-[]\T1/qpl/m/n/10.95 (b) |Hasse di-a-gram for
- []
-
-[42]
-Underfull \hbox (badness 10000) in paragraph at lines 676--676
-[]\T1/qpl/m/n/10.95 (a) |Di-rected graph in-duced by $\U/msa/m/n/10.95 ^^O$ \T1
-/qpl/m/n/10.95 on
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 697--697
-[]\T1/qpl/m/n/10.95 (b) |Di-rected graph in-duced by $\U/msa/m/n/10.95 ^^O$ \T1
-/qpl/m/n/10.95 on
- []
-
-[43] [44]
-
-LaTeX Warning: Reference `chap:scalarity' on page 45 undefined on input line 73
-0.
-
-[45] [46] [47]
-
-LaTeX Warning: Reference `chap:scalarity' on page 48 undefined on input line 79
-6.
-
-[48]
-
-LaTeX Warning: Reference `chap:scalarity' on page 49 undefined on input line 80
-5.
-
-[49]
-Underfull \hbox (badness 1292) in paragraph at lines 865--865
-[]\T1/qpl/m/n/10.95 (a) |Fol-low-ing prin-ci-
- []
-
-
-Overfull \hbox (2.4115pt too wide) in paragraph at lines 872--873
+[43] [44] [45] [46] [47] [48] [49] [50] [51] [52]
+Overfull \hbox (2.41142pt too wide) in paragraph at lines 871--872
  [][] 
  []
 
 
-Overfull \hbox (2.2143pt too wide) in paragraph at lines 880--881
+Overfull \hbox (2.2142pt too wide) in paragraph at lines 879--880
  [][] 
  []
 
-[50] [51] [52]
+[53] [54] [55]
 
-LaTeX Warning: Reference `chap:hurford-sentences' on page 53 undefined on input
- line 962.
+LaTeX Warning: Reference `chap:hurford-cond' on page 56 undefined on input line
+ 960.
 
-[53]
+[56] [57] [58]
+Overfull \hbox (19.76431pt too wide) in paragraph at lines 1051--1052
+ [][] 
+ []
 
-LaTeX Warning: Reference `chap:scalarity' on page 54 undefined on input line 97
+
+Overfull \hbox (13.78706pt too wide) in paragraph at lines 1059--1060
+ [][] 
+ []
+
+[59] [60] [61] [62] [63]
+Overfull \hbox (2.41142pt too wide) in paragraph at lines 1245--1246
+ [][] 
+ []
+
+
+Overfull \hbox (2.2142pt too wide) in paragraph at lines 1253--1254
+ [][] 
+ []
+
+
+Overfull \hbox (2.42421pt too wide) in paragraph at lines 1274--1275
+ [][] 
+ []
+
+
+Overfull \hbox (2.22699pt too wide) in paragraph at lines 1282--1283
+ [][] 
+ []
+
+[64] [65]
+
+LaTeX Warning: Reference `chap:hurford-cond' on page 66 undefined on input line
+ 1316.
+
+[66] [67]
+
+LaTeX Warning: Reference `ex2:n-t-inter' on page 68 undefined on input line 139
 9.
 
-[54] [55]
-Underfull \hbox (badness 1292) in paragraph at lines 1046--1046
-[]\T1/qpl/m/n/10.95 (a) |Fol-low-ing prin-ci-
- []
-
-
-Overfull \hbox (19.76439pt too wide) in paragraph at lines 1053--1054
+[68] [69] [70] [71] [72]
+Overfull \hbox (2.41142pt too wide) in paragraph at lines 1564--1565
  [][] 
  []
 
 
-Overfull \hbox (13.78716pt too wide) in paragraph at lines 1061--1062
- [][] 
- []
-
-[56] [57] [58] [59] [60]
-Underfull \hbox (badness 1292) in paragraph at lines 1240--1240
-[]\T1/qpl/m/n/10.95 (a) |Fol-low-ing prin-ci-
- []
-
-
-Overfull \hbox (2.4115pt too wide) in paragraph at lines 1247--1248
+Overfull \hbox (2.2142pt too wide) in paragraph at lines 1572--1573
  [][] 
  []
 
 
-Overfull \hbox (2.2143pt too wide) in paragraph at lines 1255--1256
+Underfull \hbox (badness 10000) in paragraph at lines 1631--1632
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1633--1634
+
+ []
+
+[73]
+
+LaTeX Warning: Reference `chap:hurford-cond' on page 74 undefined on input line
+ 1635.
+
+) [74]
+\openout2 = `chap3.aux'.
+
+ (./chap3.tex
+Chapter 3.
+[75
+
+
+
+
+] [76]
+Overfull \hbox (31.64421pt too wide) in paragraph at lines 69--70
  [][] 
  []
 
-[61]
-Underfull \hbox (badness 1292) in paragraph at lines 1269--1269
-[]\T1/qpl/m/n/10.95 (a) |Fol-low-ing prin-ci-
- []
+[77] [78]
+
+LaTeX Warning: Reference `chap:economy' on page 79 undefined on input line 115.
 
 
-Overfull \hbox (2.42429pt too wide) in paragraph at lines 1276--1277
- [][] 
- []
+) [79]
+\openout2 = `chap4.aux'.
+
+ (./chap4.tex
+Chapter 4.
+[80
 
 
-Overfull \hbox (2.22708pt too wide) in paragraph at lines 1284--1285
- [][] 
- []
-
-[62]
-
-LaTeX Warning: Reference `chap:hurford-sentences' on page 63 undefined on input
- line 1318.
-
-[63] [64] [65]
-
-LaTeX Warning: Reference `ex2:qtree-reduction' on page 66 undefined on input li
-ne 1408.
-
-[66]
-Overfull \hbox (36.22324pt too wide) in paragraph at lines 1437--1438
- [][] 
- []
-
-[67]
-
-LaTeX Warning: Reference `ex2:qtree-reduction' on page 68 undefined on input li
-ne 1491.
 
 
-LaTeX Warning: Reference `ex2:qtree-reduction' on page 68 undefined on input li
-ne 1515.
-
-[68]
-Underfull \hbox (badness 10000) in paragraph at lines 1520--1521
+]
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
 
-LaTeX Warning: Reference `fig2:qtrees-np' on page 69 undefined on input line 15
-22.
+LaTeX Warning: Reference `sec4:ordering' on page 81 undefined on input line 48.
 
 
-LaTeX Warning: Reference `fig2:qtrees-q' on page 69 undefined on input line 152
-2.
+[81]
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
-
-LaTeX Warning: Reference `fig2:qtree-np-polar' on page 69 undefined on input li
-ne 1533.
-
-
-LaTeX Warning: Reference `fig2:qtree-q-polar' on page 69 undefined on input lin
-e 1533.
-
-
-LaTeX Warning: Reference `fig2:qtree-np-polar' on page 69 undefined on input li
-ne 1533.
-
-
-LaTeX Warning: Reference `fig2:qtree-q-polar' on page 69 undefined on input lin
-e 1533.
-
-
-LaTeX Warning: Reference `fig2:qtree-np-polar' on page 69 undefined on input li
-ne 1542.
-
-
-LaTeX Warning: Reference `fig2:qtree-q-wh' on page 69 undefined on input line 1
-542.
-
-
-LaTeX Warning: Reference `fig2:qtree-np-polar' on page 69 undefined on input li
-ne 1542.
-
-
-LaTeX Warning: Reference `fig2:qtree-q-wh' on page 69 undefined on input line 1
-542.
-
-
-LaTeX Warning: Reference `fig2:qtree-np-wh' on page 69 undefined on input line 
-1551.
-
-
-LaTeX Warning: Reference `fig2:qtree-q-polar' on page 69 undefined on input lin
-e 1551.
-
-
-LaTeX Warning: Reference `fig2:qtree-q-wh' on page 69 undefined on input line 1
-551.
-
-
-LaTeX Warning: Reference `fig2:qtree-np-wh' on page 69 undefined on input line 
-1551.
-
-
-LaTeX Warning: Reference `fig2:qtree-q-polar' on page 69 undefined on input lin
-e 1551.
-
-
-LaTeX Warning: Reference `fig2:qtree-q-wh' on page 69 undefined on input line 1
-551.
-
-
-Underfull \hbox (badness 6412) in paragraph at lines 1551--1551
-[]\T1/qpl/m/n/10.95 (c) |Fig-ure ([]) $\OMS/cmsy/m/n/10.95 !$ \T1/qpl/m/n/10.95
- Fig-ure
  []
 
-[69]
-
-LaTeX Warning: Reference `fig2:qtree-nq-polar' on page 70 undefined on input li
-ne 1574.
-
-
-LaTeX Warning: Reference `fig2:qtree-p-polar' on page 70 undefined on input lin
-e 1574.
-
-
-LaTeX Warning: Reference `fig2:qtree-nq-polar' on page 70 undefined on input li
-ne 1574.
-
-
-LaTeX Warning: Reference `fig2:qtree-p-polar' on page 70 undefined on input lin
-e 1574.
-
-
-LaTeX Warning: Reference `fig2:qtree-nq-polar' on page 70 undefined on input li
-ne 1583.
-
-
-LaTeX Warning: Reference `fig2:qtree-p-wh' on page 70 undefined on input line 1
-583.
-
-
-LaTeX Warning: Reference `fig2:qtree-nq-polar' on page 70 undefined on input li
-ne 1583.
-
-
-LaTeX Warning: Reference `fig2:qtree-p-wh' on page 70 undefined on input line 1
-583.
-
-
-LaTeX Warning: Reference `fig2:qtree-nq-wh' on page 70 undefined on input line 
-1592.
-
-
-LaTeX Warning: Reference `fig2:qtree-p-polar' on page 70 undefined on input lin
-e 1592.
-
-
-LaTeX Warning: Reference `fig2:qtree-p-wh' on page 70 undefined on input line 1
-592.
-
-
-LaTeX Warning: Reference `fig2:qtree-nq-wh' on page 70 undefined on input line 
-1592.
-
-
-LaTeX Warning: Reference `fig2:qtree-p-polar' on page 70 undefined on input lin
-e 1592.
-
-
-LaTeX Warning: Reference `fig2:qtree-p-wh' on page 70 undefined on input line 1
-592.
-
-
-Underfull \hbox (badness 6412) in paragraph at lines 1592--1592
-[]\T1/qpl/m/n/10.95 (c) |Fig-ure ([]) $\OMS/cmsy/m/n/10.95 !$ \T1/qpl/m/n/10.95
- Fig-ure
+[82] [83] [84] [85] [86] [87]
+Underfull \hbox (badness 1117) in paragraph at lines 216--217
+\T1/qpl/m/n/12 whose key prop-erty is that it com-mutes with nega-tion ($\OML/c
+mm/m/it/12 Str\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 :\OML/cmm/m/it/12 ; D\OT1/cmr/
+m/n/12 ) =
  []
 
 
-LaTeX Warning: Reference `ex2:pv(nptq)' on page 70 undefined on input line 1598
+Underfull \hbox (badness 5446) in paragraph at lines 216--217
+\OMS/cmsy/m/n/12 :\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Str\OT1/cmr/m/n/12 (\OML/cm
+m/m/it/12 ; D\OT1/cmr/m/n/12 ))$\T1/qpl/m/n/12 ), as well as with bi-nary op-e
+r-a-tors ($\OML/cmm/m/it/12 Str\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 O\OT1/cmr/m/n/
+12 (\OML/cmm/m/it/12 ; ^^L\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; D\OT1/cmr/m/n/12
+ ) =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+
+ []
+
+[88] [89] [90] [91] [92]
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
+
+ []
+
+[93] [94] [95]
+Underfull \hbox (badness 10000) in paragraph at lines 529--530
+
+ []
+
+[96] [97]
+Underfull \hbox (badness 10000) in paragraph at lines 584--585
+
+ []
+
+[98] [99]
+Underfull \hbox (badness 10000) in paragraph at lines 700--702
+
+ []
+
+[100]
+Underfull \hbox (badness 10000) in paragraph at lines 719--720
+
+ []
+
+[101]
+Underfull \hbox (badness 10000) in paragraph at lines 763--764
+
+ []
+
+[102] [103] [104]
+Underfull \hbox (badness 10000) in paragraph at lines 918--919
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 921--922
+
+ []
+
+[105]
+Underfull \hbox (badness 10000) in paragraph at lines 971--972
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 973--974
+
+ []
+
+[106]
+Underfull \hbox (badness 10000) in paragraph at lines 990--991
+
+ []
+
+
+LaTeX Warning: Reference `chap:economy' on page 107 undefined on input line 993
 .
 
-[70]) [71] (./dissertation.bbl [72
 
+Underfull \hbox (badness 10000) in paragraph at lines 993--994
 
-
-] [73]
-Underfull \hbox (badness 3713) in paragraph at lines 177--180
-[]\T1/qpl/m/n/12 Katzir, R. (2007).  Structurally-defined al-ter-na-tives.  \T1
-/qpl/m/it/12 Lin-guis-tics and Phi-los-o-phy\T1/qpl/m/n/12 ,
  []
 
-[74]
-Underfull \hbox (badness 1173) in paragraph at lines 262--265
-[]\T1/qpl/m/n/12 Rooth, M. (1992).  A the-ory of fo-cus in-ter-pre-ta-tion.  \T
-1/qpl/m/it/12 Nat-u-ral Lan-guage Se-man-tics\T1/qpl/m/n/12 ,
+[107]
+
+LaTeX Warning: Reference `chap:hurford-sentence' on page 108 undefined on input
+ line 1032.
+
+
+Underfull \hbox (badness 3281) in paragraph at lines 1032--1033
+[]\T1/qpl/m/n/12 Our def-i-ni-tion of \T1/qpl/m/sc/12 Q-Non-Redundancy \T1/qpl/
+m/n/12 also leaves space for other Qtree well-
  []
 
-[75]) [76] (./dissertation.aux (./chap1.aux) (./chap2.aux))
+[108]
+
+LaTeX Warning: Reference `ex4:formal-simplification' on page 109 undefined on i
+nput line 1058.
+
+[109] [110] [111] [112] [113] [114]
+Underfull \hbox (badness 10000) in paragraph at lines 1335--1336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1337--1338
+
+ []
+
+) [115]
+\openout2 = `chap5.aux'.
+
+ (./chap5.tex
+Chapter 5.
+
+LaTeX Warning: Reference `chap:economy' on page 116 undefined on input line 7.
+
+[116
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+[117] [118] [119]
+Underfull \hbox (badness 1117) in paragraph at lines 103--104
+\T1/qpl/m/n/12 whose key prop-erty is that it com-mutes with nega-tion ($\OML/c
+mm/m/it/12 Str\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 :\OML/cmm/m/it/12 ; D\OT1/cmr/
+m/n/12 ) =
+ []
+
+
+Underfull \hbox (badness 5446) in paragraph at lines 103--104
+\OMS/cmsy/m/n/12 :\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Str\OT1/cmr/m/n/12 (\OML/cm
+m/m/it/12 ; D\OT1/cmr/m/n/12 ))$\T1/qpl/m/n/12 ), as well as with bi-nary op-e
+r-a-tors ($\OML/cmm/m/it/12 Str\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 O\OT1/cmr/m/n/
+12 (\OML/cmm/m/it/12 ; ^^L\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; D\OT1/cmr/m/n/12
+ ) =
+ []
+
+[120] [121] [122]
+Underfull \hbox (badness 10000) in paragraph at lines 193--206
+
+ []
+
+[123] [124]
+Overfull \hbox (31.03023pt too wide) in paragraph at lines 293--293
+ [][] 
+ []
+
+[125] [126] [127] [128]
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
+
+ []
+
+[129] [130] [131] [132]
+Underfull \hbox (badness 10000) in paragraph at lines 589--590
+
+ []
+
+[133]
+Overfull \hbox (31.03023pt too wide) in paragraph at lines 617--617
+ [][] 
+ []
+
+
+Overfull \hbox (30.33023pt too wide) in paragraph at lines 648--648
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 653--654
+
+ []
+
+[134] [135] [136]
+Underfull \hbox (badness 10000) in paragraph at lines 737--738
+
+ []
+
+[137]
+Underfull \hbox (badness 10000) in paragraph at lines 786--787
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 789--790
+
+ []
+
+[138]
+Underfull \hbox (badness 10000) in paragraph at lines 825--826
+
+ []
+
+[139]
+Underfull \hbox (badness 2486) in paragraph at lines 838--838
+[]\T1/qpl/b/n/14.4 Comparison with pre-vi-ous Redundancy-based ap-proaches to
+ []
+
+[140]
+Underfull \hbox (badness 10000) in paragraph at lines 871--872
+
+ []
+
+[141]
+Underfull \hbox (badness 10000) in paragraph at lines 884--885
+
+ []
+
+[142]
+Underfull \hbox (badness 10000) in paragraph at lines 904--905
+
+ []
+
+[143]
+Underfull \hbox (badness 10000) in paragraph at lines 911--913
+
+ []
+
+[144]
+Underfull \hbox (badness 10000) in paragraph at lines 938--939
+
+ []
+
+[145]
+Underfull \hbox (badness 10000) in paragraph at lines 977--978
+
+ []
+
+[146] [147] [148] [149]
+Underfull \hbox (badness 10000) in paragraph at lines 1030--1031
+
+ []
+
+) [150]
+\openout2 = `chap6.aux'.
+
+ (./chap6.tex
+Chapter 6.
+
+LaTeX Warning: Reference `chap:economy' on page 151 undefined on input line 11.
+
+
+[151
+
+
+
+
+] [152]
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+[153]
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+ []
+
+[154]
+Underfull \hbox (badness 1117) in paragraph at lines 135--136
+\T1/qpl/m/n/12 whose key prop-erty is that it com-mutes with nega-tion ($\OML/c
+mm/m/it/12 Str\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 :\OML/cmm/m/it/12 ; D\OT1/cmr/
+m/n/12 ) =
+ []
+
+
+Underfull \hbox (badness 5446) in paragraph at lines 135--136
+\OMS/cmsy/m/n/12 :\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Str\OT1/cmr/m/n/12 (\OML/cm
+m/m/it/12 ; D\OT1/cmr/m/n/12 ))$\T1/qpl/m/n/12 ), as well as with bi-nary op-e
+r-a-tors ($\OML/cmm/m/it/12 Str\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 O\OT1/cmr/m/n/
+12 (\OML/cmm/m/it/12 ; ^^L\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; D\OT1/cmr/m/n/12
+ ) =
+ []
+
+[155]
+Underfull \hbox (badness 10000) in paragraph at lines 172--190
+
+ []
+
+[156]
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
+
+ []
+
+[157]
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
+
+ []
+
+[158]
+Underfull \hbox (badness 10000) in paragraph at lines 264--277
+
+ []
+
+[159]
+Underfull \hbox (badness 10000) in paragraph at lines 299--300
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
+
+ []
+
+[160]
+Overfull \hbox (31.03023pt too wide) in paragraph at lines 353--353
+ [][] 
+ []
+
+[161]
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
+
+ []
+
+[162]
+Overfull \hbox (36.6302pt too wide) in paragraph at lines 419--419
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
+
+ []
+
+[163]
+
+LaTeX Warning: Reference `ex2:n-t-inter' on page 164 undefined on input line 45
+3.
+
+[164]
+Overfull \hbox (15.13159pt too wide) in paragraph at lines 494--510
+ [][] 
+ []
+
+[165] [166] [167]
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
+
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 639--640
+[]\T1/qpl/m/n/12 By con-trast, none of the Qtrees evoked by ([]192a[]) fea-ture
+ a prop-erly re-stricted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 639--640
+
+ []
+
+[168]
+Underfull \hbox (badness 10000) in paragraph at lines 652--653
+
+ []
+
+[169]
+Underfull \hbox (badness 10000) in paragraph at lines 686--687
+
+ []
+
+[170]
+Underfull \hbox (badness 1264) in paragraph at lines 697--698
+[]\T1/qpl/m/n/12 We have just gone through all the pos-si-ble sim-pli-fi-ca-tio
+ns of the fe-lic-i-tous HC
+ []
+
+[171] [172] [173]
+Underfull \hbox (badness 10000) in paragraph at lines 795--796
+
+ []
+
+[174] [175]
+Underfull \hbox (badness 10000) in paragraph at lines 845--846
+
+ []
+
+[176] [177] [178]
+Underfull \hbox (badness 10000) in paragraph at lines 979--980
+
+ []
+
+[179]
+Underfull \hbox (badness 10000) in paragraph at lines 1030--1031
+
+ []
+
+[180]
+Underfull \hbox (badness 10000) in paragraph at lines 1040--1041
+
+ []
+
+[181] [182] [183] [184]
+Underfull \hbox (badness 10000) in paragraph at lines 1098--1099
+
+ []
+
+[185]
+Underfull \hbox (badness 10000) in paragraph at lines 1130--1131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1135--1136
+
+ []
+
+[186] [187]
+Underfull \hbox (badness 10000) in paragraph at lines 1237--1238
+
+ []
+
+[188]
+Underfull \hbox (badness 10000) in paragraph at lines 1247--1248
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1260--1261
+
+ []
+
+[189]
+Underfull \hbox (badness 10000) in paragraph at lines 1274--1275
+
+ []
+
+[190] [191]
+Underfull \hbox (badness 10000) in paragraph at lines 1316--1317
+
+ []
+
+[192]
+Underfull \hbox (badness 10000) in paragraph at lines 1339--1341
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1342--1343
+
+ []
+
+[193] [194] [195] [196]
+Overfull \hbox (30.02066pt too wide) in paragraph at lines 1440--1441
+ [][] 
+ []
+
+
+Overfull \hbox (46.6378pt too wide) in paragraph at lines 1451--1452
+ [][] 
+ []
+
+[197] [198]
+Overfull \hbox (29.43445pt too wide) in paragraph at lines 1521--1522
+ [][] 
+ []
+
+
+Overfull \hbox (71.44987pt too wide) in paragraph at lines 1527--1528
+ [][] 
+ []
+
+[199]
+Underfull \hbox (badness 10000) in paragraph at lines 1533--1534
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1540--1542
+
+ []
+
+[200]
+Underfull \hbox (badness 10000) in paragraph at lines 1543--1544
+
+ []
+
+[201]
+Underfull \hbox (badness 10000) in paragraph at lines 1556--1557
+
+ []
+
+
+LaTeX Warning: Reference `ex6:roberts-relevance' on page 202 undefined on input
+ line 1563.
+
+
+LaTeX Warning: Reference `ex6:roberts-relevance' on page 202 undefined on input
+ line 1564.
+
+
+LaTeX Warning: Reference `ex6:roberts-relevance' on page 202 undefined on input
+ line 1565.
+
+
+LaTeX Warning: Reference `ex6:roberts-relevance' on page 202 undefined on input
+ line 1566.
+
+
+LaTeX Warning: Reference `ex6:overinformative-2' on page 202 undefined on input
+ line 1574.
+
+[202]
+
+LaTeX Warning: Reference `ex6:roberts-relevance' on page 203 undefined on input
+ line 1577.
+
+
+LaTeX Warning: Reference `ex6:relevance-p' on page 203 undefined on input line 
+1577.
+
+
+LaTeX Warning: Reference `ex6:roberts-relevance' on page 203 undefined on input
+ line 1577.
+
+
+LaTeX Warning: Reference `ex6:relevance-q' on page 203 undefined on input line 
+1577.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 1578.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 1578.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 1578.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\NAT@ctype' on input line 1578.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ne' on input line 1578.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 1578.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 1578.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1579--1580
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1583--1583
+[]\T1/qpl/b/n/17.28 Appendix: DNCHDs, DNLD-HDs and Super-
+ []
+
+[203] [204])
+Underfull \hbox (badness 10000) in paragraph at lines 1636--136
+[][]
+ []
+
+[205]
+\openout2 = `chap7.aux'.
+
+ (./chap7.tex
+Chapter 7.
+[206
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+[207]
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+[208]
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+[209]
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
+[210] [211] [212]
+Underfull \hbox (badness 10000) in paragraph at lines 214--224
+[]\T1/qpl/m/n/12 PREDICTIONS AS-SUM-ING NO EM-BED-DED EX-HAUS-TI-FI-CA-TION: (1
+b) <
+ []
+
+
+Underfull \hbox (badness 3601) in paragraph at lines 214--224
+\T1/qpl/m/n/12 extra-pragmatic). PRE-DIC-TIONS AS-SUM-ING EM-BED-DED EX-HAUS-TI
+-FI-CA-TION
+ []
+
+[213] [214] [215] [216]
+LaTeX Font Info:    Trying to load font information for U+mvs on input line 336
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd) [217] [218]
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--380
+
+ []
+
+[219]
+
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 220 undefined on input
+ line 386.
+
+
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 220 undefined on input
+ line 388.
+
+
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 220 undefined on input
+ line 388.
+
+
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 220 undefined on input
+ line 388.
+
+
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 220 undefined on input
+ line 388.
+
+
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 220 undefined on input
+ line 388.
+
+
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 220 undefined on input
+ line 388.
+
+[220]
+
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 221 undefined on input
+ line 425.
+
+
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 221 undefined on input
+ line 429.
+
+
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 221 undefined on input
+ line 429.
+
+
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 221 undefined on input
+ line 429.
+
+
+Overfull \hbox (9.08592pt too wide) in paragraph at lines 467--468
+ [][] 
+ []
+
+[221] [222]
+
+LaTeX Warning: Reference `ex7:shd-w' on page 223 undefined on input line 646.
+
+
+LaTeX Warning: Reference `ex7:depending-on' on page 223 undefined on input line
+ 646.
+
+[223] [224] [225] [226] [227]
+
+LaTeX Warning: Reference `ex7:ldhd-neg' on page 228 undefined on input line 877
+.
+
+[228]
+
+Package natbib Warning: Citation `VanKuppevelt1995' on page 229 undefined on in
+put line 886.
+
+
+LaTeX Warning: Reference `chap:exh-incr' on page 229 undefined on input line 89
+5.
+
+[229]
+
+LaTeX Warning: Reference `ex7:q-relevance' on page 230 undefined on input line 
+934.
+
+[230]
+
+LaTeX Warning: Reference `ex7:q-relevance' on page 231 undefined on input line 
+938.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 956--957
+
+ []
+
+[231]
+Underfull \hbox (badness 10000) in paragraph at lines 969--970
+
+ []
+
+[232]
+Underfull \hbox (badness 1348) in paragraph at lines 1004--1005
+[]\T1/qpl/m/n/12 If Jo didn't have all starters or the main dish then she had s
+ome starters.
+ []
+
+[233]) [234] (./dissertation.bbl [235
+
+
+
+] [236] [237] [238] [239])
+
+Package natbib Warning: There were undefined citations.
+
+[240] (./dissertation.aux (./chap1.aux) (./chap2.aux) (./chap3.aux)
+(./chap4.aux) (./chap5.aux) (./chap6.aux) (./chap7.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1678,45 +2246,58 @@ L3 programming layer <2024-01-22>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: EF0FEFDF15BDC5A06DF204096EECDA3E;8072.
+(rerunfilecheck)             Checksum: 91FCA3EEED1F8A3FED44198A7ED5FD23;28399.
  ) 
 Here is how much of TeX's memory you used:
- 40530 strings out of 474222
- 852015 string characters out of 5748733
- 1976975 words of memory out of 5000000
- 61766 multiletter control sequences out of 15000+600000
- 647275 words of font info for 128 fonts, out of 8000000 for 9000
+ 45771 strings out of 474222
+ 967567 string characters out of 5748733
+ 1978975 words of memory out of 5000000
+ 66122 multiletter control sequences out of 15000+600000
+ 692345 words of font info for 184 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 158i,23n,143p,2013b,2126s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/publi
-c/tex-gyre/qplb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qplbi.pfb></u
-sr/share/texmf/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texmf/fonts/typ
-e1/public/tex-gyre/qplri.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt
-1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/wasy-type1/wasy10.pfb>
-Output written on dissertation.pdf (76 pages, 739697 bytes).
+ 158i,32n,143p,3359b,2528s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.46} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.44} has been referenced but does not exis
+t, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/marvosym/marvosym.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/tex-gyr
+e/qplb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qplbi.pfb></usr/share/
+texmf/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texmf/fonts/type1/public
+/tex-gyre/qplri.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/wasy-type1/wasy10.pfb>
+Output written on dissertation.pdf (240 pages, 1400845 bytes).
 PDF statistics:
- 1960 PDF objects out of 2073 (max. 8388607)
- 1698 compressed objects within 17 object streams
- 404 named destinations out of 1000 (max. 500000)
- 285 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 7420 PDF objects out of 7423 (max. 8388607)
+ 6189 compressed objects within 62 object streams
+ 1232 named destinations out of 1440 (max. 500000)
+ 997 words of extra memory for PDF output out of 10000 (max. 10000000)
 

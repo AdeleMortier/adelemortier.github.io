@@ -37,9 +37,9 @@ Propositions can receive an alternative, equivalent interpretation in terms of s
 Propositions either denote functions of type $\langle \texttt{s}, \texttt{t}\rangle$, or subsets of the set of elements of type \texttt{s}. Should all elements of type \texttt{s} be considered when evaluating such functions, or computing such subsets? It is commonly assumed that the worlds under consideration at any point of a conversation, are the ones that are compatible with the premises of the said conversation \citep{Stalnaker1974,Stalnaker1978}. For instance, if two people have a discussion about \textit{France}, it is often reasonable to assume that they agree on what geographical area \textit{France} encompasses, and more generally about the topology of Earth. Moreover, they agree that they agree on this; and agree that they agree that they agree on this; etc. Propositions subject to this recursive, mutual, tacit agreement pattern, form what is called a Common Ground (henceforth \textbf{CG}, \citep{Stalnaker1978}). Each conversation has its own CG, as defined in (\ref{ex1:common-ground}). The set of worlds in which all the propositions of the CG hold, is called the Context Set (henceforth \textbf{CS}). The CS associated with a conversation is therefore a subset of the set of all possible worlds; and can also be seen (under the set interpretation of propositions) as the grand intersection of the propositions in the CG. This is defined in (\ref{ex1:context-set}).
 
 \begin{exe}
-	\ex {\textit{Common Ground (\textbf{CG}).} Let $\mathcal{C}$ be a conversation between participants $\lbrace P_1, ..., P_k \rbrace$. Let $K(x, p)$ is a proposition meaning that individual $x$ knows $p$, and $p$ is a proposition. The Common Ground of $\mathcal{C}$ is the set of propositions that are recursively taken for granted by all the participants in $\mathcal{C}$:\\
+	\ex {\textsc{\textbf{Common Ground (\textbf{CG})}}. Let $\mathcal{C}$ be a conversation between participants $\lbrace P_1, ..., P_k \rbrace$. Let $K(x, p)$ is a proposition meaning that individual $x$ knows $p$, and $p$ is a proposition. The Common Ground of $\mathcal{C}$ is the set of propositions that are recursively taken for granted by all the participants in $\mathcal{C}$:\\
 	$p \in CG(\mathcal{C}) \iff \forall n \in \mathbb{N}^*. \ \forall \lbrace k_1, ... k_n \rbrace \in [1; k]^n. \ K(P_{k_1}, K(P_{k_2},...K(P_{k_n}, p)...)$ }\label{ex1:common-ground}
-	\ex {\textit{Context Set (\textbf{CS}). } Let $\mathcal{C}$ be a conversation between participants $\lbrace P_1, ..., P_k \rbrace$. Let CG $CG(\mathcal{C})$ be the Common Ground of this conversation. Under a set interpretation of propositions, the resulting Context Set $CS(\mathcal{C})$ is the set of worlds verifying all propositions of the CG, i.e.:\\
+	\ex {\textsc{\textbf{Context Set (\textbf{CS})}}. Let $\mathcal{C}$ be a conversation between participants $\lbrace P_1, ..., P_k \rbrace$. Let CG $CG(\mathcal{C})$ be the Common Ground of this conversation. Under a set interpretation of propositions, the resulting Context Set $CS(\mathcal{C})$ is the set of worlds verifying all propositions of the CG, i.e.:\\
 		$CS(\mathcal{C}) = \bigcap\lbrace p \ | \ p \in CG(\mathcal{C})\rbrace$.} \label{ex1:context-set}
 \end{exe}
 
@@ -63,7 +63,7 @@ Note that updating the CG will always create a bigger set, because the CG is sim
 More generally, if it is Common Ground that $p$, and a sentence $S$ denoting $p^-$ s.t. $p \vDash p^-$ is uttered, then $S$ will feel uninformative. An informative assertion should lead to a non-vacuous update of the CS, i.e. it should properly \textit{shrink} the CS. This is spelled out in (\ref{ex1:informativity}).
 
 \begin{exe}
-	\ex {\textit{Informativity (propositional view).} A sentence $S$ denoting a proposition $p$ is informative in a conversation $\mathcal{C}$, iff $CS(\mathcal{C}) \cap p \subset CS(\mathcal{C})$.}\label{ex1:informativity}
+	\ex {\textsc{\textbf{Informativity}} (propositional view). A sentence $S$ denoting a proposition $p$ is informative in a conversation $\mathcal{C}$, iff $CS(\mathcal{C}) \cap p \subset CS(\mathcal{C})$.}\label{ex1:informativity}
 \end{exe}
 
 
@@ -77,7 +77,7 @@ In that framework, an assertion provides information in the sense that it reduce
 			\draw [draw=black] (0, 0) rectangle (2.5, 2.5);
 			\filldraw [draw=black,fill=gray] (0.4, 0.4) rectangle (1, 1);
 		\end{tikzpicture}
-		\caption{Informative update ($p$ strictly contained in the CS)}\label{fig1:contained-update}
+		\caption{Informative update ($p$ strictly contained in the CS).}\label{fig1:contained-update}
 	\end{subfigure}\hfill
 	\begin{subfigure}[b]{.23\linewidth}
 		\centering
@@ -85,14 +85,14 @@ In that framework, an assertion provides information in the sense that it reduce
 			\filldraw [draw=black,fill=gray] (2, 1) rectangle (2.8, 1.5);
 			\draw [draw=black] (0, 0) rectangle (2.5, 2.5);
 		\end{tikzpicture}
-		\caption{Informative update ($p$ strictly overlaps with the CS)}\label{fig1:informative-update}
+		\caption{Informative update ($p$ strictly overlaps with the CS).}\label{fig1:informative-update}
 	\end{subfigure}\hfill
 	\begin{subfigure}[b]{.23\linewidth}
 		\centering
 		\begin{tikzpicture}	
 			\filldraw [draw=black,fill=gray] (0, 0) rectangle (2.5, 2.5);
 		\end{tikzpicture}
-		\caption{Uninformative update ($p$ equal to the CS)}\label{fig1:uninformative-equal-update}
+		\caption{Uninformative update ($p$ equal to the CS).}\label{fig1:uninformative-equal-update}
 	\end{subfigure}\hfill
 	\begin{subfigure}[b]{.23\linewidth}
 		\centering
@@ -100,7 +100,7 @@ In that framework, an assertion provides information in the sense that it reduce
 			\filldraw [draw=black,fill=gray] (0, 0) rectangle (3, 3);
 			\filldraw [draw=black,fill=gray] (0, 0) rectangle (2.5, 2.5);
 		\end{tikzpicture}
-		\caption{Uninformative update ($p$ containing the CS)}\label{fig1:uninformative-update}
+		\caption{Uninformative update ($p$ containing the CS).}\label{fig1:uninformative-update}
 	\end{subfigure}
 	\caption{A few examples of informative and uninformative updates of the CS. The big squares represent the CS. The grey shapes refer to $p$, the proposition added to the CG (and intersected with the CS to update it).}\label{fig1:informative-assertions}
 \end{figure}
@@ -157,7 +157,7 @@ In this toy example, a presupposition was used as a diagnostic to better determi
 This incremental view of assertions leads to a revised, incremental definition of informativity, given in (\ref{ex1:informativity-ccp}). 
 
 \begin{exe}
-	\ex {\textit{Informativity (CCP view).} A sentence $S$ is informative in a conversation $\mathcal{C}$, iff all the updates of $CS(\mathcal{C})$ it gives rise to are non-vacuous.}\label{ex1:informativity-ccp}
+	\ex {\textsc{\textbf{Informativity}} (CCP view). A sentence $S$ is informative in a conversation $\mathcal{C}$, iff all the updates of $CS(\mathcal{C})$ it gives rise to are non-vacuous.}\label{ex1:informativity-ccp}
 \end{exe}
 
 In sum, assertions can be seen as proposals to update (shrink) the CS. The specific update they give rise to is compositionally derived, and incrementally performed, following the structure of the sentence. We will use a similar approach in Chapter \ref{ex1:accommodating -quds} when defining questions \textit{evoked} by assertions. But this first requires to define what questions mean. This is what we do in the next section, in which we show that questions influence, not the size, but rather, the topology of the CS.
@@ -180,7 +180,7 @@ Participants in a conversation utter assertions to shrink the CS, and hopefully,
 		--Al is arriving tomorrow.}\label{ex1:weird-assertion-sequence}
 \end{exe}
 
-This is where questions enter the game. Intuitively, a question indicates an interest in \textit{which} proposition(s) hold, among a restricted set. The proposition at stake are typically possible answers to the question. Questions therefore denote sets of sets of worlds (equivalent to a type $\langle\langle \texttt{s}, \texttt{t}\rangle, \texttt{t}\rangle$), and constrain which kind of (informative) propositions can be uttered as a follow-up. For instance, a polar question such as \textit{Is it raining?} will typically request information of the form \textit{It is raining}, or \textit{It is not raining}, see (\ref{ex1:simple-polar-q}). 
+This is where questions enter the game. Intuitively, a question indicates an interest in \textit{which} proposition(s) hold, among a restricted set. The proposition at stake are typically possible answers to the question \cite{Hamblin1973,Dayal1996}. Questions therefore denote sets of sets of worlds (equivalent to a type $\langle\langle \texttt{s}, \texttt{t}\rangle, \texttt{t}\rangle$), and constrain which kind of (informative) propositions can be uttered as a follow-up. For instance, a polar question such as \textit{Is it raining?} will typically request information of the form \textit{It is raining}, or \textit{It is not raining}, see (\ref{ex1:simple-polar-q}). 
 
 \begin{exe}
 	\ex {--Is it raining?\\
@@ -195,7 +195,7 @@ The question \textit{Is it raining?} can thus be represented as a set made of tw
 	\phantom{$\llbracket$ Is it raining? $\rrbracket$} : $\langle\langle \texttt{s}, \texttt{t}\rangle, \texttt{t}\rangle$}
 \end{exe}
 
-In the case of the question \textit{is it raining?}, the set of possible answers is fairly simple: it only contains two elements.These two elements  cover the space of all possibilities,\footnote{This is the case assuming there is no vagueness-induced ``grey area'', i.e. any salient situation is either a \textit{raining}-situation, or a \textit{not raining}-situation} and are \textit{exclusive}: if it's the case that it's raining (at a salient place, at a salient time) in $w$, then, it's not the case that it is not raining (at the same place, at the same time), in $w$. We will see in the next section that this configuration amounts to a partition of the CS. A definition of exclusivity under the set interpretation of propositions is given in (\ref{ex1:proposition-exclusivity}).
+In the case of the question \textit{is it raining?}, the set of possible answers is fairly simple: it only contains two elements. These two elements  cover the space of all possibilities,\footnote{This is the case assuming there is no vagueness-induced ``grey area'', i.e. any salient situation is either a \textit{raining}-situation, or a \textit{not raining}-situation} and are \textit{exclusive}: if it's the case that it's raining (at a salient place, at a salient time) in $w$, then, it's not the case that it is not raining (at the same place, at the same time), in $w$. We will see in the next section that this configuration amounts to a partition of the CS. A definition of exclusivity under the set interpretation of propositions is given in (\ref{ex1:proposition-exclusivity}).
 
 \begin{exe}
 	\ex {\textit{Exclusive propositions.} $p : \langle \texttt{s}, \texttt{t}\rangle$ and $q : \langle \texttt{s}, \texttt{t} \rangle$ are exclusive if $p \cap q = \emptyset$.}\label{ex1:proposition-exclusivity}
@@ -302,7 +302,7 @@ Let us now see how the above definitions apply to a \textit{wh}-question like \t
 				\draw [draw=black,pattern=north west lines] (0, 0) rectangle (.5, .3);
 		\end{tikzpicture} defines \textit{Al passed} and \begin{tikzpicture}
 		\draw [draw=black,pattern=north east lines] (0, 0) rectangle (.5, .3);
-		\end{tikzpicture} defines \textit{Jo passed} }\label{fig1:alternatives}
+		\end{tikzpicture} defines \textit{Jo passed}.}\label{fig1:alternatives}
 	\end{subfigure}\hfill
 	\begin{subfigure}[t]{.41\linewidth}
 		\centering
@@ -381,20 +381,20 @@ Just like we did with assertions, let us clarify further what it means to be a g
 		\end{tikzpicture}
 		\caption{Partition induced by \begin{tikzpicture}
 				\draw [draw=black,pattern=north west lines] (0, 0) rectangle (.5, .3);
-			\end{tikzpicture} on the CS. Cells correspond to the subsets of Figure \ref{fig1:alternatives-raining} featuring the same overall pattern ($1$ such subset). }\label{fig1:cells-raining}
+			\end{tikzpicture} on the CS. Cells correspond to the subsets of Figure \ref{fig1:alternatives-raining} featuring the same overall pattern ($1$ such subset).}\label{fig1:cells-raining}
 	\end{subfigure}
 	\caption{Updating the CS with the proposition that \textit{It's raining}, and then computing the partition induced by \textit{Is it raining} on the resulting ``shrunk'' CS. The outcome is a single-cell partition, i.e., the question has a trivial pragmatics.}\label{fig1:trivial-q}
 \end{figure}
 
 
 \begin{exe}
-	\ex {\textit{Trivial question.} Let $\mathcal{C}$ be a conversation, $CS(\mathcal{C})$ its associated Context Set, and $Q$ a question. $Q$ is trivial given $CS(\mathcal{C})$ iff the partition induced by $Q$ on $CS(\mathcal{C})$ is made of a singleton cell, i.e. has cardinal $1$.}\label{ex1:trivial-question}
+	\ex {\textsc{\textbf{Trivial Question}}. Let $\mathcal{C}$ be a conversation, $CS(\mathcal{C})$ its associated Context Set, and $Q$ a question. $Q$ is trivial given $CS(\mathcal{C})$ iff the partition induced by $Q$ on $CS(\mathcal{C})$ is made of a singleton cell, i.e. has cardinal $1$.}\label{ex1:trivial-question}
 \end{exe}
 
 We now have a basic notion of what it mean to be a good assertion, given a CS, and a good question, given a CS. A good assertion has to be informative, i.e. properly shrink the CS (as per (\ref{ex1:informativity})/(\ref{ex1:informativity-ccp})). A good question has to induce a non-trivial, multiple-cell partition on the CS (as per (\ref{ex1:trivial-question})). But being a good question or a good assertion, does not \textit{only} depend on the state of the CS! In particular, good assertions also have to be good answers to good questions. This principle, dubbed \textit{Question-Answer Congruence}, is given in (\ref{ex1:q-a-congruence}).
 
 \begin{exe}
-	\ex {\textit{Question-Answer Congruence \citep{Katzir2015}.} A felicitous assertion has to be a good answer to a good question.}\label{ex1:q-a-congruence}
+	\ex {\textsc{\textbf{Question-Answer Congruence}} \citep{Katzir2015}. A felicitous assertion has to be a good answer to a good question.}\label{ex1:q-a-congruence}
 \end{exe}
 
 The next Section presents what can be seen as a partial implementation of this principle, in the form of a general principle dubbed \textsc{Relevance}. It also points out the limitations of this principle.
@@ -403,7 +403,7 @@ The next Section presents what can be seen as a partial implementation of this p
 \section{Assertions as good answers to questions}\label{sec:q-a-interaction}
 
 
-\subsection{Relevance mediate questions and assertions}
+\subsection{Relevance mediates questions and assertions}
 Now that we precisified what assertions and questions are, it becomes possible to (at least partially) define what a good assertion should be, given a question. The principles we introduce in this Section are based on the general concept of \textsc{Relevance}. They will eventually rule out informative but ``unnatural'' sequences of assertions like (\ref{ex1:weird-assertion-sequence}), but also, more generally, a wide range of odd question-answer pairs.
 
 Following much previous literature \citep{VanKuppevelt1995a,VanKuppevelt1995b,Roberts1996,Roberts2012,Ginzburg1996,Buring2003}, we call the question against which assertions are evaluated, \textit{Question under Discussion} (henceforth \textbf{QuD}). QuDs are typically seen as partitions of the CS. In
@@ -444,7 +444,7 @@ If for instance the QuD is about which country Jo grew up in (as in (\ref{ex1:qu
 			\draw [draw=black] (0.1, 0.1) rectangle (1.45, 1.45) node[pos=.5] {\scriptsize Italy};
 			\draw [draw=black] (1.55, 1.55) rectangle (2.9, 2.9) node[pos=.5] {\scriptsize Belgium};
 		\end{tikzpicture}
-		\caption{Utterance: \textit{Jo grew up in France.}}
+		\caption{Utterance: \textit{Jo grew up in France}.}
 	\end{subfigure}\hfill
 	\begin{subfigure}[r]{.24\linewidth}
 		\centering
@@ -455,7 +455,7 @@ If for instance the QuD is about which country Jo grew up in (as in (\ref{ex1:qu
 			\draw [draw=black] (0.1, 0.1) rectangle (1.45, 1.45) node[pos=.5] {\scriptsize Italy};
 			\filldraw [draw=black,fill=gray] (1.55, 1.55) rectangle (2.9, 2.9) node[pos=.5] {\scriptsize Belgium};
 		\end{tikzpicture}
-		\caption{Utterance: \textit{Jo grew up in France or Belgium.}}
+		\caption{Utterance: \textit{Jo grew up in France or Belgium}.}
 	\end{subfigure}\hfill
 	\begin{subfigure}[r]{.24\linewidth}
 		\centering
@@ -472,13 +472,14 @@ If for instance the QuD is about which country Jo grew up in (as in (\ref{ex1:qu
 	\caption{QuD-utterance configurations for a QuD like \textit{In which country did Jo grow up}, and possible follow-up utterance.}\label{fig1:relevance-example}
 \end{figure}
 
-From this, we can conclude that a proposition is ``relevant'' to a question, if it constitutes a maximal or a non-maximal answer to the question. This is similar in spirit to the notion of \textit{Aboutness} developed \cite{Lewis1988}, according to which a proposition $p$ is about a subject matter (in modern terms, a QuD), if and only if the truth value of that proposition supervenes on
-that subject matter (i.e. $p$ should not introduce truth-conditional distinctions between cellmates, i.e. $p$ does not ``cut across'' cells). This is rephrased in (\ref{ex1:lewis-relevance}). A typical Lewis-relevant configuration is exemplified in Figure \ref{fig1:2-cells-relevant}. It is also worth mentioning that (\ref{ex1:lewis-relevance}) deems propositions contradicting the CS irrelevant (see Figure \ref{fig1:no-cell-relevant}), but in principle does not rule out propositions covering the whole CS (see Figure \ref{fig1:all-cells-relevant}), i.e. uninformative propositions as per (\ref{ex1:informativity}).
+From this, we can conclude that a proposition is ``relevant'' to a question, if it constitutes a maximal or a non-maximal answer to the question. This is similar in spirit to the notion of \textit{Aboutness} developed \cite{Lewis1988}, according to which a proposition $p$ is about a subject matter (in modern terms, a QuD), if and only if the truth value of that proposition supervenes on that subject matter (i.e. $p$ should not introduce truth-conditional distinctions between cellmates, i.e. $p$ does not ``cut across'' cells). This is rephrased in (\ref{ex1:lewis-relevance}). 
 
 \begin{exe}
-	\ex {\textsc{Lewis's Relevance (rephrased in the QuD framework).} Let $\mathcal{C}$ be a conversation, $Q$ a QuD defined as a partition of $CS(\mathcal{C})$. Let $p$ be a proposition. $p$ is Lewis-relevant to $Q$, iff $\exists C \subseteq Q. \ p \cap CS(\mathcal{C}) = C$}\label{ex1:lewis-relevance}
+	\ex\label{ex1:lewis-relevance} {\textsc{\textbf{\citeauthor{Lewis1988}'s Relevance}} (rephrased in the QuD framework). Let $\mathcal{C}$ be a conversation, $Q$ a QuD defined as a partition of $CS(\mathcal{C})$. Let $p$ be a proposition. $p$ is \textsc{\citeauthor{Lewis1988}-Relevant} to $Q$, iff $\exists C \subseteq Q. \ p \cap CS(\mathcal{C}) = C$}
 \end{exe}
 
+
+A typical \textsc{\citeauthor{Lewis1988}-Relevant} configuration is exemplified in Figure \ref{fig1:2-cells-relevant}. Note however two edge cases. The first, is that of a proposition whose intersection with the CS is empty (a contextual contradiction). This kind of proposition verifies (\ref{ex1:lewis-relevance}), because the empty set is a subset of any set, including the set of propositions defined by the QuD--whatever it is. Figure \ref{fig1:no-cell-relevant} exemplifies this kind of configuration. The second edge case, is that of a proposition whose intersection with the CS is the entire CS (a contextual tautology, uninformative as per (\ref{ex1:informativity})). This kind of proposition also verifies (\ref{ex1:lewis-relevance}), because the entire CS corresponds to the unions of all cells of any given QuD defined on that CS. Figure \ref{fig1:all-cells-relevant} exemplifies this kind of configuration. 
 
 But, coming back to the QuD \textit{In which country did Jo grow up?}, what about an utterance of the form \textit{Jo grew up in Paris?} Although overinformative (the QuD was only asking about countries, not cities!), this utterance appears relevant, because it allows to infer that Jo grew up in France, and not, say, Belgium. This kind of configuration is sketched in Figure \ref{fig1:relevance-example-2}.
 
@@ -497,14 +498,12 @@ But, coming back to the QuD \textit{In which country did Jo grow up?}, what abou
 
 The view of relevance, developed by \citet{Roberts2012}, captures this intuition, by stating that a relevant proposition has to rule out at least one maximal answer conveyed by the QuD. In other words, a relevant proposition has to be incompatible with at least one cell of the QuD. This is summarized in (\ref{ex1:roberts-relevance}). This definition makes uninformative propositions irrelevant (see Figure \ref{fig1:all-cells-relevant}), but allows certain propositions that do not coincide with the grand union of a subset of the QuD's cells, to be relevant (see Figures \ref{fig1:sub-cell-relevant} and \ref{fig1:sub-1-cell-relevant}). In other words, relevant propositions in the sense of \citeauthor{Roberts2012} may introduce truth-conditional distinctions between cellmates--as long as they rule out a cell. A particular case is that of propositions like \textit{Jo grew up in Paris}, when the QuD is about countries, which strictly entail a specific cell of the QuD, i.e. are strictly contained in one single cell (see Figure \ref{fig1:sub-cell-relevant}).
 
+
 \begin{exe}
-	\ex {\textsc{Roberts's Relevance \citep{Roberts2012}.} Let $\mathcal{C}$ be a conversation, $Q$ a (non-trivial) QuD defined as a partition of $CS(\mathcal{C})$. Let $p$ be a proposition. $p$ is Roberts-relevant to $Q$, if $\exists c \in Q. \ p \cap c = \emptyset$.
-	%\begin{itemize}
-		%\item 
-		%\item Let $Q'$ be a follow-up question. $Q'$ is Roberts-relevant to $Q$, if each alternative of $Q'$ is Roberts-relevant to $Q$.
-	%\end{itemize}
-	}\label{ex1:roberts-relevance}
+	\ex\label{ex1:roberts-relevance} {\textsc{\textbf{\citeauthor{Roberts2012}'s Relevance}} \citep{Roberts2012}. Let $\mathcal{C}$ be a conversation, $Q$ a (non-trivial) QuD defined as a partition of $CS(\mathcal{C})$. Let $p$ be a proposition. $p$ is \textsc{\citeauthor{Roberts2012}-Relevant} to $Q$, if $\exists c \in Q. \ p \cap c = \emptyset$.
+	}
 \end{exe}
+
 
 \begin{figure}[H]
 	\centering
@@ -515,7 +514,7 @@ The view of relevance, developed by \citet{Roberts2012}, captures this intuition
 			\filldraw [draw=black,fill=gray] (0, 0) rectangle (1.5, 1.5);
 			\filldraw [draw=black,fill=gray] (1.5, 1.5) rectangle (3, 3);
 		\end{tikzpicture}
-		\caption{Informative, Lewis-relevant, Roberts-relevant}\label{fig1:2-cells-relevant}
+		\caption{Informative\\\textsc{\citeauthor{Lewis1988}-Relevant}\\ \textsc{\citeauthor{Roberts2012}-Relevant}.}\label{fig1:2-cells-relevant}
 	\end{subfigure}\hfill
 	\begin{subfigure}[b]{.3\linewidth}
 		\centering
@@ -524,7 +523,7 @@ The view of relevance, developed by \citet{Roberts2012}, captures this intuition
 			\draw [draw=black] (0, 0) rectangle (1.5, 1.5);
 			\draw [draw=black] (1.5, 1.5) rectangle (3, 3);
 		\end{tikzpicture}
-		\caption{Informative, not Lewis-relevant, Roberts-relevant}\label{fig1:no-cell-relevant}
+		\caption{Informative\\\textsc{\citeauthor{Lewis1988}-Relevant}\\ \textsc{\citeauthor{Roberts2012}-Relevant}.}\label{fig1:no-cell-relevant}
 	\end{subfigure}\hfill
 	\begin{subfigure}[b]{.33\linewidth}
 		\centering
@@ -533,7 +532,7 @@ The view of relevance, developed by \citet{Roberts2012}, captures this intuition
 			\draw [draw=black] (0, 0) rectangle (1.5, 1.5);
 			\draw [draw=black] (1.5, 1.5) rectangle (3, 3);
 		\end{tikzpicture}
-		\caption{Uninformative, Lewis-relevant, not Roberts-relevant.}\label{fig1:all-cells-relevant}
+		\caption{Uninformative\\\textsc{\citeauthor{Lewis1988}-Relevant}\\not \textsc{\citeauthor{Roberts2012}-Relevant}.}\label{fig1:all-cells-relevant}
 	\end{subfigure}
 \end{figure}
 \begin{figure}[H]\ContinuedFloat
@@ -545,7 +544,7 @@ The view of relevance, developed by \citet{Roberts2012}, captures this intuition
 			\draw [draw=black] (1.5, 1.5) rectangle (3, 3);
 			\filldraw [draw=black,fill=gray] (0.5, 2) rectangle (1,2.5);
 		\end{tikzpicture}
-		\caption{Informative, not Lewis-relevant, Roberts-relevant}\label{fig1:sub-cell-relevant}
+		\caption{Informative\\not \textsc{\citeauthor{Lewis1988}-Relevant}\\ \textsc{\citeauthor{Roberts2012}-Relevant}.}\label{fig1:sub-cell-relevant}
 	\end{subfigure}\hfill
 	\begin{subfigure}[b]{.3\linewidth}
 		\centering
@@ -555,7 +554,7 @@ The view of relevance, developed by \citet{Roberts2012}, captures this intuition
 			\draw [draw=black] (1.5, 1.5) rectangle (3, 3);
 			\filldraw [draw=black,fill=gray] (0.5, 2) rectangle (1,2.5);
 		\end{tikzpicture}
-		\caption{Informative, not Lewis-relevant, Roberts-relevant}\label{fig1:sub-1-cell-relevant}
+		\caption{Informative\\not \textsc{\citeauthor{Lewis1988}-Relevant}\\ \textsc{\citeauthor{Roberts2012}-Relevant}.}\label{fig1:sub-1-cell-relevant}
 	\end{subfigure}\hfill
 	\begin{subfigure}[b]{.33\linewidth}
 		\centering
@@ -565,11 +564,11 @@ The view of relevance, developed by \citet{Roberts2012}, captures this intuition
 			\draw [draw=black] (0, 0) rectangle (1.5, 1.5);
 			\draw [draw=black] (1.5, 1.5) rectangle (3, 3);
 		\end{tikzpicture}
-		\caption{Informative, not Lewis-relevant, not Roberts-relevant}\label{fig1:not-relevant}
+		\caption{Informative\\not \textsc{\citeauthor{Lewis1988}-Relevant}\\not \textsc{\citeauthor{Roberts2012}-Relevant}.}\label{fig1:not-relevant}
 	\end{subfigure}
 \end{figure}
 
-In sum, the concept of \textsc{Relevance} (whether it follows Lewis's or Roberts's implementation) allows to rule-out a wide range of QuD-utterance pairs, by stating that propositions should properly relate to an existing question. We will not discuss which approach between Lewis's and Roberts's is best here, and will propose an incremental variant of this core concept in Chapter \ref{chap:relevance}, to deal with certain complex, out-of-the blue sentences. The next two section outline a few limitations of relevance.
+In sum, the concept of \textsc{Relevance} (whether it follows \citeauthor{Lewis1988}'s or \citeauthor{Roberts2012}'s implementation) allows to rule-out a wide range of QuD-utterance pairs, by stating that propositions should properly relate to an existing question. We will not discuss which approach between \citeauthor{Lewis1988}'s and \citeauthor{Roberts2012}'s is best here, and will propose an incremental variant of this core concept in Chapter \ref{chap:relevance}, to deal with certain complex, out-of-the blue sentences. The next two section outline a few limitations of relevance.
 
 \subsection{A few conceptual shortcomings of \textsc{Relevance}}
 
