@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  22 JUN 2025 02:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  22 JUN 2025 21:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1239,12 +1239,17 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/tex-gyre/q-ec.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}
-] [2] [3])
+] [2]
+Overfull \hbox (10.35278pt too wide) in paragraph at lines 110--110
+ [][] [][]\T1/qpl/m/n/12 ``Long-Distance'' Hur-ford Dis-junc-tions and their di
+s-junct-wise negated 
+ []
+
+[3])
 \tf@toc=\write6
 \openout6 = `dissertation.toc'.
 
-
-[4]
+ [4]
 \openout2 = `chap1.aux'.
 
  (./chap1.tex
@@ -1802,6 +1807,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 299--300
  []
 
 
+LaTeX Warning: Reference `sec:(ldh)c' on page 160 undefined on input line 302.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
@@ -1898,187 +1906,163 @@ Underfull \hbox (badness 10000) in paragraph at lines 1040--1041
 
  []
 
-[181] [182] [183] [184]
-Underfull \hbox (badness 10000) in paragraph at lines 1098--1099
+[181] [182] [183]
+Underfull \hbox (badness 7030) in paragraph at lines 1076--1076
+[]\T1/qpl/b/n/14.4 ``Compatible'' Hur-ford Dis-junc-tions and their dis-junct-w
+ise
+ []
+
+[184] [185]
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1150
 
  []
 
-[185]
-Underfull \hbox (badness 10000) in paragraph at lines 1130--1131
+[186]
+Underfull \hbox (badness 10000) in paragraph at lines 1192--1193
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1133--1134
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1135--1136
+[187] [188] [189]
+Underfull \hbox (badness 10000) in paragraph at lines 1294--1295
 
  []
 
-[186] [187]
-Underfull \hbox (badness 10000) in paragraph at lines 1237--1238
-
- []
-
-[188]
-Underfull \hbox (badness 10000) in paragraph at lines 1247--1248
+[190]
+Underfull \hbox (badness 10000) in paragraph at lines 1304--1305
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1260--1261
+Underfull \hbox (badness 10000) in paragraph at lines 1317--1318
 
  []
 
-[189]
-Underfull \hbox (badness 10000) in paragraph at lines 1274--1275
-
- []
-
-[190] [191]
-Underfull \hbox (badness 10000) in paragraph at lines 1316--1317
+[191]
+Underfull \hbox (badness 10000) in paragraph at lines 1331--1332
 
  []
 
 [192]
-Underfull \hbox (badness 10000) in paragraph at lines 1339--1341
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1342--1343
+Underfull \hbox (badness 1845) in paragraph at lines 1348--1349
+[]\T1/qpl/m/n/12 Beyond sim-ple HCs, we ex-plored more in-volved pre-dic-tions 
+of our \T1/qpl/m/sc/12 Rel-e-vance
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1348--1349
 
  []
 
-[193] [194] [195] [196]
-Overfull \hbox (30.02066pt too wide) in paragraph at lines 1440--1441
+[193]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 1386.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 1386.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 1386.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\NAT@ctype' on input line 1386.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ne' on input line 1386.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 1386.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 1386.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1398--1399
+
+ []
+
+[194] [195] [196]
+Underfull \hbox (badness 10000) in paragraph at lines 1448--1449
+
+ []
+
+[197]
+Overfull \hbox (7.36833pt too wide) in paragraph at lines 1507--1508
  [][] 
  []
 
 
-Overfull \hbox (46.6378pt too wide) in paragraph at lines 1451--1452
- [][] 
- []
-
-[197] [198]
-Overfull \hbox (29.43445pt too wide) in paragraph at lines 1521--1522
+Overfull \hbox (10.51833pt too wide) in paragraph at lines 1515--1516
  [][] 
  []
 
 
-Overfull \hbox (71.44987pt too wide) in paragraph at lines 1527--1528
+Overfull \hbox (8.41833pt too wide) in paragraph at lines 1523--1524
  [][] 
  []
 
-[199]
-Underfull \hbox (badness 10000) in paragraph at lines 1533--1534
+
+Overfull \hbox (15.7683pt too wide) in paragraph at lines 1531--1532
+ [][] 
+ []
+
+[198]
+Underfull \hbox (badness 10000) in paragraph at lines 1547--1548
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1540--1542
-
- []
-
-[200]
-Underfull \hbox (badness 10000) in paragraph at lines 1543--1544
+[199] [200]
+Underfull \hbox (badness 10000) in paragraph at lines 1576--1578
 
  []
-
-[201]
-Underfull \hbox (badness 10000) in paragraph at lines 1556--1557
-
- []
-
-
-LaTeX Warning: Reference `ex6:roberts-relevance' on page 202 undefined on input
- line 1563.
-
-
-LaTeX Warning: Reference `ex6:roberts-relevance' on page 202 undefined on input
- line 1564.
-
-
-LaTeX Warning: Reference `ex6:roberts-relevance' on page 202 undefined on input
- line 1565.
-
-
-LaTeX Warning: Reference `ex6:roberts-relevance' on page 202 undefined on input
- line 1566.
-
-
-LaTeX Warning: Reference `ex6:overinformative-2' on page 202 undefined on input
- line 1574.
-
-[202]
-
-LaTeX Warning: Reference `ex6:roberts-relevance' on page 203 undefined on input
- line 1577.
-
-
-LaTeX Warning: Reference `ex6:relevance-p' on page 203 undefined on input line 
-1577.
-
-
-LaTeX Warning: Reference `ex6:roberts-relevance' on page 203 undefined on input
- line 1577.
-
-
-LaTeX Warning: Reference `ex6:relevance-q' on page 203 undefined on input line 
-1577.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 1578.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 1578.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 1578.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 1578.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ne' on input line 1578.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 1578.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 1578.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1579--1580
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1583--1583
-[]\T1/qpl/b/n/17.28 Appendix: DNCHDs, DNLD-HDs and Super-
+[201] [202] [203]
+Overfull \hbox (30.02066pt too wide) in paragraph at lines 1688--1689
+ [][] 
  []
 
-[203] [204])
-Underfull \hbox (badness 10000) in paragraph at lines 1636--136
-[][]
+
+Overfull \hbox (46.6378pt too wide) in paragraph at lines 1699--1700
+ [][] 
  []
 
-[205]
+[204] [205]
+Overfull \hbox (29.43445pt too wide) in paragraph at lines 1769--1770
+ [][] 
+ []
+
+
+Overfull \hbox (71.44987pt too wide) in paragraph at lines 1775--1776
+ [][] 
+ []
+
+[206]
+Underfull \hbox (badness 10000) in paragraph at lines 1781--1782
+
+ []
+
+) [207]
 \openout2 = `chap7.aux'.
 
  (./chap7.tex
 Chapter 7.
-[206
+[208
 
 
 
@@ -2088,22 +2072,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
-[207]
+[209]
 Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
-[208]
+[210]
 Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
-[209]
+[211]
 Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
-[210] [211] [212]
+[212] [213] [214]
 Underfull \hbox (badness 10000) in paragraph at lines 214--224
 []\T1/qpl/m/n/12 PREDICTIONS AS-SUM-ING NO EM-BED-DED EX-HAUS-TI-FI-CA-TION: (1
 b) <
@@ -2115,11 +2099,11 @@ Underfull \hbox (badness 3601) in paragraph at lines 214--224
 -FI-CA-TION
  []
 
-[213] [214] [215] [216]
+[215] [216] [217] [218]
 LaTeX Font Info:    Trying to load font information for U+mvs on input line 336
 .
 
-(/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd) [217] [218]
+(/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd) [219] [220]
 Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
@@ -2129,50 +2113,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 379--380
 
  []
 
-[219]
+[221]
 
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 220 undefined on input
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 222 undefined on input
  line 386.
 
 
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 220 undefined on input
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 222 undefined on input
  line 388.
 
 
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 220 undefined on input
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 222 undefined on input
  line 388.
 
 
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 220 undefined on input
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 222 undefined on input
  line 388.
 
 
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 220 undefined on input
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 222 undefined on input
  line 388.
 
 
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 220 undefined on input
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 222 undefined on input
  line 388.
 
 
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 220 undefined on input
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 222 undefined on input
  line 388.
 
-[220]
+[222]
 
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 221 undefined on input
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 223 undefined on input
  line 425.
 
 
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 221 undefined on input
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 223 undefined on input
  line 429.
 
 
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 221 undefined on input
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 223 undefined on input
  line 429.
 
 
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 221 undefined on input
+LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 223 undefined on input
  line 429.
 
 
@@ -2180,36 +2164,36 @@ Overfull \hbox (9.08592pt too wide) in paragraph at lines 467--468
  [][] 
  []
 
-[221] [222]
+[223] [224]
 
-LaTeX Warning: Reference `ex7:shd-w' on page 223 undefined on input line 646.
+LaTeX Warning: Reference `ex7:shd-w' on page 225 undefined on input line 646.
 
 
-LaTeX Warning: Reference `ex7:depending-on' on page 223 undefined on input line
+LaTeX Warning: Reference `ex7:depending-on' on page 225 undefined on input line
  646.
 
-[223] [224] [225] [226] [227]
+[225] [226] [227] [228] [229]
 
-LaTeX Warning: Reference `ex7:ldhd-neg' on page 228 undefined on input line 877
+LaTeX Warning: Reference `ex7:ldhd-neg' on page 230 undefined on input line 877
 .
-
-[228]
-
-Package natbib Warning: Citation `VanKuppevelt1995' on page 229 undefined on in
-put line 886.
-
-
-LaTeX Warning: Reference `chap:exh-incr' on page 229 undefined on input line 89
-5.
-
-[229]
-
-LaTeX Warning: Reference `ex7:q-relevance' on page 230 undefined on input line 
-934.
 
 [230]
 
-LaTeX Warning: Reference `ex7:q-relevance' on page 231 undefined on input line 
+Package natbib Warning: Citation `VanKuppevelt1995' on page 231 undefined on in
+put line 886.
+
+
+LaTeX Warning: Reference `chap:exh-incr' on page 231 undefined on input line 89
+5.
+
+[231]
+
+LaTeX Warning: Reference `ex7:q-relevance' on page 232 undefined on input line 
+934.
+
+[232]
+
+LaTeX Warning: Reference `ex7:q-relevance' on page 233 undefined on input line 
 938.
 
 
@@ -2217,26 +2201,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 956--957
 
  []
 
-[231]
+[233]
 Underfull \hbox (badness 10000) in paragraph at lines 969--970
 
  []
 
-[232]
+[234]
 Underfull \hbox (badness 1348) in paragraph at lines 1004--1005
 []\T1/qpl/m/n/12 If Jo didn't have all starters or the main dish then she had s
 ome starters.
  []
 
-[233]) [234] (./dissertation.bbl [235
+[235]) [236] (./dissertation.bbl [237
 
 
 
-] [236] [237] [238] [239])
+] [238] [239] [240] [241] [242])
 
 Package natbib Warning: There were undefined citations.
 
-[240] (./dissertation.aux (./chap1.aux) (./chap2.aux) (./chap3.aux)
+[243] (./dissertation.aux (./chap1.aux) (./chap2.aux) (./chap3.aux)
 (./chap4.aux) (./chap5.aux) (./chap6.aux) (./chap7.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -2249,14 +2233,20 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: 91FCA3EEED1F8A3FED44198A7ED5FD23;28399.
+
+Package rerunfilecheck Warning: File `dissertation.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `dissertation.out':
+(rerunfilecheck)             Before: B166EBD1255181A7A88E8927AF3C011C;29503
+(rerunfilecheck)             After:  B522B7A1033C4949F137A437260F3835;29553.
  ) 
 Here is how much of TeX's memory you used:
- 45771 strings out of 474222
- 967567 string characters out of 5748733
- 1978975 words of memory out of 5000000
- 66122 multiletter control sequences out of 15000+600000
+ 45942 strings out of 474222
+ 972082 string characters out of 5748733
+ 1982975 words of memory out of 5000000
+ 66278 multiletter control sequences out of 15000+600000
  692345 words of font info for 184 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  158i,32n,143p,3359b,2528s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2294,10 +2284,10 @@ texmf/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texmf/fonts/type1/public
 </usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/wasy-type1/wasy10.pfb>
-Output written on dissertation.pdf (240 pages, 1400845 bytes).
+Output written on dissertation.pdf (243 pages, 1414940 bytes).
 PDF statistics:
- 7420 PDF objects out of 7423 (max. 8388607)
- 6189 compressed objects within 62 object streams
- 1232 named destinations out of 1440 (max. 500000)
- 997 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 7719 PDF objects out of 8907 (max. 8388607)
+ 6308 compressed objects within 64 object streams
+ 1247 named destinations out of 1440 (max. 500000)
+ 1021 words of extra memory for PDF output out of 10000 (max. 10000000)
 

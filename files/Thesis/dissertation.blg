@@ -10,29 +10,34 @@ A level-1 auxiliary file: chap6.aux
 A level-1 auxiliary file: chap7.aux
 The style file: chicago.bst
 Database file #1: biblio.bib
-I was expecting a `,' or a `}'---line 104 of file biblio.bib
+I was expecting a `,' or a `}'---line 217 of file biblio.bib
  :  
  :  editor={Benz, Anton Benz and Jäger, Gerhard},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 170 of file biblio.bib
+I was expecting a `,' or a `}'---line 283 of file biblio.bib
  :  
  :  publisher={MIT},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 371 of file biblio.bib
+Repeated entry---line 484 of file biblio.bib
  : @incollection{Groenendijk1999
  :                              ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 708 of file biblio.bib
+Repeated entry---line 821 of file biblio.bib
  : @inproceedings{Groenendijk2009
  :                               ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 957 of file biblio.bib
+Repeated entry---line 917 of file biblio.bib
+ : @misc{vonFintel2001
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1070 of file biblio.bib
  : @article{Schlenker2009
  :                       ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "VanKuppevelt1995"
+Warning--can't use both volume and number fields in Bassi2018
 Warning--no number and no volume in Chemla2016
 Warning--empty booktitle in Hulstijn1997
 Warning--no number and no volume in Kalomoiros2024
@@ -46,45 +51,45 @@ Warning--empty publisher in Heim2023
 Warning--no journal in Westera2018
 Warning--no number and no volume in Westera2018
 Warning--page numbers missing in Westera2018
-You've used 76 entries,
+You've used 86 entries,
             2861 wiz_defined-function locations,
-            1110 strings with 15276 characters,
-and the built_in function-call counts, 45819 in all, are:
-= -- 3938
-> -- 2604
-< -- 12
-+ -- 704
-- -- 960
-* -- 3526
-:= -- 8454
-add.period$ -- 237
-call.type$ -- 76
-change.case$ -- 471
-chr.to.int$ -- 71
-cite$ -- 89
-duplicate$ -- 1524
-empty$ -- 3192
-format.name$ -- 1040
-if$ -- 8490
+            1165 strings with 16180 characters,
+and the built_in function-call counts, 51823 in all, are:
+= -- 4479
+> -- 2890
+< -- 16
++ -- 778
+- -- 1070
+* -- 3969
+:= -- 9530
+add.period$ -- 267
+call.type$ -- 86
+change.case$ -- 531
+chr.to.int$ -- 81
+cite$ -- 100
+duplicate$ -- 1741
+empty$ -- 3614
+format.name$ -- 1154
+if$ -- 9620
 int.to.chr$ -- 6
 int.to.str$ -- 0
-missing$ -- 73
-newline$ -- 386
-num.names$ -- 766
-pop$ -- 411
+missing$ -- 81
+newline$ -- 436
+num.names$ -- 866
+pop$ -- 446
 preamble$ -- 2
-purify$ -- 929
+purify$ -- 1050
 quote$ -- 0
-skip$ -- 1513
+skip$ -- 1745
 stack$ -- 0
-substring$ -- 2545
-swap$ -- 513
-text.length$ -- 12
+substring$ -- 2917
+swap$ -- 609
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1430
-warning$ -- 13
-while$ -- 805
+type$ -- 1630
+warning$ -- 14
+while$ -- 917
 width$ -- 0
-write$ -- 1027
-(There were 5 error messages)
+write$ -- 1162
+(There were 6 error messages)

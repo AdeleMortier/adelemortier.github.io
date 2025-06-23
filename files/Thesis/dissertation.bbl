@@ -12,12 +12,12 @@ Bar-Lev, M.~E. and D.~Fox (2017, October).
 \newblock Universal free choice and innocent inclusion.
 \newblock {\em Semantics and Linguistic Theory\/}~{\em 27}, 95.
 
-\bibitem[\protect\citeauthoryear{Benbaji-Elhadad and Doron}{Benbaji-Elhadad and
-  Doron}{2024}]{Benbaji2024}
-Benbaji-Elhadad, I. and O.~Doron (2024).
-\newblock Relevance as a dynamic constraint.
-\newblock In {\em Proceedings of the 42nd West Coast Conference on Formal
-  Linguistics (WCCFL42}.
+\bibitem[\protect\citeauthoryear{Bassi and Bar-Lev}{Bassi and
+  Bar-Lev}{2018}]{Bassi2018}
+Bassi, I. and M.~E. Bar-Lev (2018).
+\newblock A unified existential semantics for bare conditionals.
+\newblock In {\em Proceedings of Sinn und Bedeutung}, Volume~21, pp.\
+  125–142.
 
 \bibitem[\protect\citeauthoryear{Benor and Levy}{Benor and
   Levy}{2006}]{Benor2006}
@@ -76,6 +76,12 @@ Dayal, V. (1996).
 \newblock {\em Locality in WH Quantification}.
 \newblock Springer Netherlands.
 
+\bibitem[\protect\citeauthoryear{{de Cornulier}}{{de
+  Cornulier}}{1983}]{deCornulier1983}
+{de Cornulier}, B. (1983).
+\newblock `if' and the presumption of exhaustivity.
+\newblock {\em Journal of Pragmatics\/}~{\em 7\/}(3), 247--249.
+
 \bibitem[\protect\citeauthoryear{Enguehard}{Enguehard}{2021}]{Enguehard2021}
 Enguehard, {\'E}. (2021).
 \newblock Explaining presupposition projection in (coordinations of) polar
@@ -121,6 +127,12 @@ Fox, D. and B.~Spector (2018, January).
 Gazdar, G. (1979).
 \newblock Pragmatics, {I}mplicature, {P}resuposition and {L}ogical {F}orm.
 \newblock {\em Critica\/}~{\em 12\/}(35), 113--122.
+
+\bibitem[\protect\citeauthoryear{Geis and Zwicky}{Geis and
+  Zwicky}{1971}]{Geis1971}
+Geis, M. and A.~Zwicky (1971).
+\newblock On invited inferences.
+\newblock {\em Linguistic Inquiry\/}~{\em 2\/}(1), 561--565.
 
 \bibitem[\protect\citeauthoryear{Ginzburg}{Ginzburg}{1996}]{Ginzburg1996}
 Ginzburg, J. (1996).
@@ -186,6 +198,22 @@ Heim, I. (1983, December).
 \newblock {\em File Change Semantics and the Familiarity Theory of
   Definiteness}, pp.\  164–189.
 \newblock DE GRUYTER.
+
+\bibitem[\protect\citeauthoryear{Herburger}{Herburger}{2015}]{Herburger2015}
+Herburger, E. (2015, May).
+\newblock Only if: If only we understood it.
+\newblock In {\em Proceedings of Sinn und Bedeutung}, Volume~19, pp.\
+  304–321.
+
+\bibitem[\protect\citeauthoryear{Herburger}{Herburger}{2016}]{Herburger2016}
+Herburger, E. (2016, May).
+\newblock Conditional perfection: the truth and the whole truth.
+\newblock {\em Semantics and Linguistic Theory\/}~{\em 25}, 615.
+
+\bibitem[\protect\citeauthoryear{Horn}{Horn}{1972}]{Horn1972}
+Horn, L. (1972).
+\newblock {\em On the semantic properties of logical operators in English}.
+\newblock Ph.\ D. thesis, UCLA.
 
 \bibitem[\protect\citeauthoryear{Hulstijn}{Hulstijn}{1997}]{Hulstijn1997}
 Hulstijn, J. (1997).
@@ -286,6 +314,11 @@ Lewis, D. (1988).
 \newblock Relevant {I}mplication.
 \newblock {\em Theoria\/}~{\em 54\/}(3), 161--174.
 
+\bibitem[\protect\citeauthoryear{Lilje}{Lilje}{1972}]{Lilje1972}
+Lilje, G.~W. (1972).
+\newblock Uninvited inferences.
+\newblock {\em Linguistic Inquiry\/}~{\em 3\/}(4), 540--542.
+
 \bibitem[\protect\citeauthoryear{Mandelkern and Romoli}{Mandelkern and
   Romoli}{2018}]{Mandelkern2018}
 Mandelkern, M. and J.~Romoli (2018, March).
@@ -303,6 +336,11 @@ Mascarenhas, S. (2008).
 \newblock Inquisitive semantics and logic.
 \newblock Master's thesis, University of Amsterdam.
 \newblock Manuscript, University of Amsterdam.
+
+\bibitem[\protect\citeauthoryear{Matsumoto}{Matsumoto}{1995}]{Matsumoto1995}
+Matsumoto, Y. (1995).
+\newblock The conversational condition on horn scales.
+\newblock {\em Linguistics and Philosophy\/}~{\em 18\/}(1), 21--60.
 
 \bibitem[\protect\citeauthoryear{Mayr and Romoli}{Mayr and
   Romoli}{2016}]{Mayr2016}
@@ -411,6 +449,13 @@ Tomioka, S. (2021).
   {H}ow {T}hey {A}ll {C}ome {T}ogether.
 \newblock {\em Frontiers in Communication\/}~{\em 5}.
 
+\bibitem[\protect\citeauthoryear{{van der Auwera}}{{van der
+  Auwera}}{1997}]{vanDerAuwera1997}
+{van der Auwera}, J. (1997).
+\newblock Pragmatics in the last quarter century: The case of conditional
+  perfection.
+\newblock {\em Journal of Pragmatics\/}~{\em 27\/}(3), 261--274.
+
 \bibitem[\protect\citeauthoryear{van Kuppevelt}{van
   Kuppevelt}{1995a}]{VanKuppevelt1995a}
 van Kuppevelt, J. (1995a).
@@ -422,6 +467,16 @@ van Kuppevelt, J. (1995a).
 van Kuppevelt, J. (1995b).
 \newblock Main structure and side structure in discourse.
 \newblock {\em Linguistics\/}~{\em 33\/}(4), 809–833.
+
+\bibitem[\protect\citeauthoryear{von Fintel}{von Fintel}{1997}]{vonFintel1997}
+von Fintel, K. (1997, 02).
+\newblock Bare plurals, bare conditionals, and only.
+\newblock {\em Journal of Semantics\/}~{\em 14\/}(1), 1--56.
+
+\bibitem[\protect\citeauthoryear{von Fintel}{von Fintel}{2001}]{vonFintel2001}
+von Fintel, K. (2001).
+\newblock Conditional strengthening: A case study in implicature.
+\newblock Unpublished Ms., MIT.
 
 \bibitem[\protect\citeauthoryear{von Fintel and Heim}{von Fintel and
   Heim}{2023}]{Heim2023}

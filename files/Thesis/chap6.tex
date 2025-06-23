@@ -114,7 +114,7 @@ The contrast between the two HCs will therefore arise from an interaction betwee
 
 
 
-This Chapter is structured as follows. Section \ref{sec6:prev-approaches} provides an overview of \citeauthor{Kalomoiros2024}'s approach to HCs, and outlines some of its limitations. Section \ref{sec6:machinery} uses the machinery introduced in Chapter \ref{chap:accommodating-quds} to derive questions evoked by HCs. Section \ref{sec6:relevance} motivates and defines \textsc{Incremental Q-Relevance} on LF-QuD pairs and shows how this constraint captures the HCs in (\ref{ex6:hd}) and (\ref{ex6:hc}). Section \ref{sec6:extensions} explores more complex variants of HCs and shows how \textsc{Incremental Q-Relevance} captures them, sometimes in conjunction with \textsc{Q-Non-Redundancy}. Section \ref{sec6:ccl} concludes and outlines remaining issues and questions.
+This Chapter is structured as follows. Section \ref{sec6:prev-approaches} provides an overview of \citeauthor{Kalomoiros2024}'s approach to HCs, and outlines some of its limitations. Section \ref{sec6:machinery} uses the machinery introduced in Chapter \ref{chap:accommodating-quds} to derive questions evoked by HCs. Section \ref{sec6:relevance} motivates and defines \textsc{Incremental Q-Relevance} on LF-QuD pairs and shows how this constraint captures the HCs in (\ref{ex6:hd}) and (\ref{ex6:hc}). Section \ref{sec6:chc} explores variants of HCs and shows how \textsc{Incremental Q-Relevance} captures them. Section \ref{sec6:ccl} concludes and outlines remaining issues and questions.
 
 
 \section{Existing account}\label{sec6:prev-approaches}
@@ -792,7 +792,7 @@ In fact, reversing the directionality of the principle in (\ref{ex6:incremental-
 \end{exe}
 
 
-This principle, though less intuitive in terms of its directionality, is in effect close to a result derived by \citet{Lewis1988}, who showed that, under a (relatively weak) definition of ``inquisitive'' \textsc{Relevance} between two \textit{questions}, and assuming conditionals are strict, the antecedent of a conditional \textit{must} be ``inquisitively'' \textsc{Relevant} to the consequent. However, the Appendix shows that this result cannot account for the contrast observed in HCs, because the inquisitive take on \textsc{Relevance} assigns symmetric roles to the two questions it evaluates, i.e. cannot distinguish between $p \rightarrow q$ and $q \rightarrow p$.\\
+This principle, though less intuitive in terms of its directionality, is in effect close to a result derived by \citet{Lewis1988}, who showed that, under a (relatively weak) definition of ``inquisitive'' \textsc{Relevance} between two \textit{questions}, and assuming conditionals are strict, the antecedent of a conditional \textit{must} be ``inquisitively'' \textsc{Relevant} to the consequent. However, Appendix \ref{sec6:lewis} shows that this result cannot account for the contrast observed in HCs, because the inquisitive take on \textsc{Relevance} assigns symmetric roles to the two questions it evaluates, i.e. cannot distinguish between $p \rightarrow q$ and $q \rightarrow p$.\\
 
 In any event, the challenge is now to derive a less stipulative version of (\ref{ex6:incremental-relevance-reversed}). In other words, the goal is to state a constraint making the same kind of prediction, but which would avoid stipulating the respective roles of $X$ (antecedent) and $Y$ (consequent) which, as we have seen, can so far be reversed. In the next Section, we propose to build a variant of (\ref{ex6:incremental-relevance-reversed}) as a constraint on tree-node intersection, which is already an asymmetric operation, whose directionality was motivated by the data presented in Chapter \ref{chap:redundancy}. Tying \textsc{Relevance} to tree-node intersection (and more generally perhaps, to \textit{restriction} operations), will give us the directionality stipulated in (\ref{ex6:incremental-relevance-reversed}) ``for free''.
 
@@ -1064,18 +1064,18 @@ By contrast, when the verifying nodes of the antecedent and consequent Qtree are
 	\end{xlist}\label{ex6:refinement-relevance-opp-proof}
 \end{exe}
 
-In summary, if the verifying, ``restrictor'' nodes provided by the antecedent Qtree, are too fine-grained for the consequent Qtree, the tree-node intersection operations performed when building a conditional Qtree, will be \textsc{Irrelevant}, and the entire derivation will crash. This leads us to mention a couple more important observations about how \textsc{Incremental Q-Relevance} operates. First, even if \textsc{Incremental Q-Relevance} restricts tree-node intersection, where the tree is contributed by the consequent and the restrictor node (a proposition) is contributed by the antecedent, it is indirectly sensitive to the structure of the antecedent Qtree, essentially because the verifying ``restrictor'' nodes passed to tree-node intersection, are determined by how fine-grained the antecedent's Qtree is. If the antecedent is fined-grained like \textit{(not) Noto}, the verifying nodes of its Qtrees will be fine-grained as well, meaning, the restrictor nodes passed to tree-node intersection, will be fine-grained. This in turn will make tree-node intersection less likely to achieve \textsc{Relevance}. In that sense, \textsc{Incremental Q-Relevance} is conceptually different from \citeauthor{Lewis1988}'s and \citet{Roberts2012}'s approaches to ``assertive'' \textsc{Relevance},\footnote{Both \citeauthor{Lewis1988} and \citet{Roberts2012} however proposed \textsc{Relevance} constraints between question-types. For Roberts for instance, a follow-up question is \textsc{Relevant} to a QuD, if all the alternatives in the denotation of that follow-up question, are \textsc{\citeauthor{Roberts2012}-Relevant} (as defined in (\ref{ex1:roberts-relevance})). This brings us a bit closer to what was done here. \citeauthor{Lewis1988}'s approach is further described and analyzed in the Appendix.} which treated a \textsc{Relevant} or \textsc{Irrelevant} proposition simply as a set of worlds, and not as a set of nodes (i.e. a set of sets of worlds).
+In summary, if the verifying, ``restrictor'' nodes provided by the antecedent Qtree, are too fine-grained for the consequent Qtree, the tree-node intersection operations performed when building a conditional Qtree, will be \textsc{Irrelevant}, and the entire derivation will crash. This leads us to mention a couple more important observations about how \textsc{Incremental Q-Relevance} operates. First, even if \textsc{Incremental Q-Relevance} restricts tree-node intersection, where the tree is contributed by the consequent and the restrictor node (a proposition) is contributed by the antecedent, it is indirectly sensitive to the structure of the antecedent Qtree, essentially because the verifying ``restrictor'' nodes passed to tree-node intersection, are determined by how fine-grained the antecedent's Qtree is. If the antecedent is fined-grained like \textit{(not) Noto}, the verifying nodes of its Qtrees will be fine-grained as well, meaning, the restrictor nodes passed to tree-node intersection, will be fine-grained. This in turn will make tree-node intersection less likely to achieve \textsc{Relevance}. In that sense, \textsc{Incremental Q-Relevance} is conceptually different from \citeauthor{Lewis1988}'s and \citet{Roberts2012}'s approaches to ``assertive'' \textsc{Relevance},\footnote{Both \citeauthor{Lewis1988} and \citet{Roberts2012} however proposed \textsc{Relevance} constraints between question-types. For Roberts for instance, a follow-up question is \textsc{Relevant} to a QuD, if all the alternatives in the denotation of that follow-up question, are \textsc{\citeauthor{Roberts2012}-Relevant} (as defined in (\ref{ex1:roberts-relevance})). This brings us a bit closer to what was done here. \citeauthor{Lewis1988}'s approach is further described and analyzed in Appendix \ref{sec6:lewis}.} which treated a \textsc{Relevant} or \textsc{Irrelevant} proposition simply as a set of worlds, and not as a set of nodes (i.e. a set of sets of worlds).
 
 A second, yet observation, is that \textsc{Incremental Q-Relevance} being a constraint on tree-node intersection, it will have to be checked for every single tree-node intersection operation performed as part of the formation of a conditional Qtree. If one of these operations fails to be \textsc{Relevant}, then the derivation of the entire conditional Qtree, will be expected to fail. There will be as many such operations, as there are verifying, ``restrictor'' nodes in the antecedent Qtree. In particular, increasing the complexity of the antecedent, may increase the number of verifying nodes. In that respect, an interesting subcase is that of a disjunctive antecedent mixing different levels of granularity. In such cases, the finer-grained component will determine what the finest-grained restrictor nodes are, and as such, will constitute the bottleneck for \textsc{Incremental Q-Relevance}. We will see a few examples instantiating that observation in the next Section.
 
 
-\section{Extensions}\label{sec6:extensions}
+\section{Extension to ``Compatible'' Hurford Conditionals}\label{sec6:chc}
 
-In this Section, we explore the predictions of \textsc{Incremental Q-Relevance} on both familiar and new data, that the other prominent account of HCs, \textsc{Super-Redundancy}, is shown to struggle with.
+In this Section, we explore the predictions of \textsc{Incremental Q-Relevance} on data that might look familiar from Chapter \ref{chap:hurford-disj}, that the other prominent account of HCs, \textsc{Super-Redundancy}, is shown to struggle with.
 
-\subsection{``Compatible'' Hurford Conditionals}\label{sec6:chc}
+\subsection{``Compatible'' Hurford Disjunctions and their disjunctwise negated counterparts}
 
-In Chapter \ref{chap:hurford-disj}, we introduced ``Compatible'' Hurford Disjunctions (henceforth \textbf{CHD}s), repeated below. Such disjunctions feature merely compatible disjuncts, and still feel odd. Chapter \ref{chap:hurford-disj} predicted the sentences in (\ref{ex5:chd}) to be odd, due to them featuring disjuncts conveying incomparable degrees of granularity, which in turn made it impossible to derive well-formed disjunctive Qtrees for these sentences.
+In Chapter \ref{chap:hurford-disj}, we introduced ``Compatible'' Hurford Disjunctions (henceforth \textbf{CHD}s), repeated below. Such disjunctions feature merely compatible disjuncts, and still feel odd. Chapter \ref{chap:hurford-disj} predicted the sentences in (\ref{ex5:chd}) to be odd, due to them featuring disjuncts conveying incomparable degrees of granularity, which in turn made it impossible to derive well-formed disjunctive Qtrees for these sentences. Most if not all accounts of pragmatic oddness, including \textsc{Super-Redundancy}, struggle with such sentences.
 
 \begin{exe}
 	\exr{ex5:chd}
@@ -1085,7 +1085,7 @@ In Chapter \ref{chap:hurford-disj}, we introduced ``Compatible'' Hurford Disjunc
 	\end{xlist}
 \end{exe} 
 
-What about conditional variants of the sentences in (\ref{ex5:chd}), obtained \textit{via} the \textit{or}-to-\textit{if} tautology? Because we assumed that the formation of conditional Qtrees is distinct from that of disjunctive Qtrees, changing the disjunctions in (\ref{ex5:chd}) into conditionals, may lead to different predictions. To get a more complete picture, let us first generate ``disjunctwise'' negated counterparts of (\ref{ex5:chd}). This is done in (\ref{ex6:chd-neg}). The sentences in (\ref{ex6:chd-neg}) still meet the description of CHDs, because, if $p$ and $q$ are merely compatible, so do $\neg p$ and $\neg q$.
+Just like regular HDs, CHDs have ``disjunctwise'' negated counterparts, given in (\ref{ex6:chd-neg}). We will call such expressions \textbf{DNCHD}s. The DNCHDs in (\ref{ex6:chd-neg}) still meet the description of CHDs, because, if $p$ and $q$ are merely compatible, so do $\neg p$ and $\neg q$.
 
 \begin{exe}
 	\ex\label{ex6:chd-neg}
@@ -1095,10 +1095,29 @@ What about conditional variants of the sentences in (\ref{ex5:chd}), obtained \t
 	\end{xlist}
 \end{exe} 
 
-As a side note, we predict the sentences in (\ref{ex6:chd-neg}) to be just as bad as those in (\ref{ex5:chd}), for the same reasons: their two disjuncts convey incomparable degrees of granularity -- inherited from their unnegated counterparts. \citeauthor{Kalomoiros2024}'s \textsc{Super-Redundancy} on the other hand, predicts both sentences to be fine. This is detailed in the Appendix.\\
+Our account predicts the sentences in (\ref{ex6:chd-neg}) to be just as bad as those in (\ref{ex5:chd}), for the same reasons: their two disjuncts convey incomparable degrees of granularity -- inherited from their unnegated counterparts. Therefore, none of the variants in (\ref{ex6:chd-neg}) can evoke a well-formed disjunctive Qtree. \citeauthor{Kalomoiros2024}'s \textsc{Super-Redundancy} on the other hand, predicts both sentences to be fine. This is detailed in (\ref{ex6:chd-neg-sr}).
 
+\begin{exe}
+	\ex\label{ex6:chd-neg-sr} {DNCHDs are not Super Redundant (SR).\\
+		We show (\ref{ex6:chd-neg})=$(\neg\p)\vee(\neg\q)$, with $(\neg\p) \wedge (\neg\q) \not\vDash \bot$, is not SR.\\
+		Take C = $\neg\p$.\\
+		We then have (\ref{ex6:hd-neg})$^-_C$ = $\neg\q$.\\
+		Take $D=\bot$.\\
+		$(\textref{ex6:chd-neg})_{Str(C, D)} = (\neg(\p \wedge D)) \vee (\neg\q)$\\
+		\phantom{$(\textref{ex6:chd-neg})_{Str(C, D)}$} $\equiv (\neg(\p \wedge \bot)) \vee (\neg\q)$\\
+		\phantom{$(\textref{ex6:chd-neg})_{Str(C, D)}$} $\equiv (\neg\bot) \vee (\neg\q)$\\
+		\phantom{$(\textref{ex6:hd-neg})_{Str(C, D)}$} $\equiv \top \vee (\neg\q)$\\
+		\phantom{$(\textref{ex6:hd-neg})_{Str(C, D)}$} $\equiv \top$\\
+		\phantom{$(\textref{ex6:hd-neg})_{Str(C, D)}$} $\not\equiv \neg\q = (\textref{ex6:chd-neg})^-_C$\\
+		Exact same reasoning when taking C = $\neg\q$, swapping the roles of \p{} and \q.
+	}
+\end{exe}
 
-We can now apply the \textit{or}-to-\textit{if} tautology to the sentences in (\ref{ex5:chd}) and (\ref{ex6:chd-neg}), to create four different kinds of ``Compatible'' Hurford Conditionals (henceforth \textbf{CHC}s). Note that we can generate four variants instead of just two (as it was the case for simple HCs), because the two disjuncts in CHDs and disjunctwise negated CHDs, are not in any kind of entailment relation, and therefore play interchangeable roles. In other words, either disjunct can appear as an antecedent or consequent in the derived conditionals. This is all done in (\ref{ex6:chc}).
+What about conditional variants of the sentences in (\ref{ex5:chd}) and (\ref{ex6:chd-neg}), obtained \textit{via} the \textit{or}-to-\textit{if} tautology?
+
+\subsection{Constructing ``Compatible'' HCs from CHDs}
+
+Because we assumed that the formation of conditional Qtrees is distinct from that of disjunctive Qtrees, changing the disjunctions in (\ref{ex5:chd}) and (\ref{ex6:chd-neg}) into conditionals, may lead to different predictions. We now apply the \textit{or}-to-\textit{if} tautology to the sentences in (\ref{ex5:chd}) and (\ref{ex6:chd-neg}), to create four different kinds of ``Compatible'' Hurford Conditionals (henceforth \textbf{CHC}s). Note that we can generate four variants instead of just two (as it was the case for simple HCs derived out of HDs and DNHDs), because the two disjuncts in CHDs and DNCHDs, are not in any kind of entailment relation, and therefore play interchangeable roles. In other words, either disjunct can appear as an antecedent or consequent in the derived conditionals. Such conditionals are given in (\ref{ex6:chc}).
 
 \begin{exe}
 	\ex\label{ex6:chc}
@@ -1127,10 +1146,48 @@ Interestingly, the four CHCs in (\ref{ex6:chc}), seem to contrast in terms of fe
 	\end{xlist}
 \end{exe}
 
-Under the material implication hypothesis, \textsc{Super-Redundancy} predicts all variants in (\ref{ex6:chc}) to be fine, simply because the CHDs they are derived from, are already mispredicted by this account to be fine.\\
+Under the material implication hypothesis, \textsc{Super-Redundancy} predicts all variants in (\ref{ex6:chc}) to be fine, simply because the CHDs they are derived from, are already mispredicted by this account to be fine. This is shown for (\ref{ex6:chc-nbtf}) in (\ref{ex6:chc-nbtf-sr}) and for (\ref{ex6:chc-btnf}) in (\ref{ex6:chc-btnf-sr}). This trivially extends to the two other variants (\ref{ex6:chc-nftb}) and (\ref{ex6:chc-ftnb}) by simply swapping the roles of $p$ and $q$ in the proofs.\\
+
+\begin{exe}
+	\ex{CHCs are not Super Redundant (SR).}
+		\begin{xlist}
+			\ex {We show (\ref{ex6:chc-nbtf})=$(\neg\q)\rightarrow \p$, with $\p \wedge \q \not\vDash \bot$, is not SR.\\
+				Take C = $\neg\q$.\\
+				We then have (\ref{ex6:chc-nbtf})$^-_C$ = $\p$.\\
+				Take $D=\top$.\\
+				$(\textref{ex6:chc-nbtf})_{Str(C, D)} = (\neg(\q \wedge D)) \rightarrow \p$\\
+				\phantom{$(\textref{ex6:chc-nbtf})_{Str(C, D)}$} $\equiv (\neg(\q \wedge \top)) \rightarrow \p$\\
+				\phantom{$(\textref{ex6:chc-nbtf})_{Str(C, D)}$} $\equiv (\neg \q) \rightarrow \p$\\
+				\phantom{$(\textref{ex6:chc-nbtf})_{Str(C, D)}$} $\not\equiv \p = (\textref{ex6:chc-nbtf})^-_C$\\
+				Take C = $\p$.\\
+				We then have (\ref{ex6:chc-nbtf})$^-_C$ = $\neg\q$.\\
+				Take $D=\top$.\\
+				$(\textref{ex6:chc-nbtf})_{Str(C, D)} = (\neg\q) \rightarrow (\p \wedge D)$\\
+				\phantom{$(\textref{ex6:chc-nbtf})_{Str(C, D)}$} $\equiv (\neg\q) \rightarrow (\p \wedge \top)$\\
+				\phantom{$(\textref{ex6:chc-nbtf})_{Str(C, D)}$} $\equiv (\neg\q) \rightarrow \p$\\
+				\phantom{$(\textref{ex6:chc-nbtf})_{Str(C, D)}$} $\not\equiv \neg\q = (\textref{ex6:chc-nbtf})^-_C$}\label{ex6:chc-nbtf-sr} 
+			\ex {We show (\ref{ex6:chc-btnf})=$\q\rightarrow (\neg\p)$, with $\p \wedge \q \not\vDash \bot$, is not SR.\\
+				Take C = $\q$.\\
+				We then have (\ref{ex6:chc-btnf})$^-_C$ = $\neg\p$.\\
+				Take $D=\top$.\\
+				$(\textref{ex6:chc-btnf})_{Str(C, D)} = (\q \wedge D) \rightarrow (\neg\p)$\\
+				\phantom{$(\textref{ex6:chc-btnf})_{Str(C, D)}$} $\equiv (\q \wedge \top) \rightarrow (\neg\p)$\\
+				\phantom{$(\textref{ex6:chc-btnf})_{Str(C, D)}$} $\equiv \q \rightarrow (\neg\p)$\\
+				\phantom{$(\textref{ex6:chc-btnf})_{Str(C, D)}$} $\not\equiv \neg\p = (\textref{ex6:chc-btnf})^-_C$\\
+				Take C = $\neg\p$.\\
+				We then have (\ref{ex6:chc-nbtf})$^-_C$ = $\q$.\\
+				Take $D=\top$.\\
+				$(\textref{ex6:chc-btnf})_{Str(C, D)} = \q \rightarrow \neg(\p \wedge D)$\\
+				\phantom{$(\textref{ex6:chc-btnf})_{Str(C, D)}$} $\equiv \q \rightarrow \neg(\p \wedge \top)$\\
+				\phantom{$(\textref{ex6:chc-btnf})_{Str(C, D)}$} $\equiv \q \rightarrow \neg \p$\\
+				\phantom{$(\textref{ex6:chc-btnf})_{Str(C, D)}$} $\not\equiv \q = (\textref{ex6:chc-btnf})^-_C$}\label{ex6:chc-btnf-sr}
+		\end{xlist}
+\end{exe}
 
 
-From our perspective, this pattern may also look surprising, because we just established that \textsc{Relevance} in conditionals was associated with ``granularity'' violations (specifically, cases in which the antecedent was finer-grained than the consequent), and moreover, Chapter \ref{chap:hurford-disj} established that \textit{SuB29 will take place in France}, and \textit{SuB29 will take place in the Basque country}, conveyed \textit{orthogonal} degrees of granularity, that could not be reconciled. So, at first blush, we may have expected all the conditionals in (\ref{ex6:chc}) to pattern the same.\\
+From our perspective, this pattern may also look surprising, because we just established that \textsc{Relevance} in conditionals was associated with ``granularity'' violations (specifically, cases in which the antecedent was finer-grained than the consequent), and moreover, Chapter \ref{chap:hurford-disj} established that \textit{SuB29 will take place in France}, and \textit{SuB29 will take place in the Basque country}, conveyed \textit{orthogonal} degrees of granularity, that could not be reconciled. So, at first blush, we may have expected all the conditionals in (\ref{ex6:chc}) to pattern the same.
+
+\subsection{Capturing CHCs}
 
 We will now see that our model of evoked Qtrees, complemented with \textsc{Incremental Q-Relevance} \textit{actually} captures the pattern in (\ref{ex6:chc}). This will boil down to the fact that, although \textit{SuB29 will take place in France}, and \textit{SuB29 will take place in the Basque country} do not evoke Qtrees in any kind of refinement relation, \textit{SuB29 will take place in France} can be seen as ``coarser-grained'' than \textit{SuB29 will take place in the Basque country}, in the following, weaker sense: some regions like the Basque country, can be included in the union of two countries, but it is harder to think of a country that would be included in the union of two (or more) regions.\footnote{Note that this difference may be even more obvious when considering similar configurations, but at different levels of granularity, e.g. by adopting \citeauthor{Singh2008a}'s original examples involving countries like Russia, and continents like Asia. Some countries are included in the union of two continents, but no continent is included in the union of two (or more) countries. Here, we just kept France and the Basque country to stay in the theme.} We will see that this observation can be related to the property of \textsc{Multiple Strict Entailment} in (\ref{ex6:irrelevant-inter-complex}), that we showed caused \textsc{Irrelevance} in tree-node intersection. This will be enough to derive that the tree-node intersection operations performed when deriving Qtrees for (\ref{ex6:chc-nftb}) and (\ref{ex6:chc-ftnb}), are \textsc{Relevant}, while those performed in when deriving Qtrees for (\ref{ex6:chc-nbtf}) and (\ref{ex6:chc-btnf}), are not.\footnote{This prediction will follow from the concept of \textsc{Relevance} defined here, but does not follow from the previous version of this principle proposed in \citet{HenotMortier2024a}.}\\
 
@@ -1273,7 +1330,7 @@ In the case of (\ref{ex6:chc-ftnb}), let us consider the polar Qtree for \textit
 
 In that case, the \textit{France} node acts as the only restrictor node, and gets intersected with a by-region partition. The result of this intersection, fully preserves all regions included in France (e.g. \textit{Midi}) and fully rules out regions completely out of France (e.g. \textit{Navarre}). Regions partially in France (e.g. \textit{the Basque country}), are partially preserved. In any case, this intersection fully preserves one region from the original partition (e.e. \textit{Midi}), and fully excludes one (e.g. \textit{Navarre}). It is thus \textsc{Relevant}, and the resulting conditional Qtree in Figure \ref{fig6:qtree-chc-ftnb}, is predicted to be well-formed. As a result, (\ref{ex6:chc-ftnb}) evokes at least one well-formed Qtree and is correctly predicted to be felicitous.\\
 
-In this Section, we have explored an interesting and relatively unexpected prediction of \textsc{Incremental Q-Relevance}, when it comes to ``Compatible'' HCs. We have shown that \textsc{Incremental Q-Relevance}, combined with our model of conveyed granularity, accounts for challenging contrasts affecting such CHCs. Interestingly, the intuitive readings of the felicitous variants   (\ref{ex6:chc-nftb}) and (\ref{ex6:chc-ftnb}), given in (\ref{ex6:chc-nftbnf}) and (\ref{ex6:chc-ftnbf}) respectively, are consistent with the well-formed Qtrees derived from these sentences, given in Figures \ref{fig6:qtree-chc-nftb} and \ref{fig6:qtree-chc-ftnb} respectively. In these Figures, the verifying nodes are the ones contributed by the consequent, but \textit{restricted} to the domain where the antecedent holds. For (\ref{ex6:chc-nftb}), we end up with the non-French Basque country, i.e. the Spanish Basque country; for (\ref{ex6:chc-ftnb}), we end up with any French region that is not the French Basque countr. These verifying nodes correspond to how the antecedent gets understood in (\ref{ex6:chc-nftb}) and (\ref{ex6:chc-ftnb}).
+In this Section, we have explored an interesting and relatively unexpected prediction of \textsc{Incremental Q-Relevance}, when it comes to ``Compatible'' HCs. We have shown that \textsc{Incremental Q-Relevance}, combined with our model of conveyed granularity, accounts for challenging contrasts affecting such CHCs. Interestingly, the intuitive readings of the felicitous variants   (\ref{ex6:chc-nftb}) and (\ref{ex6:chc-ftnb}), given in (\ref{ex6:chc-nftbnf}) and (\ref{ex6:chc-ftnbf}) respectively, are consistent with the well-formed Qtrees derived from these sentences, given in Figures \ref{fig6:qtree-chc-nftb} and \ref{fig6:qtree-chc-ftnb} respectively. In these Figures, the verifying nodes are the ones contributed by the consequent, but \textit{restricted} to the domain where the antecedent holds. For (\ref{ex6:chc-nftb}), we end up with the non-French Basque country, i.e. the Spanish Basque country; for (\ref{ex6:chc-ftnb}), we end up with any French region that is not the French Basque country. These verifying nodes correspond to how the antecedent gets understood in (\ref{ex6:chc-nftb}) and (\ref{ex6:chc-ftnb}).
 
 More broadly, this result suggests that conditionals whose antecedent and consequent evoke orthogonal questions, may not always be degraded.\footnote{I thank Ivano Ciardelli for pointing out this issue to me. I was happy to realize that the concept of \textsc{Relevance} introduced in this dissertation, unlike its previous version spelled out in \citet{HenotMortier2024a} (which raised the initial concerns), \textit{can} rule in such ``orthogonal'' conditionals, at least under certain conditions.} It also predicts that \textsc{Incremental Q-Relevance} may filter out some interpretations of these conditionals, in terms of the possible questions they evoke. \footnote{A conditional like (\ref{ex6:orthogonal-conditional}) for instance, can be felicitous granted that the proposition that \textit{Jo gets into SuB29} includes at least all the worlds in which Jo feels a certain emotion, and excludes all the worlds in which Jo feels another emotion. Also note that the question raised by the consequent of this sentence can only be polar (i.e. be about whether Jo is happy or not), if Jo getting into SuB29 strictly coincides with Jo being happy or Jo being not happy. This would lead to derive conditional perfection for (\ref{ex6:orthogonal-conditional}). We leave a more systematic analysis of these observations for future work.
 
@@ -1282,9 +1339,71 @@ More broadly, this result suggests that conditionals whose antecedent and conseq
 \end{exe}}The next Section turns to another case of ``non-entailing'' HCs, derived from familiar variants of HDs.
 
 
-\subsection{``Long-Distance'' HCs derived from LDHDs}\label{sec:(ldh)c}
 
-In Chapter \ref{chap:hurford-disj}, we showed that ``Long Distance'' HDs (henceforth \textbf{LDHDs}, \citenp{Marty2022}), exemplified in (\ref{ex6:ldhd-pos}), were \textsc{Q-Redundant}. Such constructions are obtained from standard HDs of the form $p \vee p^+$ by further disjoining $p^+$ (that we will call ``strong'' disjunct) with a proposition $r$, which is s.t. $p^+ \vee r$ is merely compatible with $p$ (that we will call ``weak'' disjunct). This can be done by choosing $r$ to contradict $p$.\footnote{In fact, choosing $r$ to be compatible with $\neg p$ would be enough to achieve the desired relation between the main disjuncts of an LDHD.} In (\ref{ex6:ldhd-pos}) for instance, NELS55 taking place in Göttingen, which is located in Germany, is incompatible with NELS55 taking place in the US (and \textit{a fortiori}, with NELS55 taking place in Connecticut).
+\section{Conclusion and outlook}\label{sec6:ccl}
+
+
+In this Chapter, we captured the challenging contrasts displayed by Hurford Conditionals, using two main ingredients. The first, was that sentences evoke questions (Qtrees) matching their degree of granularity. The second ingredient, was that the core operation behind the formation of conditional Qtrees (tree-node intersection), which is asymmetric in nature, is constrained by a new concept of \textsc{Relevance}. Drawing from both \citet{Lewis1988} and \citet{Roberts2012}, this new concept of \textsc{Relevance} was made asymmetrically sensitive to Qtree granularity. The contrast observed in HCs then boiled down to the (rough) intuitive idea that felicitous conditionals should display an antecedent that is coarser-grained than their consequent.\\
+
+Beyond simple HCs, we explored more involved predictions of our \textsc{Relevance} constraint, and showed that, surprisingly, conditionals like CHCs, whose antecedent and consequent evoke orthogonal questions, \textit{can} be felicitous under certain conditions. Further investigating the conditions under which these conditionals are fine, and what kind of information structure they evoke under such conditions, may give us new insights regarding the specific pragmatics of conditionals, e.g. the phenomenon of conditional perfection \citep{Geis1971, Lilje1972, Horn1972, deCornulier1983, Matsumoto1995, vanDerAuwera1997, vonFintel1997, vonFintel2001, Herburger2015, Herburger2016, Bassi2018}. Appendix \ref{sec6:ldhc} further extends this result to another class of HCs inspired from variants of HDs, and shows that the relevant paradigm can be explained \textit{via} a combination of \textsc{Relevance} and \textsc{Redundancy} constraints. This captures the intuition that different sentences give rise to different flavors of oddness.\\
+
+One datapoint that the current framework cannot account for, is given in (\ref{ex6:hc-disj}). (\ref{ex6:hc-disj}) is obtained from the infelicitous HC (\ref{ex6:hc-sw}), by simply replacing \textit{Italy} with \textit{France} in the consequent. The consequent \textit{France}, unlike \textit{Italy}, entails the antecedent not \textit{not Noto}. This seems to lead to a sensible improvement of the judgment. Yet, our approach to \textsc{Relevance} does not distinguish between (\ref{ex6:hc-sw}) and (\ref{ex6:hc-disj}),because it is unable to differentiate between two truth-conditionally different consequents, if they convey the same degree of granularity. So, both sentences are predicted to be equally odd under the current view.\footnote{The account laid out in \citet{HenotMortier2024a} captures this datapoint, because it assigns a central role to nodes flagged as verifying by the consequent, when it comes to evaluating \textsc{Relevance}. The main idea, is that intersecting \textit{Italy} with \textit{not Noto} shrinks \textit{Italy}, in turn causing infelicity, while intersecting \textit{France} with \textit{not Noto}, does not shrink \textit{France}, thus preserving felicity. \citeauthor{HenotMortier2024a}'s account however, covers less ground regarding ``orthogonal'' conditionals, including CHCs.}
+
+\begin{exe}
+	\ex \label{ex6:hc-disj} {If SuB29 will not take place in Noto, it will take place in France. \hfill $\neg \pplus\rightarrow \q$}
+\end{exe}
+
+This Chapter, along with Chapter \ref{chap:hurford-disj}, constituted an extensive discussion of non-scalar odd constructions, whether disjunctive or conditional in nature. The next Chapter leaves aside countries and cities (at last!) to investigate what happens in ``scalar'' counterparts of HDs, HCs, and some of their variants. 
+
+\iffalse
+
+\section{Appendix: granularity-sensitivity in question-answer pairs}
+
+However, we have argued the contrast in HCs should be explained by a constraint sensitive to the level of granularity conveyed by the antecedent and consequent. But neither \textsc{\citeauthor{Lewis1988}'s Relevance} nor \textsc{\citeauthor{Roberts2012}'s Relevance} are sensitive to how the proposition at stake packages information: the only relevant(!) factor is the set-theoretic relation between the proposition as a whole, and the QuD, seen as a partition of the CS. This implies that the level of granularity conveyed by the proposition is not directly taken into account when assessing its \textsc{Relevance} to the question (although, of course, the strength of the proposition is). Looking beyond the case of HCs, this does not seem to match intuitions about what a \textsc{Relevant} answer to a question is.\\
+
+The question-answer pairs in (\ref{ex6:relevant-answers}) for instance, show that the answer's conveyed granularity should be taken into account when assessing \textsc{Relevance}. (\ref{ex6:relevant-answers})'s QuD strongly suggests a by-country partition of the CS. This predicts both (\ref{ex6:relevant}) and (\ref{ex6:relevant-coarse}) to be \textsc{Relevant} under both views, because both sentences refer to a proper subset of all countries. Yet, (\ref{ex6:relevant-coarse}) does not appear felicitous without hedging (e.g., using \textit{for all I know}). Its relative oddness in this context is however intuitive: \textit{Europe} feels ``coarser-grained'' than, e.g. \textit{France or Belgium}. This can be modeled by saying \textit{Europe} can less straightforwardly be partitioned into country-level cells, than \textit{France or Belgium}. 
+
+\begin{exe}
+	\ex {In which country did Jo grow up?}
+	\begin{xlist}
+		\ex[] {-- They grew up in France or Belgium.\hfill (\ref{ex1:lewis-relevance}) \cmark{} (\ref{ex6:roberts-relevance}) \cmark }\label{ex6:relevant}
+		\ex[??] {-- They grew up in Europe. \hfill (\ref{ex1:lewis-relevance}) \cmark{} (\ref{ex6:roberts-relevance}) \cmark}\label{ex6:relevant-coarse}
+		\ex[?] {-- They grew up in Paris (or Brussels). \hfill (\ref{ex1:lewis-relevance}) \xmark{} (\ref{ex6:roberts-relevance}) \cmark}\label{ex6:overinformative}
+		\ex[??] {-- They speak French natively \hfill (\ref{ex1:lewis-relevance}) \xmark{} (\ref{ex6:roberts-relevance}) \xmark}\label{ex6:irrelevant}
+	\end{xlist}
+	\label{ex6:relevant-answers}
+\end{exe}
+
+In fact, this is exactly the kind of intuition that Qtrees incorporate:\footnote{See also \cite{Benbaji2024} for a ``dynamic'' view of \textsc{Relevance} along the same lines.} a Qtree for (\ref{ex6:relevant}) ould feature a country-level terminal layer, properly coinciding with the QuD; while a Qtree for (\ref{ex6:relevant-coarse}) would ``stop'' at the continent-level. But no continent properly ``fits'' within a country-cell of the QuD. Making \textsc{Relevance} sensitive to distinctions in evoked Qtrees could thus explain the contrast in (\ref{ex6:relevant}-\ref{ex6:relevant-coarse}).
+
+
+Having a granularity-sensitive notion of \textsc{Relevance} may also help explain why finer-grained, overinformative answers like (\ref{ex6:overinformative}), are not so infelicitous:\footnote{We however note that (\ref{ex1:roberts-relevance}) achieves this, too.} they suggest a partition of the CS whose cells (city-level) can all be mapped to a single (country-level) cell of the partition provided by the QuD. (\ref{ex6:irrelevant}), which is also overinformative and predicted to be \textsc{Irrelevant}, sounds more odd than (\ref{ex6:overinformative}) and (\ref{ex6:overinformative-2}), because the partition it suggests (\textit{What's Jo's level in French?}) cannot be properly mapped to the partition set by the QuD. For instance, Jo could very well be fluent in French, without having grown up in France. This suggests that granularity-sensitive notion of \textsc{Relevance} should state that a proposition is \textsc{Relevant} if it can be partitioned into more specific ``sub-propositions'' (=verifying nodes), s.t. each sub-proposition ``fits'' a cell of the question, i.e., entails it.
+
+
+This may also capture the contrast between (\ref{ex6:overinformative}) and (\ref{ex6:irrelevant}) -- (\ref{ex6:overinformative}) turns out not so odd, because it typically evokes a Qtree featuring a terminal city-layer, in which each node can be ``fitted'' within single country (i.e. is \textsc{Relevant} to the QuD according to (\ref{ex6:roberts-relevance}-\ref{ex6:relevance-p})). (\ref{ex1:lewis-relevance}) on the other hand, feels worse because the kind of question it evokes (\textit{What's Jo's proficiency in French?}), features cells that cannot be properly mapped to the partition set by the QuD. These data overall suggest that a proposition is \textsc{Relevant} if it evokes a Qtree whose nodes all entail some cell of the overt QuD. This constitutes an extension (and a strengthening) of (\ref{ex6:roberts-relevance}-\ref{ex6:relevance-q}),
+
+\fi
+\section{Appendix: \citeauthor{Lewis1988}'s \textsc{Relevant Implications}}\label{sec6:lewis}
+
+We have previously reviewed \citet{Lewis1988}'s standard view on  \textsc{Relevance}, according to which a \textit{proposition} $p$ is relevant to a \textit{question} $Q$ (partition of the CS) iff $p$'s intersection with the CS corresponds to a (potentially empty) unions of cells in $Q$. But \citet{Lewis1988} also defines a concept of \textsc{Relevance} between two \textit{propositions}, \textit{via} their respective ``subject matters''. In more modern terms, ``subject matters'' correspond to questions. Under that view, two propositions are said to be \textsc{Relevant} to each other, iff their evoked questions are -- in the sense of (\ref{ex6:relevance-qs}). This definition is disjunctive in nature, and therefore relatively weak. The \textsc{Connection} property in particular, appears quite easy to verify.
+
+\begin{exe}
+	\ex {\textsc{\textbf{Relevance between two propositions}} (rephrased in the QuD framework). Two propositions $p$ and $q$, are relevant to each other, iff at least one of the following two conditions holds:
+		\begin{enumerate}[(i)]
+			\item \textsc{Inclusion}: the finest-grained question evoked by $p$ refines the finest-grained question evoked by $q$.
+			\item \textsc{Connection}: some cell in the finest-grained question evoked by $p$ does not overlap with some cell in the finest-grained question evoked by $q$. 
+		\end{enumerate} }\label{ex6:relevance-qs}
+\end{exe}
+
+The notable advantage of (\ref{ex6:relevance-qs}), is that it allows to \textit{predict} that, in a conditional, antecedent and consequent should be \textsc{Relevant} to each other, in the sense of (\ref{ex6:relevance-qs}). Assuming a strict semantics for conditionals, i.e. that \textit{if $p$ then $q$} holds if every $p$-world of the CS is a $q$-world, \citeauthor{Lewis1988} shows that, whenever \textit{if $p$ then $q$} holds, $p$ and $q$ are \textsc{Relevant} to each other in the sense of (\ref{ex6:relevance-qs}). However, when $p$ and $q$ are both contingent, i.e. have different truth values across different worlds of the CS, the aspect of (\ref{ex6:relevance-qs}) that is being used to prove this result, is \textsc{Connection}. So, whenever \textit{if $p$ then $q$} holds and $p$ and $q$ are both contingent, $p$ and $q$ are connected, i.e. some cell in the finest-grained question evoked by $p$ does not overlap with some cell in the finest-grained question evoked by $q$. Note that this condition is symmetric, and so is insensitive to a swap between antecedent and consequent. Therefore, whenever \textit{if $q$ then $p$} holds and $p$ and $q$ are both contingent, $p$ and $q$ are connected. Moreover, \citeauthor{Lewis1988} shows that the prediction of \textsc{Relevance} between antecedent and consequent, is insensitive to the introduction of negation. So, whenever \textit{if $\neg q$ then $p$} holds and $p$ and $q$ are both contingent, $p$ and $q$ are connected; and whenever \textit{if $p$ then $\neg q$} holds and $p$ and $q$ are both contingent, $p$ and $q$ are connected.\\
+
+Could we use the concept of \textsc{Relevance} between propositions introduced in (\ref{ex6:relevance-qs}) to tease apart HCs? HCs typically make use of two contingent propositions $p$ and $p^+$, s.t. $p^+ \vDash p$. Based on (\ref{ex6:relevance-qs}), two HCs or the form $p \rightarrow \neg p^+$ and $\neg p^+ \rightarrow p$, will then imply the same condition of \textsc{Connection} between $p$ and $p^+$. This condition is quite weak, because it only implies that some cell of the question evoked by $p$ be disjoint from some cell of the question evoked by $p^+$. But more importantly, it is the same for felicitous and infelicitous HCs. Therefore,  (\ref{ex6:relevance-qs}) is insufficient to tease apart HCs, and a stronger approach to \textsc{Relevance} must be posited. 
+
+\section{Appendix: extension to ``Long-Distance'' Hurford Conditionals}\label{sec6:ldhc}
+
+\subsection{``Long-Distance'' Hurford Disjunctions and their disjunctwise negated counterparts}
+
+In Chapter \ref{chap:hurford-disj}, we showed that ``Long Distance'' HDs (henceforth \textbf{LDHDs}, \citenp{Marty2022}), exemplified in (\ref{ex6:ldhd-pos}), were \textsc{Q-Redundant}. Such constructions are obtained from standard HDs of the form $p \vee p^+$ by further disjoining $p^+$ (that we will call ``strong'' disjunct) with a proposition $r$, which is s.t. $p^+ \vee r$ is merely compatible with $p$ (that we will call ``weak'' disjunct). This can be done by choosing $r$ to contradict $p$.\footnote{In fact, choosing $r$ to be compatible with $\neg p$ would be enough to achieve the desired logical relation between the main disjuncts of an LDHD.} In (\ref{ex6:ldhd-pos}) for instance, NELS55 taking place in Göttingen, which is located in Germany, is incompatible with NELS55 taking place in the US (and \textit{a fortiori}, with NELS55 taking place in Connecticut).
 
 \begin{exe}
 	\ex\label{ex6:ldhd-pos}
@@ -1296,42 +1415,160 @@ In Chapter \ref{chap:hurford-disj}, we showed that ``Long Distance'' HDs (hencef
 	\end{xlist}
 \end{exe}
 
+The infelicity of LDHDs is captured by \textsc{Super-Redundancy}. This is proved in (\ref{ex6:ldhd-pos-sr}) -- adapted from \citet{Kalomoiros2024}.
 
-Here, we are interested in conditionals derived from LDHDs \textit{via} the \textit{or}-to-\textit{if} tautology -- in a way similar to how (C)HCs were derived earlier in that Chapter. To build such conditionals, we need two kinds of LDHDs: the ones in (\ref{ex6:ldhd-pos}), and their ``disjunctwise'' negated counterparts. These negated variants are shown in (\ref{ex6:ldhd-neg}). Here is how such variants are constructed. In both (\ref{ex6:ldhd-neg-ws}) and (\ref{ex6:ldhd-neg-sw}) the weak disjunct, \textit{not Connecticut}, corresponds to the negation of the stronger disjunct of (\ref{ex6:ldhd-pos-ws})/(\ref{ex6:ldhd-pos-sw}). Additionally, (\ref{ex6:ldhd-neg-ws}) and (\ref{ex6:ldhd-neg-sw})'s stronger disjunct, \textit{not the US}, corresponds to the negation of the weak disjunct of (\ref{ex6:ldhd-pos-ws})/(\ref{ex6:ldhd-pos-sw}). Again, just like in (\ref{ex6:ldhd-pos}), the extra proposition disjoined with it (\textit{New Haven}), is chosen to be incompatible with the weaker disjunct, which is now \textit{not Connecticut}. 
+\begin{exe}
+	\ex {LDHDs are Super-Redundant (SR).\\
+		We show (\ref{ex6:ldhd-pos-ws})=\p{} $\vee$ (\pplus{} $\vee$ \r), with $\pplus \vDash \p$ and $\p \wedge (\pplus \vee \r) \not\vDash \bot$, is SR.\\
+		Take C = \pplus.\\
+		We then have (\ref{ex6:ldhd-pos-ws})$^-_C$ = $\p \vee \r$.\\
+		$\forall D. \ (\textref{ex6:ldhd-pos-ws})_{Str(C, D)}$ = $\p \vee ((\pplus \wedge D) \vee \r)$\\
+		\phantom{$\forall D. \ (\textref{ex6:ldhd-pos-ws})_{Str(C, D)}$} $\equiv \p \vee ((\pplus\vee\r) \wedge (D \vee \r))$\\
+		\phantom{$\forall D. \ (\textref{ex6:ldhd-pos-ws})_{Str(C, D)}$} $\equiv (\p \vee \pplus\vee\r) \wedge (\p \vee D \vee \r)$\\
+		\phantom{$\forall D. \ (\textref{ex6:ldhd-pos-ws})_{Str(C, D)}$} $\equiv (\p \vee\r) \wedge (\p \vee D \vee \r)$\\
+		\phantom{$\forall D. \ (\textref{ex6:ldhd-pos-ws})_{Str(C, D)}$} $\equiv \p \vee\r$ = (\ref{ex6:ldhd-pos-ws})$^-_C$\\
+		Same proof for (\ref{ex6:ldhd-pos-sw})=(\pplus{} $\vee$ \r) $\vee$ \p{}.}\label{ex6:ldhd-pos-sr}
+\end{exe}
+
+
+In a move that should now look familiar, we can derive ``disjunctwise'' negated LDHDs out of the sentences in (\ref{ex6:ldhd-pos}). These negated variants are shown in (\ref{ex6:ldhd-neg}). We will call such sentences \textbf{DNLDHD}s. Here is how DNLDHDs are constructed. In both (\ref{ex6:ldhd-neg-ws}) and (\ref{ex6:ldhd-neg-sw}), the weak disjunct, \textit{NELS55 won't take place in Connecticut}, corresponds to the negation of the stronger disjunct of (\ref{ex6:ldhd-pos-ws})/(\ref{ex6:ldhd-pos-sw}). Additionally, (\ref{ex6:ldhd-neg-ws}) and (\ref{ex6:ldhd-neg-sw})'s stronger disjunct, \textit{NELS55 will not take plces in the US}, corresponds to the negation of the weak disjunct of (\ref{ex6:ldhd-pos-ws})/(\ref{ex6:ldhd-pos-sw}). Just like in (\ref{ex6:ldhd-pos}), the extra proposition disjoined with the strong disjunct,  \textit{NELS55 will take place in New Haven}, is chosen to be incompatible with the weaker disjunct: NELS55 cannot take place in New Haven, and outside Connecticut.
 
 \begin{exe}
 	\ex\label{ex6:ldhd-neg}
 	\begin{xlist}
 		\ex[\#] {NELS55 won't take place in Connecticut, or, won't take place in the US or will take place in New Haven.\\
-			\hfill $(\neg \pplus) \vee (\neg \p \vee \r) = \q \vee (\qplus \vee \s)$\\
+			\hfill $(\neg \pplus) \vee (\neg \p \vee \s) = \q \vee (\qplus \vee \s)$\\
 			With $\q := \neg\pplus; \qplus := \neg\p$ s.t. $\qplus \vDash \q$; $(\qplus \vee \s)\wedge \q \not\vDash \bot$}\label{ex6:ldhd-neg-ws}
 		\ex[\#] {NELS55 won't take place in the US or will take place in New Haven, or, won't take place in Connecticut.\\
-			\hfill $(\neg \p \vee \r) \vee (\neg \pplus) = (\qplus \vee \s) \vee \q$\\
+			\hfill $(\neg \p \vee \s) \vee (\neg \pplus) = (\qplus \vee \s) \vee \q$\\
 			With $\q := \neg\pplus; \qplus := \neg\p$ s.t. $\qplus \vDash \q$; $(\qplus \vee \s)\wedge \q \not\vDash \bot$}\label{ex6:ldhd-neg-sw}
 	\end{xlist}
 \end{exe}
 
-The sentences in (\ref{ex6:ldhd-neg}), appear extremely degraded, which intuitively seems to come the observation that they directly combine propositions conveying very different degrees of granularity. But despite this intuition, at the logical-structural level, these disjunctwise negated LDHDs are to LDHDs exactly what disjunctwise negated HDs are to HDs. In particular, they are identical to LDHDs both in terms of their structure and in terms of the logical relations between their constitutive parts. This implies that the sentences in (\ref{ex6:ldhd-neg}) are isomorphic with the sentences in (\ref{ex6:ldhd-pos}) -- just like HDs are isomorphic with their disjunctwise negated counterparts.
+The DNLDHDs in (\ref{ex6:ldhd-neg}), appear extremely degraded, which intuitively seems to come the observation that they directly combine (negated) propositions conveying very different degrees of granularity; e.g. \textit{NELS55 will take place in New Haven}, and \textit{NELS55 won't take place in the US}. But despite this intuition, DNLDHDs are to LDHDs what DNHDs are to HDs. In particular, DNLDHDs are identical to LDHDs both in terms of their structure and in terms of the logical relations between their constitutive parts. Meaning, the LDHDs in (\ref{ex6:ldhd-neg}) are isomorphic with the DNLDHDs in (\ref{ex6:ldhd-pos}) -- just like HDs are isomorphic with their disjunctwise negated counterparts.\\
 
-Before ``converting'' the sentences in (\ref{ex6:ldhd-pos}) and (\ref{ex6:ldhd-neg}) to conditionals, let us highlight that the very degraded sentences in (\ref{ex6:ldhd-neg}) are both predicted by \textsc{Super-Redundancy} to be fine, for the same reasons as DNHDs. Under our view, such LDHDs are \text{Q-Redundant} due to their simplification $\neg p^+ \vee r$. This is all detailed in the Appendix.\\
+For this very reason, the DNLDHDs in (\ref{ex6:ldhd-neg}) are both predicted by \textsc{Super-Redundancy} to be fine, for the same reasons as DNHDs. This is proved in (\ref{ex6:ldhd-neg-sr}).
+
+\begin{exe}
+	\ex {DNLDHDs are not Super-Redundant (SR).\\
+		We show (\ref{ex6:ldhd-neg-ws}) = ($\neg$\pplus) $\vee$ ($\neg$\p{} $\vee$ \s), with $\neg\p \vDash \neg\pplus$ and $(\neg\pplus) \wedge (\neg\p \vee \s) \not\vDash \bot$, is not SR.\\
+		Take $C = \neg$\pplus.\\
+		We then have (\ref{ex6:ldhd-neg-ws})$^-_C$ = $(\neg\p)\vee\s$\\
+		Take $D = \top$.\\
+		$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)} = (\neg(\pplus\wedge D)) \vee (\neg\p \vee \s)$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\equiv (\neg(\pplus\wedge \top)) \vee (\neg\p \vee \s)$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\equiv (\neg\pplus) \vee (\neg\p \vee \s)$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\equiv (\neg\pplus) \vee \s$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\not\equiv (\neg\p) \vee \s$ = (\ref{ex6:ldhd-neg-ws})$^-_C$\\
+		Take $C = \neg\p$.\\
+		We then have (\ref{ex6:ldhd-neg-ws})$^-_C$ = $(\neg\pplus)\vee\s$.\\
+		Take $D = \bot$.\\
+		$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)} = (\neg\pplus) \vee (\neg(\p\wedge D) \vee \s)$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\equiv (\neg\pplus) \vee (\neg(\p\wedge \bot) \vee \s)$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\equiv (\neg\pplus) \vee (\top \vee \s)$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\equiv \top$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\not\equiv (\neg\pplus) \vee \s$ = (\ref{ex6:ldhd-neg-ws})$^-_C$\\
+		Take $C = \s$.\\
+		We then have (\ref{ex6:ldhd-neg-ws})$^-_C$ = $(\neg\pplus)\vee(\neg\p) \equiv \neg\pplus$.\\
+		Take $D = \top$.\\
+		$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)} = (\neg\pplus) \vee (\neg\p\vee (\s \wedge D))$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\equiv (\neg\pplus) \vee (\neg\p\vee (\s \wedge \top))$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\equiv (\neg\pplus) \vee (\neg\p\vee \s)$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\equiv (\neg\pplus) \vee \s$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\not\equiv \neg\pplus$ = (\ref{ex6:ldhd-neg-ws})$^-_C$\\
+		Take $C = (\neg\p\vee\s)$.\\
+		We then have (\ref{ex6:ldhd-neg-ws})$^-_C$ = $\neg\pplus$.\\
+		Take $D = \top$.\\
+		$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)} = (\neg\pplus) \vee ((\neg\p\vee\s)\wedge D)$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\equiv (\neg\pplus) \vee ((\neg\p\vee\s)\wedge \top)$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\equiv (\neg\pplus) \vee (\neg\p\vee\s)$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\equiv (\neg\pplus) \vee\s$\\
+		\phantom{$(\textref{ex6:ldhd-neg-ws})_{Str(C, D)}$} $\not\equiv (\neg\pplus)$ = (\ref{ex6:ldhd-neg-ws})$^-_C$\\
+		Same proof for (\ref{ex6:ldhd-neg-sw})=$(\neg\p\vee\s)\vee(\neg\pplus)$.}\label{ex6:ldhd-neg-sr}
+\end{exe}
 
 
-Turning the LDHDs in (\ref{ex6:ldhd-pos}) and (\ref{ex6:ldhd-neg}) into conditionals \textit{via} the \textit{or}-to-\textit{if} tautology, leads to the paradigm in (\ref{ex6:ldhc}). Similarly to the CHCs in Section \ref{sec6:chc}, this paradigm is made of four different conditionals (instead of just two, as it was the case with simple HCs), because the main two disjuncts in (\ref{ex6:ldhd-pos}) and (\ref{ex6:ldhd-neg}), are not in any kind of entailment relation, i.e. play completely symmetric roles. As a result, it makes sense to apply the \textit{or}-to-\textit{if} tautology in either direction, i.e. to treat either disjunct's negation as the antecedent, and the remaining disjunct, as the consequent, of the resulting conditional.
+Under our view, DNLDHDs are \textsc{Q-Redundant} due to their simplification $\neg p^+ \vee s$, shown in (\ref{ex6:ldhd-neg-simp}).
+
+\begin{exe}
+	\ex{NELS55 won't take place in Connecticut, or will take place in New Haven.\\
+		\hfill $(\neg \pplus) \vee \s$}\label{ex6:ldhd-neg-simp}
+\end{exe}
+
+Here is why. DNLDHDs like (\ref{ex6:ldhd-neg-ws}) and (\ref{ex6:ldhd-neg-sw}) display nested disjunctions, mixing three expressions associated with different levels of granularity: $S_s$ = \textit{NELS55 will take place in New Haven}, evokes a by-city partition; $\neg S_{p^+}$ = \textit{NELS55 won't take place in Connecticut} evokes a by-region partition; $\neg S_{p}$ = \textit{NELS55 won't take place in the US}, evokes a by-country partition.\footnote{Recall that negation does not have any effect on Qtree structure or conveyed granularity} The only way to properly disjoin Qtrees evoked by these expressions, is to have these Qtrees stand in a refinement relation. Specifically, the Qtree evoked by $S_s$ = \textit{NELS55 will take place in New Haven}, should refine the one evoked by $\neg S_{p^+}$ = \textit{NELS55 won't take place in Connecticut}, which itself should refine the one evoked by $\neg S_{p}$ = \textit{NELS55 won't take place in the US}. This is achieved by the ``\textit{wh}-articulated'' Qtrees evoked by $S_s$, $\neg S_{p^+}$, and $\neg S_{p}$, respectively. Such Qtrees are represented in Figures \ref{fig:qtree-nh}, \ref{fig:qtree-nct}, and \ref{fig:qtree-nus}, and get properly disjoined in Figure \ref{fig:qtree-nctv(nusvnh)}.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{.45\linewidth}
+		\centering
+		\scalebox{.75}{
+		\begin{forest}
+			[CS [\textcolor{blue}{US}[\textcolor{orange}{CT}[\fbox{\textcolor{pink}{New Haven}}][\textcolor{pink}{...}]][\textcolor{orange}{MA}[\textcolor{pink}{...}]][\textcolor{orange}{...}]][\textcolor{blue}{Germany}[\textcolor{orange}{Lower Saxony}[\textcolor{pink}{Göttingen}][\textcolor{pink}{...}]][\textcolor{orange}{...}]][\textcolor{blue}{...}]]
+		\end{forest}}
+		\caption{``\textit{Wh}-articulated'' Qtree evoked by $S_{\s}$ = \textit{NELS55 will take place in New Haven}.}\label{fig:qtree-nh}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{.45\linewidth}
+		\centering		\scalebox{.75}{
+		\begin{forest}
+			[CS [\textcolor{blue}{US}[\textcolor{orange}{CT}[{\textcolor{pink}{New Haven}}][\textcolor{pink}{...}]][\fbox{\textcolor{orange}{MA}}[\textcolor{pink}{...}]][\fbox{\textcolor{orange}{...}}]][\textcolor{blue}{Germany}[\fbox{\textcolor{orange}{Lower Saxony}}[\textcolor{pink}{Göttingen}][\textcolor{pink}{...}]][\fbox{\textcolor{orange}{...}}]][\textcolor{blue}{...}]]
+		\end{forest}}
+		\caption{``\textit{Wh}-articulated'' Qtree evoked by $\neg S_{\pplus}$ = \textit{NELS55 won't take place in Connecticut}.}\label{fig:qtree-nct}
+	\end{subfigure}3
+	
+	\begin{subfigure}[b]{.45\linewidth}
+		\centering		\scalebox{.75}{
+			\begin{forest}
+				[CS [{\textcolor{blue}{US}}[\textcolor{orange}{CT}[{\textcolor{pink}{New Haven}}][\textcolor{pink}{...}]][{\textcolor{orange}{MA}}[\textcolor{pink}{...}]][{\textcolor{orange}{...}}]][\fbox{\textcolor{blue}{Germany}}[{\textcolor{orange}{Lower Saxony}}[\textcolor{pink}{Göttingen}][\textcolor{pink}{...}]][{\textcolor{orange}{...}}]][\fbox{\textcolor{blue}{...}}]]
+		\end{forest}}
+		\caption{``\textit{Wh}-articulated'' Qtree evoked by $\neg S_{\p}$ = \textit{NELS55 won't take place in the US}.}\label{fig:qtree-nus}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{.45\linewidth}
+		\centering		\scalebox{.75}{
+			\begin{forest}
+				[CS [{\textcolor{blue}{US}}[\textcolor{orange}{CT}[\fbox{\textcolor{pink}{New Haven}}][\textcolor{pink}{...}]][\fbox{\textcolor{orange}{MA}}[\textcolor{pink}{...}]][\fbox{\textcolor{orange}{...}}]][\fbox{\textcolor{blue}{Germany}}[\fbox{\textcolor{orange}{Lower Saxony}}[\textcolor{pink}{Göttingen}][\textcolor{pink}{...}]][\fbox{\textcolor{orange}{...}}]][\fbox{\textcolor{blue}{...}}]]
+		\end{forest}}
+		\caption{Only Qtree evoked by (\ref{ex6:ldhd-neg-ws})/(\ref{ex6:ldhd-neg-sw}), obtaining by disjoining Trees \ref{fig:qtree-nh}, \ref{fig:qtree-nct}, and \ref{fig:qtree-nus}.}\label{fig:qtree-nctv(nusvnh)}
+	\end{subfigure}
+\end{figure}
+
+
+Based on these Figures, one can also directly disjoin the Qtree evoked $S_s$, in Figure \ref{fig:qtree-nh}, with the one evoked by $\neg S_{p^+}$ in Figure \ref{fig:qtree-nct}. The result is represented in Figure \ref{fig:qtree-nctvnh}
+
+\begin{figure}[H]
+	\centering		\scalebox{.75}{
+		\begin{forest}
+			[CS [{\textcolor{blue}{US}}[\textcolor{orange}{CT}[\fbox{\textcolor{pink}{New Haven}}][\textcolor{pink}{...}]][\fbox{\textcolor{orange}{MA}}[\textcolor{pink}{...}]][\fbox{\textcolor{orange}{...}}]][{\textcolor{blue}{Germany}}[\fbox{\textcolor{orange}{Lower Saxony}}[\textcolor{pink}{Göttingen}][\textcolor{pink}{...}]][\fbox{\textcolor{orange}{...}}]][{\textcolor{blue}{...}}]]
+	\end{forest}}
+	\caption[]{Only Qtree evoked by (\ref{ex6:ldhd-neg-simp}) = $\neg S_{p^+} \vee S_s$, obtained by disjoining Trees \ref{fig:qtree-nh} and \ref{fig:qtree-nct}.}\label{fig:qtree-nctvnh}
+\end{figure}
+
+Now, it can be shown that the Qtree corresponding to the DNLDHDs (\ref{ex6:ldhd-neg-ws})/(\ref{ex6:ldhd-neg-sw}) in Figure \ref{fig:qtree-nctv(nusvnh)}, and the one corresponding to a simplification of these sentences, in Figure \ref{fig:qtree-nctvnh}, are equivalent. First, they are obviously structurally identical. And they are also characterized by the same sets of minimal verifying paths, essentially because any path from the root to a non-US region-node goes through a non-US country node. Therefore the Qtree in Figure \ref{fig:qtree-nctv(nusvnh)} and the one in Figure \ref{fig:qtree-nctvnh}, both have the following set of minimal verifying paths: the path to \textit{New Haven}; paths to US states different from Connecticut; paths to all non-US regions. Therefore, the only Qtree evoked by (\ref{ex6:ldhd-neg-ws})/(\ref{ex6:ldhd-neg-sw}), is \textsc{Q-Redundant} given \ref{ex6:ldhd-neg-ws})/(\ref{ex6:ldhd-neg-sw}), and these sentences should be deemed odd.\\
+
+We have just argued that our approach correctly predicts both LDHDs and DNLDHDs to be degraded, because both variants violate \textsc{Q-Non-Redundancy}. We proceed to explore ``conditional'' variants of these sentences and show that the sharp deviance of these variants is explained in our framework \textit{via} a conspiration between \textsc{Q-Non-Redundancy} and \textsc{Incremental Q-Relevance}.
+
+
+
+\subsection{Constructing ``Long-Distance'' HCs from LDHDs}
+
+Let us now turn to the conditionals derived from LDHDs \textit{via} the \textit{or}-to-\textit{if} tautology -- in a way similar to how (C)HCs were derived earlier in that Chapter. To build such conditionals, we need two kinds of LDHDs: the ones in (\ref{ex6:ldhd-pos}), and their disjunctwise negated counterparts in (\ref{ex6:ldhd-neg}).
+Turning these LDHDs into conditionals \textit{via} the \textit{or}-to-\textit{if} tautology, leads to the paradigm in (\ref{ex6:ldhc}). Similarly to the CHCs in Section \ref{sec6:chc}, this paradigm is made of four different conditionals (instead of just two, as it was the case with simple HCs), because the main two disjuncts in (\ref{ex6:ldhd-pos}) and (\ref{ex6:ldhd-neg}), are not in any kind of entailment relation, i.e. play completely symmetric roles. As a result, it makes sense to apply the \textit{or}-to-\textit{if} tautology in either direction, i.e. to treat either disjunct's negation as the antecedent, and the remaining disjunct, as the consequent, of the resulting conditional.
 
 \begin{exe}
 	\ex\label{ex6:ldhc}
 	\begin{xlist}
 		\ex{Derived from (\ref{ex6:ldhd-pos}), using the simple (``weak'') disjunct as antecedent.\\
-			\# If NELS55 will not take place in the US, it will take place in Connecticut or in Göttingen.
+			\# If NELS55 won't take place in the US, it will take place in Connecticut or in Göttingen.
 			\\ $\neg\p \rightarrow (\pplus\vee\r)$}\label{ex6:ldhc-pos-ws}
 		\ex {Derived from (\ref{ex6:ldhd-pos}), using the complex disjunct as antecedent.\\
-			\# If NELS55 will not take place in Connecticut or in Göttingen, it will take place in the US.
+			\# If NELS55 won't take place in Connecticut or in Göttingen, it will take place in the US.
 			\\ $\neg(\pplus\vee\r)\rightarrow \p$}\label{ex6:ldhc-pos-sw}
 		\ex{Derived from (\ref{ex6:ldhd-neg}), using the simple (``weak'') disjunct as antecedent.\\
 			\# If it's not the case that NELS55 won't take place in Connecticut, it won't take place in the US or will take place in New Haven.\\
 			$\neg(\neg \pplus)\rightarrow(\neg \p \vee \s)$}\label{ex6:ldhc-neg-ws}
 		\ex{Derived from (\ref{ex6:ldhd-neg}), using the complex disjunct as antecedent.\\
-			\# If it's not the case that NELS55 won't take place in the US or will take place in New Haven, it will not take place in Connecticut.\\
+			\# If it's not the case that NELS55 won't take place in the US or will take place in New Haven, it won't take place in Connecticut.\\
 			$\neg(\neg \p \vee \s) \rightarrow(\neg \pplus)$}\label{ex6:ldhc-neg-sw}	
 	\end{xlist}
 \end{exe}
@@ -1339,7 +1576,18 @@ Turning the LDHDs in (\ref{ex6:ldhd-pos}) and (\ref{ex6:ldhd-neg}) into conditio
 All the conditionals in (\ref{ex6:ldhc}) appear infelicitous. Furthermore, it feels like these various conditionals, exhibit different ``flavors'' of oddness. Both (\ref{ex6:ldhc-pos-ws}) and (\ref{ex6:ldhc-neg-ws}) seem to convey contradictory information as part of their consequent (granted their antecedent). (\ref{ex6:ldhc-pos-ws})'s consequent entertains the idea that NELS55 will take place in Connecticut, while its antecedent said \textit{not the US}). (\ref{ex6:ldhc-neg-ws})'s consequent entertains the idea that NELS55 won't take place in the US, while its antecedent said \textit{Connecticut}. We will in fact show that both (\ref{ex6:ldhc-pos-ws}) and (\ref{ex6:ldhc-neg-ws}) are \textsc{Q-Redundant}, considering simplifications removing these locally contradictory pieces of information from their consequents.
 Turning to (\ref{ex6:ldhc-pos-sw}), it just feels like its consequent does not make sense at at all, given its antecedent; we will in fact show that (\ref{ex6:ldhc-pos-sw}) violates \textsc{Incremental Q-Relevance}. Lastly, (\ref{ex6:ldhc-neg-sw}) is almost impossible to make sense of as-is. We will show (\ref{ex6:ldhc-neg-sw}) violates \textsc{Incremental Q-Relevance}, as well.\\
 
-This pattern is interesting, because, again, it is not predicted by \textsc{Super-Redundancy}, at least assuming conditionals are material. Indeed, under these (perhaps simplifying) assumptions, the prediction made by \textsc{Super-Redundancy} are insensitive to transformations like the \textit{or}-to-\textit{if} tautology, but \textit{are} sensitive to variable changes of the form $q := \neg p$. \textsc{Super-Redundancy} thus predicts the LDHC in (\ref{ex6:ldhc-pos-ws}) and (\ref{ex6:ldhc-pos-sw}), derived from the LDHDs in (\ref{ex6:ldhd-pos}), to be deviant (because the LDHDs in (\ref{ex6:ldhd-pos}) were already predicted so). Similarly, it predicts the LDHCs in (\ref{ex6:ldhc-neg-ws}) and (\ref{ex6:ldhc-neg-sw}), derived from the LDHDs in (\ref{ex6:ldhd-neg}), to be fine (because the LDHDs in (\ref{ex6:ldhd-neg}) were already predicted so -- see Appendix). In other words, the mispredictions of \textsc{Super-Redundancy} in the case of (\ref{ex6:ldhd-neg}), spread to its conditional variants (\ref{ex6:ldhc-neg-ws}) and (\ref{ex6:ldhc-neg-sw}).\\
+This pattern is interesting, because, again, it is not predicted by \textsc{Super-Redundancy}, at least assuming conditionals are material. Indeed, under these (arguably simplifying) assumptions, the prediction made by \textsc{Super-Redundancy} are insensitive to transformations like the \textit{or}-to-\textit{if} tautology, but \textit{are} sensitive to variable changes of the form $q := \neg p$. \textsc{Super-Redundancy} thus predicts the LDHCs in (\ref{ex6:ldhc-pos-ws}) and (\ref{ex6:ldhc-pos-sw}), derived from the LDHDs in (\ref{ex6:ldhd-pos}), to be deviant (because the LDHDs in (\ref{ex6:ldhd-pos}) were already predicted so). Similarly, it predicts the LDHCs in (\ref{ex6:ldhc-neg-ws}) and (\ref{ex6:ldhc-neg-sw}), derived from the LDHDs in (\ref{ex6:ldhd-neg}), to be fine (because the LDHDs in (\ref{ex6:ldhd-neg}) were already predicted so). In other words, the mispredictions of \textsc{Super-Redundancy} in the case of (\ref{ex6:ldhd-neg}), spread to its conditional variants (\ref{ex6:ldhc-neg-ws}) and (\ref{ex6:ldhc-neg-sw}).\\
+
+%\begin{exe}
+%	\ex (\ref{ex6:ldhc-pos-sw}) is not SR
+%	\begin{xlist}
+%		\ex {C = \pplus{} $\vee$ \r. Take $D = \top$.\\ $\neg$((\pplus{} $\vee$ \r) $\wedge$ $D$) $\rightarrow$ \p{} $\equiv$ $\neg$(\pplus{} $\vee$ \r) $\rightarrow$ \p{} $\equiv$ \r{} $\vee$ \p{} $\not\equiv$ \p}
+%		\ex {C = \p. Take $D = \bot$.\\
+%			$\neg$(\pplus{}$\vee$ \r) $\rightarrow$ (\p{} $\wedge$ $D$) $\equiv$  $\neg$(\pplus{}$\vee$ \r)$\rightarrow$(\p{} $\wedge$ $\bot$)  $\equiv$ \pplus{}$\vee$ \r{} $\vee$ $\bot$ $\equiv$ \pplus{}$\vee$ \r{} $\not\equiv$ $\neg$(\pplus{}$\vee$\r)}
+%		\ex {C = \pplus. Take $D = \bot$.\\
+%			$\neg$((\pplus{} $\wedge$ $D$)$\vee$ \r) $\rightarrow$ \p{}  $\equiv$  $\neg$(\pplus{}$\vee$ \r)$\rightarrow$ \p{} $\equiv$ \pplus{}$\vee$ \r{} $\vee$ $\bot$ $\equiv$ \pplus{}$\vee$ \r{} $\not\equiv$ $\neg$(\pplus{}$\vee$\r)} \label{ex5:sr-ldhc-sw}
+%	\end{xlist}
+%\end{exe}
 
 It is additionally worth noting that the conditionals in (\ref{ex6:ldhc-neg-ws}) and (\ref{ex6:ldhc-neg-sw}) may be simplified, by eliminating the double negation in the case of (\ref{ex6:ldhc-neg-ws}), and by applying De Morgan's Law in the case of (\ref{ex6:ldhc-neg-sw}). This is done in (\ref{ex6:ldhc-neg-ws-simp}) and (\ref{ex6:ldhc-neg-sw-simp}), respectively. In our current framework, double negation elimination, performed in (\ref{ex6:ldhc-neg-ws-simp}), is innocuous\footnote{The way we defined negation makes it almost involutive, meaning, applying it twice very often leads to the same result as not applying it at all. One pathological case, is when an entire layer is flagged as verifying in the input Qtree. Applying negation to the input Qtree once, erases this flagging on the entire layer. Applying negation a second time, does not recover the flagged layer, because the flipping operation induced by negation only targets layers that have at least one verifying node. But sentences like (\ref{ex6:ldhc-neg-ws-simp}) do not belong to this pathological class.} It is also inovuous from the point of \textsc{Super-Redundancy}, whose misprediction for (\ref{ex6:ldhc-neg-ws}) carries over to (\ref{ex6:ldhc-neg-ws-simp}). However, De Morgan's Law, performed in (\ref{ex6:ldhc-neg-sw-simp}), is \textit{a priori} not innocuous, at least for our account, because it introduces a brand new operator, conjunction, for which we have not yet devised an inquisitive contribution. And in fact, this conjunctive variant appears significantly more felicitous than the variant it is derived from. We will leave this conjunctive variant for future work.
 
@@ -1350,43 +1598,43 @@ It is additionally worth noting that the conditionals in (\ref{ex6:ldhc-neg-ws})
 			\# If NELS55 will take place in Connecticut, it won't take place in the US or will take place in New Haven.\\
 			$\pplus\rightarrow(\neg \p \vee \r)$}\label{ex6:ldhc-neg-ws-simp}
 		\ex{Derived from (\ref{ex6:ldhc-neg-sw}), \textit{via} De Morgan's Law.\\
-			If NELS55 will take place in the US and not in New Haven, it will not take place in Connecticut.\\
+			If NELS55 will take place in the US and not in New Haven, it won't take place in Connecticut.\\
 			$(\p \wedge\neg\r) \rightarrow(\neg \pplus)$
 		}\label{ex6:ldhc-neg-sw-simp}
 	\end{xlist}
 \end{exe}
 
 
-
+\subsection{Capturing LDHCs}
 We now proceed to show that all variants in (\ref{ex6:ldhc}) -- even when reasonably simplified -- are predicted by our framework to be odd, for various reasons. We first focus on the two \textsc{Q-Redundant} cases ((\ref{ex6:ldhc-pos-ws}) and (\ref{ex6:ldhc-neg-ws})/(\ref{ex6:ldhc-neg-ws-simp})), then turn to the two \textsc{Q-Irrelevant} cases ((\ref{ex6:ldhc-pos-sw}) and (\ref{ex6:ldhc-neg-sw}	)).
 
 First, we show that (\ref{ex6:ldhc-pos-ws}), repeated below, is \textsc{Q-Redundant}, given its simplification that omits the \textit{Connecticut} ($p^+$) disjunct within its consequent; see (\ref{ex6:ldhc-pos-ws-simpred})
 
 \begin{exe}
-	\exr{ex6:ldhc-pos-ws}[\#]{If NELS55 will not take place in the US, it will take place in Connecticut or in Göttingen.
+	\exr{ex6:ldhc-pos-ws}[\#]{If NELS55 won't take place in the US, it will take place in Connecticut or in Göttingen.
 		\\ $\neg\p \rightarrow (\pplus\vee\r)$}
-	\ex[]{If NELS55 will not take place in the US, it will take place in Göttingen.
+	\ex[]{If NELS55 won't take place in the US, it will take place in Göttingen.
 		\\ $\neg\p \rightarrow \r$}\label{ex6:ldhc-pos-ws-simpred}
 \end{exe}
 
-$S_{p^+}$ = \textit{NELS55 will take place in Connecticut} is coarser-grained than $S_{r}$ = \textit{NELS55 will take place in Gottingen}, therefore both sentences evoke Qtree that can stand in a refinement relation, whose disjunction gives rise to the Qtree for $S_{p^+} \vee S_r$ in Figure \ref{fig6:qtree-cvg}.\footnote{This Qtree could have involved more layers on top of the US state/region layer, but the presence/absence of such layers do not affect the final outcome.} 
+$S_{p^+}$ = \textit{NELS55 will take place in Connecticut} is coarser-grained than $S_{r}$ = \textit{NELS55 will take place in Göttingen}, therefore both sentences evoke Qtree that can stand in a refinement relation, whose disjunction gives rise to the Qtree for $S_{p^+} \vee S_r$ in Figure \ref{fig6:qtree-cvg}.\footnote{This Qtree could have involved more layers on top of the US state/region layer, but the presence/absence of such layers do not affect the final outcome.} 
 
 \begin{figure}[H]
 	\centering
 	\begin{forest}
-		[CS[\fbox{\textcolor{orange}{Connecticut}}[\textcolor{brown}{New Haven}][\textcolor{brown}{...}]][\textcolor{orange}{Massachusetts}[\textcolor{brown}{...}]][\textcolor{orange}{...}][\textcolor{orange}{Lower Saxony}[\fbox{\textcolor{brown}{Gottingen}}][\textcolor{brown}{...}]][\textcolor{orange}{...}]]
+		[CS[\fbox{\textcolor{orange}{Connecticut}}[\textcolor{brown}{New Haven}][\textcolor{brown}{...}]][\textcolor{orange}{Massachusetts}[\textcolor{brown}{...}]][\textcolor{orange}{...}][\textcolor{orange}{Lower Saxony}[\fbox{\textcolor{brown}{Göttingen}}][\textcolor{brown}{...}]][\textcolor{orange}{...}]]
 	\end{forest}
 	\caption[]{Qtree evoked by $S_{\pplus} \vee S_{\r}$}\label{fig6:qtree-cvg}
 \end{figure}
 
-Combining the Qtree in Figure \ref{fig6:qtree-cvg} with an antecedent Qtree for $\neg S_p$ = \textit{NELS55 will not take place in the US} (either ``polar'' or ``\textit{wh}''), yields the Qtrees in Figure \ref{fig6:qtree-nust(cvg)}. In such Qtrees, the \textit{Connecticut} nodes that was verifying in the consequent, got filtered by tree-node intersection. And the Qtrees in Figure \ref{fig6:qtree-nust(cvg)}, are thus also evoked by the simplification $\neg S_p \rightarrow S_r$ in (\ref{ex6:ldhc-pos-ws-simpred}).  As a result, (\ref{ex6:ldhc-pos-ws}) is predicted to be odd due to violations of \textsc{Q-Non-Redundancy}.
+Combining the Qtree in Figure \ref{fig6:qtree-cvg} with an antecedent Qtree for $\neg S_p$ = \textit{NELS55 won't take place in the US} (either ``polar'' or ``\textit{wh}''), yields the Qtrees in Figure \ref{fig6:qtree-nust(cvg)}. In such Qtrees, the \textit{Connecticut} nodes that was verifying in the consequent, got filtered by tree-node intersection. And the Qtrees in Figure \ref{fig6:qtree-nust(cvg)}, are thus also evoked by the simplification $\neg S_p \rightarrow S_r$ in (\ref{ex6:ldhc-pos-ws-simpred}).  As a result, (\ref{ex6:ldhc-pos-ws}) is predicted to be odd due to violations of \textsc{Q-Non-Redundancy}.
 
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{.45\linewidth}
 		\centering
 		\begin{forest}
-			[CS[\textcolor{blue}{US}] [\textcolor{blue}{$\neg$US}[\textcolor{orange}{Lower Saxony}[\fbox{\textcolor{brown}{Gottingen}}][\textcolor{brown}{...}]][\textcolor{orange}{...}]]]
+			[CS[\textcolor{blue}{US}] [\textcolor{blue}{$\neg$US}[\textcolor{orange}{Lower Saxony}[\fbox{\textcolor{brown}{Göttingen}}][\textcolor{brown}{...}]][\textcolor{orange}{...}]]]
 		\end{forest}
 		\caption{``Polar'' antecedent Qtree $\rightarrow$ Tree \ref{fig6:qtree-cvg}.}
 	\end{subfigure}
@@ -1394,7 +1642,7 @@ Combining the Qtree in Figure \ref{fig6:qtree-cvg} with an antecedent Qtree for 
 	\begin{subfigure}[b]{.45\linewidth}
 		\centering
 		\begin{forest}
-			[CS[\textcolor{blue}{US}] [\textcolor{blue}{Germany}[\textcolor{orange}{Lower Saxony}[\fbox{\textcolor{brown}{Gottingen}}][\textcolor{brown}{...}]][\textcolor{orange}{...}]][\textcolor{blue}{France}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]
+			[CS[\textcolor{blue}{US}] [\textcolor{blue}{Germany}[\textcolor{orange}{Lower Saxony}[\fbox{\textcolor{brown}{Göttingen}}][\textcolor{brown}{...}]][\textcolor{orange}{...}]][\textcolor{blue}{France}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]
 		\end{forest}
 		\caption{``\textit{Wh}'' antecedent Qtree $\rightarrow$ Tree \ref{fig6:qtree-cvg}.}
 	\end{subfigure}
@@ -1415,7 +1663,7 @@ $\neg S_{p}$ = \textit{NELS55 won't take place in the US} is coarser-grained tha
 \begin{figure}[H]
 	\centering
 	\begin{forest}
-		[CS[\textcolor{blue}{US}[{\textcolor{orange}{Connecticut}}[\fbox{\textcolor{pink}{New Haven}}][\textcolor{pink}{...}]][\textcolor{orange}{...}]][\fbox{\textcolor{blue}{Germany}}[\textcolor{orange}{Lower Saxony}[{\textcolor{pink}{Gottingen}}][\textcolor{pink}{...}]][\textcolor{orange}{...}]][\fbox{\textcolor{blue}{...}}]]
+		[CS[\textcolor{blue}{US}[{\textcolor{orange}{Connecticut}}[\fbox{\textcolor{pink}{New Haven}}][\textcolor{pink}{...}]][\textcolor{orange}{...}]][\fbox{\textcolor{blue}{Germany}}[\textcolor{orange}{Lower Saxony}[{\textcolor{pink}{Göttingen}}][\textcolor{pink}{...}]][\textcolor{orange}{...}]][\fbox{\textcolor{blue}{...}}]]
 	\end{forest}
 	\caption[]{Qtree evoked by $\neg S_{\p} \vee S_{\s}$}\label{fig6:qtree-usvnh}
 \end{figure}
@@ -1442,8 +1690,8 @@ Combining the Qtree in Figure \ref{fig6:qtree-usvnh} with an antecedent Qtree fo
 	\end{subfigure}
 \end{figure}
 \begin{figure}[H]
-\ContinuedFloat
-\centering
+	\ContinuedFloat
+	\centering
 	\begin{subfigure}[b]{.45\linewidth}
 		\centering
 		\begin{forest}
@@ -1457,15 +1705,15 @@ Combining the Qtree in Figure \ref{fig6:qtree-usvnh} with an antecedent Qtree fo
 Thirdly, we show that (\ref{ex6:ldhc-pos-sw}), repeated below, turns out incrementally \textsc{Irrelevant}, essentially because the finest degree of granularity conveyed by its disjunctive antecedent is by-city, and as such, is finer-grained than the granularity conveyed by the consequent -- incurring a violation close to the one observed in infelicitous HCs.
 
 \begin{exe}
-	\exr{ex6:ldhc-pos-sw}[\#] {If NELS55 will not take place in Connecticut or in Göttingen, it will take place in the US.
+	\exr{ex6:ldhc-pos-sw}[\#] {If NELS55 won't take place in Connecticut or in Göttingen, it will take place in the US.
 		\\ $\neg(\pplus\vee\r)\rightarrow \p$}
 \end{exe}
 
-Figure \ref{fig6:qtree-n(cvg)} shows the disjunctive Qtree evoked by (\ref{ex6:ldhc-pos-sw})'s antecedent, $\neg (S_{\pplus} \vee S_{\r})$ = \textit{NELS55 will not take place in Connecticut or in Gottingen}. It is directly derived from the Qtree in Figure \ref{fig6:qtree-cvg}, by simply flipping its verifying nodes layer-by-layer. Qtrees for (\ref{ex6:ldhc-pos-sw})'s consequent $S_p$ = \textit{NELS55 will take place in the US}, are given in Figure \ref{fig6:qtrees-us}. 
+Figure \ref{fig6:qtree-n(cvg)} shows the disjunctive Qtree evoked by (\ref{ex6:ldhc-pos-sw})'s antecedent, $\neg (S_{\pplus} \vee S_{\r})$ = \textit{NELS55 won't take place in Connecticut or in Göttingen}. It is directly derived from the Qtree in Figure \ref{fig6:qtree-cvg}, by simply flipping its verifying nodes layer-by-layer. Qtrees for (\ref{ex6:ldhc-pos-sw})'s consequent $S_p$ = \textit{NELS55 will take place in the US}, are given in Figure \ref{fig6:qtrees-us}. 
 \begin{figure}[H]
 	\centering
 	\begin{forest}
-		[CS[{\textcolor{orange}{Connecticut}}[\fbox{\textcolor{brown}{New Haven}}][\fbox{\textcolor{brown}{...}}]][\fbox{\textcolor{orange}{Massachusetts}}[\fbox{\textcolor{brown}{...}}]][\fbox{\textcolor{orange}{...}}][\fbox{\textcolor{orange}{Lower Saxony}}[{\textcolor{brown}{Gottingen}}][\fbox{\textcolor{brown}{...}}]][\fbox{\textcolor{orange}{...}}]]
+		[CS[{\textcolor{orange}{Connecticut}}[\fbox{\textcolor{brown}{New Haven}}][\fbox{\textcolor{brown}{...}}]][\fbox{\textcolor{orange}{Massachusetts}}[\fbox{\textcolor{brown}{...}}]][\fbox{\textcolor{orange}{...}}][\fbox{\textcolor{orange}{Lower Saxony}}[{\textcolor{brown}{Göttingen}}][\fbox{\textcolor{brown}{...}}]][\fbox{\textcolor{orange}{...}}]]
 	\end{forest}
 	\caption[]{Qtree evoked by $\neg (S_{\pplus} \vee S_{\r})$}\label{fig6:qtree-n(cvg)}
 \end{figure}
@@ -1478,7 +1726,7 @@ Figure \ref{fig6:qtree-n(cvg)} shows the disjunctive Qtree evoked by (\ref{ex6:l
 	\end{subfigure}
 	\begin{subfigure}[b]{.45\linewidth}
 		\centering
-			\begin{forest}
+		\begin{forest}
 			[CS[\fbox{\textcolor{blue}{US}}][\textcolor{blue}{$\neg$US}]]
 		\end{forest}
 		
@@ -1491,17 +1739,17 @@ It can be shown that combining the Qtree in Figure \ref{fig6:qtree-n(cvg)} (as a
 Fourth, and lastly, we show that this last result extends to (\ref{ex6:ldhc-neg-sw}), repeated below.
 
 \begin{exe}
-	\exr{ex6:ldhc-neg-sw}[]{If it's not the case that NELS55 won't take place in the US or will take place in New Haven, it will not take place in Connecticut.\\
+	\exr{ex6:ldhc-neg-sw}[]{If it's not the case that NELS55 won't take place in the US or will take place in New Haven, it won't take place in Connecticut.\\
 		$\neg(\neg \p \vee \s) \rightarrow(\neg \pplus)$}
 \end{exe}
 
-Figure \ref{fig6:qtree-n(usvnh)}  shows the disjunctive Qtree evoked by (\ref{ex6:ldhc-neg-sw})'s antecedent, $\neg (\neg S_{\p} \vee S_{\s})$ = \textit{It's not the case that NELS55 won't take place in the US or will take place in New Haven}. It is directly derived from the Qtree in Figure \ref{fig6:qtree-usvnh}, by simply flipping its verifying nodes layer-by-layer. Qtrees for (\ref{ex6:ldhc-neg-sw})'s consequent $\neg S_{p^+}$ = \textit{NELS55 will not take place in Connecticut}, are given in Figure \ref{fig6:qtrees-nct}. 
+Figure \ref{fig6:qtree-n(usvnh)}  shows the disjunctive Qtree evoked by (\ref{ex6:ldhc-neg-sw})'s antecedent, $\neg (\neg S_{\p} \vee S_{\s})$ = \textit{It's not the case that NELS55 won't take place in the US or will take place in New Haven}. It is directly derived from the Qtree in Figure \ref{fig6:qtree-usvnh}, by simply flipping its verifying nodes layer-by-layer. Qtrees for (\ref{ex6:ldhc-neg-sw})'s consequent $\neg S_{p^+}$ = \textit{NELS55 won't take place in Connecticut}, are given in Figure \ref{fig6:qtrees-nct}. 
 
 
 \begin{figure}[H]
 	\centering
 	\begin{forest}
-		[CS[\fbox{\textcolor{blue}{US}}[{\textcolor{orange}{Connecticut}}[{\textcolor{pink}{New Haven}}][\fbox{\textcolor{pink}{...}}]][\textcolor{orange}{...}]][{\textcolor{blue}{Germany}}[\textcolor{orange}{Lower Saxony}[\fbox{\textcolor{pink}{Gottingen}}][\fbox{\textcolor{pink}{...}}]][\textcolor{orange}{...}]][{\textcolor{blue}{...}}]]
+		[CS[\fbox{\textcolor{blue}{US}}[{\textcolor{orange}{Connecticut}}[{\textcolor{pink}{New Haven}}][\fbox{\textcolor{pink}{...}}]][\textcolor{orange}{...}]][{\textcolor{blue}{Germany}}[\textcolor{orange}{Lower Saxony}[\fbox{\textcolor{pink}{Göttingen}}][\fbox{\textcolor{pink}{...}}]][\textcolor{orange}{...}]][{\textcolor{blue}{...}}]]
 	\end{forest}
 	\caption[]{Qtree evoked by $\neg S_{\p} \vee S_{\s}$}\label{fig6:qtree-n(usvnh)}
 \end{figure}
@@ -1535,105 +1783,6 @@ Similarly to what was done for (\ref{ex6:ldhc-pos-sw}), it can be shown that com
 In this Section, we have investigated ``Long-Distance'' Hurford Conditionals, derived from LDHDs. Such conditionals involve complex antecedents or consequents, and mix degree of granularity in various ways, but all appear quite degraded. They were shown to be challenging for at least one account of oddness solely based on the concept of \textsc{Redundancy}. Unlike this family of approach, our proposed framework 
 talk about other ways to create long distance variants of HC by driectly disjoining the antecedent/conseunr of HCs.
 
-\section{Conclusion and outlook}\label{sec6:ccl}
-
-TALK ABOUT PERFECTION
-In this Chapter, we captured the challenging contrasts displayed by Hurford Conditionals, using two main ingredients. The first, was that sentences evoke questions (Qtrees) matching their degree of granularity. The second ingredient, was that the core operation behind the formation of conditional Qtrees (tree-node intersection), which is asymmetric in nature, is constrained by a new concept of \textsc{Relevance}. Drawing from both \citet{Lewis1988} and \citet{Roberts2012}, this new concept of \textsc{Relevance} was made asymmetrically sensitive to Qtree granularity. The contrast observed in HCs then boiled down to the (rough) intuitive idea that felicitous conditionals should display an antecedent that is coarser-grained than their consequent.\\
-
- Beyond simple HCs, we explored more involved predictions of our \textsc{Relevance} constraint, and showed that, surprisingly, conditionals whose antecedent and consequent evoke orthogonal questions, \textit{can} be felicitous under certain conditions. Finally, we saw that certain paradigms could be explained by a combination of \textsc{Relevance} and \textsc{Redundancy} constraints -- accounting for the intuition that different sentences give rise to different flavors of oddness.\\
-
-One datapoint that the current framework cannot account for, is given in (\ref{ex6:hc-disj}). (\ref{ex6:hc-disj}) is obtained from the infelicitous HC (\ref{ex6:hc-sw}), by simply replacing \textit{Italy} with \textit{France} in the consequent. This leads to a sensible improvement of the judgment. Yet, out model of \textsc{Relevance}, which is only sensitive to the degree of granularity evoked by the consequent, and not to what the consequent actually denotes, does not distinguish between (\ref{ex6:hc-sw}) and (\ref{ex6:hc-disj}) -- meaning, both sentences are predicted to be equally odd\footnote{The account laid out in \citet{HenotMortier2024a} captures this datapoint, because it assigns a central role to nodes flagged as verifying by the consequent, when it comes to evaluating \textsc{Relevance}. The main idea, is that intersecting \textit{Italy} with \textit{not Noto} shrinks \textit{Italy}, in turn causing infelicity, while intersecting \textit{France} with \textit{not Noto}, does not shrink \textit{France}, thus preserving felicity. \citeauthor{HenotMortier2024a}'s account however, has less empirical coverage regarding ``orthogonal'' conditionals, including CHCs.}
-
-\begin{exe}
-	\ex \label{ex6:hc-disj} {If SuB29 will not take place in Noto, it will take place in France. \hfill $\neg \pplus\rightarrow \q$}
-\end{exe}
-
-This Chapter, along with Chapter \ref{chap:hurford-disj} constituted an extensive discussion of non-scalar odd constructions, whether disjunctive or conditional in nature. The next Chapter leaves aside countries and cities (at least!) to investigate what happens in ``scalar'' counterparts of HDs, HCs, and some of their variants. 
-\newpage
-
-\section{Appendix: granularity-sensitivity in question-answer pairs}
-
-However, we have argued the contrast in HCs should be explained by a constraint sensitive to the level of granularity conveyed by the antecedent and consequent. But neither \textsc{\citeauthor{Lewis1988}'s Relevance} nor \textsc{\citeauthor{Roberts2012}'s Relevance} are sensitive to how the proposition at stake packages information: the only relevant(!) factor is the set-theoretic relation between the proposition as a whole, and the QuD, seen as a partition of the CS. This implies that the level of granularity conveyed by the proposition is not directly taken into account when assessing its \textsc{Relevance} to the question (although, of course, the strength of the proposition is). Looking beyond the case of HCs, this does not seem to match intuitions about what a \textsc{Relevant} answer to a question is.\\
-
-The question-answer pairs in (\ref{ex6:relevant-answers}) for instance, show that the answer's conveyed granularity should be taken into account when assessing \textsc{Relevance}. (\ref{ex6:relevant-answers})'s QuD strongly suggests a by-country partition of the CS. This predicts both (\ref{ex6:relevant}) and (\ref{ex6:relevant-coarse}) to be \textsc{Relevant} under both views, because both sentences refer to a proper subset of all countries. Yet, (\ref{ex6:relevant-coarse}) does not appear felicitous without hedging (e.g., using \textit{for all I know}). Its relative oddness in this context is however intuitive: \textit{Europe} feels ``coarser-grained'' than, e.g. \textit{France or Belgium}. This can be modeled by saying \textit{Europe} can less straightforwardly be partitioned into country-level cells, than \textit{France or Belgium}. 
-
-\begin{exe}
-	\ex {In which country did Jo grow up?}
-	\begin{xlist}
-		\ex[] {-- They grew up in France or Belgium.\hfill (\ref{ex1:lewis-relevance}) \cmark{} (\ref{ex6:roberts-relevance}) \cmark }\label{ex6:relevant}
-		\ex[??] {-- They grew up in Europe. \hfill (\ref{ex1:lewis-relevance}) \cmark{} (\ref{ex6:roberts-relevance}) \cmark}\label{ex6:relevant-coarse}
-		\ex[?] {-- They grew up in Paris (or Brussels). \hfill (\ref{ex1:lewis-relevance}) \xmark{} (\ref{ex6:roberts-relevance}) \cmark}\label{ex6:overinformative}
-		\ex[??] {-- They speak French natively \hfill (\ref{ex1:lewis-relevance}) \xmark{} (\ref{ex6:roberts-relevance}) \xmark}\label{ex6:irrelevant}
-	\end{xlist}
-	\label{ex6:relevant-answers}
-\end{exe}
-
-In fact, this is exactly the kind of intuition that Qtrees incorporate:\footnote{See also \cite{Benbaji2024} for a ``dynamic'' view of \textsc{Relevance} along the same lines.} a Qtree for (\ref{ex6:relevant}) ould feature a country-level terminal layer, properly coinciding with the QuD; while a Qtree for (\ref{ex6:relevant-coarse}) would ``stop'' at the continent-level. But no continent properly ``fits'' within a country-cell of the QuD. Making \textsc{Relevance} sensitive to distinctions in evoked Qtrees could thus explain the contrast in (\ref{ex6:relevant}-\ref{ex6:relevant-coarse}).
 
 
-Having a granularity-sensitive notion of \textsc{Relevance} may also help explain why finer-grained, overinformative answers like (\ref{ex6:overinformative}), are not so infelicitous:\footnote{We however note that (\ref{ex1:roberts-relevance}) achieves this, too.} they suggest a partition of the CS whose cells (city-level) can all be mapped to a single (country-level) cell of the partition provided by the QuD. (\ref{ex6:irrelevant}), which is also overinformative and predicted to be \textsc{Irrelevant}, sounds more odd than (\ref{ex6:overinformative}) and (\ref{ex6:overinformative-2}), because the partition it suggests (\textit{What's Jo's level in French?}) cannot be properly mapped to the partition set by the QuD. For instance, Jo could very well be fluent in French, without having grown up in France. This suggests that granularity-sensitive notion of \textsc{Relevance} should state that a proposition is \textsc{Relevant} if it can be partitioned into more specific ``sub-propositions'' (=verifying nodes), s.t. each sub-proposition ``fits'' a cell of the question, i.e., entails it.
 
-
-This may also capture the contrast between (\ref{ex6:overinformative}) and (\ref{ex6:irrelevant}) -- (\ref{ex6:overinformative}) turns out not so odd, because it typically evokes a Qtree featuring a terminal city-layer, in which each node can be ``fitted'' within single country (i.e. is \textsc{Relevant} to the QuD according to (\ref{ex6:roberts-relevance}-\ref{ex6:relevance-p})). (\ref{ex1:lewis-relevance}) on the other hand, feels worse because the kind of question it evokes (\textit{What's Jo's proficiency in French?}), features cells that cannot be properly mapped to the partition set by the QuD. These data overall suggest that a proposition is \textsc{Relevant} if it evokes a Qtree whose nodes all entail some cell of the overt QuD. This constitutes an extension (and a strengthening) of (\ref{ex6:roberts-relevance}-\ref{ex6:relevance-q}), 
-\section{Appendix: \citeauthor{Lewis1988}'s view of \textsc{Relevance} between questions}
- According to \citet{Lewis1988}, \textsc{Relevance} between to propositions, can be cashed out in terms of \textsc{Relevance} between their evoked questions. he notion of \textsc{Relevance} at stake amounts to inclusion (meaning, refinement) or connection between the questions evoked by the two propositions. This is shown by Lewis to be equivalent to connection, and at least one proposition being non-contingent. Two questions are said to be connected if one can find a pair of cells, one from each question, whose overlap is empty. Lewis additionally shows an interesting result, which is that, under a strict analysis of conditionals, \textit{if $p$ then $q$} holds iff $p$ and $q$ are \textsc{Relevant} to each other. This however, still fails to predict an asymmetry in HCs, because \textsc{Relevance}, defined as connection between evoked questions, and non-contingency, is a symmetric concept, that is also very weak. \\
-
-We think there are still two issues with 
-
-\section{Appendix: DNCHDs, DNLDHDs and Super-Redundancy}
-
-This Appendix contains proofs that \textsc{Super-Redundancy} predicts disjunctwise negated CHDs and LDHDs to be fine -- contrary to intuitions.
-
-\begin{exe}
-	\ex\label{ex6:chd-neg-sr} {``Disjunctwise'' negated CHDs are not Super Redundant (SR).\\
-		We show (\ref{ex6:chd-neg})=$(\neg\p)\vee(\neg\q)$, with $(\neg\p) \wedge (\neg\q) \not\vDash \bot$, is SR.\\
-		Take C = $\neg\p$.\\
-		We then have (\ref{ex6:hd-neg})$^-_C$ = $\neg\q$.\\
-		Take $D=\bot$.\\
-		$(\textref{ex6:chd-neg})_{Str(C, D)} = (\neg(\p \wedge D)) \vee (\neg\q)$\\
-		\phantom{$(\textref{ex6:chd-neg})_{Str(C, D)}$} $\equiv (\neg(\p \wedge \bot)) \vee (\neg\q)$\\
-		\phantom{$(\textref{ex6:chd-neg})_{Str(C, D)}$} $\equiv (\neg\bot) \vee (\neg\q)$\\
-		\phantom{$(\textref{ex6:hd-neg})_{Str(C, D)}$} $\equiv \top \vee (\neg\q)$\\
-		\phantom{$(\textref{ex6:hd-neg})_{Str(C, D)}$} $\equiv \top$\\
-		\phantom{$(\textref{ex6:hd-neg})_{Str(C, D)}$} $\not\equiv \neg\q = (\textref{ex6:chd-neg})^-_C$\\
-		Exact same reasoning when taking C = $\neg\q$, swapping the roles of \p{} and \q.
-	}
-\end{exe}
-
-\begin{exe}
-		\ex 
-		\begin{xlist}
-			\ex {(\ref{ex6:ldhd-pos})=\p{} $\vee$ (\pplus{} $\vee$ \r) is SR.\\
-				C = \pplus. $\forall D. $ \p{} $\vee$ ((\pplus{}$\wedge$ $D$) $\vee$ \r) $\equiv$ \p{} $\vee$ ((\pplus{}$\vee$ \r) $\wedge$ ($D$ $\vee$ \r)) $\equiv$ (\p{} $\vee$ \r) $\wedge$ (\p{} $\vee$ $D$ $\vee$ \r) $\equiv$ \p{} $\vee$ \r}
-			\ex {(\ref{ex6:ldhd-neg}) = $\neg$\pplus{} $\vee$ ($\neg$\p{} $\vee$ \r) is not SR.\\
-				C = $\neg$\pplus. Take $D = \top$.\\
-				$\neg$(\pplus{} $\wedge$ $D$) $\vee$ ($\neg$\p{} $\vee$ \r) $\equiv$ $\neg$\pplus{} $\vee$ ($\neg$\p{} $\vee$ \r) $\equiv$ $\neg$\pplus{} $\vee$ \r{} $\not\equiv$ $\neg$\p{} $\vee$ \r\\
-				C = $\neg$\p. Take $D = \bot$.\\
-				$\neg$\pplus{} $\vee$ ($\neg$(\p{} $\wedge$ $D$) $\vee$ \r) $\equiv$ $\neg$\pplus{} $\vee$ ($\top$ $\vee$ \r) $\equiv$ $\top$ $\not\equiv$ $\neg$\pplus{} $\vee$ \r\\
-				C = \r. Take $D = \top$.\\
-				$\neg$\pplus{} $\vee$ ($\neg$\p{} $\vee$ (\r{} $\wedge$ $D$)) $\equiv$ $\neg$\pplus{} $\vee$ \r{} $\not\equiv$ $\neg$\pplus $\equiv$ $\neg$\pplus{} $\vee$ $\neg$\p{}\\
-				C = ($\neg$\p{} $\vee$ \r). Take $D = \top$.\\
-				$\neg$\pplus{} $\vee$ (($\neg$\p{} $\wedge$ $D$) $\vee$ (\r{} $\wedge$ $D$)) $\equiv$ $\neg$\pplus{} $\vee$ ($\neg$\p{} $\vee$ \r) $\equiv$ $\neg$\pplus{} $\vee$ \r{} $\not\equiv$ $\neg$\pplus
-				
-			}
-		\end{xlist}
-\end{exe}
-
-\begin{exe}
-	\ex (\ref{ex6:ldhc-pos-sw}) is not SR
-	\begin{xlist}
-		\ex {C = \pplus{} $\vee$ \r. Take $D = \top$.\\ $\neg$((\pplus{} $\vee$ \r) $\wedge$ $D$) $\rightarrow$ \p{} $\equiv$ $\neg$(\pplus{} $\vee$ \r) $\rightarrow$ \p{} $\equiv$ \r{} $\vee$ \p{} $\not\equiv$ \p}
-		\ex {C = \p. Take $D = \bot$.\\
-			$\neg$(\pplus{}$\vee$ \r) $\rightarrow$ (\p{} $\wedge$ $D$) $\equiv$  $\neg$(\pplus{}$\vee$ \r)$\rightarrow$(\p{} $\wedge$ $\bot$)  $\equiv$ \pplus{}$\vee$ \r{} $\vee$ $\bot$ $\equiv$ \pplus{}$\vee$ \r{} $\not\equiv$ $\neg$(\pplus{}$\vee$\r)}
-		\ex {C = \pplus. Take $D = \bot$.\\
-			$\neg$((\pplus{} $\wedge$ $D$)$\vee$ \r) $\rightarrow$ \p{}  $\equiv$  $\neg$(\pplus{}$\vee$ \r)$\rightarrow$ \p{} $\equiv$ \pplus{}$\vee$ \r{} $\vee$ $\bot$ $\equiv$ \pplus{}$\vee$ \r{} $\not\equiv$ $\neg$(\pplus{}$\vee$\r)} \label{ex5:sr-ldhc-sw}
-	\end{xlist}
-\end{exe}
-
-
-\begin{forest}
-	[CS [US[Conn[\fbox{New Haven}][...]][\fbox{Mass}[...]][\fbox{...}]][\fbox{Italy}[\fbox{Sicily}[Noto][...]][\fbox{...}]][\fbox{France}[\fbox{Paris}][\fbox{...}]][\fbox{...}]]
-\end{forest}
-\begin{forest}
-	[CS [US[Conn[\fbox{New Haven}][...]][\fbox{Mass}[...]][\fbox{...}]][{Italy}[\fbox{Sicily}[Noto][...]][\fbox{...}]][{France}[\fbox{Paris}][\fbox{...}]][{...}]]
-\end{forest}

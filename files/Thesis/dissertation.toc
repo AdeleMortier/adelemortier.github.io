@@ -100,29 +100,32 @@
 \contentsline {subsection}{\numberline {6.4.3}\textsc {Incremental Q-Relevance}}{174}{subsection.6.4.3}%
 \contentsline {subsection}{\numberline {6.4.4}Capturing the contrast in Hurford Conditionals}{178}{subsection.6.4.4}%
 \contentsline {subsection}{\numberline {6.4.5}Taking stock}{181}{subsection.6.4.5}%
-\contentsline {section}{\numberline {6.5}Extensions}{184}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}``Compatible'' Hurford Conditionals}{184}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}``Long-Distance'' HCs derived from LDHDs}{191}{subsection.6.5.2}%
-\contentsline {section}{\numberline {6.6}Conclusion and outlook}{200}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Appendix: granularity-sensitivity in question-answer pairs}{202}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Appendix: \citeauthor {Lewis1988}'s view of \textsc {Relevance} between questions}{203}{section.6.8}%
-\contentsline {section}{\numberline {6.9}Appendix: DNCHDs, DNLDHDs and Super-Redundancy}{204}{section.6.9}%
-\contentsline {chapter}{\numberline {7}Some but not all redundant sentences escape infelicity: oddness and scalarity}{206}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Experimentally assessing asymmetries in scalar Hurford Disjunctions}{206}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}The data}{206}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}Previous accounts}{207}{subsection.7.1.2}%
-\contentsline {subsection}{\numberline {7.1.3}Experiment}{211}{subsection.7.1.3}%
-\contentsline {section}{\numberline {7.2}A novel account account of the asymmetries in scalar Hurford Disjunctions}{216}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Qtrees of simplex LFs: scalar vs. non-scalar case}{216}{subsection.7.2.1}%
-\contentsline {subsubsection}{Defining the same-granularity relation}{216}{section*.129}%
-\contentsline {subsubsection}{Non-scalar items}{217}{section*.130}%
-\contentsline {subsubsection}{Scalar items}{219}{section*.132}%
-\contentsline {subsubsection}{Deriving Qtrees for scalemates and non-scalemates}{220}{section*.134}%
-\contentsline {subsection}{\numberline {7.2.2}Getting compositional}{224}{subsection.7.2.2}%
-\contentsline {section}{\numberline {7.3}The case of scalar Hurford Conditionals}{226}{section.7.3}%
-\contentsline {subsubsection}{The problem}{226}{section*.150}%
-\contentsline {subsubsection}{Exploring a potential solution}{228}{section*.151}%
-\contentsline {section}{\numberline {7.4}Scalarity and accommodated QuDs}{229}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Qtree recap}{229}{subsection.7.4.1}%
-\contentsline {section}{\numberline {7.5}Capturing scalar HCs via Q-Relevance}{230}{section.7.5}%
-\contentsline {subsection}{\numberline {7.5.1}Interim conclusion}{232}{subsection.7.5.1}%
+\contentsline {section}{\numberline {6.5}Extension to ``Compatible'' Hurford Conditionals}{184}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}``Compatible'' Hurford Disjunctions and their disjunctwise negated counterparts}{184}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Constructing ``Compatible'' HCs from CHDs}{185}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Capturing CHCs}{188}{subsection.6.5.3}%
+\contentsline {section}{\numberline {6.6}Conclusion and outlook}{193}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Appendix: \citeauthor {Lewis1988}'s \textsc {Relevant Implications}}{194}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Appendix: extension to ``Long-Distance'' Hurford Conditionals}{195}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}``Long-Distance'' Hurford Disjunctions and their disjunctwise negated counterparts}{195}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}Constructing ``Long-Distance'' HCs from LDHDs}{200}{subsection.6.8.2}%
+\contentsline {subsection}{\numberline {6.8.3}Capturing LDHCs}{202}{subsection.6.8.3}%
+\contentsline {chapter}{\numberline {7}Some but not all redundant sentences escape infelicity: oddness and scalarity}{208}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Experimentally assessing asymmetries in scalar Hurford Disjunctions}{208}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}The data}{208}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Previous accounts}{209}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Experiment}{213}{subsection.7.1.3}%
+\contentsline {section}{\numberline {7.2}A novel account account of the asymmetries in scalar Hurford Disjunctions}{218}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Qtrees of simplex LFs: scalar vs. non-scalar case}{218}{subsection.7.2.1}%
+\contentsline {subsubsection}{Defining the same-granularity relation}{218}{section*.131}%
+\contentsline {subsubsection}{Non-scalar items}{219}{section*.132}%
+\contentsline {subsubsection}{Scalar items}{221}{section*.134}%
+\contentsline {subsubsection}{Deriving Qtrees for scalemates and non-scalemates}{222}{section*.136}%
+\contentsline {subsection}{\numberline {7.2.2}Getting compositional}{226}{subsection.7.2.2}%
+\contentsline {section}{\numberline {7.3}The case of scalar Hurford Conditionals}{228}{section.7.3}%
+\contentsline {subsubsection}{The problem}{228}{section*.152}%
+\contentsline {subsubsection}{Exploring a potential solution}{230}{section*.153}%
+\contentsline {section}{\numberline {7.4}Scalarity and accommodated QuDs}{231}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Qtree recap}{231}{subsection.7.4.1}%
+\contentsline {section}{\numberline {7.5}Capturing scalar HCs via Q-Relevance}{232}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Interim conclusion}{234}{subsection.7.5.1}%
