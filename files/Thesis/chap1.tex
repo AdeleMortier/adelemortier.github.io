@@ -579,7 +579,7 @@ Regardless on which view of \textsc{Relevance} is adopted, relevant propositions
 		$Q' = \lbrace c' \ | \ \exists c \in Q. \ c' = c \cap p \wedge c' \neq \emptyset\rbrace$}\label{ex1:partitioned-context-set-update}
 \end{exe}
 
-There are two shortcomings to the current framework. First, adding a proposition to  the CG ``mechanically'' leads to an update of the CS and of the QuD, but does not directly affect the \textit{structure} of this QuD: even if some cells should shrink, the \textit{limits} of each cell remain the same. This goes against the intuition that sometimes, sentences give rise rise to brand new QuDs, as exemplified by the exchange in (\ref{ex1:followup-qud}).
+There are two shortcomings to the current framework. First, adding a proposition to  the CG ``mechanically'' leads to an update of the CS and of the QuD, but does not directly affect the \textit{structure} of this QuD: even if some cells should shrink, the \textit{limits} of each cell remain the same. This goes against the intuition that sometimes, sentences give rise to brand new QuDs, as exemplified by the exchange in (\ref{ex1:followup-qud}).
 
 \begin{exe}
 	\ex {--Is it raining?\\
@@ -590,45 +590,55 @@ There are two shortcomings to the current framework. First, adding a proposition
 
 Second, and relatedly, one can wonder what is supposed to happen in the case of out-of-the-blue sentences, i.e. sentences for which there is no explicit QuD. In such cases, it is generally assumed that a reasonable QuD is somehow inferred. But, given the fact that a QuD is merely a partition of the current CS, there exists many options. This dissertation will focus on how exactly QuDs are inferred, what additional constraints hold between an assertion and a QuD, and what the consequences are for pragmatic theory.
 
-\subsection{Relevance and the packaging of information}
-We start by showing that the felicity of disjunctions and conditionals is sensitive to \textit{overt} QuDs -- but in different ways. We take this as evidence that out-of-the-blue disjunctions and conditionals accommodate different kinds of implicit QuDs.\\
+%\subsection{Relevance and the packaging of information}
+%We start by showing that the felicity of disjunctions and conditionals is sensitive to \textit{overt} QuDs -- but in different ways. We take this as evidence that out-of-the-blue disjunctions and conditionals accommodate different kinds of implicit QuDs.\\
+%
+%If a context contrasting \textit{Paris} and \textit{France but not Paris} is set as in (\ref{ex1:qud-setting}), (\ref{ex1:hc-ns-w}) and (\ref{ex1:ldhc-ns-w}) improve (see \cite{Haslinger2023} for similar effects on disjunctions and conjunctions). This is strange: even if the context and question made \textit{Paris} (but no other French city) a relevant alternative to \textit{France}, \textit{exh} would remain IW in the consequent of (\ref{ex1:hc-ns-w}): \textit{if Jo did not grow up in Paris, she grew up in France but not Paris}, is equivalent to \textit{if Jo did not grow up in Paris, she grew up in France}. In other words, \textit{exh} (as constrained by IW) cannot leverage the contextually provided alternatives to make (\ref{ex1:hc-ns-w}) escape SR in (\ref{ex1:qud-setting}). The same applies to (\ref{ex1:ldhc-ns-w}).
+%
+%
+%\begin{exe}
+%	\ex{\textit{Context: French accents vary across countries and between Paris the rest of France.}\\
+%		Al: I'm wondering where Jo learned French.\\
+%		Lu: I'm not completely sure but... (\ref{ex1:hc-ns-w}) \cmark (\ref{ex1:ldhc-ns-w}) \cmark}\label{ex1:qud-setting}
+%\end{exe}
+%
+%
+%This suggests that a purely LF-based view of redundancy such as SR, may be insufficient to capture the interaction between HCs and how their context of utterance packages information. Rather, it seems that the context of (\ref{ex1:qud-setting}) makes a specific partition of the CS salient, and that this partition can be used to make otherwise infelicitous assertions accommodate a different question than the one they would evoke out-of-the-blue.
+%
+%Additionally, conditionals and disjunctions seem to accommodate distinct QuDs. To show this, we use the construction \textit{depending on Q, p} (\cite{Karttunen1977,Kaufmann2016}), where \textit{Q} is a question and \textit{p} a proposition. This construction has been argued to force the partition conveyed by Q to match specific live issues raised by $p$. We understand such ``live issues'' as the maximal true answers of the QuD evoked by $p$. The contrast between (\ref{ex1:depending-on-or}) and (\ref{ex1:depending-on-if}) then suggests that the \textit{France} and \textit{Belgium} answers can be matched against \textit{Q} in the disjunctive, but not in the conditional case. This in turn means that a disjunction introduces a QuD making both disjuncts maximal true answers, while a conditional does not do the same with its consequent and the negation of its antecedent.
+%
+%\begin{exe}
+%	\ex\label{ex1:depending-on} Depending on $[$how her accent sounds like$]_{Q}$...
+%	\begin{xlist}
+%		\ex {Jo grew up in France \textbf{or} in Belgium. \hfill \p{}$\vee$\q }\label{ex1:depending-on-or}
+%		\ex[??]{\textbf{if} Jo didn't grow up in France she grew up in Belgium. \hfill $\neg$\p{}$\rightarrow$\q} \label{ex1:depending-on-if}
+%		\ex[?] {\textbf{if} Jo didn't grow up in France, she grew up in Belgium \textbf{or} in Québec. \hfill $\neg$\p{}$\rightarrow$(\q$\vee$\r)}\label{ex1:depending-on-if-or}
+%		\ex [??]{\textbf{if} Jo didn't grow up in France \textbf{or} Belgium, she grew up in Québec. \hfill $\neg$(\p$\vee$\q)$\rightarrow$\r}\label{ex1:depending-on-or-if}
+%	\end{xlist}
+%\end{exe}
+%
+%
+%The existence of an improvement between (\ref{ex1:depending-on-if}) and (\ref{ex1:depending-on-if-or}), and the absence of a similar improvement in between (\ref{ex1:depending-on-if}) and (\ref{ex1:depending-on-or-if}), also implies that the answers targeted by \textit{depending on Q}, when \textit{p} is conditional, are the ones made available by the consequent of \textit{p} (which is appropriately disjunctive in (\ref{ex1:depending-on-if-or}), but not (\ref{ex1:depending-on-or-if})).
+%
+%
+%More generally, this predicts ``connectivity effects'' in disjunctions-of-conditionals, in that the antecedents and consequents respectively have to address similar QuDs; and no such effect in conditionals-of-disjunctions, in that disjuncts coming from the antecedent and consequent may be inquisitively unrelated.
 
-If a context contrasting \textit{Paris} and \textit{France but not Paris} is set as in (\ref{ex1:qud-setting}), (\ref{ex1:hc-ns-w}) and (\ref{ex1:ldhc-ns-w}) improve (see \cite{Haslinger2023} for similar effects on disjunctions and conjunctions). This is strange: even if the context and question made \textit{Paris} (but no other French city) a relevant alternative to \textit{France}, \textit{exh} would remain IW in the consequent of (\ref{ex1:hc-ns-w}): \textit{if Jo did not grow up in Paris, she grew up in France but not Paris}, is equivalent to \textit{if Jo did not grow up in Paris, she grew up in France}. In other words, \textit{exh} (as constrained by IW) cannot leverage the contextually provided alternatives to make (\ref{ex1:hc-ns-w}) escape SR in (\ref{ex1:qud-setting}). The same applies to (\ref{ex1:ldhc-ns-w}).
+
+\section{Conclusion and roadmap of the dissertation}
+
+In this Chapter, we have introduced the dominant view of the semantics of questions and assertions, and of their interplay. In particular, we have seen that assertions should better be informative and relevant to the QuD raised by the conversation. In the rest of this dissertation, we will show that the interplay between questions and assertions may have implications beyond \textsc{Relevance}, and as such explain more cases of oddness that previously assumed. Specifically, we will claim that instead of being a ``good'' answer to \textit{some} QuD, an out-of-the-blue sentence must be a good answer to a \textit{good} QuD, following insights by \citet{Katzir2015}.
+
+Chapter \ref{chap:accommodating-quds} will continue the discussion on the pragmatics of questions, and argue that ``good'' implicit QuDs are determined from the shape of the assertive sentence itself. This is pushing the idea that assertions evoke alternatives one step further, in the sense that sentences will be taken to evoke questions (themselves derived from alternatives). These implicit questions will have a structure that consists in a generalization of the partition structure, namely, they will take the form of nested partitions of the CS.\\
+
+In Chapters \ref{chap:redundancy}, we will claim that the process deriving questions from assertions as defined in Chapter \ref{chap:accommodating-quds}, is subject to constraints that go beyond \textsc{Relevance}, in particular \textsc{Redundancy}. A new concept of \textsc{Redundancy} will be used to explain when, and how, structurally and logically similar sentences involving disjunctions and conditionals, display distinct oddness/felicity profiles. More broadly, the introduction of constraints on QuD derivation will make way for a ``lifted'' view of pragmatic oddness, under which an assertion is not odd \textit{per se}, but rather, is odd due to its interaction with the QuDs it evokes.\\
+
+Chapter \ref{chap:hurford-disj} will further generalize the view of \textsc{Redundancy} introduced in \ref{chap:redundancy}, in order to cover a wider variety of disjunctive sentences related to Hurford Disjunctions \citep{Hurford1974}.\\
+
+Chapter \ref{chap:hurford-sentences} will turn to conditional variants of Hurford Disjunctions \citep{Mandelkern2018}, and introduce a second constraint on QuD derivation, drawing from \textsc{\citeauthor{Lewis1988}'s} and \textsc{\citeauthor{Roberts2012}'s Relevance}.\\
+
+Lastly, Chapter \ref{chap:scalarity} will explore Hurford Disjunctions involving logically entailing scalar items, showing experimental evidence supporting the existence of a pragmatic contrast between the two possible orderings of these disjunctions. The contrast will then be explained by appealing to (incrementally) derived implicit questions, and independently motivated principles constraining question answering. 
 
 
-\begin{exe}
-	\ex{\textit{Context: French accents vary across countries and between Paris the rest of France.}\\
-		Al: I'm wondering where Jo learned French.\\
-		Lu: I'm not completely sure but... (\ref{ex1:hc-ns-w}) \cmark (\ref{ex1:ldhc-ns-w}) \cmark}\label{ex1:qud-setting}
-\end{exe}
-
-
-This suggests that a purely LF-based view of redundancy such as SR, may be insufficient to capture the interaction between HCs and how their context of utterance packages information. Rather, it seems that the context of (\ref{ex1:qud-setting}) makes a specific partition of the CS salient, and that this partition can be used to make otherwise infelicitous assertions accommodate a different question than the one they would evoke out-of-the-blue.
-
-Additionally, conditionals and disjunctions seem to accommodate distinct QuDs. To show this, we use the construction \textit{depending on Q, p} (\cite{Karttunen1977,Kaufmann2016}), where \textit{Q} is a question and \textit{p} a proposition. This construction has been argued to force the partition conveyed by Q to match specific live issues raised by $p$. We understand such ``live issues'' as the maximal true answers of the QuD evoked by $p$. The contrast between (\ref{ex1:depending-on-or}) and (\ref{ex1:depending-on-if}) then suggests that the \textit{France} and \textit{Belgium} answers can be matched against \textit{Q} in the disjunctive, but not in the conditional case. This in turn means that a disjunction introduces a QuD making both disjuncts maximal true answers, while a conditional does not do the same with its consequent and the negation of its antecedent.
-
-\begin{exe}
-	\ex\label{ex1:depending-on} Depending on $[$how her accent sounds like$]_{Q}$...
-	\begin{xlist}
-		\ex {Jo grew up in France \textbf{or} in Belgium. \hfill \p{}$\vee$\q }\label{ex1:depending-on-or}
-		\ex[??]{\textbf{if} Jo didn't grow up in France she grew up in Belgium. \hfill $\neg$\p{}$\rightarrow$\q} \label{ex1:depending-on-if}
-		\ex[?] {\textbf{if} Jo didn't grow up in France, she grew up in Belgium \textbf{or} in Québec. \hfill $\neg$\p{}$\rightarrow$(\q$\vee$\r)}\label{ex1:depending-on-if-or}
-		\ex [??]{\textbf{if} Jo didn't grow up in France \textbf{or} Belgium, she grew up in Québec. \hfill $\neg$(\p$\vee$\q)$\rightarrow$\r}\label{ex1:depending-on-or-if}
-	\end{xlist}
-\end{exe}
-
-
-The existence of an improvement between (\ref{ex1:depending-on-if}) and (\ref{ex1:depending-on-if-or}), and the absence of a similar improvement in between (\ref{ex1:depending-on-if}) and (\ref{ex1:depending-on-or-if}), also implies that the answers targeted by \textit{depending on Q}, when \textit{p} is conditional, are the ones made available by the consequent of \textit{p} (which is appropriately disjunctive in (\ref{ex1:depending-on-if-or}), but not (\ref{ex1:depending-on-or-if})).
-
-
-More generally, this predicts ``connectivity effects'' in disjunctions-of-conditionals, in that the antecedents and consequents respectively have to address similar QuDs; and no such effect in conditionals-of-disjunctions, in that disjuncts coming from the antecedent and consequent may be inquisitively unrelated.
-
-
-\section{Roadmap of the dissertation}
-
-Specifically, we will claim that instead of being a ``good'' answer to \textit{some} QuD, an out-of-the-blue sentence must be a good answer to a \textit{good} QuD, following insight by \citet{Katzir2015}. We will show that operationalizing this principle allows to account for a wider range of oddness phenomena, that previous approaches struggled to capture under the same umbrella.
-
- ``Good'' QuDs are determined from the shape of the assertive sentence itself. This is pushing the idea that assertions evoke alternatives one step further, in the sense that sentences will be taken to evoke questions (themselves derived from alternatives). These evoked questions will have a structure that consists in a generalization of the partition structure, namely, they will take the form of parse tree of the CS. We will additionally claim the process deriving good questions from good answers, is subject to constraints that go beyond relevance, and cover concepts such as redundancy. These constraints will make way for a ``lifted'' view of pragmatic oddness, under which an assertion is not odd \textit{per se}, but rather, is odd due to its interaction with the QuDs it evokes. Before presenting the core components of our model, we will briefly present two recent accounts of oddness based on similar ideas.
 
 
 

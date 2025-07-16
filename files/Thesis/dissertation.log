@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  22 JUN 2025 21:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  16 JUL 2025 00:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1114,35 +1114,31 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 (/usr/share/texlive/texmf-dist/tex/generic/alphalph/alphalph.sty
 Package: alphalph 2019/12/09 v2.6 Convert numbers to letters (HO)
 )
-(./dissertation.aux (./chap1.aux) (./chap2.aux) (./chap3.aux
+(./dissertation.aux (./chap1.aux) (./chap2.aux
 
 LaTeX Warning: Label `ex2:focus-alternatives' multiply defined.
 
-) (./chap4.aux
-
-LaTeX Warning: Label `ex4:n(pvq)tp-repeated-sr' multiply defined.
-
-) (./chap5.aux) (./chap6.aux) (./chap7.aux))
+) (./chap6.aux))
 \openout1 = `dissertation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1200,7 +1196,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 122.
+Package hyperref Info: Link coloring OFF on input line 123.
 
 (./dissertation.out) (./dissertation.out)
 \@outlinefile=\write5
@@ -1239,22 +1235,59 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/tex-gyre/q-ec.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}
-] [2]
-Overfull \hbox (10.35278pt too wide) in paragraph at lines 110--110
+]
+
+Package natbib Warning: Citation `Lewis1988' on page 2 undefined on input line 
+57.
+
+
+Overfull \hbox (10.35278pt too wide) in paragraph at lines 59--59
  [][] [][]\T1/qpl/m/n/12 ``Long-Distance'' Hur-ford Dis-junc-tions and their di
 s-junct-wise negated 
  []
 
-[3])
+)
 \tf@toc=\write6
 \openout6 = `dissertation.toc'.
 
- [4]
+ [2]
+Underfull \hbox (badness 1038) in paragraph at lines 129--130
+\T1/qpl/m/n/12 con-di-tions of their well-formedness, draw-ing from fa-mil-iar 
+con-cepts in prag-mat-ics,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.134 \end{abstract}
+                     [1]
 \openout2 = `chap1.aux'.
 
  (./chap1.tex
 Chapter 1.
-[5
+
+Package natbib Warning: Citation `Heim2023' on page 1 undefined on input line 1
+4.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15 
+      [1
 
 
 ]
@@ -1262,24 +1295,68 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
 0.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [6{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [7] [8] [9] [1
-0]
+)
 
-LaTeX Warning: Reference `ex1:accommodating -quds' on page 11 undefined on inpu
-t line 163.
+Package natbib Warning: Citation `Stalnaker1974' on page 2 undefined on input l
+ine 37.
 
-[11] [12] [13]
+
+Package natbib Warning: Citation `Stalnaker1978' on page 2 undefined on input l
+ine 37.
+
+
+Package natbib Warning: Citation `Stalnaker1978' on page 2 undefined on input l
+ine 37.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.38 
+      [2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [3]
+[4]
+
+Package natbib Warning: Citation `Heim1982' on page 5 undefined on input line 1
+20.
+
+
+Package natbib Warning: Citation `Heim1983a' on page 5 undefined on input line 
+120.
+
+
+Package natbib Warning: Citation `Heim1983b' on page 5 undefined on input line 
+120.
+
+[5] [6]
+
+LaTeX Warning: Reference `ex1:accommodating -quds' on page 7 undefined on input
+ line 163.
+
+[7]
+
+Package natbib Warning: Citation `Hamblin1973' on page 8 undefined on input lin
+e 183.
+
+
+Package natbib Warning: Citation `Dayal1996' on page 8 undefined on input line 
+183.
+
+[8] [9]
 LaTeX Font Info:    Trying to load font information for TS1+qpl on input line 2
 33.
  (/usr/share/texmf/tex/latex/tex-gyre/ts1qpl.fd
 File: ts1qpl.fd 2009/09/25 v1.2 font definition file for TS1/qpl
 )
+
+Package natbib Warning: Citation `Fox2018' on page 10 undefined on input line 2
+40.
+
 LaTeX Font Info:    Trying to load font information for U+euf on input line 240
 .
-
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [14{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [15]
+) [10{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [11]
 Underfull \hbox (badness 10000) in paragraph at lines 262--265
 \T1/qpl/m/n/12 Alternatives ($\OML/cmm/m/it/12 P$\T1/qpl/m/n/12 ): $\OMS/cmsy/m
 /n/12 f$$\U/stmry/m/n/12 J$\T1/qpl/m/n/12 Jo passed$\U/stmry/m/n/12 K$\T1/qpl/m
@@ -1287,485 +1364,893 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--265
 y/m/n/12 g$ \T1/qpl/m/n/12 =
  []
 
-[16] [17] [18] [19] [20]
 
-LaTeX Warning: Reference `chap:relevance' on page 21 undefined on input line 57
+Package natbib Warning: Citation `Jager1996' on page 12 undefined on input line
+ 333.
+
+
+Package natbib Warning: Citation `Hulstijn1997' on page 12 undefined on input l
+ine 333.
+
+
+Package natbib Warning: Citation `Groenendijk1984' on page 12 undefined on inpu
+t line 333.
+
+
+Package natbib Warning: Citation `Groenendijk1999' on page 12 undefined on inpu
+t line 333.
+
+[12]
+
+Package natbib Warning: Citation `Katzir2015' on page 13 undefined on input lin
+e 397.
+
+[13]
+
+Package natbib Warning: Citation `VanKuppevelt1995a' on page 14 undefined on in
+put line 409.
+
+
+Package natbib Warning: Citation `VanKuppevelt1995b' on page 14 undefined on in
+put line 409.
+
+
+Package natbib Warning: Citation `Roberts1996' on page 14 undefined on input li
+ne 409.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 14 undefined on input li
+ne 409.
+
+
+Package natbib Warning: Citation `Ginzburg1996' on page 14 undefined on input l
+ine 409.
+
+
+Package natbib Warning: Citation `Buring2003' on page 14 undefined on input lin
+e 409.
+
+[14]
+
+Package natbib Warning: Citation `Lewis1988' on page 15 undefined on input line
+ 475.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 15 undefined on input line
+ 478.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 15 undefined on input line
+ 478.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 15 undefined on input line
+ 482.
+
+[15]
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 499.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 499.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 503.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 503.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 503.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 16 undefined on input line
+ 517.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 517.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 16 undefined on input line
+ 517.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 517.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 16 undefined on input line
+ 526.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 526.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 16 undefined on input line
+ 526.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 526.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 16 undefined on input line
+ 535.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 535.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 16 undefined on input line
+ 535.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 535.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 16 undefined on input line
+ 547.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 547.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 16 undefined on input line
+ 547.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 547.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 16 undefined on input line
+ 557.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 557.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 16 undefined on input line
+ 557.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 557.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 16 undefined on input line
+ 567.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 567.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 16 undefined on input line
+ 567.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 16 undefined on input li
+ne 567.
+
+[16]
+
+Package natbib Warning: Citation `Lewis1988' on page 17 undefined on input line
+ 571.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 17 undefined on input li
+ne 571.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 17 undefined on input line
+ 571.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 17 undefined on input li
+ne 571.
+
+
+LaTeX Warning: Reference `chap:relevance' on page 17 undefined on input line 57
 1.
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 594--595
+[17]
+
+Package natbib Warning: Citation `Katzir2015' on page 18 undefined on input lin
+e 629.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 631--632
 
  []
 
 
-LaTeX Warning: Reference `ex1:hc-ns-w' on page 22 undefined on input line 596.
+LaTeX Warning: Reference `chap:redundancy' on page 18 undefined on input line 6
+33.
 
 
-LaTeX Warning: Reference `ex1:ldhc-ns-w' on page 22 undefined on input line 596
-.
-
-
-LaTeX Warning: Reference `ex1:hc-ns-w' on page 22 undefined on input line 596.
-
-
-LaTeX Warning: Reference `ex1:hc-ns-w' on page 22 undefined on input line 596.
-
-
-LaTeX Warning: Reference `ex1:ldhc-ns-w' on page 22 undefined on input line 596
-.
-
-
-LaTeX Warning: Reference `ex1:hc-ns-w' on page 22 undefined on input line 602.
-
-
-LaTeX Warning: Reference `ex1:ldhc-ns-w' on page 22 undefined on input line 602
-.
-
-[22]
-Underfull \hbox (badness 1173) in paragraph at lines 616--616
-[]\T1/qpl/b/n/12 if \T1/qpl/m/n/12 Jo didn't grow up in France \T1/qpl/b/n/12 o
-r \T1/qpl/m/n/12 Bel-gium, she grew up in Québec.
+Underfull \hbox (badness 1442) in paragraph at lines 633--634
+\T1/qpl/m/n/12 struc-turally and log-i-cally sim-i-lar sen-tences in-volv-ing d
+is-junc-tions and con-di-tion-als,
  []
 
-[23] [24]
 
-LaTeX Warning: Reference `ex1:partition-from-propositions' on page 25 undefined
- on input line 699.
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
 
-) [25]
+ []
+
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 18 undefined on input line
+ 635.
+
+
+LaTeX Warning: Reference `chap:redundancy' on page 18 undefined on input line 6
+35.
+
+
+Package natbib Warning: Citation `Hurford1974' on page 18 undefined on input li
+ne 635.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--636
+
+ []
+
+[18]
+
+Package natbib Warning: Citation `Mandelkern2018' on page 19 undefined on input
+ line 637.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 19 undefined on input line
+ 637.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 19 undefined on input li
+ne 637.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
+
+ []
+
+
+LaTeX Warning: Reference `chap:scalarity' on page 19 undefined on input line 63
+9.
+
+[19]
+
+Package natbib Warning: Citation `Karttunen1977' on page 20 undefined on input 
+line 679.
+
+[20]
+
+LaTeX Warning: Reference `ex1:partition-from-propositions' on page 21 undefined
+ on input line 709.
+
+) [21]
 \openout2 = `chap2.aux'.
 
  (./chap2.tex
 Chapter 2.
-[26
+
+Package natbib Warning: Citation `Stalnaker1978' on page 22 undefined on input 
+line 9.
+
+
+Package natbib Warning: Citation `Heim1982' on page 22 undefined on input line 
+9.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 22 undefined on input line
+ 9.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 22 undefined on input li
+ne 9.
+
+[22
 
 
 
 
-] [27] [28] [29]
-Overfull \hbox (8.15503pt too wide) in paragraph at lines 158--159
+]
+
+Package natbib Warning: Citation `Roberts1996' on page 23 undefined on input li
+ne 25.
+
+
+LaTeX Warning: Reference `chap:redundancy' on page 23 undefined on input line 2
+8.
+
+
+LaTeX Warning: Reference `chap:redundancy' on page 23 undefined on input line 3
+8.
+
+[23]
+
+Package natbib Warning: Citation `Haslinger2023' on page 24 undefined on input 
+line 41.
+
+
+Package natbib Warning: Citation `Katzir2015' on page 24 undefined on input lin
+e 41.
+
+
+Package natbib Warning: Citation `Rooth1992' on page 24 undefined on input line
+ 41.
+
+
+Package natbib Warning: Citation `Buring2003' on page 24 undefined on input lin
+e 49.
+
+
+Package natbib Warning: Citation `Ippolito2019' on page 24 undefined on input l
+ine 49.
+
+
+Package natbib Warning: Citation `Zhang2022' on page 24 undefined on input line
+ 49.
+
+[24] [25]
+Overfull \hbox (8.15503pt too wide) in paragraph at lines 162--163
  [][] 
  []
 
-[30] [31]
+[26]
 
-LaTeX Warning: Reference `chap:exh-incr' on page 32 undefined on input line 191
+Package natbib Warning: Citation `Buring2003' on page 27 undefined on input lin
+e 190.
+
+
+Package natbib Warning: Citation `Riester2019' on page 27 undefined on input li
+ne 190.
+
+
+Package natbib Warning: Citation `Onea2016' on page 27 undefined on input line 
+190.
+
+
+Package natbib Warning: Citation `Ippolito2019' on page 27 undefined on input l
+ine 190.
+
+
+Package natbib Warning: Citation `Zhang2022' on page 27 undefined on input line
+ 190.
+
+[27]
+
+LaTeX Warning: Reference `chap:scalarity' on page 28 undefined on input line 19
+5.
+
+
+LaTeX Warning: Reference `chap:exh-incr' on page 28 undefined on input line 195
 .
 
-[32] [33]
-Overfull \hbox (31.64421pt too wide) in paragraph at lines 286--287
+[28] [29]
+Overfull \hbox (31.64421pt too wide) in paragraph at lines 290--291
  [][] 
  []
 
-[34] [35] [36] [37] [38]
-Overfull \hbox (0.8436pt too wide) in paragraph at lines 412--413
+[30] [31] [32]
+
+Package natbib Warning: Citation `Roberts1996' on page 33 undefined on input li
+ne 358.
+
+[33] [34]
+Overfull \hbox (0.8436pt too wide) in paragraph at lines 416--417
+ [][] 
+ []
+
+[35]
+Overfull \hbox (31.64421pt too wide) in paragraph at lines 468--469
+ [][] 
+ []
+
+[36] [37] [38]
+Overfull \hbox (38.4442pt too wide) in paragraph at lines 546--547
  [][] 
  []
 
 [39]
-Overfull \hbox (31.64421pt too wide) in paragraph at lines 464--465
+
+Package natbib Warning: Citation `Rooth1992' on page 40 undefined on input line
+ 580.
+
+
+Package natbib Warning: Citation `Katzir2007' on page 40 undefined on input lin
+e 580.
+
+
+Package natbib Warning: Citation `Fox2011' on page 40 undefined on input line 5
+80.
+
+[40]
+
+Package natbib Warning: Citation `Rooth1992' on page 41 undefined on input line
+ 610.
+
+
+Package natbib Warning: Citation `Katzir2007' on page 41 undefined on input lin
+e 610.
+
+[41] [42] [43]
+
+Package natbib Warning: Citation `Ippolito2019' on page 44 undefined on input l
+ine 731.
+
+
+Package natbib Warning: Citation `Ippolito2019' on page 44 undefined on input l
+ine 731.
+
+
+LaTeX Warning: Reference `chap:scalarity' on page 44 undefined on input line 73
+1.
+
+[44]
+
+Package natbib Warning: Citation `Ippolito2019' on page 45 undefined on input l
+ine 816.
+
+[45]
+
+Package natbib Warning: Citation `Rooth1992' on page 46 undefined on input line
+ 826.
+
+
+Package natbib Warning: Citation `Rooth1992' on page 46 undefined on input line
+ 826.
+
+[46]
+
+LaTeX Warning: Reference `chap:scalarity' on page 47 undefined on input line 87
+1.
+
+[47]
+
+LaTeX Warning: Reference `chap:scalarity' on page 48 undefined on input line 88
+0.
+
+
+Overfull \vbox (0.74934pt too high) has occurred while \output is active []
+
+
+[48]
+Overfull \hbox (2.41142pt too wide) in paragraph at lines 947--948
  [][] 
  []
 
-[40] [41] [42]
-Overfull \hbox (38.4442pt too wide) in paragraph at lines 542--543
+
+Overfull \hbox (2.2142pt too wide) in paragraph at lines 955--956
  [][] 
  []
 
-[43] [44] [45] [46] [47] [48] [49] [50] [51] [52]
-Overfull \hbox (2.41142pt too wide) in paragraph at lines 871--872
- [][] 
- []
+[49] [50] [51]
 
+LaTeX Warning: Reference `chap:hurford-cond' on page 52 undefined on input line
+ 1036.
 
-Overfull \hbox (2.2142pt too wide) in paragraph at lines 879--880
- [][] 
- []
+[52]
 
-[53] [54] [55]
+LaTeX Warning: Reference `chap:scalarity' on page 53 undefined on input line 10
+53.
 
-LaTeX Warning: Reference `chap:hurford-cond' on page 56 undefined on input line
- 960.
-
-[56] [57] [58]
-Overfull \hbox (19.76431pt too wide) in paragraph at lines 1051--1052
+[53] [54]
+Overfull \hbox (19.76431pt too wide) in paragraph at lines 1127--1128
  [][] 
  []
 
 
-Overfull \hbox (13.78706pt too wide) in paragraph at lines 1059--1060
- [][] 
- []
-
-[59] [60] [61] [62] [63]
-Overfull \hbox (2.41142pt too wide) in paragraph at lines 1245--1246
+Overfull \hbox (13.78706pt too wide) in paragraph at lines 1135--1136
  [][] 
  []
 
 
-Overfull \hbox (2.2142pt too wide) in paragraph at lines 1253--1254
+Package natbib Warning: Citation `Simons2001' on page 55 undefined on input lin
+e 1151.
+
+
+Package natbib Warning: Citation `Zhang2022' on page 55 undefined on input line
+ 1151.
+
+[55] [56] [57] [58] [59]
+Overfull \hbox (2.41142pt too wide) in paragraph at lines 1321--1322
  [][] 
  []
 
 
-Overfull \hbox (2.42421pt too wide) in paragraph at lines 1274--1275
+Overfull \hbox (2.2142pt too wide) in paragraph at lines 1329--1330
  [][] 
  []
 
 
-Overfull \hbox (2.22699pt too wide) in paragraph at lines 1282--1283
+Overfull \hbox (2.42421pt too wide) in paragraph at lines 1350--1351
  [][] 
  []
+
+
+Overfull \hbox (2.22699pt too wide) in paragraph at lines 1358--1359
+ [][] 
+ []
+
+[60] [61]
+
+LaTeX Warning: Reference `chap:hurford-cond' on page 62 undefined on input line
+ 1392.
+
+[62] [63]
+
+LaTeX Warning: Reference `ex2:n-t-inter' on page 64 undefined on input line 147
+5.
 
 [64] [65]
 
-LaTeX Warning: Reference `chap:hurford-cond' on page 66 undefined on input line
- 1316.
+Package natbib Warning: Citation `Wason1968' on page 66 undefined on input line
+ 1546.
 
-[66] [67]
 
-LaTeX Warning: Reference `ex2:n-t-inter' on page 68 undefined on input line 139
-9.
+Package natbib Warning: Citation `Aloni2022' on page 66 undefined on input line
+ 1546.
 
-[68] [69] [70] [71] [72]
-Overfull \hbox (2.41142pt too wide) in paragraph at lines 1564--1565
+[66] [67] [68]
+Overfull \hbox (2.41142pt too wide) in paragraph at lines 1640--1641
  [][] 
  []
 
 
-Overfull \hbox (2.2142pt too wide) in paragraph at lines 1572--1573
+Overfull \hbox (2.2142pt too wide) in paragraph at lines 1648--1649
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1631--1632
+Package natbib Warning: Citation `Ippolito2019' on page 69 undefined on input l
+ine 1706.
+
+
+Package natbib Warning: Citation `Zhang2022' on page 69 undefined on input line
+ 1706.
+
+
+Package natbib Warning: Citation `Mascarenhas2008' on page 69 undefined on inpu
+t line 1717.
+
+
+Package natbib Warning: Citation `Mascarenhas2008' on page 69 undefined on inpu
+t line 1717.
+
+
+Package natbib Warning: Citation `Ciardelli2009' on page 69 undefined on input 
+line 1717.
+
+
+Package natbib Warning: Citation `Ciardelli2009' on page 69 undefined on input 
+line 1717.
+
+
+Package natbib Warning: Citation `Groenendijk2009' on page 69 undefined on inpu
+t line 1717.
+
+
+Package natbib Warning: Citation `Groenendijk2009' on page 69 undefined on inpu
+t line 1717.
+
+
+Package natbib Warning: Citation `Ciardelli2017' on page 69 undefined on input 
+line 1717.
+
+
+Package natbib Warning: Citation `Ciardelli2017' on page 69 undefined on input 
+line 1717.
+
+
+Package natbib Warning: Citation `Ciardelli2018' on page 69 undefined on input 
+line 1717.
+
+
+Package natbib Warning: Citation `Ciardelli2018' on page 69 undefined on input 
+line 1717.
+
+
+Package natbib Warning: Citation `Zhang2024' on page 69 undefined on input line
+ 1717.
+
+[69]
+
+Package natbib Warning: Citation `Ippolito2019' on page 70 undefined on input l
+ine 1722.
+
+
+LaTeX Warning: Reference `chap:economy' on page 70 undefined on input line 1722
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1722--1723
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1633--1634
+Package natbib Warning: Citation `Ippolito2019' on page 70 undefined on input l
+ine 1732.
+
+
+Package natbib Warning: Citation `Ippolito2019' on page 70 undefined on input l
+ine 1732.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1732--1733
 
  []
+
+
+Package natbib Warning: Citation `Ippolito2019' on page 70 undefined on input l
+ine 1735.
+
+[70]
+Underfull \hbox (badness 10000) in paragraph at lines 1755--1756
+
+ []
+
+
+Package natbib Warning: Citation `Ippolito2019' on page 71 undefined on input l
+ine 1758.
+
+
+Package natbib Warning: Citation `Ippolito2019' on page 71 undefined on input l
+ine 1758.
+
+
+Package natbib Warning: Citation `Ippolito2019' on page 71 undefined on input l
+ine 1761.
+
+[71]
+
+Package natbib Warning: Citation `Rooth1992' on page 72 undefined on input line
+ 1771.
+
+
+Package natbib Warning: Citation `Rooth1992' on page 72 undefined on input line
+ 1774.
+
+
+Overfull \hbox (31.64421pt too wide) in paragraph at lines 1785--1786
+ [][] 
+ []
+
+
+Package natbib Warning: Citation `Ippolito2019' on page 72 undefined on input l
+ine 1800.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1800--1801
+
+ []
+
+[72]
+
+Package natbib Warning: Citation `Ippolito2019' on page 73 undefined on input l
+ine 1803.
+
+
+Package natbib Warning: Citation `Ippolito2019' on page 73 undefined on input l
+ine 1807.
+
+
+Package natbib Warning: Citation `Ippolito2019' on page 73 undefined on input l
+ine 1817.
+
+
+Package natbib Warning: Citation `Gazdar1979' on page 73 undefined on input lin
+e 1817.
+
+
+Package natbib Warning: Citation `Singh2008a' on page 73 undefined on input lin
+e 1817.
+
+
+Package natbib Warning: Citation `Singh2008b' on page 73 undefined on input lin
+e 1817.
+
+
+Package natbib Warning: Citation `Chierchia2009' on page 73 undefined on input 
+line 1817.
+
+
+Package natbib Warning: Citation `Fox2018' on page 73 undefined on input line 1
+817.
 
 [73]
 
-LaTeX Warning: Reference `chap:hurford-cond' on page 74 undefined on input line
- 1635.
+LaTeX Warning: Reference `chap:redundancy' on page 74 undefined on input line 1
+832.
+
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 74 undefined on input line
+ 1832.
+
+
+LaTeX Warning: Reference `chap:scalarity' on page 74 undefined on input line 18
+32.
+
+
+LaTeX Warning: Reference `chap:economy' on page 74 undefined on input line 1832
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1841--1842
+
+ []
+
+
+Package natbib Warning: Citation `Heim1983a' on page 74 undefined on input line
+ 1843.
+
+
+Package natbib Warning: Citation `Heim1983b' on page 74 undefined on input line
+ 1843.
+
+
+LaTeX Warning: Reference `chap:redundancy' on page 74 undefined on input line 1
+843.
 
 ) [74]
-\openout2 = `chap3.aux'.
+\openout2 = `chap6.aux'.
 
- (./chap3.tex
+ (./chap6.tex
 Chapter 3.
+
+Package natbib Warning: Citation `HenotMortier2024a' on page 75 undefined on in
+put line 2.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 75 undefined on input line
+ 2.
+
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 75 undefined on input line
+ 4.
+
+
+Package natbib Warning: Citation `Mandelkern2018' on page 75 undefined on input
+ line 4.
+
+
+Package natbib Warning: Citation `Kalomoiros2024' on page 75 undefined on input
+ line 4.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 75 undefined on input line
+ 4.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 75 undefined on input li
+ne 4.
+
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 75 undefined on input line
+ 11.
+
+
+Package natbib Warning: Citation `Hurford1974' on page 75 undefined on input li
+ne 11.
+
+
+Package natbib Warning: Citation `Gazdar1979' on page 75 undefined on input lin
+e 11.
+
+
+Package natbib Warning: Citation `Gazdar1979' on page 75 undefined on input lin
+e 11.
+
+
+Package natbib Warning: Citation `Singh2008b' on page 75 undefined on input lin
+e 11.
+
+
+Package natbib Warning: Citation `Singh2008b' on page 75 undefined on input lin
+e 11.
+
+
+Package natbib Warning: Citation `Fox2018' on page 75 undefined on input line 1
+1.
+
+
+Package natbib Warning: Citation `Fox2018' on page 75 undefined on input line 1
+1.
+
+
+Package natbib Warning: Citation `HenotMortier2023' on page 75 undefined on inp
+ut line 11.
+
+
+Package natbib Warning: Citation `HenotMortier2023' on page 75 undefined on inp
+ut line 11.
+
+
+LaTeX Warning: Reference `chap:economy' on page 75 undefined on input line 11.
+
 [75
 
 
 
 
-] [76]
-Overfull \hbox (31.64421pt too wide) in paragraph at lines 69--70
- [][] 
- []
-
-[77] [78]
-
-LaTeX Warning: Reference `chap:economy' on page 79 undefined on input line 115.
-
-
-) [79]
-\openout2 = `chap4.aux'.
-
- (./chap4.tex
-Chapter 4.
-[80
-
-
-
-
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
- []
+Package natbib Warning: Citation `Mandelkern2018' on page 76 undefined on input
+ line 21.
 
 
-LaTeX Warning: Reference `sec4:ordering' on page 81 undefined on input line 48.
+LaTeX Warning: Reference `chap:redundancy' on page 76 undefined on input line 2
+1.
 
-
-[81]
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
-
- []
-
-[82] [83] [84] [85] [86] [87]
-Underfull \hbox (badness 1117) in paragraph at lines 216--217
-\T1/qpl/m/n/12 whose key prop-erty is that it com-mutes with nega-tion ($\OML/c
-mm/m/it/12 Str\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 :\OML/cmm/m/it/12 ; D\OT1/cmr/
-m/n/12 ) =
- []
-
-
-Underfull \hbox (badness 5446) in paragraph at lines 216--217
-\OMS/cmsy/m/n/12 :\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Str\OT1/cmr/m/n/12 (\OML/cm
-m/m/it/12 ; D\OT1/cmr/m/n/12 ))$\T1/qpl/m/n/12 ), as well as with bi-nary op-e
-r-a-tors ($\OML/cmm/m/it/12 Str\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 O\OT1/cmr/m/n/
-12 (\OML/cmm/m/it/12 ; ^^L\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; D\OT1/cmr/m/n/12
- ) =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
-
- []
-
-[88] [89] [90] [91] [92]
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 380--381
-
- []
-
-[93] [94] [95]
-Underfull \hbox (badness 10000) in paragraph at lines 529--530
-
- []
-
-[96] [97]
-Underfull \hbox (badness 10000) in paragraph at lines 584--585
-
- []
-
-[98] [99]
-Underfull \hbox (badness 10000) in paragraph at lines 700--702
-
- []
-
-[100]
-Underfull \hbox (badness 10000) in paragraph at lines 719--720
-
- []
-
-[101]
-Underfull \hbox (badness 10000) in paragraph at lines 763--764
-
- []
-
-[102] [103] [104]
-Underfull \hbox (badness 10000) in paragraph at lines 918--919
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 921--922
-
- []
-
-[105]
-Underfull \hbox (badness 10000) in paragraph at lines 971--972
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 973--974
-
- []
-
-[106]
-Underfull \hbox (badness 10000) in paragraph at lines 990--991
-
- []
-
-
-LaTeX Warning: Reference `chap:economy' on page 107 undefined on input line 993
-.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 993--994
-
- []
-
-[107]
-
-LaTeX Warning: Reference `chap:hurford-sentence' on page 108 undefined on input
- line 1032.
-
-
-Underfull \hbox (badness 3281) in paragraph at lines 1032--1033
-[]\T1/qpl/m/n/12 Our def-i-ni-tion of \T1/qpl/m/sc/12 Q-Non-Redundancy \T1/qpl/
-m/n/12 also leaves space for other Qtree well-
- []
-
-[108]
-
-LaTeX Warning: Reference `ex4:formal-simplification' on page 109 undefined on i
-nput line 1058.
-
-[109] [110] [111] [112] [113] [114]
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1336
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1337--1338
-
- []
-
-) [115]
-\openout2 = `chap5.aux'.
-
- (./chap5.tex
-Chapter 5.
-
-LaTeX Warning: Reference `chap:economy' on page 116 undefined on input line 7.
-
-[116
-
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
-
- []
-
-[117] [118] [119]
-Underfull \hbox (badness 1117) in paragraph at lines 103--104
-\T1/qpl/m/n/12 whose key prop-erty is that it com-mutes with nega-tion ($\OML/c
-mm/m/it/12 Str\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 :\OML/cmm/m/it/12 ; D\OT1/cmr/
-m/n/12 ) =
- []
-
-
-Underfull \hbox (badness 5446) in paragraph at lines 103--104
-\OMS/cmsy/m/n/12 :\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Str\OT1/cmr/m/n/12 (\OML/cm
-m/m/it/12 ; D\OT1/cmr/m/n/12 ))$\T1/qpl/m/n/12 ), as well as with bi-nary op-e
-r-a-tors ($\OML/cmm/m/it/12 Str\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 O\OT1/cmr/m/n/
-12 (\OML/cmm/m/it/12 ; ^^L\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; D\OT1/cmr/m/n/12
- ) =
- []
-
-[120] [121] [122]
-Underfull \hbox (badness 10000) in paragraph at lines 193--206
-
- []
-
-[123] [124]
-Overfull \hbox (31.03023pt too wide) in paragraph at lines 293--293
- [][] 
- []
-
-[125] [126] [127] [128]
-Underfull \hbox (badness 10000) in paragraph at lines 443--444
-
- []
-
-[129] [130] [131] [132]
-Underfull \hbox (badness 10000) in paragraph at lines 589--590
-
- []
-
-[133]
-Overfull \hbox (31.03023pt too wide) in paragraph at lines 617--617
- [][] 
- []
-
-
-Overfull \hbox (30.33023pt too wide) in paragraph at lines 648--648
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 653--654
-
- []
-
-[134] [135] [136]
-Underfull \hbox (badness 10000) in paragraph at lines 737--738
-
- []
-
-[137]
-Underfull \hbox (badness 10000) in paragraph at lines 786--787
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 789--790
-
- []
-
-[138]
-Underfull \hbox (badness 10000) in paragraph at lines 825--826
-
- []
-
-[139]
-Underfull \hbox (badness 2486) in paragraph at lines 838--838
-[]\T1/qpl/b/n/14.4 Comparison with pre-vi-ous Redundancy-based ap-proaches to
- []
-
-[140]
-Underfull \hbox (badness 10000) in paragraph at lines 871--872
-
- []
-
-[141]
-Underfull \hbox (badness 10000) in paragraph at lines 884--885
-
- []
-
-[142]
-Underfull \hbox (badness 10000) in paragraph at lines 904--905
-
- []
-
-[143]
-Underfull \hbox (badness 10000) in paragraph at lines 911--913
-
- []
-
-[144]
-Underfull \hbox (badness 10000) in paragraph at lines 938--939
-
- []
-
-[145]
-Underfull \hbox (badness 10000) in paragraph at lines 977--978
-
- []
-
-[146] [147] [148] [149]
-Underfull \hbox (badness 10000) in paragraph at lines 1030--1031
-
- []
-
-) [150]
-\openout2 = `chap6.aux'.
-
- (./chap6.tex
-Chapter 6.
-
-LaTeX Warning: Reference `chap:economy' on page 151 undefined on input line 11.
-
-
-[151
-
-
-
-
-] [152]
+[76]
 Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
-[153]
+
+Package natbib Warning: Citation `Kalomoiros2024' on page 77 undefined on input
+ line 57.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 77 undefined on input line
+ 59.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 77 undefined on input li
+ne 59.
+
+[77]
 Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
-[154]
+
+Package natbib Warning: Citation `Kalomoiros2024' on page 78 undefined on input
+ line 117.
+
+
+Package natbib Warning: Citation `Mandelkern2018' on page 78 undefined on input
+ line 122.
+
+
+Package natbib Warning: Citation `Kalomoiros2024' on page 78 undefined on input
+ line 122.
+
+
+Package natbib Warning: Citation `Kalomoiros2024' on page 78 undefined on input
+ line 122.
+
+[78]
+
+Package natbib Warning: Citation `Kalomoiros2024' on page 79 undefined on input
+ line 129.
+
+
+LaTeX Warning: Reference `ex4:sr' on page 79 undefined on input line 129.
+
+
+LaTeX Warning: Reference `chap:redundancy' on page 79 undefined on input line 1
+29.
+
+
+LaTeX Warning: Reference `ex4:sr' on page 79 undefined on input line 132.
+
+
+Package natbib Warning: Citation `Kalomoiros2024' on page 79 undefined on input
+ line 132.
+
+
 Underfull \hbox (badness 1117) in paragraph at lines 135--136
 \T1/qpl/m/n/12 whose key prop-erty is that it com-mutes with nega-tion ($\OML/c
 mm/m/it/12 Str\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 :\OML/cmm/m/it/12 ; D\OT1/cmr/
@@ -1781,50 +2266,223 @@ r-a-tors ($\OML/cmm/m/it/12 Str\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 O\OT1/cmr/m/n/
  ) =
  []
 
-[155]
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 79 undefined on input line
+ 143.
+
+
+Package natbib Warning: Citation `Kalomoiros2024' on page 79 undefined on input
+ line 143.
+
+
+LaTeX Warning: Reference `ex5:hd-sr' on page 79 undefined on input line 143.
+
+
+LaTeX Warning: Reference `ex5:hd-sr' on page 79 undefined on input line 146.
+
+
+LaTeX Warning: Reference `ex5:hd-sw' on page 79 undefined on input line 147.
+
+
+LaTeX Warning: Reference `ex5:hd-ws' on page 79 undefined on input line 147.
+
+
+LaTeX Warning: Reference `ex5:hd-sw' on page 79 undefined on input line 149.
+
+
+LaTeX Warning: Reference `ex5:hd-ws' on page 79 undefined on input line 149.
+
+
+LaTeX Warning: Reference `ex5:hd-sw' on page 79 undefined on input line 150.
+
+
+LaTeX Warning: Reference `ex5:hd-ws' on page 79 undefined on input line 150.
+
+
+LaTeX Warning: Reference `ex5:hd-sw' on page 79 undefined on input line 151.
+
+
+LaTeX Warning: Reference `ex5:hd-ws' on page 79 undefined on input line 151.
+
+
+LaTeX Warning: Reference `ex5:hd-sw' on page 79 undefined on input line 152.
+
+
+LaTeX Warning: Reference `ex5:hd-ws' on page 79 undefined on input line 152.
+
+
+LaTeX Warning: Reference `ex5:hd-sw' on page 79 undefined on input line 153.
+
+
+LaTeX Warning: Reference `ex5:hd-ws' on page 79 undefined on input line 153.
+
+
+LaTeX Warning: Reference `ex5:hd-sw' on page 79 undefined on input line 154.
+
+
+LaTeX Warning: Reference `ex5:hd-ws' on page 79 undefined on input line 154.
+
+
+LaTeX Warning: Reference `ex5:hd-sw' on page 79 undefined on input line 154.
+
+
+LaTeX Warning: Reference `ex5:hd-ws' on page 79 undefined on input line 154.
+
+
+LaTeX Warning: Reference `ex4:sr' on page 79 undefined on input line 158.
+
+
+Package natbib Warning: Citation `Kalomoiros2024' on page 79 undefined on input
+ line 158.
+
+[79]
 Underfull \hbox (badness 10000) in paragraph at lines 172--190
 
  []
 
-[156]
+
+Package natbib Warning: Citation `Meyer2013' on page 80 undefined on input line
+ 195.
+
+
+Package natbib Warning: Citation `Meyer2013' on page 80 undefined on input line
+ 195.
+
+
+Package natbib Warning: Citation `Katzir2014' on page 80 undefined on input lin
+e 195.
+
+
+Package natbib Warning: Citation `Katzir2014' on page 80 undefined on input lin
+e 195.
+
+
+Package natbib Warning: Citation `Mayr2016' on page 80 undefined on input line 
+195.
+
+
+Package natbib Warning: Citation `Mayr2016' on page 80 undefined on input line 
+195.
+
+
+Package natbib Warning: Citation `Grice1975' on page 80 undefined on input line
+ 195.
+
+[80]
+
+Package natbib Warning: Citation `Kalomoiros2024' on page 81 undefined on input
+ line 204.
+
+
+Package natbib Warning: Citation `Kalomoiros2024' on page 81 undefined on input
+ line 204.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 216--217
 
  []
 
-[157]
+
+LaTeX Warning: Reference `ex4:sr' on page 81 undefined on input line 218.
+
+[81]
 Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
-[158]
+[82]
+
+Package natbib Warning: Citation `Fox2007' on page 83 undefined on input line 2
+64.
+
+
+Package natbib Warning: Citation `Chierchia2009' on page 83 undefined on input 
+line 264.
+
+
+Package natbib Warning: Citation `Hurford1974' on page 83 undefined on input li
+ne 264.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 264--277
 
  []
 
-[159]
+
+Package natbib Warning: Citation `Evans1977' on page 83 undefined on input line
+ 289.
+
+[83]
+
+Package natbib Warning: Citation `Nicolae2025' on page 84 undefined on input li
+ne 299.
+
+
+Package natbib Warning: Citation `Nicolae2025' on page 84 undefined on input li
+ne 299.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 299--300
 
  []
 
 
-LaTeX Warning: Reference `sec:(ldh)c' on page 160 undefined on input line 302.
+Package natbib Warning: Citation `Haslinger2023' on page 84 undefined on input 
+line 302.
+
+
+Package natbib Warning: Citation `Kalomoiros2024' on page 84 undefined on input
+ line 302.
+
+
+LaTeX Warning: Reference `sec:(ldh)c' on page 84 undefined on input line 302.
+
+
+LaTeX Warning: Reference `chap:redundancy' on page 84 undefined on input line 3
+02.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
-[160]
+[84]
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 85 undefined on input line
+ 327.
+
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 85 undefined on input line
+ 327.
+
+
 Overfull \hbox (31.03023pt too wide) in paragraph at lines 353--353
  [][] 
  []
 
-[161]
+[85]
+
+LaTeX Warning: Reference `fig5:qtree-noto-tiered' on page 86 undefined on input
+ line 391.
+
+
+LaTeX Warning: Reference `fig5:qtree-italy-wh' on page 86 undefined on input li
+ne 391.
+
+
+LaTeX Warning: Reference `fig5:qtree-noto-tiered' on page 86 undefined on input
+ line 391.
+
+
+LaTeX Warning: Reference `fig5:qtree-italy-wh' on page 86 undefined on input li
+ne 391.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 391--392
 
  []
 
-[162]
+[86]
 Overfull \hbox (36.6302pt too wide) in paragraph at lines 419--419
  [][] 
  []
@@ -1835,28 +2493,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 424--425
  []
 
 
+LaTeX Warning: Reference `chap:redundancy' on page 87 undefined on input line 4
+34.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
 
-[163]
+[87]
 
-LaTeX Warning: Reference `ex2:n-t-inter' on page 164 undefined on input line 45
-3.
+LaTeX Warning: Reference `ex2:n-t-inter' on page 88 undefined on input line 453
+.
 
-[164]
+[88]
 Overfull \hbox (15.13159pt too wide) in paragraph at lines 494--510
  [][] 
  []
 
-[165] [166] [167]
+[89] [90] [91]
 Underfull \hbox (badness 10000) in paragraph at lines 633--634
 
  []
 
 
 Underfull \hbox (badness 1365) in paragraph at lines 639--640
-[]\T1/qpl/m/n/12 By con-trast, none of the Qtrees evoked by ([]192a[]) fea-ture
+[]\T1/qpl/m/n/12 By con-trast, none of the Qtrees evoked by ([]125a[]) fea-ture
  a prop-erly re-stricted
  []
 
@@ -1865,69 +2527,521 @@ Underfull \hbox (badness 10000) in paragraph at lines 639--640
 
  []
 
-[168]
+[92]
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 93 undefined on input line
+ 646.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 652--653
 
  []
 
-[169]
+
+LaTeX Warning: Reference `ex5:q-non-redundancy' on page 93 undefined on input l
+ine 655.
+
+
+LaTeX Warning: Reference `ex5:q-equivalence' on page 93 undefined on input line
+ 655.
+
+
+LaTeX Warning: Reference `ex5:q-non-redundancy' on page 93 undefined on input l
+ine 657.
+
+
+LaTeX Warning: Reference `ex5:q-equivalence' on page 93 undefined on input line
+ 658.
+
+
+LaTeX Warning: Reference `ex5:q-non-redundancy' on page 93 undefined on input l
+ine 662.
+
+[93]
 Underfull \hbox (badness 10000) in paragraph at lines 686--687
 
  []
 
-[170]
+[94]
 Underfull \hbox (badness 1264) in paragraph at lines 697--698
 []\T1/qpl/m/n/12 We have just gone through all the pos-si-ble sim-pli-fi-ca-tio
 ns of the fe-lic-i-tous HC
  []
 
-[171] [172] [173]
+
+Package natbib Warning: Citation `Lewis1988' on page 95 undefined on input line
+ 706.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 95 undefined on input line
+ 706.
+
+[95]
+
+Package natbib Warning: Citation `Lewis1988' on page 96 undefined on input line
+ 709.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 96 undefined on input line
+ 709.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 96 undefined on input line
+ 712.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 96 undefined on input line
+ 712.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 96 undefined on input line
+ 715.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 96 undefined on input line
+ 715.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 96 undefined on input li
+ne 718.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 96 undefined on input li
+ne 721.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 96 undefined on input li
+ne 721.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 96 undefined on input li
+ne 721.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 96 undefined on input line
+ 735.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 96 undefined on input li
+ne 735.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 96 undefined on input line
+ 735.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 96 undefined on input li
+ne 735.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 96 undefined on input line
+ 735.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 96 undefined on input li
+ne 735.
+
+[96]
+
+Package natbib Warning: Citation `Lewis1988' on page 97 undefined on input line
+ 746.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 97 undefined on input li
+ne 746.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 97 undefined on input line
+ 746.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 97 undefined on input li
+ne 746.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 97 undefined on input line
+ 756.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 97 undefined on input li
+ne 756.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 97 undefined on input line
+ 756.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 97 undefined on input li
+ne 756.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 97 undefined on input line
+ 761.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 97 undefined on input li
+ne 761.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 97 undefined on input line
+ 761.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 97 undefined on input li
+ne 761.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 97 undefined on input line
+ 772.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 97 undefined on input li
+ne 772.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 97 undefined on input line
+ 772.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 97 undefined on input li
+ne 772.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 97 undefined on input line
+ 782.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 97 undefined on input li
+ne 782.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 97 undefined on input line
+ 782.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 97 undefined on input li
+ne 782.
+
+[97]
+
+Package natbib Warning: Citation `Lewis1988' on page 98 undefined on input line
+ 795.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 795--796
 
  []
 
-[174] [175]
+
+LaTeX Warning: Reference `chap:redundancy' on page 98 undefined on input line 7
+97.
+
+[98]
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 99 undefined on input line
+ 811.
+
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 99 undefined on input line
+ 811.
+
+
+LaTeX Warning: Reference `chap:redundancy' on page 99 undefined on input line 8
+11.
+
+
+LaTeX Warning: Reference `ex4:pv(nptq)' on page 99 undefined on input line 811.
+
+
+
+LaTeX Warning: Reference `ex4:pv(nptq)' on page 99 undefined on input line 811.
+
+
+
+LaTeX Warning: Reference `ex4:pv(nptq)' on page 99 undefined on input line 814.
+
+
+
+LaTeX Warning: Reference `fig4:qtree-p-polar' on page 99 undefined on input lin
+e 829.
+
+
+LaTeX Warning: Reference `fig4:qtree-nptq-polar-polar' on page 99 undefined on 
+input line 829.
+
+
+LaTeX Warning: Reference `fig4:qtree-p-polar' on page 99 undefined on input lin
+e 829.
+
+
+LaTeX Warning: Reference `fig4:qtree-nptq-polar-polar' on page 99 undefined on 
+input line 829.
+
+
+LaTeX Warning: Reference `fig4:qtree-p-polar' on page 99 undefined on input lin
+e 840.
+
+
+LaTeX Warning: Reference `fig4:qtree-nptq-polar-wh' on page 99 undefined on inp
+ut line 840.
+
+
+LaTeX Warning: Reference `fig4:qtree-p-polar' on page 99 undefined on input lin
+e 840.
+
+
+LaTeX Warning: Reference `fig4:qtree-nptq-polar-wh' on page 99 undefined on inp
+ut line 840.
+
+
+LaTeX Warning: Reference `ex4:pv(nptq)-repeated' on page 99 undefined on input 
+line 842.
+
+
+LaTeX Warning: Reference `ex4:pv(nptq)-repeated' on page 99 undefined on input 
+line 842.
+
+[99]
+
+LaTeX Warning: Reference `ex4:pv(nptq)' on page 100 undefined on input line 845
+.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 845--846
 
  []
 
-[176] [177] [178]
+
+Package natbib Warning: Citation `Lewis1988' on page 100 undefined on input lin
+e 847.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 100 undefined on input l
+ine 847.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 100 undefined on input lin
+e 847.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 100 undefined on input lin
+e 847.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 100 undefined on input l
+ine 847.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 100 undefined on input lin
+e 847.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 100 undefined on input l
+ine 847.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 100 undefined on input lin
+e 847.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 100 undefined on input lin
+e 847.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 100 undefined on input l
+ine 847.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 100 undefined on input l
+ine 847.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 100 undefined on input lin
+e 861.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 100 undefined on input l
+ine 861.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 100 undefined on input lin
+e 861.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 100 undefined on input l
+ine 861.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 100 undefined on input lin
+e 872.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 100 undefined on input l
+ine 872.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 100 undefined on input lin
+e 872.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 100 undefined on input l
+ine 872.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 100 undefined on input lin
+e 882.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 100 undefined on input l
+ine 882.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 100 undefined on input lin
+e 882.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 100 undefined on input l
+ine 882.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 100 undefined on input lin
+e 893.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 100 undefined on input l
+ine 893.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 100 undefined on input lin
+e 893.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 100 undefined on input l
+ine 893.
+
+[100] [101] [102]
 Underfull \hbox (badness 10000) in paragraph at lines 979--980
 
  []
 
-[179]
+[103]
 Underfull \hbox (badness 10000) in paragraph at lines 1030--1031
 
  []
 
-[180]
+[104]
 Underfull \hbox (badness 10000) in paragraph at lines 1040--1041
 
  []
 
-[181] [182] [183]
+[105] [106]
+
+Package natbib Warning: Citation `Lewis1988' on page 107 undefined on input lin
+e 1067.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 107 undefined on input l
+ine 1067.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 107 undefined on input lin
+e 1067.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 107 undefined on input l
+ine 1067.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 107 undefined on input l
+ine 1067.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 107 undefined on input lin
+e 1067.
+
+[107]
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 108 undefined on input lin
+e 1074.
+
+
 Underfull \hbox (badness 7030) in paragraph at lines 1076--1076
 []\T1/qpl/b/n/14.4 ``Compatible'' Hur-ford Dis-junc-tions and their dis-junct-w
 ise
  []
 
-[184] [185]
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 108 undefined on input lin
+e 1078.
+
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 108 undefined on input lin
+e 1078.
+
+
+LaTeX Warning: Reference `ex5:chd' on page 108 undefined on input line 1078.
+
+
+LaTeX Warning: Reference `ex5:chd' on page 108 undefined on input line 1081.
+
+[108]
+
+LaTeX Warning: Reference `ex5:chd' on page 109 undefined on input line 1098.
+
+
+Package natbib Warning: Citation `Kalomoiros2024' on page 109 undefined on inpu
+t line 1098.
+
+
+LaTeX Warning: Reference `ex5:chd' on page 109 undefined on input line 1116.
+
+
+LaTeX Warning: Reference `ex5:chd' on page 109 undefined on input line 1120.
+
+
+LaTeX Warning: Reference `ex5:chd' on page 109 undefined on input line 1120.
+
+[109]
+
+LaTeX Warning: Reference `ex5:chd' on page 110 undefined on input line 1125.
+
+
+LaTeX Warning: Reference `ex5:chd' on page 110 undefined on input line 1127.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1149--1150
 
  []
 
-[186]
+[110]
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 111 undefined on input lin
+e 1188.
+
+[111]
+
+Package natbib Warning: Citation `Singh2008a' on page 112 undefined on input li
+ne 1192.
+
+
+Package natbib Warning: Citation `HenotMortier2024a' on page 112 undefined on i
+nput line 1192.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1192--1193
 
  []
 
-[187] [188] [189]
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 112 undefined on input lin
+e 1194.
+
+[112] [113]
 Underfull \hbox (badness 10000) in paragraph at lines 1294--1295
 
  []
 
-[190]
+[114]
 Underfull \hbox (badness 10000) in paragraph at lines 1304--1305
 
  []
@@ -1937,15 +3051,72 @@ Underfull \hbox (badness 10000) in paragraph at lines 1317--1318
 
  []
 
-[191]
+[115]
 Underfull \hbox (badness 10000) in paragraph at lines 1331--1332
 
  []
 
-[192]
+
+Package natbib Warning: Citation `HenotMortier2024a' on page 116 undefined on i
+nput line 1335.
+
+[116]
+
+Package natbib Warning: Citation `Lewis1988' on page 117 undefined on input lin
+e 1346.
+
+
+Package natbib Warning: Citation `Roberts2012' on page 117 undefined on input l
+ine 1346.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1346--1347
 
  []
+
+
+Package natbib Warning: Citation `Geis1971' on page 117 undefined on input line
+ 1348.
+
+
+Package natbib Warning: Citation `Lilje1972' on page 117 undefined on input lin
+e 1348.
+
+
+Package natbib Warning: Citation `Horn1972' on page 117 undefined on input line
+ 1348.
+
+
+Package natbib Warning: Citation `deCornulier1983' on page 117 undefined on inp
+ut line 1348.
+
+
+Package natbib Warning: Citation `Matsumoto1995' on page 117 undefined on input
+ line 1348.
+
+
+Package natbib Warning: Citation `vanDerAuwera1997' on page 117 undefined on in
+put line 1348.
+
+
+Package natbib Warning: Citation `vonFintel1997' on page 117 undefined on input
+ line 1348.
+
+
+Package natbib Warning: Citation `vonFintel2001' on page 117 undefined on input
+ line 1348.
+
+
+Package natbib Warning: Citation `Herburger2015' on page 117 undefined on input
+ line 1348.
+
+
+Package natbib Warning: Citation `Herburger2016' on page 117 undefined on input
+ line 1348.
+
+
+Package natbib Warning: Citation `Bassi2018' on page 117 undefined on input lin
+e 1348.
 
 
 Underfull \hbox (badness 1845) in paragraph at lines 1348--1349
@@ -1958,7 +3129,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 1348--1349
 
  []
 
-[193]
+
+Package natbib Warning: Citation `HenotMortier2024a' on page 117 undefined on i
+nput line 1350.
+
+
+Package natbib Warning: Citation `HenotMortier2024a' on page 117 undefined on i
+nput line 1350.
+
+[117]
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 118 undefined on input lin
+e 1356.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 118 undefined on input lin
+e 1386.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\begingroup' on input line 1386.
@@ -1988,16 +3175,50 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\new@ifnextchar' on input line 1386.
 
 
+Package natbib Warning: Citation `Lewis1988' on page 118 undefined on input lin
+e 1388.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 118 undefined on input lin
+e 1388.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 118 undefined on input lin
+e 1398.
+
+
+Package natbib Warning: Citation `Lewis1988' on page 118 undefined on input lin
+e 1398.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1398--1399
 
  []
 
-[194] [195] [196]
+[118]
+
+LaTeX Warning: Reference `chap:hurford-disj' on page 119 undefined on input lin
+e 1406.
+
+
+Package natbib Warning: Citation `Marty2022' on page 119 undefined on input lin
+e 1406.
+
+
+Package natbib Warning: Citation `Marty2022' on page 119 undefined on input lin
+e 1406.
+
+[119]
+
+Package natbib Warning: Citation `Kalomoiros2024' on page 120 undefined on inpu
+t line 1418.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1448--1449
 
  []
 
-[197]
+[120] [121]
 Overfull \hbox (7.36833pt too wide) in paragraph at lines 1507--1508
  [][] 
  []
@@ -2017,12 +3238,12 @@ Overfull \hbox (15.7683pt too wide) in paragraph at lines 1531--1532
  [][] 
  []
 
-[198]
+[122]
 Underfull \hbox (badness 10000) in paragraph at lines 1547--1548
 
  []
 
-[199] [200]
+[123] [124]
 Underfull \hbox (badness 10000) in paragraph at lines 1576--1578
 
  []
@@ -2032,7 +3253,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1579--1580
 
  []
 
-[201] [202] [203]
+[125] [126] [127]
 Overfull \hbox (30.02066pt too wide) in paragraph at lines 1688--1689
  [][] 
  []
@@ -2042,7 +3263,7 @@ Overfull \hbox (46.6378pt too wide) in paragraph at lines 1699--1700
  [][] 
  []
 
-[204] [205]
+[128] [129]
 Overfull \hbox (29.43445pt too wide) in paragraph at lines 1769--1770
  [][] 
  []
@@ -2052,176 +3273,16 @@ Overfull \hbox (71.44987pt too wide) in paragraph at lines 1775--1776
  [][] 
  []
 
-[206]
+[130]
 Underfull \hbox (badness 10000) in paragraph at lines 1781--1782
 
  []
 
-) [207]
-\openout2 = `chap7.aux'.
-
- (./chap7.tex
-Chapter 7.
-[208
-
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
-
- []
-
-[209]
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
-
- []
-
-[210]
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
-
- []
-
-[211]
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
-
- []
-
-[212] [213] [214]
-Underfull \hbox (badness 10000) in paragraph at lines 214--224
-[]\T1/qpl/m/n/12 PREDICTIONS AS-SUM-ING NO EM-BED-DED EX-HAUS-TI-FI-CA-TION: (1
-b) <
- []
-
-
-Underfull \hbox (badness 3601) in paragraph at lines 214--224
-\T1/qpl/m/n/12 extra-pragmatic). PRE-DIC-TIONS AS-SUM-ING EM-BED-DED EX-HAUS-TI
--FI-CA-TION
- []
-
-[215] [216] [217] [218]
-LaTeX Font Info:    Trying to load font information for U+mvs on input line 336
-.
-
-(/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd) [219] [220]
-Underfull \hbox (badness 10000) in paragraph at lines 377--378
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 379--380
-
- []
-
-[221]
-
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 222 undefined on input
- line 386.
-
-
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 222 undefined on input
- line 388.
-
-
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 222 undefined on input
- line 388.
-
-
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 222 undefined on input
- line 388.
-
-
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 222 undefined on input
- line 388.
-
-
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 222 undefined on input
- line 388.
-
-
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 222 undefined on input
- line 388.
-
-[222]
-
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 223 undefined on input
- line 425.
-
-
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 223 undefined on input
- line 429.
-
-
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 223 undefined on input
- line 429.
-
-
-LaTeX Warning: Reference `ex7:qtree-simplex-def' on page 223 undefined on input
- line 429.
-
-
-Overfull \hbox (9.08592pt too wide) in paragraph at lines 467--468
- [][] 
- []
-
-[223] [224]
-
-LaTeX Warning: Reference `ex7:shd-w' on page 225 undefined on input line 646.
-
-
-LaTeX Warning: Reference `ex7:depending-on' on page 225 undefined on input line
- 646.
-
-[225] [226] [227] [228] [229]
-
-LaTeX Warning: Reference `ex7:ldhd-neg' on page 230 undefined on input line 877
-.
-
-[230]
-
-Package natbib Warning: Citation `VanKuppevelt1995' on page 231 undefined on in
-put line 886.
-
-
-LaTeX Warning: Reference `chap:exh-incr' on page 231 undefined on input line 89
-5.
-
-[231]
-
-LaTeX Warning: Reference `ex7:q-relevance' on page 232 undefined on input line 
-934.
-
-[232]
-
-LaTeX Warning: Reference `ex7:q-relevance' on page 233 undefined on input line 
-938.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 956--957
-
- []
-
-[233]
-Underfull \hbox (badness 10000) in paragraph at lines 969--970
-
- []
-
-[234]
-Underfull \hbox (badness 1348) in paragraph at lines 1004--1005
-[]\T1/qpl/m/n/12 If Jo didn't have all starters or the main dish then she had s
-ome starters.
- []
-
-[235]) [236] (./dissertation.bbl [237
-
-
-
-] [238] [239] [240] [241] [242])
+) [131] (./dissertation.bbl)
 
 Package natbib Warning: There were undefined citations.
 
-[243] (./dissertation.aux (./chap1.aux) (./chap2.aux) (./chap3.aux)
-(./chap4.aux) (./chap5.aux) (./chap6.aux) (./chap7.aux))
+(./dissertation.aux (./chap1.aux) (./chap2.aux) (./chap6.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -2233,61 +3294,44 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `dissertation.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `dissertation.out':
-(rerunfilecheck)             Before: B166EBD1255181A7A88E8927AF3C011C;29503
-(rerunfilecheck)             After:  B522B7A1033C4949F137A437260F3835;29553.
+Package rerunfilecheck Info: File `dissertation.out' has not changed.
+(rerunfilecheck)             Checksum: 099FC4DCE60C6EF4893BC6F7A865ECC6;15386.
  ) 
 Here is how much of TeX's memory you used:
- 45942 strings out of 474222
- 972082 string characters out of 5748733
- 1982975 words of memory out of 5000000
- 66278 multiletter control sequences out of 15000+600000
- 692345 words of font info for 184 fonts, out of 8000000 for 9000
+ 42180 strings out of 474222
+ 891084 string characters out of 5748733
+ 1981975 words of memory out of 5000000
+ 63202 multiletter control sequences out of 15000+600000
+ 682449 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 158i,32n,143p,3359b,2528s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{Hfootnote.46} has been referenced but does not exis
-t, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.44} has been referenced but does not exis
-t, replaced by a fixed one
-
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/marvosym/marvosym.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/tex-gyr
-e/qplb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qplbi.pfb></usr/share/
-texmf/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texmf/fonts/type1/public
-/tex-gyre/qplri.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/wasy-type1/wasy10.pfb>
-Output written on dissertation.pdf (243 pages, 1414940 bytes).
+ 158i,32n,143p,2188b,2126s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/publi
+c/tex-gyre/qplb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qplbi.pfb></u
+sr/share/texmf/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texmf/fonts/typ
+e1/public/tex-gyre/qplri.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt
+1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/wasy-type1/wasy10.pfb>
+Output written on dissertation.pdf (134 pages, 960152 bytes).
 PDF statistics:
- 7719 PDF objects out of 8907 (max. 8388607)
- 6308 compressed objects within 64 object streams
- 1247 named destinations out of 1440 (max. 500000)
- 1021 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3662 PDF objects out of 4296 (max. 8388607)
+ 2896 compressed objects within 29 object streams
+ 592 named destinations out of 1000 (max. 500000)
+ 509 words of extra memory for PDF output out of 10000 (max. 10000000)
 

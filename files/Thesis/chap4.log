@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  16 JUN 2025 18:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  27 JUN 2025 10:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -514,17 +514,104 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.5 T
-     his chapter presents novel data derived from the logical form $p\vee p ...
+l.5 I
+     n the previous Chapter, we suggested that disjunctions and conditionals...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+Missing character: There is no I in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
 Missing character: There is no T in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
-Missing character: There is no c in font nullfont!
+Missing character: There is no C in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -539,6 +626,49 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no v in font nullfont!
@@ -9029,7 +9159,7 @@ or  <return>  to continue without it.
 
 ! Undefined control sequence.
 l.83 	\ex
-          {\textsc{Maxim of Manner} \citep{Grice1975}. Be clear, meaning:
+          {\textsc{\textbf{Maxim of Manner}} \citep{Grice1975}. Be clear, me...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -9043,14 +9173,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.83 	\ex {\textsc{Maxim of Manner}
-                                    \citep{Grice1975}. Be clear, meaning:
+l.83 	\ex {\textsc{\textbf{Maxim of Manner}}
+                                             \citep{Grice1975}. Be clear, me...
+
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
+(Font)              using `OT1/cmr/bx/n' instead on input line 83.
+
 ! Undefined control sequence.
-l.83 	\ex {\textsc{Maxim of Manner} \citep
-                                          {Grice1975}. Be clear, meaning:
+l.83 ... {\textsc{\textbf{Maxim of Manner}} \citep
+                                                  {Grice1975}. Be clear, mea...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -9084,23 +9219,23 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (52.64424pt too wide) in paragraph at lines 83--84
-[]\OT1/cmr/m/sc/10 Maxim
+Overfull \hbox (55.35396pt too wide) in paragraph at lines 83--84
+[]\OT1/cmr/bx/n/10 Maxim
  []
 
 
-Overfull \hbox (11.71107pt too wide) in paragraph at lines 83--84
-\OT1/cmr/m/sc/10 of
+Overfull \hbox (9.26384pt too wide) in paragraph at lines 83--84
+\OT1/cmr/bx/n/10 of
  []
 
 
-Overfull \hbox (25.93315pt too wide) in paragraph at lines 83--84
-\OT1/cmr/m/sc/10 Man-
+Overfull \hbox (26.729pt too wide) in paragraph at lines 83--84
+\OT1/cmr/bx/n/10 Man-
  []
 
 
-Overfull \hbox (17.73326pt too wide) in paragraph at lines 83--84
-\OT1/cmr/m/sc/10 ner
+Overfull \hbox (16.39577pt too wide) in paragraph at lines 83--84
+\OT1/cmr/bx/n/10 ner
  []
 
 Missing character: There is no A in font nullfont!
@@ -10053,7 +10188,7 @@ or  <return>  to continue without it.
 
 ! Undefined control sequence.
 l.95 	\ex
-          {\textsc{Global Non-Redundancy \citep{Meyer2013,Mayr2016}.} A sent...
+          {\textsc{\textbf{Global Non-Redundancy}} \citep{Meyer2013,Mayr2016...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -10072,8 +10207,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.95 ...on-Redundancy \citep{Meyer2013,Mayr2016}.}
-                                                   A sentence $S$ cannot be ...
+l.95 	\ex {\textsc{\textbf{Global Non-Redundancy}}
+                                                   \citep{Meyer2013,Mayr2016...
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -10083,8 +10218,8 @@ or  <return>  to continue without it.
 ! Undefined control sequence.
 <write> ...abel{ex4:target-sentences}{{}{\thepage 
                                                   }{}{}{}}
-l.95 ...on-Redundancy \citep{Meyer2013,Mayr2016}.}
-                                                   A sentence $S$ cannot be ...
+l.95 	\ex {\textsc{\textbf{Global Non-Redundancy}}
+                                                   \citep{Meyer2013,Mayr2016...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -10095,8 +10230,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> ...abel{ex4:pv(pvq)-repeated}{{}{\thepage 
                                                   }{}{}{}}
-l.95 ...on-Redundancy \citep{Meyer2013,Mayr2016}.}
-                                                   A sentence $S$ cannot be ...
+l.95 	\ex {\textsc{\textbf{Global Non-Redundancy}}
+                                                   \citep{Meyer2013,Mayr2016...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -10107,8 +10242,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> ...bel{ex4:npt(pvq)-repeated}{{}{\thepage 
                                                   }{}{}{}}
-l.95 ...on-Redundancy \citep{Meyer2013,Mayr2016}.}
-                                                   A sentence $S$ cannot be ...
+l.95 	\ex {\textsc{\textbf{Global Non-Redundancy}}
+                                                   \citep{Meyer2013,Mayr2016...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -10119,8 +10254,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> ...bel{ex4:pv(nptq)-repeated}{{}{\thepage 
                                                   }{}{}{}}
-l.95 ...on-Redundancy \citep{Meyer2013,Mayr2016}.}
-                                                   A sentence $S$ cannot be ...
+l.95 	\ex {\textsc{\textbf{Global Non-Redundancy}}
+                                                   \citep{Meyer2013,Mayr2016...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -10131,8 +10266,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> ...bel{ex4:pv(nqtp)-repeated}{{}{\thepage 
                                                   }{}{}{}}
-l.95 ...on-Redundancy \citep{Meyer2013,Mayr2016}.}
-                                                   A sentence $S$ cannot be ...
+l.95 	\ex {\textsc{\textbf{Global Non-Redundancy}}
+                                                   \citep{Meyer2013,Mayr2016...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -10143,8 +10278,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> ...bel{ex4:n(pvq)tp-repeated}{{}{\thepage 
                                                   }{}{}{}}
-l.95 ...on-Redundancy \citep{Meyer2013,Mayr2016}.}
-                                                   A sentence $S$ cannot be ...
+l.95 	\ex {\textsc{\textbf{Global Non-Redundancy}}
+                                                   \citep{Meyer2013,Mayr2016...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -10155,8 +10290,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> ...el{sec4:previous-accounts}{{}{\thepage 
                                                   }{}{}{}}
-l.95 ...on-Redundancy \citep{Meyer2013,Mayr2016}.}
-                                                   A sentence $S$ cannot be ...
+l.95 	\ex {\textsc{\textbf{Global Non-Redundancy}}
+                                                   \citep{Meyer2013,Mayr2016...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -10167,8 +10302,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{ex4:manner}{{}{\thepage 
                                           }{}{}{}}
-l.95 ...on-Redundancy \citep{Meyer2013,Mayr2016}.}
-                                                   A sentence $S$ cannot be ...
+l.95 	\ex {\textsc{\textbf{Global Non-Redundancy}}
+                                                   \citep{Meyer2013,Mayr2016...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -10184,23 +10319,40 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.95 ...on-Redundancy \citep{Meyer2013,Mayr2016}.}
-                                                   A sentence $S$ cannot be ...
+l.95 	\ex {\textsc{\textbf{Global Non-Redundancy}}
+                                                   \citep{Meyer2013,Mayr2016...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-<argument> Global Non-Redundancy \citep 
-                                        {Meyer2013,Mayr2016}.
-l.95 ...on-Redundancy \citep{Meyer2013,Mayr2016}.}
-                                                   A sentence $S$ cannot be ...
+l.95 ...tsc{\textbf{Global Non-Redundancy}} \citep
+                                                  {Meyer2013,Mayr2016}. A se...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+Missing character: There is no M in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no . in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -10278,7 +10430,7 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
 l.96 	\ex
-          {\textit{Structural simplicity \citep{Katzir2007}.} $S'$ is a simp...
+          {\textsc{\textbf{Structural simplicity}} \citep{Katzir2007}. $S'$ ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -10286,16 +10438,25 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-<argument> Structural simplicity \citep 
-                                        {Katzir2007}.
-l.96 ...Structural simplicity \citep{Katzir2007}.}
-                                                   $S'$ is a simplification ...
+l.96 ...tsc{\textbf{Structural simplicity}} \citep
+                                                  {Katzir2007}. $S'$ is a si...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+Missing character: There is no K in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no . in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -10390,23 +10551,18 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (57.06924pt too wide) in paragraph at lines 95--98
-[]\OT1/cmr/m/sc/10 Global
+Overfull \hbox (53.15952pt too wide) in paragraph at lines 95--98
+[]\OT1/cmr/bx/sc/10 Global
  []
 
 
-Overfull \hbox (24.4054pt too wide) in paragraph at lines 95--98
-\OT1/cmr/m/sc/10 Non-
+Overfull \hbox (24.97209pt too wide) in paragraph at lines 95--98
+\OT1/cmr/bx/sc/10 Non-
  []
 
 
-Overfull \hbox (62.42195pt too wide) in paragraph at lines 95--98
-\OT1/cmr/m/sc/10 Redundancy
- []
-
-
-Overfull \hbox (111.3213pt too wide) in paragraph at lines 95--98
-\OT1/cmr/m/sc/10 Meyer2013,Mayr2016.
+Overfull \hbox (62.61076pt too wide) in paragraph at lines 95--98
+\OT1/cmr/bx/sc/10 Redundancy
  []
 
 
@@ -10445,33 +10601,28 @@ Overfull \hbox (6.70831pt too wide) in paragraph at lines 95--98
  []
 
 
-Overfull \hbox (26.70535pt too wide) in paragraph at lines 95--98
-\OT1/cmr/m/it/10 Struc-
+Overfull \hbox (30.9304pt too wide) in paragraph at lines 95--98
+\OT1/cmr/bx/sc/10 Struc-
  []
 
 
-Overfull \hbox (20.06096pt too wide) in paragraph at lines 95--98
-\OT1/cmr/m/it/10 tural
+Overfull \hbox (24.3818pt too wide) in paragraph at lines 95--98
+\OT1/cmr/bx/sc/10 tural
  []
 
 
-Overfull \hbox (18.911pt too wide) in paragraph at lines 95--98
-\OT1/cmr/m/it/10 sim-
+Overfull \hbox (21.1471pt too wide) in paragraph at lines 95--98
+\OT1/cmr/bx/sc/10 sim-
  []
 
 
-Overfull \hbox (18.91098pt too wide) in paragraph at lines 95--98
-\OT1/cmr/m/it/10 plic-
+Overfull \hbox (21.7221pt too wide) in paragraph at lines 95--98
+\OT1/cmr/bx/sc/10 plic-
  []
 
 
-Overfull \hbox (11.24435pt too wide) in paragraph at lines 95--98
-\OT1/cmr/m/it/10 ity
- []
-
-
-Overfull \hbox (51.00525pt too wide) in paragraph at lines 95--98
-\OT1/cmr/m/it/10 Katzir2007.
+Overfull \hbox (13.4166pt too wide) in paragraph at lines 95--98
+\OT1/cmr/bx/sc/10 ity
  []
 
 
@@ -17583,7 +17734,7 @@ or  <return>  to continue without it.
 
 ! Undefined control sequence.
 l.170 	\ex
-           {\textsc{Local Non-Redundancy.} $S$ is deviant if $S$ contains $\...
+           {\textsc{\textbf{Local Non-Redundancy}} \citep{Katzir2014}. $S$ i...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -17597,12 +17748,32 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.170 	\ex {\textsc{Local Non-Redundancy.}
-                                           $S$ is deviant if $S$ contains $\...
+l.170 	\ex {\textsc{\textbf{Local Non-Redundancy}}
+                                                   \citep{Katzir2014}. $S$ i...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+! Undefined control sequence.
+l.170 ...tsc{\textbf{Local Non-Redundancy}} \citep
+                                                  {Katzir2014}. $S$ is devia...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no K in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no . in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no d in font nullfont!
@@ -17697,18 +17868,18 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (50.36649pt too wide) in paragraph at lines 170--172
-[]\OT1/cmr/m/sc/10 Local
+Overfull \hbox (46.88177pt too wide) in paragraph at lines 170--172
+[]\OT1/cmr/bx/sc/10 Local
  []
 
 
-Overfull \hbox (24.4054pt too wide) in paragraph at lines 170--172
-\OT1/cmr/m/sc/10 Non-
+Overfull \hbox (24.97209pt too wide) in paragraph at lines 170--172
+\OT1/cmr/bx/sc/10 Non-
  []
 
 
-Overfull \hbox (65.61635pt too wide) in paragraph at lines 170--172
-\OT1/cmr/m/sc/10 Redundancy.
+Overfull \hbox (62.61076pt too wide) in paragraph at lines 170--172
+\OT1/cmr/bx/sc/10 Redundancy
  []
 
 
@@ -21574,7 +21745,7 @@ or  <return>  to continue without it.
 
 ! Undefined control sequence.
 l.213 	\ex
-           {\textsc{Super-Redundancy.} A sentence $S$ is infelicitous if it ...
+           {\textsc{\textbf{Super-Redundancy}} \citep{Kalomoiros2024}. A sen...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -21588,12 +21759,36 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.213 	\ex {\textsc{Super-Redundancy.}
-                                       A sentence $S$ is infelicitous if it ...
+l.213 	\ex {\textsc{\textbf{Super-Redundancy}}
+                                               \citep{Kalomoiros2024}. A sen...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+! Undefined control sequence.
+l.213 ...\textsc{\textbf{Super-Redundancy}} \citep
+                                                  {Kalomoiros2024}. A senten...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no K in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no . in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -21695,13 +21890,13 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (53.19978pt too wide) in paragraph at lines 213--214
-[]\OT1/cmr/m/sc/10 Super-
+Overfull \hbox (53.32623pt too wide) in paragraph at lines 213--214
+[]\OT1/cmr/bx/sc/10 Super-
  []
 
 
-Overfull \hbox (65.61635pt too wide) in paragraph at lines 213--214
-\OT1/cmr/m/sc/10 Redundancy.
+Overfull \hbox (62.61076pt too wide) in paragraph at lines 213--214
+\OT1/cmr/bx/sc/10 Redundancy
  []
 
 
@@ -22647,7 +22842,7 @@ Overfull \hbox (11.69794pt too wide) in paragraph at lines 221--222
 
 
 Overfull \hbox (15.01381pt too wide) in paragraph at lines 221--222
-\OT1/cmr/bx/n/10 SR
+\OT1/cmr/bx/sc/10 SR
  []
 
 
@@ -24321,10 +24516,10 @@ l.245 ...ghtarrow (\p \wedge D) \equiv (\p \vee \q
                                                   ) \vee (\p \wedge D) \equi...
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 85 strings out of 474222
- 1575 string characters out of 5748733
- 1939975 words of memory out of 5000000
- 22434 multiletter control sequences out of 15000+600000
+ 86 strings out of 474222
+ 1599 string characters out of 5748733
+ 1938975 words of memory out of 5000000
+ 22435 multiletter control sequences out of 15000+600000
  559024 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  26i,6n,24p,1113b,186s stack positions out of 10000i,1000n,20000p,200000b,200000s

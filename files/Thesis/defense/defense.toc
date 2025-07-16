@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Background on assertions and questions}{9}{0}{1}
+\beamer@sectionintoc {2}{Compositional Implicit Questions}{18}{0}{2}
+\beamer@sectionintoc {3}{Rephrasing Redundancy}{31}{0}{3}
+\beamer@sectionintoc {4}{Rephrasing Relevance}{36}{0}{4}
+\beamer@sectionintoc {5}{Conclusion: Beyond the Bizarre}{46}{0}{5}
+\beamer@sectionintoc {6}{Appendix}{58}{0}{6}

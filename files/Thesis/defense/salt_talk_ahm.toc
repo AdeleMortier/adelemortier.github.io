@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Odd assertions and odd questions}{6}{0}{1}
+\beamer@sectionintoc {2}{A Redundancy Case Study}{17}{0}{2}
+\beamer@sectionintoc {3}{Spooky action at a distance}{23}{0}{3}
+\beamer@sectionintoc {4}{To Redundancy and Beyond}{24}{0}{4}
+\beamer@sectionintoc {5}{Appendix}{26}{0}{5}
