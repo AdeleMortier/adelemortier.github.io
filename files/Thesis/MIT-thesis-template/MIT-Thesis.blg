@@ -1,0 +1,23 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'MIT-Thesis.blg'
+[63] biber:340> INFO - === Fri Sep  5, 2025, 15:51:26
+[75] Biber.pm:419> INFO - Reading 'MIT-Thesis.bcf'
+[134] Biber.pm:979> INFO - Found 51 citekeys in bib section 0
+[144] Biber.pm:4419> INFO - Processing section 0
+[151] Biber.pm:4610> INFO - Looking for bibtex file 'biblio.bib' for section 0
+[155] bibtex.pm:1713> INFO - LaTeX decoding ...
+[267] bibtex.pm:1519> INFO - Found BibTeX data source 'biblio.bib'
+[520] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[521] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[521] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[521] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[555] bbl.pm:660> INFO - Writing 'MIT-Thesis.bbl' with encoding 'UTF-8'
+[570] bbl.pm:763> INFO - Output to MIT-Thesis.bbl
+[570] Biber.pm:131> WARN - Duplicate entry key: 'Groenendijk1999' in file 'biblio.bib', skipping ...
+[570] Biber.pm:131> WARN - Duplicate entry key: 'Groenendijk2009' in file 'biblio.bib', skipping ...
+[570] Biber.pm:131> WARN - Duplicate entry key: 'vonFintel2001' in file 'biblio.bib', skipping ...
+[570] Biber.pm:131> WARN - Duplicate entry key: 'Schlenker2009' in file 'biblio.bib', skipping ...
+[570] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_m5i_/a9e03cb3043b9e2c02591da84105bb68_38886.utf8, line 982, warning: 1 characters of junk seen at toplevel
+[570] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_m5i_/a9e03cb3043b9e2c02591da84105bb68_38886.utf8, line 1215, warning: 1 characters of junk seen at toplevel
+[570] Biber.pm:131> WARN - I didn't find a database entry for 'Fox2018' (section 0)
+[570] Biber.pm:133> INFO - WARNINGS: 7

@@ -1,0 +1,1890 @@
+\chapter{Accommodating QuDs: Qtrees}\label{chap:accommodating-quds}
+
+\begin{flushright}
+	\textit{MANGEKYOU SHARINGAN!!}\\\vspace{2mm}
+	Trym, Millenium Kyuubi Mix
+\end{flushright}
+
+This Chapter introduces a model of questions that is more sophisticated than standardly assumed (cf. Chapter \ref{chap:introduction}). The goal is two fold: first, capture the intuition that questions may be ordered in terms of specificity; second, relate assertions to implicit questions matching their degree of specificity. To this aim, questions are defined as recursive partitions, or parse trees of the Context Set. The Chapter then describes how such questions can be ``retro-engineered'' from assertions, in a compositional way. The Chapter additionally hints at ways in which this new model may better predict pragmatic oddness -- further explored in the following Chapters.
+
+
+\section{Making sense}
+
+\subsection{Oddness despite relevance and informativeness}
+In Chapter \ref{chap:introduction}, we have seen that assertive sentences should be informative, i.e. lead to an incremental shrinkage of the Context Set (\textbf{CS}) \parencite{Stalnaker1978,Heim1982}. We have also seen that they should be relevant, i.e. shrink the CS in a way consistent with the Question under Discussion (\textbf{QuD}) \parencite{Lewis1988,Roberts2012}. But sometimes, it is unclear what the QuD should be. For instance, consider the exchange in (\ref{ex2:exchange-qud-settled}).
+
+\begin{exe}
+	\ex {Al: Have you seen Jo today?\\
+		Ed: No I haven't...}\label{ex2:exchange-qud-settled}
+\end{exe}
+
+In this exchange, Ed's reply fully settles the overt QuD (\textit{Have you seen Jo today?}), by intersecting the CS with the set of worlds in which Ed has not seen Jo on the day that \textit{today} refers to. But one could imagine many possible continuations to Ed's utterance. Any such continuation should be informative and relevant to \textit{some} QuD, but it is unclear how this QuD should be determined. In principle, it could be any non-vacuous partition of the newly updated CS. But there are many such partitions. How to know which one to pick?
+
+Let us consider the following felicitous follow-up to (\ref{ex2:exchange-qud-settled}). This continuation is felicitous, so, should be both informative and relevant.
+
+\begin{exe}
+	\ex {--Have you seen Jo today?\\
+		--No I haven't... Either she is sick, or if she's not sick, she is at a conference.}\label{ex2:non-red-followup}
+\end{exe}
+
+To be relevant, the sentence has to relate to a QuD. But, as mentioned earlier, the overt QuD \textit{Have you seen Jo?} is at that point already settled. This suggests that, when no overt QuD is on the table, a ``reasonable'' QuD is chosen among all the possible non-vacuous partitions of the CS, and is such that the sentence under consideration properly answers it. More generally, sentences are never uttered in and of themselves; their purpose is to answer a question, overt or not, and to induce further questions \cite{Roberts1996}. A pragmatic model of assertion therefore needs to integrate what sentences mean, but also what kind of question they attempt to answer -- implicitly or explicitly. Back to (\ref{ex2:non-red-followup}), a ``reasonable'' QuD is probably along the lines of \textit{Where is Jo?}. Then, the continuation in (\ref{ex2:non-red-followup}) is predicted to be both informative (it says that Jo is sick or at a conference), and relevant.
+
+
+But even if some implicit ``reasonable'' QuD can be inferred in the absence of an overt one, some cases of oddness do not seem to from a lack of informativity or relevance. The follow-up sentence in (\ref{ex2:red-followup}) for instance, is equivalent to the one in (\ref{ex2:non-red-followup}) assuming implication is material, and so should in principle evoke the same QuD. (\ref{ex2:non-red-followup}) is thus predicted to be both informative and relevant, just like (\ref{ex2:non-red-followup}). Yet, this follow-up is sharply odd. Chapter \ref{chap:redundancy} will further detail how this particular contrast is challenging for existing theories of oddness.
+
+\begin{exe}
+	\ex {--Have you seen Jo today?\\
+		--No I haven't... \# Either she is sick, or if she's not at a conference, she is sick.}\label{ex2:red-followup}
+\end{exe}
+
+On way to understand the contrast between (\ref{ex2:non-red-followup}) and (\ref{ex2:red-followup}) is to submit that the two follow-ups at stake do not exactly answer the same kind of QuD. Whatever QuD (\ref{ex2:non-red-followup}) answers, is ``reasonable'' given what precedes it; whatever QuD (\ref{ex2:red-followup}) answers, is not ``reasonable''. If this is indeed the root of the observed contrast, then one must devise a way to systematically derive QuDs from out-of-the-blue assertions, in such a way that semantically similar, yet structurally distinct assertions, sometimes give rise to distinct QuDs.
+
+
+This Chapter will address this desideratum and introduce a pragmatic model of these sentences (along with many others), in which they end up packaging information differently in terms of their evoked QuDs. This novel difference at the ``inquisitive'' level will be exploited in all the following Chapters, to explain when, and how, structurally and logically similar sentences, package information in distinct way, some ways being more optimal than others. This will be applied to the follow-ups in (\ref{ex2:non-red-followup}) and (\ref{ex2:red-followup}) in Chapter \ref{chap:redundancy}.
+
+\subsection{Overview  and motivation of the Chapter}
+The machinery we introduce in this Chapter aims to account for the above datapoints (among others), by relating their felicity or oddness to the QuD(s) inferred from them.\footnote{We will not talk extensively about cases in which an assertive sentence constitutes a direct answer to an \textit{overt} QuD. There is in fact an interesting line of work showing that overt QuDs can influence pragmatic oddness, especially when it comes to matters of redundancy \parencite{Haslinger2023}.} The fundamental principle we want to operationalize is \textit{Question-Answer Congruence} (henceforth \textbf{QAC}), as formalized by \textcite{Katzir2015},\footnote{This principle has been discussed in several forms for many years, within and outside the field of generative linguistics. See for instance \textcite{Rooth1992} for a discussion on how focused assertions and questions can be systematically related in terms of their \textit{semantics}.} and given in (\ref{ex2:q-a-congruence}). 
+
+\begin{exe}
+	\ex {\textsc{\textbf{Question-Answer Congruence (QAC)}}. A felicitous assertion has to be a good answer to a good question.}\label{ex2:q-a-congruence}
+\end{exe}
+
+This take on QAC is interesting because it roots this principle in pragmatics, and is broad enough to encompass a variety of constraints that were previously not grouped under the same umbrella. Chapter \ref{chap:introduction} for instance, showed that \textsc{Relevance} could rule out a wide range of question-answer pairs, and as such could constitute a partial implementation of QAC. But QAC may in principle involve other constraints applying to question-answer pairs. This dissertation will show that, under a certain interpretation of ``good answer'' and ``good question'', many more cases of pragmatic oddness can be understood as an accross-the-board failure of QAC.
+
+In this Chapter, we will lay out the groundwork for this more general pragmatic theory of question-answer well-formedness. We begin by introducing a more new model of questions, based on nested partitions, instead of mere partitions of the CS (as discussed in Chapter \ref{chap:introduction}). This model is building on \textcite{Buring2003,Ippolito2019,Zhang2022}, among many others. Next, equipped with this model of questions, we will show that questions can be evoked by assertions in a compositional way. As a result, sentences involving different operators (specifically, disjunctions and conditionals), give rise to different kinds of questions. Crucially in this model, each sentence may be associated with multiple potential questions. Finally, we will sketch what a pragmatics for question-answer pairs should look like in that framework. In line with QAC, a sentence which cannot be felicitously paired with \textit{any} question will be deemed odd. This can happen if \textit{all} the pairs formed by a sentence and a question it evokes, are themselves ill-formed. 
+
+We now proceed to define questions, not just as partition, but rather, as parse trees of the Context Set, that we will call Qtrees.
+
+\section{Structure of Question Trees}
+
+\subsection{From partitions to recursive partitions, to parse trees}\label{sec:nested-partition}
+Building on the standard model presented in Chapter \ref{chap:introduction}, we introduce a more elaborate view of the pragmatics of questions. This model will incorporate the idea that questions have internal structure, and specifically, are hierarchically organized. This hierarchical organization is meant to capture the intuition that a question such as (\ref{ex2:city-question}) for instance, appears more \textit{fine-grained}, than a question like (\ref{ex2:country-question}). Alternatively, whatever proposition identifies a cell in (\ref{ex2:city-question}), also identifies a cell in (\ref{ex2:country-question}). Crucially, this intuition will be incorporated in the pragmatics of questions, and so will be made directly accessible to the grammar.
+
+\begin{exe}
+	\ex 
+	\begin{xlist}
+		\ex {In which city did Jo grow up?}\label{ex2:city-question}
+		\ex {In which country did Jo grow up?}\label{ex2:country-question}
+	\end{xlist}
+\end{exe}
+
+First, let us observe that these intuitions about question-specificity are \textit{not} readily cashed out by standard partitions or alternative sets associated with questions. (\ref{ex2:city-question})'s and (\ref{ex2:country-question})'s sets of alternatives, given in (\ref{ex2:city-partition}) and (\ref{ex2:country-partition}) respectively, are made of disjoint, non empty propositions which, at a certain level of approximation, cover the space of all possibilities.\footnote{We will assume here, that any point on Earth is associated with one single country, and one single city, in a Voronoi fashion. At this level of approximation, there is no countryless or cityless area. Alternatively, one could assume that there are cityless areas, but that the possibility of Jo growing up in such areas is ruled-out by the presupposition carried by \textit{which}-questions like (\ref{ex2:city-question}). Under this assumption, \textit{where}-questions may require more work.} In other words, these alternatives already partition the set of \textit{all} worlds. The partition that (\ref{ex2:city-partition}) (resp. (\ref{ex2:country-partition})) induces on the CS is therefore obtained from (\ref{ex2:city-partition}) (resp. (\ref{ex2:country-partition})) by simply intersecting each of its elements (a proposition/cell) with the CS -- discarding empty sets.
+
+\begin{exe}
+	\ex 
+	\begin{xlist}
+		\ex {$\llbracket$ In which city did Jo grow up?$\rrbracket^w$ =\\$\lbrace p \ | \ \exists l. \ \text{$l$ is a city} \wedge p = \lambda w'. \ \text{Jo grew up in $l$ in $w'$}\rbrace$}\label{ex2:city-partition}
+		\ex {$\llbracket$ In which country did Jo grow up?$\rrbracket^w$ =\\$\lbrace p \ | \ \exists l. \ \text{$l$ is a country} \wedge p = \lambda w'. \ \text{Jo grew up in $l$ in $w'$}\rbrace$}\label{ex2:country-partition}
+	\end{xlist}
+\end{exe}
+
+(\ref{ex2:city-question}) therefore induces a by-city partition of the CS (see Figure \ref{fig2:city-partition}), while (\ref{ex2:country-question}) induces a by-country partition (see Figure \ref{fig2:country-partition}). But nothing in (\ref{ex2:city-question})'s partition signals that each of its cells is properly contained in a cell of (\ref{ex2:country-question})'s partition. This property can de derived from the two structures, but is not readily \textit{encoded} by them.
+
+
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.48\linewidth}
+		\centering
+		\scalebox{1.25}{
+		\begin{tikzpicture}	
+			\draw [draw=black] (0, 0) rectangle (4,4) ;
+			\draw [draw=orange] (0.2, 2.15) rectangle (0.975, 2.925) node[pos=.5] {\tiny \textcolor{orange}{Nice}};
+			\draw [draw=orange] (1.075, 2.15) rectangle (1.85, 2.925) node[pos=.5] {\tiny \textcolor{orange}{...}};
+			\draw [draw=orange] (0.2, 3.025) rectangle (0.975, 3.8) node[pos=.5] {\tiny \textcolor{orange}{Paris}};
+			\draw [draw=orange] (1.075, 3.025) rectangle (1.85, 3.8) node[pos=.5] {\tiny \textcolor{orange}{Lyon}};
+			\draw [draw=orange] (0.2, 0.2) rectangle (0.975, 0.975) node[pos=.5] {\tiny \textcolor{orange}{Milan}};
+			\draw [draw=orange] (1.075, 0.2) rectangle (1.85, 0.975) node[pos=.5] {\tiny \textcolor{orange}{...}};
+			\draw [draw=orange] (0.2, 1.075) rectangle (0.975, 1.85) node[pos=.5] {\tiny \textcolor{orange}{Rome}};
+			\draw [draw=orange] (1.075, 1.075) rectangle (1.85, 1.85) node[pos=.5] {\tiny \textcolor{orange}{Turin}};
+			
+			\draw [draw=orange] (2.15, 0.2) rectangle (2.925, 0.975) node[pos=.5] {\tiny \textcolor{orange}{...}};
+			\draw [draw=orange] (3.025, 0.2) rectangle (3.8, 0.975) node[pos=.5] {\tiny \textcolor{orange}{...}};
+			\draw [draw=orange] (2.15, 1.075) rectangle (2.925, 1.85) node[pos=.5] {\tiny \textcolor{orange}{...}};
+			\draw [draw=orange] (3.025, 1.075) rectangle (3.8, 1.85) node[pos=.5] {\tiny \textcolor{orange}{...}};
+			
+			\draw [draw=orange] (2.15, 2.15) rectangle (2.925, 2.925) node[pos=.5] {\tiny \textcolor{orange}{Leipzig}};
+			\draw [draw=orange] (3.025, 2.15) rectangle (3.8, 2.925) node[pos=.5] {\tiny \textcolor{orange}{...}};
+			\draw [draw=orange] (2.15, 3.025) rectangle (2.925, 3.8) node[pos=.5] {\tiny \textcolor{orange}{Berlin}};
+			\draw [draw=orange] (3.025, 3.025) rectangle (3.8, 3.8) node[pos=.5] {\tiny \textcolor{orange}{Munich}};
+		\end{tikzpicture}}
+		\caption{By-city partition associated with (\ref{ex2:city-partition}). Cells are ordered on a grid for clarity only.}\label{fig2:city-partition}
+	\end{subfigure}\hfill
+	\begin{subfigure}[t]{.48\linewidth}
+		\centering
+		\scalebox{1.25}{
+		\begin{tikzpicture}	
+			\draw [draw=black] (0, 0) rectangle (4,4);
+			\draw [draw=blue] (0.1, 2.05) rectangle (1.95, 3.9) node[pos=.5] {\tiny \textcolor{blue}{France}};
+			\draw [draw=blue] (2.05, 0.1) rectangle (3.9, 1.95) node[pos=.5] {\tiny \textcolor{blue}{...}};
+			\draw [draw=blue] (0.1, 0.1) rectangle (1.95, 1.95) node[pos=.5] {\tiny \textcolor{blue}{Italy}};
+			\draw [draw=blue] (2.05, 2.05) rectangle (3.9, 3.9) node[pos=.5] {\tiny \textcolor{blue}{Germany}};
+		\end{tikzpicture}}
+		\caption{By-country partition associated with (\ref{ex2:country-partition}). Cells are ordered on a grid for clarity only.}\label{fig2:country-partition}
+	\end{subfigure}
+	\caption{Standard partitions induced by a fine-grained (\ref{ex2:city-partition}) and a coarser-grained question (\ref{ex2:country-partition}).}
+\end{figure}
+
+Intuitively, grouping together the propositions listed in (\ref{ex2:city-partition}) talking about cities belonging to the same country, would help capture the desired property. This is done in (\ref{ex2:city-parse}). (\ref{ex2:city-parse}) then defines a set of sets of propositions. 
+\begin{exe}
+	\ex {$\llbracket$ In which city did Jo grow up?$\rrbracket^w$ =\\$\lbrace\lbrace p \ | \ \exists l. \ \text{$l$ is a city in $l'$} \wedge \ p = \lambda w'. \ \text{Jo grew up in $l$ in $w'$}\rbrace \ | \ l' \text{ is a country} \rbrace$}\label{ex2:city-parse}
+\end{exe}
+
+Grouping together cells within bigger sets (which are cells themselves), amounts to building a \textit{nested} partition of the CS. In our example, the ``outer'' partition is by-country, and the ``inner'' partition, is by-city. Graphically, this is equivalent to adding the ``blue rectangles'' from Figure \ref{fig2:country-partition}, to Figure \ref{fig2:city-partition}. This operation is performed in Figure \ref{fig2:city-recursive-partition}. The tree in Figure \ref{fig2:city-tree} is yet another, more readable way to represent the same thing. In this tree, each node refers to a proposition of the form \textit{Jo grew up in l}, $l$ denoting a city or a country. Each node is understood as intersected with the CS, which corresponds to the root of the tree. Therefore, each node forms a proper subset of the CS. Nodes appearing at the same level (forming a ``layer''), partition the CS. Deeper layers, correspond to finer-grained partitions. Tree like Figure \ref{fig2:city-tree} will be used throughout the dissertation to represent nested partitions like Figure \ref{fig2:city-recursive-partition}. One must always keep in mind that the two representations are equivalent. (\ref{ex2:set-tree-bijection}) formally defines the bijective mapping between nested sets of propositions (dubbed \textit{inductive propositions}) like (\ref{ex2:city-parse}), and tree structures like Figure \ref{fig2:city-tree}.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{tikzpicture}	
+			\draw [draw=black] (0, 0) rectangle (4,4) ;
+			\draw [draw=blue] (0.1, 2.05) rectangle (1.95, 3.9);
+				\draw [draw=orange] (0.2, 2.15) rectangle (0.975, 2.925);
+				\draw [draw=orange] (1.075, 2.15) rectangle (1.85, 2.925);
+				\draw [draw=orange] (0.2, 3.025) rectangle (0.975, 3.8);
+				\draw [draw=orange] (1.075, 3.025) rectangle (1.85, 3.8);
+			\draw [draw=blue] (2.05, 0.1) rectangle (3.9, 1.95) node[pos=.5] {\scriptsize \textcolor{blue}{...}};
+			\draw [draw=blue] (0.1, 0.1) rectangle (1.95, 1.95);
+				\draw [draw=orange] (0.2, 0.2) rectangle (0.975, 0.975);
+				\draw [draw=orange] (1.075, 0.2) rectangle (1.85, 0.975);
+				\draw [draw=orange] (0.2, 1.075) rectangle (0.975, 1.85);
+				\draw [draw=orange] (1.075, 1.075) rectangle (1.85, 1.85);
+			\draw [draw=blue] (2.05, 2.05) rectangle (3.9, 3.9);
+				\draw [draw=orange] (2.15, 2.15) rectangle (2.925, 2.925);
+				\draw [draw=orange] (3.025, 2.15) rectangle (3.8, 2.925);
+				\draw [draw=orange] (2.15, 3.025) rectangle (2.925, 3.8);
+				\draw [draw=orange] (3.025, 3.025) rectangle (3.8, 3.8);
+		\end{tikzpicture}
+		\caption{Recursive partition view}\label{fig2:city-recursive-partition}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.5\linewidth}
+		\centering
+		\vspace{-4.4cm}
+		\begin{forest}
+			[{CS\\
+				Jo grew up in...}[\textcolor{blue}{France}[\textcolor{orange}{{Paris}}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}]][\textcolor{blue}{Germany}[\textcolor{orange}{Berlin}][\textcolor{orange}{...}]][\textcolor{blue}{Italy}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]
+		\end{forest}
+		\caption{Tree view}\label{fig2:city-tree}
+	\end{subfigure}
+	\caption{Alternative representations of the CS corresponding to the nested sets of (\ref{ex2:city-parse}).}\label{tree:country-city-parse}
+\end{figure}
+
+
+\begin{exe}
+	\ex {\textsc{\textbf{Set-to-tree bijection}}. To define this bijection, we first define inductive propositions, and their propositional content. $S$ is an inductive proposition if either:
+		\begin{itemize}
+			\item $S$ is a set of worlds (i.e. a proposition);
+			\item $S$ is a set of inductive propositions.
+		\end{itemize}
+		The propositional content of an inductive proposition is then defined as:
+		\begin{itemize}
+			\item If $S$ is a proposition: $S$;
+			\item If $S$ is a set of inductive propositions: the grand union of the propositional contents of $S$'s elements.
+		\end{itemize}
+		Any inductive proposition $S$ is in a bijection with a tree structure whose nodes are propositions, and defined as:
+		\begin{itemize}
+			\item If $S$ is a proposition: the tree node denoting $S$;
+			\item If $S$ is a set of inductive propositions: the tree whose root denotes $S$'s propositional content, and whose children are the tree structures induced by each of $S$'s elements. 
+	\end{itemize}}\label{ex2:set-tree-bijection}
+\end{exe}
+
+So far, we have shown that the standard view linking questions to partitions, fails to account for the intuition that questions differing in terms of specificity, stand in some kind of inclusion relation encoded in their structure. We proposed a way to cash out this intuition, by appealing to recursive partitions, that we represent as trees for clarity.
+
+
+We now proceed to generalize these observations about the structure of questions. Building on \textcite{Buring2003,Riester2019,Onea2016,Ippolito2019,Zhang2022} (among others), we take questions to denote \textit{parse trees} of the CS, i.e. structures that hierarchically organize the worlds of the CS. Such trees (abbreviated \textbf{Qtrees}) are defined in (\ref{ex2:qtree-def}). 
+%(\ref{ex2:parse-def}) provide a more general definition of a parse.\footnote{This slightly differs from the notion of parse defined for sentences for instance, in which linear precedence must be preserved.} 
+\begin{exe}
+	\ex {\textsc{\textbf{Structure of Question-trees} (Qtrees)}. Qtrees are rooted trees whose nodes are all subsets of the CS and s.t.:
+		\begin{itemize}
+			\item Their root generally\footnote{In the case of sentences carrying presuppositions, the root will be assumed to correspond to the intersection between the CS and the sentence's presupposition. In fact, the whole Qtree will be intersected with the presupposition. This will be put to use in Chapter \ref{chap:scalarity}. But the examples we will see before this, will all involve Qtree rooted in the CS.} refers to the CS;
+			\item Any intermediate node is a proposition, which is partitioned by the set of its children.
+		\end{itemize}
+	}\label{ex2:qtree-def}
+\end{exe}
+%	\ex {\textit{Parse.} Let $S$ be a set. A parse of $S$ is a rooted tree whose nodes are subsets of $S$ and s.t.:
+%		\begin{itemize}
+%			\item The root is $S$;
+%			\item Any intermediate node is partitioned by the set of its children.
+%		\end{itemize}
+%	}\label{ex2:parse-def}
+
+A Qtree can be bijectively mapped to a nested partition of the CS as defined in (\ref{ex2:nested-partition}). Due to this equivalence, we will mostly use Qtrees in the rest of this dissertation.
+
+\begin{exe}
+	\ex {\textsc{\textbf{Nested partition}}. A nested partition $P$ of a set $S$ is a kind of inductive proposition, s.t.:
+		\begin{itemize}
+			\item If $P$ is a set of inductive propositions, then the propositional contents of $P$'s elements partition $P$'s propositional content. Additionally, $P$'s elements are nested partitions of their own propositional content. 
+		\end{itemize}	
+	}\label{ex2:nested-partition}
+\end{exe}
+
+
+Before investigating the interpretation and the structural properties of model of questions, the next Section covers a few core concepts from graph theory that will be useful in the rest of the Chapter and beyond.
+
+
+\subsection{A brief refresher on graph theory (and a few useful concepts for Qtrees)}
+
+(\ref{ex2:qtree-def}) defines Qtres as rooted trees. Linguists typically understand trees as relations between parent nodes and their children, along the lines of (\ref{ex2:recursive-interpretation}).
+
+\begin{exe}
+	\ex {\textsc{\textbf{Rooted tree}} (inductive version). A tree rooted in $N$ is either:
+		\begin{itemize}
+			\item $N$ (single, childless node);
+			\item $N$, along with $N$'s children, which are all rooted trees.
+	\end{itemize}}\label{ex2:tree-inductive}
+\end{exe}
+
+But we will see throughout this dissertation that it is also useful to see a tree as a specific kind of graph. We will first define graphs, then define trees as a subkind of graph, and lastly, show the importance of defining a root in such trees. The definition of a graph is given in (\ref{ex2:graph}). A graph is a way to represent a binary relation, which by default will be symmetric\footnote{\textit{Undirected} graphs, that we will simply call graphs, implement symmetric relations, while \textit{directed} graphs implement asymmetric relations.}. Elements in the domain of the relation are modeled as nodes, and unordered pairs of nodes are connected with an edge, iff they verify the relation. A graph therefore amounts to a set of nodes, and a set of edges between these nodes. This is illustrated in Figure \ref{fig2:basic-graph}.
+
+\begin{exe}	
+	\ex {\textsc{\textbf{Graph}}. A graph is defined by a set of nodes $\mathcal{N}$ and by a set of edges $\mathcal{E}$ between elements of $\mathcal{N}$. Edges are defined as unordered pairs of nodes: $\mathcal{E} \subseteq \lbrace \lbrace N_1, N_2\rbrace \ | \ (N_1, N_2) \in \mathcal{N}^2\rbrace$}\label{ex2:graph}
+\end{exe}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\node[shape=circle,draw=black] (A) at (0,0) {A};
+		\node[shape=circle,draw=black] (B) at (0,3) {B};
+		\node[shape=circle,draw=black] (C) at (2.5,4) {C};
+		\node[shape=circle,draw=black] (D) at (2.5,1) {D};
+		\node[shape=circle,draw=black] (F) at (5,3) {F} ;
+		\node[shape=circle,draw=black] (E) at (-2,2) {E} ;
+		
+		\path [-,color=orange] (A) edge node[left] {} (B);
+		\path [-](B) edge node[left] {} (C);
+		\path [-,color=orange](A) edge node[left] {} (D);
+		\path [-](D) edge node[left] {} (C);
+		\path [-,color=orange](D) edge node[right] {} (F);   
+	\end{tikzpicture}
+	\caption{A graph $G=(\mathcal{N}, \mathcal{E})$, with $\mathcal{N}=\lbrace A, B, C, D, E, F\rbrace$ and $\mathcal{E}=\lbrace \lbrace A, B\rbrace, \lbrace A, D\rbrace, \lbrace B, C\rbrace, \lbrace C, D\rbrace, \lbrace D, F\rbrace\rbrace$.}\label{fig2:basic-graph}
+\end{figure}
+
+This definition allows to define rooted trees as a kind of graph with a few extra properties: connectivity, acyclicity, and rootedness; see (\ref{ex2:rooted-tree}). We now unpack what these three extra properties mean for graphs. This will lead us to define a few useful concepts applying to trees, namely paths, ancestry, and depth.
+
+\begin{exe}
+	\ex {\textsc{\textbf{Rooted tree}} (graph version). A rooted tree is a graph that is connected and acyclic, and features a distinguished node called root.}\label{ex2:rooted-tree}
+\end{exe}
+
+In graphs, sequences of adjacent edges form paths. For instance, in Figure \ref{fig2:basic-graph}, the ordered sequence $[$\textcolor{orange}{$\lbrace A, B\rbrace$}, \textcolor{orange}{$\lbrace A, D\rbrace$}, \textcolor{orange}{$\lbrace D, F\rbrace$}$]$ forms a path, between node $A$ and node $F$. This is generalized in (\ref{ex2:graph-path}).
+
+\begin{exe}
+	\ex {\textsc{\textbf{Path}}. Let $G = (\mathcal{N}, \mathcal{E})$ be a graph. Let $(N_1, N_2) \in \mathcal{N}^2$ be two nodes of $G$. There is a path in $G$ between $N_1$ and $N_2$ (abbreviated $N_1 \stackrel{G}{\leadsto}  N_2$) iff $N_1$ and $N_2$ can be connected by a series of edges in $G$, i.e. $\exists (e_1, ... e_k) \in \mathcal{E}^k. \ N_1 \in e_1 \wedge N_2 \in e_k \wedge \forall i \in [1; k-1]. \  |e_i \cap e_{i+1}|  = 1$, where $|.|$ is the cardinality operator.}\label{ex2:graph-path}
+\end{exe}
+
+In Figure \ref{fig2:basic-graph}, it is easy to see that nodes $A$, $B$, $C$, $D$ and $F$ are all connected to each other by at least one path (in fact, infinitely many of them that cycle through these nodes). Node $E$ on the other hand, is isolated. So, Figure \ref{fig2:basic-graph} represents a graph that is \textit{not} connected. If $E$ were removed from the set of nodes, and the edges remained the same, the resulting graph would be connected. This concept of connectivity is generalized in (\ref{ex2:graph-connectivity}). If a graph is a tree, then, it is connected.
+\begin{exe}
+	\ex {\textsc{\textbf{Connectivity}}. Let $G = (\mathcal{N}, \mathcal{E})$ be a graph. $G$ is connected, iff there is a path in $G$ between any pair of nodes in $\mathcal{N}$, i.e. $\forall (N_1, N_2) \in \mathcal{N}^2. \ N_1 \stackrel{G}{\leadsto} N_2$.}\label{ex2:graph-connectivity}
+\end{exe}
+
+Another thing to note about Figure \ref{fig2:basic-graph}, is that nodes $A$, $B$, $C$, and $D$ form a ``cycle'', there is a path that starts at one of these nodes (e.g., $C$), and ends at this very same node, \textit{via} $B$, $A$, and $D$. Because of this cycle, there are infinitely many paths between $A$, $B$, $C$, and $D$, and also between each of these nodes, and $F$. Removing the edge between, say, $A$ and $B$, would break the cycle (yet, interestingly, maintain connectivity between $A$, $B$, $C$, and $D$). The resulting graph would be acyclic. The general definition of an acyclic graph, is given in (\ref{ex2:graph-acyclic}). If a graph is a tree, then, it is acyclic. Moreover, connectivity and acyclicity, are necessary and sufficient for a graph to be a tree.
+
+\begin{exe}
+	\ex {\textsc{\textbf{Acyclicity}}. Let $G = (\mathcal{N}, \mathcal{E})$ be a graph. $G$ is acyclic, iff no node $N$ of $\mathcal{N}$ is s.t. there is a path starting and ending at $N$ in $G$, i.e. $\neg\exists N \in \mathcal{N}. \ N \stackrel{G}{\leadsto} N$.}\label{ex2:graph-acyclic}
+\end{exe}
+
+We now have a definition of what kind of data structure a tree is. But why do we need  Qtrees to be ``rooted''? To understand why, let us go back to the tree in Figure \ref{fig2:city-tree}, repeated in Figure \ref{fig2:city-tree-repeated} below. The way this tree is represented on paper, is somehow misleading. Recall that, from the point of view of graph theory, a tree is just an undirected graph, with a few extra properties constraining its edges. If the tree represented in Figure \ref{fig2:city-tree-repeated} were not ``rooted'', nothing would prevent us from representing it in the form of Figure \ref{fig2:city-tree-france-root}: the nodes and edges are strictly the same, but in Figure \ref{fig2:city-tree-france-root}, \textit{France} ``appears'' to be the root of the tree, because visually, it is represented at the top. To avoid this confusion, the fact that the CS node should be ``at the top'' is made part of the representation of the tree -- which then becomes a \textit{rooted} tree. So, a rooted tree is just a tree, plus one distinguished node that serves as root.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[{CS\\
+				Jo grew up in...}[\textcolor{blue}{France}[\textcolor{orange}{{Paris}}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}]][\textcolor{blue}{Germany}[\textcolor{orange}{Berlin}][\textcolor{orange}{...}]][\textcolor{blue}{Italy}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]
+		\end{forest}
+		\caption{The ``intuitive'' view, in which the CS appears at the top.}\label{fig2:city-tree-repeated}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[\textcolor{blue}{France}[\textcolor{orange}{Paris}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}][CS[\textcolor{blue}{Germany}[\textcolor{orange}{Berlin}][\textcolor{orange}{...}]][\textcolor{blue}{Italy}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]]
+		\end{forest}
+		\caption{An alternative ``counter-intuitive'' view, in which the CS is \textit{not} at the top, yet all edges and nodes are the same.}\label{fig2:city-tree-france-root}
+	\end{subfigure}
+	\caption{Two equivalent ways to represent the tree corresponding to the question in (\ref{ex2:city-question}); assuming trees were connected, acyclic graphs, but not rooted.}
+\end{figure}
+
+
+The notion of a distinguished root in fact allows to define a few interesting properties on trees that linguist may be more familiar with, and that will be used throughout this dissertation. First, once a tree is rooted, it is possible to define a measure of distance between each node of the tree, and the root. This corresponds to the concept of depth, defined in (\ref{ex2:tree-node-depth}). In Figure \ref{fig2:city-tree-repeated} for instance, the CS has depth $0$, \textit{Germany} depth $1$, and \textit{Lyon} depth $2$. This also allows to define the global ``size'' of the tree, in the form of its maximal depth; see (\ref{ex2:tree-depth}). Figure \ref{fig2:city-tree-repeated} for instance, is a tree of depth $2$.
+
+\begin{exe}
+	\ex
+	\begin{xlist}	
+		\ex {\textsc{\textbf{Depth of a node in a rooted tree}}. Let $T = (\mathcal{N}, \mathcal{E}, R)$ be a rooted tree, with root $R$. Let $N \in \mathcal{N}$. The depth of $N$ in $T$ ($d(N, T)$) corresponds to the length of the minimal path between $R$ and $N$ if $N \neq R$,\footnote{This path can be determined using a simple Depth-First Search algorithm starting from the root.} and is set to $0$ if $N = R$.}\label{ex2:tree-node-depth}
+		\ex {\textsc{\textbf{Depth of a rooted tree}}. Let $T = (\mathcal{N}, \mathcal{E}, R)$ be a rooted tree, with root $R$. The depth of $T$ ($d(T)$) is the maximal depth of a node in $T$: $d(T) = max_{N \in \mathcal{N}}(d(N, T))$.}\label{ex2:tree-depth}
+	\end{xlist}
+\end{exe}
+
+Having a distinguished root, and the derived concepts of depth, gives us the parent-child relation between nodes for free.\footnote{in the next Section, we will introduce another definition of tree, that takes this relation as a primitive} This relation is defined based on depth and edges in (\ref{ex2:parent-child}), and its transitive closure (the ancestor relation) is defined in (\ref{ex2:ancestor}), in two possible ways. 
+
+\begin{exe}
+	\ex {\textsc{\textbf{Parent-child relation in a rooted tree}}. Let $T = (\mathcal{N}, \mathcal{E}, R)$ be a rooted tree. Let $(N_1, N_2) \in \mathcal{N}^2$. $N_1$ is the parent of $N_2$  (and $N_2$ is the child of $N_1$), iff $\lbrace N_1, N_2\rbrace \in \mathcal{E}$ and $d(N_1, T) < d(N_2, T)$.}\label{ex2:parent-child}
+	\ex\label{ex2:ancestor}
+	\begin{xlist}
+		\ex {\textsc{\textbf{Ancestor relation}} (recursive version). Let $T = (\mathcal{N}, \mathcal{E}, R)$ be a rooted tree. Let $(N_1, N_2) \in \mathcal{N}^2$. $N_1$ is an ancestor of $N_2$ iff either:
+			\begin{itemize}
+				\item $N_1$ is the parent of $N_2$;
+				\item or $N_1$ is the parent of an ancestor of $N_2$.
+		\end{itemize}}
+	\ex {\textsc{\textbf{Ancestor relation}} (path version). Let $T = (\mathcal{N}, \mathcal{E}, R)$ be a rooted tree. Let $(N_1, N_2) \in \mathcal{N}^2$. $N_1$ is an ancestor of $N_2$ iff $N_1 \stackrel{T}{\leadsto} N_2$ and $d(N_1, T) < d(N_2, T)$.}
+	\end{xlist}
+\end{exe}
+
+Lastly, in the rest of this dissertation, we will extensively use the concept of \textit{layer}, that we define as a the maximal set of same-depth nodes in a rooted tree; see (\ref{ex2:tree-layer}). Figure \ref{fig2:city-tree-repeated} features a country-layer at depth $1$, and a city-layer at depth $2$. Layers therefore reflect an intuitive notion of granularity.
+
+\begin{exe}
+	\ex {\textsc{\textbf{Depth-$k$ layer of a rooted tree}}. Let $T = (\mathcal{N}, \mathcal{E}, R)$ be a rooted tree, with root $R$. Let $k$ be an integer s.t. $0\geq k<d(T)$. The depth-$k$ layer of $T$ is the set of nodes in $\mathcal{N}$ whose depth is $k$, i.e. $\lbrace N \in \mathcal{N} \ | \ d(N, T)=k\rbrace$.}\label{ex2:tree-layer}
+\end{exe}
+
+
+Now that we have defined the core structure of Qtrees along with a few related properties and metrics, we proceed to assign an interpretation to this kind of structure.
+
+\subsection{Interpreting Qtrees}\label{sec:interpreting-qtrees}
+\cite{Aloni2022}
+At the end of Section \ref{sec:nested-partition}, we showed that question should better be represented as nested partition, in order to encode their degree of specificity, and the grammar sensitive to how more or less fine-grained questions relate to each other. We also discussed how nested partitions could be unequivocally represented as Qtrees. It is easy to see that the tree in Figure \ref{fig2:city-tree}/\ref{fig2:city-tree-repeated}, repeated again in Figure \ref{fig2:city-qtree}, is a Qtree according to (\ref{ex2:qtree-def}). We saw that this Qtree intuitively capture the idea that a \textit{Which country?} kind of question, is contained in a \textit{Which city?} kind of question. We now investigate how to exploit this hierarchy in a meaningful way. We will use Figure \ref{fig2:city-qtree} as an example, and now assign an interpretation to nodes and paths in such structures. We will focus on three meaningful aspects of Qtrees: answer-granularity (understood as node depth), strategies of inquiry (understood as paths), and question refinement (understood as tree inclusion)
+
+\begin{figure}[H]
+	\centering
+	\begin{forest}
+		[{CS\\
+			Jo grew up in...}[\textcolor{blue}{France}[\textcolor{orange}{{Paris}}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}]][\textcolor{blue}{Germany}[\textcolor{orange}{Berlin}][\textcolor{orange}{...}]][\textcolor{blue}{Italy}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]
+	\end{forest}
+	\caption{``Intuitive'' Qtree for \textit{Which city did Jo grow up in?}}\label{fig2:city-qtree}
+\end{figure}
+
+We start with the interpretation of nodes as possible answers, with different granularities. The root of Figure \ref{fig2:city-qtree} for instance, which corresponds to the entire CS, defines a tautology: it is a proposition which is true of all worlds of the CS, because it simply coincides with it.\footnote{Chapter \ref{chap:introduction} moreover identifies it as an uninformative proposition that is Lewis-relevant but not Roberts-relevant.} It can be understood as identifying the unique cell of coarsest-grained partition of the CS, that is, the CS itself. By contrast, leaves like \textit{Paris}, \textit{Lyon}, \textit{Berlin} in Figure \ref{fig2:city-qtree}, correspond to the ``smallest'' cells of the recursive partition that the Qtree defines. They can be seen as maximal answer to the underlying question, e.g., \textit{In which city did Jo grow up?}. Intermediate nodes like \textit{France} or \textit{Germany} in Figure \ref{fig2:city-qtree}, form cells of ``intermediate'' size, and can always be seen as unions of leaves. They appear to correspond to non-maximal answers. Because Qtrees can be made of many layers, they induce a hierarchy between non-maximal answers: an non-maximal answer $p$ is ``more maximal'' than another non-maximal answer $q$, iff the node corresponding to $p$ is located deeper in the Qtree than the node corresponding to $q$. This is formalized in (\ref{ex2:answer-gran}).
+
+\begin{exe}
+	\ex {\textsc{\textbf{Answer granularity}}. Let $T$ be a Qtree and $(N_1, N_2)$ be two nodes in $T$. $N_1$ constitutes a finer-grained answer than $N_2$ iff $d(N_1, T) > d(N_2, T)$. This implies that leaves of $T$ correspond to the finest-grained answers (maximal answers) to the question $T$ represents.}\label{ex2:answer-gran}
+\end{exe}
+
+
+Next, we discuss how Qtree encapsulate \citeauthor{Roberts1996}'s notion of \textit{Strategy of Inquiry}. To this end, we observe that nodes in a tree can receive a ``recursive'' interpretation, that incorporates everything the node dominates. Under this interpretation, a node $N$ in a Qtree is not only what $N$ denotes; it is the whole subtree ($\sim$subquestion) rooted in $N$, as defined in (\ref{ex2:recursive-interpretation})
+
+
+\begin{exe}
+	\ex\label{ex2:recursive-interpretation} {\textsc{\textbf{Recursive interpretation of tree nodes}}. Let $T = (\mathcal{N}, \mathcal{E}, R)$ be a rooted tree. Let $N \in \mathcal{N}$ be a node of $T$. $N$'s recursive interpretation corresponds to:
+		\begin{itemize}
+			\item $N$, if $N$ is a leaf;
+			\item the subtree of $T$ rooted in $N$, otherwise. 
+	\end{itemize}}
+\end{exe}
+
+This point of view originates from the inductive definition of a rooted tree given in (\ref{ex2:tree-inductive}) and repeated below.
+
+\begin{exe}
+	\exr{ex2:tree-inductive} {\textsc{\textbf{Rooted tree}} (inductive version). A tree rooted in $N$ is either:
+		\begin{itemize}
+			\item $N$ (single, childless node);
+			\item $N$, along with $N$'s children, which are all rooted trees.
+	\end{itemize}}
+\end{exe}
+
+If $T$ is a Qtree, then $N$'s recursive interpretation will be the Qtree rooted in $N$. This Qtree's root can be seen as a ``local'' CS, which is equal to the global CS, updated with $N$. For instance, the recursive interpretation of the \textit{France}-node in Figure \ref{fig2:city-qtree}, corresponds to the subtree of Figure \ref{fig2:city-qtree} rooted in \textit{France}. This subtree, given in Figure \ref{fig2:france-subtree}, amounts to the question \textit{In which city did Jo grow up?}, granted that \textit{Jo lives in France}, since its root corresponds to the CS intersected with the proposition that \textit{Jo lives in France}.
+
+\begin{figure}[H]
+	\centering
+	\begin{forest}
+		[\textcolor{blue}{France}[\textcolor{orange}{{Paris}}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}]]
+	\end{forest}
+	\caption{``Recursive'' interpretation of the \textit{France}-node in Figure \ref{fig2:city-qtree}.}\label{fig2:france-subtree}
+\end{figure}
+
+In fact, this subtree as a whole, can be understood as the tree-node intersection of Figure \ref{fig2:city-qtree} and the proposition that \textit{Jo grew up in France}. Tree-node intersection is defined in (\ref{ex2:nodewise-inter}). This operation takes a Qtree and a proposition $p$, and creates a Qtree whose nodes are each intersected with $p$, and resulting empty nodes are removed. Edges from the original Qtree are retained, as long as the nodes they connect are still part of the newly formed Qtree. Note that, because the nodes and edges of a tree form \textit{sets} (and not \textit{multisets}), tree-node intersection automatically collapses nodes from the original tree whose intersections with $p$ yield the same result; and it also collapses the edges between such nodes. Figure \ref{fig2:tree-node-inter} provides a decomposition of this procedure, computing the tree-node intersection between Figure \ref{fig2:city-qtree} and the proposition that \textit{Jo grew up in France}, and illustrating how nodes and edges may ``collapse''. (\ref{ex2:recursive-interpretation-cs}) generalizes this point, by stating that the subtree of a Qtree rooted in a node $N$, can be reconstructed by tree-node intersecting the entire Qtree with the proposition $N$ corresponds to. In other words, the subquestion corresponding to a node $N$, can be seen as a \textit{restriction} of the entire Qtree, taking $N$ for granted. This is proved in (\ref{ex2:recursive-interpretation-cs-proof}).
+
+\begin{exe}
+	\ex {\textsc{\textbf{Tree-node Intersection}}. Let $T=(\mathcal{N}, \mathcal{E}, R)$ be a Qtree. Let $p$ be a proposition. The tree-node intersection between $T$ and $p$, noted $T \cap p$, is defined iff $R \cap p \neq \emptyset$ and, if so, is the Qtree $T'=(\mathcal{N}', \mathcal{E}', R')$ s.t.:
+	\begin{itemize}
+		\item $\mathcal{N}' = \lbrace N \cap p \ | \ N \in \mathcal{N} \wedge N \cap p \neq \emptyset\rbrace$
+		\item $\mathcal{E}' = \lbrace \lbrace N_1\cap p, N_2\cap p\rbrace \ | \ \lbrace N_1, N_2\rbrace \in \mathcal{E} \wedge (N_1\cap p) \neq (N_2\cap p) \wedge N_1\cap p \neq \emptyset \wedge N_2\cap p \neq \emptyset \rbrace$
+		\item $R' = R\cap p$
+		\end{itemize}}\label{ex2:nodewise-inter}
+\end{exe}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{\linewidth}
+		\centering
+		\scalebox{.8}{
+			\begin{forest}
+				[{CS $\cap$ \textcolor{blue}{France}}[{\textcolor{blue}{France} $\cap$ \textcolor{blue}{France}}[{\textcolor{orange}{{Paris}} $\cap$ \textcolor{blue}{France}}][{\textcolor{orange}{Lyon} $\cap$ \textcolor{blue}{France}}][\textcolor{orange}{...}]][{\textcolor{blue}{Germany} $\cap$ \textcolor{blue}{France}}[{\textcolor{orange}{Berlin} $\cap$ \textcolor{blue}{France}}][\textcolor{orange}{...}]][{\textcolor{blue}{Italy} $\cap$ \textcolor{blue}{France}}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]
+			\end{forest}
+		}
+		\caption{Intersecting the tree in Figure \ref{fig2:city-qtree} with the proposition that \textit{Jo grew up in France}.}
+	\end{subfigure}
+	
+	\begin{subfigure}[t]{.33\linewidth}
+		\centering		\scalebox{.8}{
+		\begin{forest}
+			[{\textcolor{blue}{France}}[\textcolor{blue}{France}[\textcolor{orange}{{Paris}}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}]][$\emptyset$[$\emptyset$][$\emptyset$]][$\emptyset$[$\emptyset$]][$\emptyset$]]
+		\end{forest}}
+		\caption{...After computing tree-node intersections.}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.27\linewidth}
+		\centering		\scalebox{.8}{
+		\begin{forest}
+			[\textcolor{blue}{France}[\textcolor{blue}{France}[\textcolor{orange}{{Paris}}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}]]]
+		\end{forest}}
+		\caption{...After removing empty nodes and resulting dangling edges.}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.3\linewidth}
+		\centering 		\scalebox{.8}{
+		\begin{forest}
+			[\textcolor{blue}{France}[\textcolor{orange}{{Paris}}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}]]
+		\end{forest}}
+		\caption{...After removing trivial edges: we get Figure \ref{fig2:france-subtree} back.}
+	\end{subfigure}
+	\caption{The recursive interpretation of a node, can be obtained by intersecting the whole Qtree with that node, removing empty nodes and trivial edges (formed by a parent node and its only child).}\label{fig2:tree-node-inter}
+\end{figure}
+
+\begin{exe}
+ 	\ex {\textsc{\textbf{Recursive interpretation and CS update}}. Let $T$ be a Qtree. Let $N$ be a node of $T$. $N$'s recursive interpretation corresponds to the tree-node intersection of $T$ with $N$.}\label{ex2:recursive-interpretation-cs}
+ 	\ex {\textsc{\textbf{Proof of (\ref{ex2:recursive-interpretation-cs})}}. Let $T$ be a Qtree. Let $N$ be a node of $T$. Because $T$ is a Qtree, any node $N$ dominates is a subset of $N$; any node dominating $N$, is a superset of $N$, and any node that is neither dominated nor dominating $N$, is disjoint from $N$. By definition, $N$'s recursive interpretation is the subtree of $T$ rooted in $N$, noted $T'$. We show that $T'$ corresponds to the tree-node intersection between $T$ and $N$, $T \cap N$. Let $N'$ be $N$ or a node dominated by $N$. $N' \subseteq N$, so $N' \cap N = N'$. This holds for any $N'$ dominated by $N$ or equal to $N$. So $T \cap N$ preserves $T'$. Let $N'$ be an ancestor of $N$. $N \subseteq N'$ so $N' \cap N = N$. So any ancestor of $N$ in $T$, is reduced to $N$ in $T \cap N$. Let $N'$ be a node in $T$ that is neither dominated nor dominating $N$. $N \cap N' = \emptyset$, and so any sibling/uncle/cousin of $N$ in $T$ is absent in $T \cap N$, along with any incident edges. Therefore, $T \cap N$ ends up being just $T'$.}\label{ex2:recursive-interpretation-cs-proof}
+\end{exe}
+
+We have just seen that under the recursive interpretation of nodes, each node $N$ can be seen as a subquestion of the whole Qtree, which takes $N$'s propositional content for granted. Under this interpretation, a path from the root (CS) to any node $N$, can then be seen as a series of subquestions, taking for granted increasingly strong propositions. In Figure \ref{fig2:city-qtree} for instance, a path of the form $[\textit{CS}, \textit{France}, \textit{Paris}]$, can be interpreted as a series of inquiries of the form: $[$\textit{In which city did Jo grow up (I have no idea)?}, \textit{In which city did Jo grow up (given Jo grew up in France)?}, \textit{Jo grew up in Paris}$]$. If the path terminates on a leaf, then the series of inquiries converges to a maximal answer. We will call such paths complete strategies of inquiry.
+
+\begin{exe}
+	\ex {\textsc{\textbf{Complete Strategy of Inquiry}}. Let $T$ be a Qtree. A complete strategy of inquiry on $T$ is a path from $T$'s root to one of $T$'s leaves.}
+\end{exe}
+
+This model is very close to what the previous literature had posited at the conversational level, whereby sentences answer questions and sometimes evoke new, finer-grained questions. The key difference here, is that individual questions are assumed to encapsulate the same kind of dynamic, hierarchical information. How does this relate to question granularity? Note that intuitively finer-grained questions yield deeper Qtrees than intuitively coarser-grained ones. Additionally, (\ref{ex2:tree-depth}) defined Qtree depth as the maximal length of a path from the root to a leaf in the tree. This leads to the equivalence in (\ref{ex2:depth-soi}).
+
+\begin{exe}
+	\ex {\textit{\textbf{Depth and Complete Strategies of Inquiry}}. Let $T$ be a Qtree. $T$'s depth can be recovered by finding the length of its longest complete strategy of inquiry, dubbed maximal complete strategy of inquiry.}\label{ex2:depth-soi}
+\end{exe}
+
+In other words, finer-grained questions are linked to deeper Qtrees, which are characterized by a longer, maximal complete strategy of inquiry. In sum, a fine-grained question is a question for which converging to a maximal answer may require a lot of intermediate steps, or subquestions. This is useful as an absolute measure of question-complexity, but probably not enough to determine if a question is finer-grained than another question. For instance, this incorrectly predicts two completely independent questions to be comparable in terms of granularity, just because they give rise to Qtree of different depths. 
+
+
+
+There is in fact another way in which the recursive interpretation of nodes can help clarify in what sense a \textit{Which city} kind of question, is more fine-grained than a \textit{Which country} kind of question, in the current framework. Figure \ref{fig2:qtrees-diff-gran} shows what a Qtree for (\ref{ex2:city-partition}) and a Qtree for (\ref{ex2:country-partition}) should intuitively look like. 
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[{CS\\
+				Jo grew up in...}[\textcolor{blue}{France}[\textcolor{orange}{{Paris}}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}]][\textcolor{blue}{Germany}[\textcolor{orange}{Berlin}][\textcolor{orange}{...}]][\textcolor{blue}{Italy}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]
+		\end{forest}
+		\caption{``Intuitive'' Qtree for (\ref{ex2:city-partition}) = \textit{Which city did Jo grow up in?}}\label{fig2:city-qtree-repeated2}
+	\end{subfigure}\hfill
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[{CS\\
+				Jo grew up in...}[\textcolor{blue}{France}][\textcolor{blue}{Germany}][\textcolor{blue}{Italy}][\textcolor{blue}{...}]]
+		\end{forest}
+		\caption{``Intuitive'' Qtree for (\ref{ex2:country-partition}) = \textit{Which country did Jo grow up in?}}\label{fig2:country-qtree}
+	\end{subfigure}
+	\caption{Comparing \textit{Which city} and \textit{Which country} Qtrees.}\label{fig2:qtrees-diff-gran}
+\end{figure}
+The Qtree for (\ref{ex2:city-partition}) stops at the city-level, because cities should constitute maximal answer to that kind of question; the Qtree for (\ref{ex2:country-partition}) on the other hand, stops at the country level, for similar reasons. And it is easy to notice that the Qtree for (\ref{ex2:country-partition}) somehow forms a ``subset'' of the Qtree for (\ref{ex2:city-partition}): it forms a subset of the nodes, and a subsets of the edges, of the Qtree for (\ref{ex2:city-partition}). Additionally, it is not a random subgraph of Figure \ref{fig2:city-qtree-repeated2} (as defined in (\ref{ex2:subgraph})). It remains a Qtree, that constitues a refinement of Figure \ref{fig2:city-qtree-repeated2}, as defined in (\ref{ex2:qtree-refinement}). It can also be shown, that all the possible refinements of a Qtree $T$, correspond to all the possible subgraphs of $T$ that have the Qtree property.\footnote{We identify the refinement operation between $T$ and $T'$, as a set $\mathcal{T}$ of subtrees of $T$, that is closed under root-sisterhood.
+	We assume $T$ is a refinement of a Qtree $T'$ and show $T'$ is a subgraph of $T$ with the Qtree property. $T'$ is obtained from $T$ by removing the subtrees in $\mathcal{T}$ from $T$. So it is obviously a subgraph of $T$. We now show $T'$ is a Qtree. $\mathcal{T}$ cannot contain the tree rooted in $T$, otherwise $T'$ would be empty. So $T'$ has same root as $T$, and this root is the CS. Let $N$ be an intermediate node in $T'$. $N$ has at least one child $N'$, which means that $\mathcal{T}$ cannot contain the subtree of $T$ rooted in $N'$. To be partitioned by its children, $N$ in $T'$ must have the same children as $N$ in $T$, i.e. $\mathcal{T}$ should not contain any tree rooted in a child of $N$. If $\mathcal{T}$ did, then $\mathcal{T}$ would also contain the subtree of $T$ rooted in $N'$, du to its closure property. Contradiction. So $N$ retained all its children from $T$, and is partitioned by them, given that $T$ is a Qtree.\\
+	We assume $T'$ is a subgraph of $T$ with the Qtree property and show $T$ is a refinement of a Qtree $T'$. $T'$ is a subgraph of $T$, so we can define $S$ the set of nodes of $T$ not in $T'$. We then define $\mathcal{T}$ as the set of subtrees of $T$ rooted in a maximal element of $S$ w.r.t. the ancestor relation, as induced by $T$'s edges. We show this set is closed under root-sisterhood. Let $T'' \in \mathcal{T}$. It is subtree of $T$ rooted in some node $N$, and $N$ is maximal in $S$ w.r.t. the ancestor relation. If $N$ has no sister in $T$, then the closure property is trivially verified. If $N$ has a sister $N'$ in $T$, we show the closure property by contradiction. If the subtree of $T$ rooted in $N'$ did not belong to $\mathcal{T}$, then, either $N'$ would be part of a subtree of $\mathcal{T}$ (but not as root), or, $N'$ would be a node in $T'$. The former option would imply that some common ancestor of $N$ and $N'$ would be the root of a subtree in $\mathcal{T}$. But then both $N$ and some ancestor of $N$, would be maximal in $S$ w.r.t. the ancestor relation. Contradiction. The former option would mean that $N'$'s parent in $T'$, would have $N'$, but not $N$ has child, and so would not be partitioned by its children. Therefore, $T'$ would not be a Qtree. Contradiction.}
+
+\begin{exe}
+	\ex {\textit{\textbf{Subgraph}}. Let $G = (\mathcal{N}, \mathcal{E})$ and $G' = (\mathcal{N}', \mathcal{E}')$ be two graphs. $G' \subseteq G$, iff $\mathcal{N}' \subseteq \mathcal{N}$ and $\mathcal{E}' \subseteq \mathcal{E}$.}\label{ex2:subgraph}
+	\ex {\textit{\textbf{Qtree refinement}}. Let $T$ and $T'$ be Qtrees. $T$ is a refinement of $T'$ (or: $T$ is finer-grained than $T'$), iff $T'$ can be obtained from $T$ by removing a subset $\mathcal{T}$ of $T$'s subtrees, s.t., if $\mathcal{T}$ contains a subtree rooted in $N$, then, for each node $N'$ that is a sibling of $N$ in $T$, the subtree of $T$ rooted in $N'$, is also in $\mathcal{T}$.}\label{ex2:qtree-refinement}
+\end{exe}
+
+
+Two other possible refinements of Figure \ref{fig2:city-qtree-repeated2} are given below. It is worth noting that the process deriving a refinement from a Qtree need not remove entire layers. 
+
+
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[{CS\\
+				Jo grew up in...}[\textcolor{blue}{France}[\textcolor{orange}{Paris}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}]][\textcolor{blue}{Germany}][\textcolor{blue}{Italy}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]
+		\end{forest}
+		\caption{A refinement where the children of the \textit{Germany}-node are deleted.}\label{fig2:city-qtree-trimmed1}
+	\end{subfigure}\hfill
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[{CS\\
+				Jo grew up in...}[\textcolor{blue}{France}][\textcolor{blue}{Germany} [\textcolor{orange}{Berlin}][\textcolor{orange}{...}]][\textcolor{blue}{Italy}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]
+		\end{forest}
+		\caption{A refinement where the children of the \textit{France}-node are deleted.}\label{fig2:city-qtree-trimmed2}
+	\end{subfigure}
+	\caption{Possible refinements of the Qtree for \textit{Which city did Jo grow up in?} in Figure \ref{fig2:city-qtree-repeated2}.}\label{fig2:qtrees-trimmed}
+\end{figure}
+
+
+
+
+\subsection{Flagging Qtrees}
+
+So far, we have considered Qtrees directly associated with questions, like (\ref{ex2:city-question}) and (\ref{ex2:country-question}). But, as suggested in the introduction to this Chapter, we want to go one step further, and posit that assertive sentences, like (\ref{ex2:city-assertion}) and (\ref{ex2:country-assertion}), also evoke questions in the form of Qtrees. Such questions will correspond to the ones a given assertion could be a good answer to.
+
+\begin{exe}
+	\ex \label{ex2:city-country-assertions}
+	\begin{xlist}
+		\ex {Jo grew up in Paris.}\label{ex2:city-assertion}
+		\ex {Jo grew up in France.}\label{ex2:country-assertion}
+	\end{xlist}
+\end{exe}
+
+So (\ref{ex2:city-assertion}) and (\ref{ex2:country-assertion}) for instance, should evoke Qtrees associated with questions like (\ref{ex2:city-question}) and (\ref{ex2:country-question}), respectively. We sketched an intuitive representation of these Qtrees in Figure \ref{fig2:qtrees-diff-gran}. Are these Qtrees representing everything that the assertions in (\ref{ex2:city-assertion}) and (\ref{ex2:country-assertion}) convey though? One major difference between questions and assertions, is that questions are ignorant of the answer, while assertions provide such an answer. So, if (\ref{ex2:city-assertion}) were directly mapped to the Qtree in Figure \ref{fig2:city-qtree-repeated2}, the information that (\ref{ex2:city-assertion}) actually answers the question by identifying the \textit{Paris}-node, would be lost. Another way to see the issue, is to observe that (\ref{ex2:city-assertion}) and (\ref{ex2:city-assertion2}) would then be associated with the exact same Qtree.
+
+\begin{exe}
+	\ex {Jo grew up in Berlin.}\label{ex2:city-assertion2}
+\end{exe}
+
+To avoid such collisions in the case of assertive sentences, we define an extra piece of machinery on top of the Qtree architecture, that consists in a set of ``verifying'' nodes keeping track of \textit{how} the assertion answers the question it evokes. I Figures, these nodes will be represented in boxes; given a Qtree $T$, $T$'s set of verifying nodes will be referred to as $\mathcal{N}^+(T)$. (\ref{ex2:city-assertion}) and (\ref{ex2:country-assertion}) for instance, will intuitively evoke Qtree that \textit{structurally} match those in Figure \ref{fig2:qtrees-diff-gran}, but whose \textit{Paris} and \textit{France} noes respectively, are ``boxed'', i.e. flagged as verifying.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[{CS\\
+				Jo grew up in...}[\textcolor{blue}{France}[\textcolor{orange}{{\fbox{Paris}}}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}]][\textcolor{blue}{Germany}[\textcolor{orange}{Berlin}][\textcolor{orange}{...}]][\textcolor{blue}{Italy}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]
+		\end{forest}
+		\caption{``Intuitive'' Qtree for (\ref{ex2:city-partition}) = \textit{Which city did Jo grow up in?}}\label{fig2:paris-qtree}
+	\end{subfigure}\hfill
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[{CS\\
+				Jo grew up in...}[\textcolor{blue}{\fbox{France}}][\textcolor{blue}{Germany}][\textcolor{blue}{Italy}][\textcolor{blue}{...}]]
+		\end{forest}
+		\caption{``Intuitive'' Qtree for (\ref{ex2:country-partition}) = \textit{Which country did Jo grow up in?}}\label{fig2:france-qtree}
+	\end{subfigure}
+	\caption{Comparing \textit{Which city} and \textit{Which country} Qtrees.}\label{fig2:paris-france-qtrees}
+\end{figure}
+
+In that particular case, the nodes that are flagged as verifying in both Qtrees, strictly coincide with the proposition conveyed by the assertions, namely, that \textit{Jo grew up in Paris}, and that \textit{Jo grew up in France}. For an assertion like (\ref{ex2:city-assertion2}), the only flagged node would be \textit{Berlin}. But we will not take this strict equivalence between prejacent proposition and verifying nodes to be a generality. In the model laid out in the next Section, we will assume that verifying nodes, just like Qtree structure, are compositionally ``retro-engineered'' from the structure and meaning of the sentence. As a result, there may be more than on verifying node in a given Qtree, and, the grand union of a Qtree's verifying nodes, may not always coincide with the proposition denoted by the assertion.\footnote{This will in particular be true of conditional assertions.}
+The next Section therefore introduces a more systematic way to derive Qtrees and their verifying nodes from simplex sentences.
+
+
+Moreover, an accommodated Qtree should allow the sentence evoking it to properly answer it; that is why we assume that any well-formed Qtree derived from a sentence should come with a non-empty set of verifying nodes.(see (\ref{ex2:vacuous-flagging})). More generally, we assume that oddness results from the fact that a given sentence, through its LF, cannot give rise to any well-formed Qtree. This is summarized in (\ref{ex2:oddness-sentence}).
+
+
+\begin{exe}
+	\ex {\textit{\textbf{Empty labeling of verifying nodes}}. If a sentence $S$ evokes a Qtree $T$ but does not flag any node as verifying on $T$, then $T$ is deemed odd given $S$.}\label{ex2:vacuous-flagging}
+	\ex {\textit{\textbf{Oddness of a sentence}}. A sentence $S$ is odd if any Qtree $T$ it evokes is odd given $S$.}\label{ex2:oddness-sentence}
+\end{exe}
+
+
+
+\section{Compositional Qtrees: base case}\label{sec:simplex}
+
+So far, we have established that assertive sentences can evoke the questions they are good answers to, in the form of Qtrees. And we used ``intuitive'' Qtrees like the ones in Figures \ref{fig2:paris-qtree} and \ref{fig2:france-qtree} to show how such structures could capture a wide range of properties connecting questions and answers, and questions to each other. We now introduce a principled algorithm to derive Qtrees out of assertive sentences. This will heavily build on the notion of alternatives and how they can be ordered in terms of specificity. We will show that this ordering of alternatives induces a specific ``layering'' on Qtrees.
+
+\subsection{Alternatives}
+
+It is quite uncontroversial that assertive sentences evoke alternatives \parencite{Rooth1992,Katzir2007,Fox2011}. An alternative is a sentence that is sufficiently ``similar'' to the sentence it is evoked by, but may have a different meaning. For instance, (\ref{ex2:alt-some}) is felt to have (\ref{ex2:alt-all}) as alternative, and vice versa. Pre-theoretically, this is because, in many contexts, (\ref{ex2:alt-some}) is utterable iff (\ref{ex2:alt-all}) is, too. The same holds for (\ref{ex2:alt-paris}) and (\ref{ex2:alt-lyon}).
+
+\begin{exe}
+	\ex \label{ex2:alt-scalar}
+	\begin{xlist}
+		\ex {Jo ate all of the cookies.}\label{ex2:alt-some}
+		\ex {Jo ate some of the cookies.}\label{ex2:alt-all}
+	\end{xlist}
+	\ex \label{ex2:alt-non-scalar}
+	\begin{xlist}
+		\ex {Jo grew up in Paris.}\label{ex2:alt-paris}
+		\ex {Jo grew up in Lyon.}\label{ex2:alt-lyon}
+	\end{xlist}
+\end{exe}
+
+Moreover, the computation of alternatives is driven by focus. In (\ref{ex2:alt-scalar}) and (\ref{ex2:alt-non-scalar}), it was implicitely assumed that quantifiers and city names respectively, were focused, and so gave rise to alternative varying in terms of the focused element. But note that, if the object of (\ref{ex2:alt-some}) and the verb of (\ref{ex2:alt-paris}) had been focused instead, the alternatives to these sentences would have been different, along the lines of (\ref{ex2:alt-muffins}) and (\ref{ex2:alt-reside}), respectively.
+
+\begin{exe}
+	\ex \label{ex2:alt-scalar-foc}
+	\begin{xlist}
+		\ex {Jo ate all of the COOKIES.}\label{ex2:alt-cookies}
+		\ex {Jo ate all of the muffins.}\label{ex2:alt-muffins}
+	\end{xlist}
+	\ex \label{ex2:alt-non-scalar-foc}
+	\begin{xlist}
+		\ex {Jo GREW UP in Paris.}\label{ex2:alt-growup}
+		\ex {Jo resides in Paris.}\label{ex2:alt-reside}
+	\end{xlist}
+\end{exe}
+
+We define what counts as an alternative to a given sentence (or more generally an LF) in (\ref{ex2:focus-alternatives}), based on \textcite{Rooth1992} and \textcite{Katzir2007}.
+
+\begin{exe}
+	\ex {\textsc{\textbf{Structural alternatives}}. Let $X$ be an LF containing a focused constituent. The set of $X$'s alternatives is the set $\mathcal{A}_{X}$ of LFs $Y$, obtained by substituting $X$'s focused constituent with an element that is at most as complex.}\label{ex2:focus-alternatives}
+	\ex {\textsc{\textbf{Structural complexity}}. Let $X$ and $Y$ be two LFs. $X$ is at most as complex as $Y$ iff $X$ can be obtained from $Y$ \textit{via} substitutions of lexical items with other lexical items, or constituent-to-subconstituent substitutions.}\label{ex2:complexity}
+\end{exe}
+
+Structural alternatives to a given LF (which are also LFs), induce a set of propositional alternatives, as defined in (\ref{ex2:prop-alternatives}).
+
+\begin{exe}
+	\ex {\textsc{\textbf{Propositional alternatives}}. Let $X$ be an LF denoting a proposition $p$. The set of $X$'s propositional alternatives is the set $\mathcal{A}_{p, X}$ of propositions denoted by $X$'s structural alternatives:
+		$\mathcal{A}_{p, X} = \lbrace q \ | \ \exists Y \in \mathcal{A}_{X}. \ \llbracket Y \rrbracket = q\rbrace$}\label{ex2:prop-alternatives}
+\end{exe}
+
+Propositional alternatives can be related to each other by entailment -- forming a partial order. This partial order between propositional alternatives can be graphically represented in the form of a Hasse diagram. Hasse diagrams for two possible sets of propositional alternatives, roughly corresponding to (\ref{ex2:alt-scalar-foc}) and (\ref{ex2:alt-non-scalar}), are given in Figure \ref{fig2:hasse}.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{tikzpicture}
+			\node[] at(0, 0) (A) {all};
+			\node[] at(0, -2) (B) {some};
+			\draw[->] (A) -- (B);
+		\end{tikzpicture}
+		\caption{Hasse diagram for $\lbrace \textit{all}, \textit{some}\rbrace$}\label{fig2:hasse-scalar} 
+	\end{subfigure}	
+	\hfill
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{tikzpicture}
+			\node[] at(1.5, 2) (E) {Europe};
+			\node[] at(0, 0) (F) {France};
+			\node[] at(3, 0) (G) {Germany};
+			\node[] at(-1, -2) (P) {Paris};
+			\node[] at(1, -2) (L) {Lyon};
+			\node[] at(3, -2) (B) {Berlin};
+			\draw[->] (F) -- (P);
+			\draw[->] (F) -- (L);
+			\draw[->] (G) -- (B);
+			\draw[->] (E) -- (F);
+			\draw[->] (E) -- (G);
+		\end{tikzpicture}
+		\caption{Hasse diagram for $\lbrace \textit{Europe}, \textit{France}, \textit{Germany}, \textit{Paris}, \textit{Lyon}, \textit{Berlin} \rbrace$}\label{fig2:hasse-locations}
+	\end{subfigure}
+	\caption{Hasse diagrams generated by $\vDash$ on two possible sets of propositional alternatives.}\label{fig2:hasse}
+\end{figure}
+
+How are these diagrams obtained from propositional alternatives, and the entailment relations between them? Formally, a Hasse diagram is a directed graph, as defined in (\ref{ex2:directed-graph}). The only difference between a graph and a directed graph, is that the edges of a directed graph have a direction, i.e. they correspond to ordered pairs instead of sets of cardinality 2. If $[N_1, N_2]$ is a directed edge, $[N_1, N_2]$ is visually represented as $N_1 \rightarrow N_2$. Paths are also directed, and so is the ancestor relation (see (\ref{ex2:directed-graph-path}) and (\ref{ex2:directed-ancestor})). Directed graphs are designed to model \textit{asymmetric} relations, like $\vDash$.
+
+\begin{exe}
+	\ex {\textsc{\textbf{Directed graph}}. A directed graph is defined by a set of nodes $\mathcal{N}$ and by a set of directed edges $\mathcal{E}$ between elements of $\mathcal{N}$. Directed edges are defined as ordered pairs of nodes: $\mathcal{E} \subseteq \lbrace [N_1, N_2] \ | \ (N_1, N_2) \in \mathcal{N}^2\rbrace$}\label{ex2:directed-graph}
+	\ex {\textit{Directed Path.} Let $G = (\mathcal{N}, \mathcal{E})$ be a directed graph. Let $(N_1, N_2) \in \mathcal{N}^2$ be two nodes of $G$. There is a path in $G$ between $N_1$ and $N_2$ (abbreviated $N_1 \stackrel{G}{\leadsto}  N_2$) iff $N_1$ can be connected to $N_2$ by a series of directed edges in $G$, i.e. $\exists (e_1, ... e_k) \in \mathcal{E}^k. \ e_1^{(0)} = N_1 \wedge e_k^{(1)} = N_2  \wedge \forall i \in [1; k-1]. \ e_i^{(1)} = e_{i+1}^{(0)}$, where, for any edge $e$,  $e = [e^{(0)}, e^{(1)}]$.}\label{ex2:directed-graph-path}
+	\ex {\textsc{\textbf{Ancestor relation}} (directed version). Let $G = (\mathcal{N}, \mathcal{E})$ be a directed graph. Let $(N_1, N_2) \in \mathcal{N}^2$. $N_1$ is an ancestor of $N_2$ iff $N_1 \stackrel{G}{\leadsto} N_2$.}\label{ex2:directed-ancestor}
+\end{exe}
+
+The directed graphs (not yet the Hasse diagrams) induced by $\vDash$ on the sets of alternatives from Figure \ref{fig2:hasse}, are given in Figure \ref{ex2:graph-entailment}. In these graphs, there is a directed edge $[p, q]$ between two nodes corresponding to propositions $p$ and $q$, iff $q \vDash p$. Figure \ref{fig2:entailment-graph-scalar} already looks like the corresponding Hasse diagram in Figure \ref{fig2:hasse-scalar}, but Figure  \ref{fig2:entailment-graph-locations} does not: it features a few more directed edges (in red) than its Hasse counterpart in Figure \ref{fig2:hasse-locations}.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{tikzpicture}
+			\node[] at(0, 0) (A) {all};
+			\node[] at(0, -2) (B) {some};
+			\draw[->] (A) -- (B);
+		\end{tikzpicture}
+		\caption{Directed graph induced by $\vDash$ on $\lbrace \textit{all}, \textit{some} \rbrace$}\label{fig2:entailment-graph-scalar}
+	\end{subfigure}	
+	\hfill
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{tikzpicture}
+			\node[] at(1.5, 2) (E) {Europe};
+			\node[] at(0, 0) (F) {France};
+			\node[] at(3, 0) (G) {Germany};
+			\node[] at(-1, -2) (P) {Paris};
+			\node[] at(1, -2) (L) {Lyon};
+			\node[] at(3, -2) (B) {Berlin};
+			\draw[->] (F) -- (P);
+			\draw[->] (F) -- (L);
+			\draw[->] (G) -- (B);
+			\draw[->] (E) -- (F);
+			\draw[->] (E) -- (G);
+			\draw[->,color=red] (E) to [out=-90,in=135] (B);
+			\draw[->,color=red] (E) to [out=-100,in=90] (L);
+			\draw[->,color=red] (E) to [out=-160,in=90] (P);
+		\end{tikzpicture}
+		\caption{Directed graph induced by $\vDash$ on $\lbrace \textit{Europe}, \textit{France}, \textit{Germany}, \textit{Paris}, \textit{Lyon}, \textit{Berlin} \rbrace$}\label{fig2:entailment-graph-locations}
+	\end{subfigure}
+	\caption{Directed graphs generated by $\vDash$ on two possible sets of propositional alternatives.}\label{ex2:graph-entailment}
+\end{figure}
+
+How do Hasse diagrams eliminate these few superfluous edges? The Hasse diagrams we are interested in correspond to the transitive reduction of the graphs in Figure \ref{ex2:graph-entailment}, which were induced by $\vDash$ on sets of propositional alternatives. The transitive reduction operation precisely gets rid of the red edges in Figure \ref{fig2:hasse-locations}, based on the idea that such edges correspond to paths formed by the black ones. The formal (though, non constructive) definition of a transitive reduction, is given in (\ref{ex2:transitive-reduction}). This definition maps the graphs in Figure \ref{ex2:graph-entailment}, to the Hasse diagrams in Figure \ref{fig2:hasse}.
+
+\begin{exe}
+	\ex {\textsc{\textbf{Transitive reduction of a graph}}. Let $G = (\mathcal{N}, \mathcal{E})$ be a graph. The transitive reduction $G'$ of $G$ is the graph:
+	\begin{itemize}
+		\item Whose set of nodes is $\mathcal{N}$;
+		\item Whose edges are the smallest set $\mathcal{E'}$ s.t. $\forall (N_1, N_2) \in \mathcal{N}. \ N_1 \stackrel{G}{\leadsto} N_2 \iff N_1 \stackrel{G'}{\leadsto} N_2$
+		\end{itemize}}\label{ex2:transitive-reduction}
+\end{exe}
+
+The Hasse diagram in Figure \ref{fig2:hasse-locations} is basically a rooted tree, and may look like a Qtree, but this is not a generality. For instance, the Hasse diagram in Figure \ref{fig2:hasse-scalar} is not connected, so is not even a tree. Additionally, not all sets of propositional alternatives, even if their Hasse diagram is tree-like, are guaranteed to verify the partition property of Qtrees. The next Section focuses on how Hasse diagrams can be used to determine how alternatives relate to each other in terms of granularity. This will eventually allow us to encode granularity in the structure of Qtree.
+
+
+
+\subsection{Alternatives and granularity}
+
+In this Section, we use a notion of granularity to constrain what kind of Qtree can be evoked by a simplex assertive LFs. We consider simplex LFs to be LFs which do not contain a node of type \texttt{t} besides their root.\footnote{Nina Haslinger suggested that this condition \textit{may} be relaxed under certain contexts. For instance, a disjunctive LF denoting $p$, may sometimes be understood as simplex, and generate Qtrees based on the recipe presented later in this Chapter. The exact circumstances under which this is possible, should be fleshed out, but will not be the focus of this dissertation. One intuition, suggested by Nina, is that an overt QuD may indicate what is relevant, and in turn determine what should be considered ``simplex'' when computing implicit Qtrees (and comparing such Qtrees to the overt QuD). Another intuition, is that the ``simplex'' character of an LF, may be partly driven by focus.} The goal is to organize the layers of a Qtree in terms of how specific the nodes in this layer are. Why is an external notion of granularity needed to structure Qtree? In the Qtree sketched in e.g. Figure \ref{fig2:paris-qtree}, each layer corresponds to an intuitive degree of specificity: a by-country layer dominates a by-city layer. Though intuitive, this kind of configuration is not the only one to verify the Qtree property. The tree in Figure \ref{fig2:paris-qtree-mixed}, where the \textit{Germany}-node is replaced by its children, is also a Qtree: at our level of approximation, all countries but Germany, plus all the German cities, partition the set of all possible locations, and, each country represented in this tree is properly partitioned by the set of its cities.
+
+
+\begin{figure}[H]
+	\centering
+		\begin{forest}
+			[{CS\\
+				Jo grew up in...}[\textcolor{blue}{France}[\textcolor{orange}{{\fbox{Paris}}}][\textcolor{orange}{Lyon}][\textcolor{orange}{...}]][\textcolor{orange}{Berlin}][\textcolor{orange}{...}][\textcolor{blue}{Italy}[\textcolor{orange}{...}]][\textcolor{blue}{...}]]
+		\end{forest}
+		\caption{``Unintuitive'' Qtree for (\ref{ex2:city-partition}) = \textit{Which city did Jo grow up in?}, where layers exhibit ``mixed granularity''.}\label{fig2:paris-qtree-mixed}
+	\end{figure}
+
+To derive Qtrees like Figure \ref{fig2:paris-qtree}, and rule-out Qtrees like Figure \ref{fig2:paris-qtree-mixed}, we need a notion of granularity that can transfer into the Qtree layers. We now show that a relation of same-granularity can be derived from Hasse diagrams induced by $\vDash$ on ``complete'' sets of propositional alternatives. Considering such diagrams, where \textit{all} relevant alternatives are considered, we take that two nodes (two propositional alternatives) have same granularity if they are equidistant (in terms of path length) to any common ancestor and common descendant they may have. We also take that any node has the same granularity as itself. This relation, defined in (\ref{ex2:granularity}) is close in spirit to \textcite{Ippolito2019}'s \textit{Specificity Condition}.\footnote{However, the structure on which this condition operates in \citeauthor{Ippolito2019}'s model, appears slightly different (\textit{Structured Sets of Alternatives}). Also, the \textit{Specificity Condition} is not taken to be a relation, but a rather, a constraint defining which kind of alternatives can be contrasted in e.g. disjunctive environments.} Note that this definition constitutes a universal statement, so nodes that do \textit{not} have any common ancestor or descendant, automatically have same-granularity.\footnote{This will be discussed in more detail when dealing with scalar alternatives such as $\langle$\textit{some}, \textit{all}$\rangle$, in Chapter \ref{chap:scalarity}. It will be crucial that such alternatives, which do \textit{not} have a common ancestor in their Hasse diagram (see Figure \ref{fig2:hasse-scalar}), \textit{can} be seen as same-granularity.}
+
+\begin{exe}
+	\ex {\textsc{\textbf{Same granularity relation}} ($\sim_g$). Let $p$ and $q$ be two propositions belonging to the same set of propositional alternatives. If $p=q$, then $p \sim_g q$. If not, let $H$ be the Hasse diagram induced by $\vDash$ on the set of propositional alternatives to $p$ and $q$. If for all common ancestor $r$ of both $p$ and $q$ in $H$ and for all common descendant $r'$ of both $p$ and $q$ in $H$, the paths from $r$ to $p$ and $r$ to $q$ have same length, and the paths from $p$ to $r'$ and $q$ to $r'$ have same length, then $p \sim_g q$.}\label{ex2:granularity}
+\end{exe}
+
+
+Figure \ref{fig2:hasse-gran} show a few simple configurations for which $p$ and $q$ do or do not have same granularity.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{.15\linewidth}
+		\centering
+		\begin{tikzpicture}
+			\node[] (A) at (0,0) {$r$};
+			\node[] (B) at (-.5, -1) {$p$};
+			\node[] (C) at (.5, -1) {$q$};
+			
+			\path [->] (A) edge node[left] {} (B);
+			\path [->] (A) edge node[left] {} (C);
+		\end{tikzpicture}
+		\caption{$p\sim_g q$}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{.15\linewidth}
+		\centering
+		\begin{tikzpicture}
+			\node[] (A) at (0, 0) {$r$};
+			\node[] (B) at (-.5, -2) {$p$};
+			\node[] (C) at (.5, -2) {$q$};
+			\node[] (D) at (-.5, -1) {$s$};
+			
+			\path [->] (A) edge node[left] {} (D);
+			\path [->] (A) edge node[left] {} (C);
+			\path [->] (D) edge node[left] {} (B);
+		\end{tikzpicture}
+		\caption{$p\not\sim_g q$}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{.15\linewidth}
+		\centering
+		\begin{tikzpicture}
+			\node[] (A) at (0,0) {$r$};
+			\node[] (B) at (-.5, -1) {$p$};
+			\node[] (C) at (.5, -1) {$q$};
+			\node[] (D) at (0, -2) {$r'$};
+			
+			\path [->] (A) edge node[left] {} (B);
+			\path [->] (A) edge node[left] {} (C);
+			\path [->] (B) edge node[left] {} (D);
+			\path [->] (C) edge node[left] {} (D);
+		\end{tikzpicture}
+		\caption{$p\sim_g q$}
+	\end{subfigure}\hfill
+	\begin{subfigure}[b]{.15\linewidth}
+		\centering
+		\begin{tikzpicture}
+			\node[] (B) at (-.5, -1) {$p$};
+			\node[] (C) at (.5, -1) {$q$};
+			\node[] (D) at (0, -2) {$r'$};
+			
+			\path [->] (B) edge node[left] {} (D);
+			\path [->] (C) edge node[left] {} (D);
+		\end{tikzpicture}
+		\caption{$p\sim_g q$}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{.15\linewidth}
+		\centering
+		\begin{tikzpicture}
+			\node[] (B) at (-.5, -1) {$p$};
+			\node[] (C) at (.5, -1) {$q$};
+			
+		\end{tikzpicture}
+		\caption{$p\sim_g q$}
+	\end{subfigure}
+	\caption{Different Hasse diagrams for $\vDash$ influence whether $p$ and $q$ are same-granularity.}\label{fig2:hasse-gran}
+\end{figure}
+
+
+
+We now leverage this relation between propositions to define the layers of a Qtree as partitions induced by sets of same-granularity alternatives. We first observe that the relation $\sim_g$ defined in (\ref{ex2:granularity}) can be used to divide the set of propositional alternatives to a given LF, into subsets sharing the same level of granularity. This gives rise to a ``tiered'' set of alternatives, as defined in (\ref{ex2:tiered-alternatives}). 
+\begin{exe}
+	\ex {\textsc{\textbf{Tiered set of propositional alternatives}}. Let $X$ be a sentence denoting a proposition $p$. A tiered set of propositional alternatives to $X$, is the set of sets of propositions, whose elements are the maximal sets of propositions related by the same-granularity relation. In other words,  $\mathcal{A}_{p, X}^{\sim_g} = \lbrace \lbrace r \in \mathcal{A}_{p, X} \ | \ r \sim_g q \rbrace \ | \ q \in \mathcal{A}_{p, X}\rbrace$. If $\sim_g$ is an equivalence relation, $\mathcal{A}_{p, X}^{\sim_g}$ is a partition.} \label{ex2:tiered-alternatives}
+\end{exe}
+
+Tiered sets of alternatives are quite close to the \textit{Structured Sets of Alternatives} defined in \textcite{Ippolito2019}. One difference however, is that tiered sets of propositional alternatives are \textit{not} assumed to include propositions corresponding to alternatives that are more complex than the original LF. The elements of a tiered set of propositional alternatives are sets of propositions and form same-granularity ``tiers'', as defined in (\ref{ex2:granularity-tier}). These tiers will be used to form Qtree layers. If $\sim_g$ is an equivalence relation when restricted to a specific set of propositional alternatives, then the resulting tiered set of alternatives will partition it, i.e. same-granularity tiers will be cells.
+
+\begin{exe}
+	\ex {\textsc{\textbf{Same-granularity tier}}. Let $X$ be a sentence denoting a proposition $p$, and $\mathcal{A}_{p, X}$ its set of propositional alternatives. Let $q \in \mathcal{A}_{p, X}$. The set of same-granularity alternatives to $q$ (in $\mathcal{A}_{p, X}$), is the set of propositions in $\mathcal{A}_{p, X}$ sharing same-granularity with $q$. We call this set $\mathcal{A}^q_{p, X}$. $\mathcal{A}^q_{p, X} = \lbrace r \in \mathcal{A}_{p, X} \ | \ r \sim_g q\rbrace$. $\mathcal{A}^q_{p, X}$ is a subset of the tiered set of propositional alternatives to $X$, $\mathcal{A}_{p, X}^{\sim_g}$. Moreover, if $\sim_g$ is an equivalence relation, then $\mathcal{A}^q_{p, X}$ constitutes a cells of $\mathcal{A}_{p, X}^{\sim_g}$. }\label{ex2:granularity-tier}
+\end{exe}
+
+\subsection{Leveraging alternatives to generate Qtrees}
+We are now equipped to devise a recipe generating Qtrees out of simplex sentences, based on tiered sets of propositional alternatives. We start by considering the standard constraint on question-answer pairs, given in (\ref{ex2:con-q-a}). This constraint establishes a connection between the standard set of alternatives derived from a sentence involving focus, and the kind of question this sentence answers.
+
+\begin{exe}
+	\ex {\textsc{\textbf{Constraint on question-answer pairs}} (\citenp{Rooth1992}, to be revised). A good question-answer pair $(Q, A)$ is s.t. $\llbracket Q \rrbracket \subseteq \llbracket A\rrbracket^f$, where:
+	\begin{itemize}
+		\item $\llbracket Q \rrbracket$ corresponds to the alternative semantics of the question;
+		\item $\llbracket A\rrbracket^f$ corresponds to the focus semantic value of the answer, i.e. the set of propositions denoted by LFs obtained from $A$ \textit{via} the substitution of $A$'s focused material by a same-type element.
+		\end{itemize}}\label{ex2:con-q-a}
+\end{exe}
+
+Let us show that this constraint is not sufficient (though, a good starter) for a model of questions evoked by assertions. We assume that $A$ corresponds to the sentence \textit{Jo grew up in PARIS}, where \textit{PARIS} is focused. The focus semantic value of $A$ then involves propositions denoted by LFs of the form \textit{Jo grew up in l}, with \textit{l} a location, e.g. \textit{Paris}, \textit{France}, or \textit{Germany}. If the only constraint on the question $Q$ accommodated from $A$ was that $\llbracket Q \rrbracket$ should be a subset of  $\llbracket A\rrbracket^f$, then, in principle, $\llbracket Q \rrbracket$ could be made of the three propositions that \textit{Jo grew up in Paris}, \textit{Jo grew up in France}, and \textit{Jo grew up in Germany}. Granted that Paris is in France, and that France and Germany are disjoint, this set of alternatives would induce a partition of the CS of the form $\lbrace \neg \textit{France} \wedge \neg \textit{Germany}, \textit{Germany}, \textit{France} \wedge \neg \textit{Paris}, \textit{Paris}\rbrace$. This appears similar to the mixed-granularity layer that we said was problematic in Figure \ref{fig2:paris-qtree-mixed}. So not all questions allowed by (\ref{ex2:con-q-a}), given a fixed assertion, appear to make sense. There are two ways to alter (\ref{ex2:con-q-a}) to avoid that kind of configuration: modify the relation between $\llbracket Q\rrbracket$ and $\llbracket A \rrbracket^f$, and/or, change $\llbracket A \rrbracket^f$ into something else.
+
+We in fact opt for both options, and reuse the ideas presented in the previous Section. Specifically, we consider two subcases: the case in which $\llbracket Q \rrbracket$ simply corresponds to $\lbrace \llbracket A \rrbracket \rbrace$, and induces a partition of the CS of the form $\lbrace \llbracket A \rrbracket, \neg\llbracket A \rrbracket \rbrace$; and the case foreshadowed in the previous Section, in which $\llbracket Q \rrbracket$ corresponds to same-granularity alternatives to $\llbracket A \rrbracket$. These two cases are repeated in (\ref{ex2:con-q-a-gran}).
+
+\begin{exe}
+	\ex {\textsc{\textbf{Constraint on question-answer pairs}} (first revision). Let $X$ be a LF denoting $p$. $X$ evokes a question that is either:
+		\begin{enumerate}[(i)]
+			\item\label{ex2:con-q-a-gran-singleton} $\llbracket Q \rrbracket = \lbrace p \rbrace$;
+			\item\label{ex2:con-q-a-gran-tier} $\llbracket Q \rrbracket = \mathcal{A}^p_{p, X}$, the set of same-granularity alternatives to $p$.
+	\end{enumerate}}\label{ex2:con-q-a-gran}
+\end{exe}
+
+
+(\ref{ex2:con-q-a-gran}) allows assertions to evoke multiple potential Qtrees. According to (\ref{ex2:con-q-a-gran}), an assertion such as \textit{Jo grew up in Paris}, will either evoke the question $\llbracket Q \rrbracket = \lbrace \textit{Paris} \rbrace$, inducing a partition of the CS of the form $\lbrace \textit{Paris}, \neg\textit{Paris}\rbrace$, and corresponding to the polar question of whether or not Jo grew up in Paris; or, $\llbracket Q \rrbracket = \lbrace \textit{Paris}, \textit{Lyon}, \textit{Nice}, ..., \textit{Berlin}, ..., \textit{Rome}, ... \rbrace$, inducing a similar partition of the CS, and corresponding to the \textit{wh}-question \textit{In which city did Jo grow up?}. These partitions are represented in Figure \ref{fig2:one-layer-qtrees}. 
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[CS [\textcolor{orange}{Paris}] [\textcolor{orange}{$\neg${Paris}}]]
+		\end{forest}
+		\caption{A Qtree for (\ref{ex2:city-assertion}) assuming (\ref{ex2:con-q-a-gran}\ref{ex2:con-q-a-gran-singleton}) }\label{fig2:one-layer-polar}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.5\linewidth}
+		\centering
+		\begin{forest}
+			[CS [\textcolor{orange}{Paris}] [\textcolor{orange}{Lyon}] [\textcolor{orange}{...}] [\textcolor{orange}{Berlin}] [\textcolor{orange}{...}] [\textcolor{orange}{Rome}]]
+		\end{forest}
+		\caption{A Qtree for (\ref{ex2:city-assertion}) assuming (\ref{ex2:con-q-a-gran}\ref{ex2:con-q-a-gran-tier})}\label{fig2:one-layer-wh}
+	\end{subfigure}
+	\caption{One-layer Qtrees generable from (\ref{ex2:con-q-a-gran}) and the sentence (\ref{ex2:city-assertion})=\textit{Jo grew up in Paris}.}\label{fig2:one-layer-qtrees}
+\end{figure}
+
+The above partitions seem more in line with intuitions than the pathological ones generable from (\ref{ex2:con-q-a}). However, they still do not form layered Qtrees. Therefore, (\ref{ex2:con-q-a-gran}) is still not powerful enough to capture the specificity differences sketched in Figure \ref{fig2:qtrees-diff-gran} among others. Going one step further, we can assume that the Qtrees compatible with a sentence, are either generated by the proposition $p$ denoted by the sentence (thus creating a Qtree like Figure \ref{fig2:one-layer-polar}), or, by the sentence's tiered set of propositional alternatives, as defined in (\ref{ex2:tiered-alternatives}). Specifically in the latter case, it will be assumed that each layer of the Qtree corresponds to the partition induced on the CS by a same-granularity tier of propositional alternatives, and that layers are ordered in terms of granularity. Figure \ref{fig2:one-layer-wh} constitutes the simplest subcase of this principle, in which only one layer gets generated out of same-granularity alternatives to $p$. In any case, verifying nodes are defined as the leaves of the tree entailing $p$ (i.e. contained in $p$). This is formalized in (\ref{ex2:qtree-simplex-def}). In this definition, (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-wh}) may be seen as a subcase of (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-tiered}), in which the $p$-chain set to $p$ only.
+
+\begin{exe}
+	\ex {\textsc{\textbf{Qtrees for simplex LFs}}.
+		Let $X$ be a simplex LF denoting $p$, not settled in the CS. Let $\mathcal{A}_{p, X}$ be the set $X$'s propositional alternatives. For any $q \in  \mathcal{A}_{p, X}$, let $\mathcal{A}^q_{p, X} \subseteq \mathcal{A}_{p, X}$ be the set of alternatives from $\mathcal{A}_{p, X}$ sharing same granularity with $q$. We assume for simplicity that for any $q$, $\mathcal{A}^q_{p, X}$ partitions the CS. A Qtree for $X$ is either:
+		\begin{enumerate}[(i)]
+			\item\label{pt2:simplex-qtree-polar} A depth-1 Qtree whose leaves denote $\mathfrak{P}_{\lbrace p \rbrace, CS} = \lbrace p, \neg p\rbrace$
+			\item\label{pt2:simplex-qtree-wh} A depth-1 Qtree whose leaves denote $\mathfrak{P}_{\mathcal{A}^p_{p, X}, CS} = \mathcal{A}^p_{p,X}$.
+			\item\label{pt2:simplex-qtree-tiered} A depth-$k$ Qtree ($k > 1$) constructed in the following way:
+			\begin{itemize}
+				\item Formation of a ``$p$-chain'' $p_0 = p \subset p_1 \subset ... \subset p_n$ where $p_0, ...,  p_n$ are all in $\mathcal{A}_{p, X}$ but belong to different granularity tiers in $\mathcal{A}_{p, X}^{\sim_g}$:  $\mathcal{A}^{p_0}_{p, X}$ $\neq$ $\mathcal{A}^{p_1}_{p, X}$ $\neq$ ... $\neq$$\mathcal{A}^{p_n}_{p, X}$.
+				\item Generation of the ``layers'' of the Qtree, based on the partitions induced by the granularity tiers corresponding to each element of the $p$-chain:\\ \begin{small}$\left\lbrace\mathfrak{P}_{\mathcal{A}^{p_i}_{p, X}, CS} \ | \ i \in [0;n]\right\rbrace$\end{small}.
+				\item Determination of the edges between nodes (cells) of adjacent layers (and between the highest layer and the root), based on the subset relation.\footnote{This may not always create well-formed Qtrees. Chapter \ref{chap:scalarity} will explore such cases update (\ref{ex2:qtree-simplex-def}) in consequence.}
+			\end{itemize}
+		\end{enumerate}
+		In any case,  \setlength{\fboxsep}{1pt}\fbox{verifying nodes} are defined as the set of leaves entailing $p$.
+	}\label{ex2:qtree-simplex-def}
+\end{exe}
+
+
+\subsection{Applying the recipe to two simple sentences}
+
+We can now apply (\ref{ex2:qtree-simplex-def}) to sentences like (\ref{ex2:city-assertion}) and (\ref{ex2:country-assertion}), repeated below.
+
+\begin{exe}
+	\exr{ex2:city-country-assertions}
+	\begin{xlist}
+		\ex {Jo grew up in Paris.}
+		\ex {Jo grew up in France.}
+	\end{xlist}
+\end{exe}
+
+We start with (\ref{ex2:city-assertion}), and assume that its alternatives are of the form \textit{Jo grew up in l}, with \textit{l} a city or a country. Taking for granted that ``city'' propositions and ``country'' propositions form two distinct granularity tiers, the tiered set of propositional alternatives to (\ref{ex2:city-assertion}), will be as in (\ref{ex2:city-tiered-alt}).
+
+\begin{exe}
+	\ex {$\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\sim_g} = \lbrace \lbrace \textit{Paris}, \textit{Lyon}, ..., \textit{Berlin}, ...\rbrace, \lbrace\textit{France}, \textit{Germany}, ...\rbrace\rbrace$\\
+	\phantom{$\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\sim_g}$} $=\lbrace\lbrace p \ | \ \exists l. \ \text{$l$ is a city} \wedge \ p = \lambda w. \ \text{Jo grew up in $l$ in $w$}\rbrace,$\\
+	\phantom{$\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\sim_g} = \lbrace$}$\lbrace p \ | \ \exists l. \ \text{$l$ is a country} \wedge \ p = \lambda w. \ \text{Jo grew up in $l$ in $w$}\rbrace\rbrace$}\label{ex2:city-tiered-alt}
+\end{exe} 
+
+
+
+First, we can generate a Qtree for (\ref{ex2:city-assertion})  using principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-polar}). This Qtree will have the CS as root, and two leaves corresponding to the propositions that \textit{Jo grew up in Paris}, and \textit{Jo did not grow up in Paris} (assuming this matter is not settled in the CS). This Qtree is depicted in Figure \ref{fig2:city-qtree-polar}. Intuitively, it corresponds to the question of whether or not Jo grew up in Paris.
+
+Second, we can use principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-wh}). To do so, we must determine the set of same-granularity alternatives to the prejacent proposition that \textit{Jo grew up in Paris}. This set, labeled $\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\textit{Paris}}$, corresponds to the first element of the tiered set of propositional alternatives $\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\sim_g}$ in  (\ref{ex2:city-tiered-alt}). It is repeated in (\ref{ex2:city-gran-alt}). The alternatives contained in $\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\textit{Paris}}$ are all exclusive (cities are spatially disjoint), and moreover cover the space of possibilities. So, once intersected with the CS, they already form a partition of the CS. According to principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-wh}), this partition correspond to the leaves of the resulting Qtree. This Qtree is depicted in Figure \ref{fig2:city-qtree-wh}. Intuitively, it corresponds to the question of which city Jo grew up in.
+
+
+\begin{exe}
+	\ex {$\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\textit{Paris}} = \lbrace \textit{Paris}, \textit{Lyon}, ..., \textit{Berlin}, ...\rbrace$\\
+		\phantom{$\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\sim_g}$} $=\lbrace p \ | \ \exists l. \ \text{$l$ is a city} \wedge \ p = \lambda w. \ \text{Jo grew up in $l$ in $w$}\rbrace$\\
+		\phantom{$\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\sim_g}$} $=\mathfrak{P}_{\lbrace \textit{Paris}, \textit{Lyon}, ..., \textit{Berlin}, ...\rbrace, CS}$}\label{ex2:city-gran-alt}
+\end{exe} 
+
+Third and lastly, we can use principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-tiered}), which constitutes are multi-layer generalization of principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-wh}). To do so, we need to define a $p$-chain of propositions entailed $p$ = $\lambda w. \ $\textit{Jo grew up in Paris in $w$}. The tiered set of alternatives posited in (\ref{ex2:city-tiered-alt}) contains one such proposition, namely $p' = \lambda w. \ $\textit{Jo grew up in France in $w$}. The resulting Qtree will therefore be made of three layers: the CS (root), the partition generated by the same granularity alternatives to $p'$, and the partition generated by the same granularity alternatives to $p$, already defined in (\ref{ex2:city-gran-alt}). The set of same-granularity alternatives to $p'$, labeled $\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\textit{France}}$, corresponds to the second element of the tiered set of propositional alternatives $\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\sim_g}$ in  (\ref{ex2:city-tiered-alt}). It is repeated in (\ref{ex2:country-gran-alt}). The alternatives contained in $\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\textit{France}}$ are all exclusive (country are spatially disjoint), and moreover cover the space of possibilities. So, once intersected with the CS, they already form a partition of the CS. 
+
+\begin{exe}
+	\ex {$\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\textit{France}} = \lbrace \textit{France}, \textit{Germany}, ...\rbrace$\\
+		\phantom{$\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\sim_g}$} $=\lbrace p \ | \ \exists l. \ \text{$l$ is a country} \wedge \ p = \lambda w. \ \text{Jo grew up in $l$ in $w$}\rbrace$\\
+		\phantom{$\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\sim_g}$} $=\mathfrak{P}_{\lbrace \textit{France}, \textit{Germany}, ...\rbrace, CS}$}\label{ex2:country-gran-alt}
+\end{exe} 
+
+As per principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-tiered}), a Qtree evoked by (\ref{ex2:city-assertion}) will then have the CS as top layer, the nodes corresponding to the partition in (\ref{ex2:country-gran-alt}) as middle layer, and the nodes corresponding to the partition in (\ref{ex2:city-gran-alt}) as bottom (leaf) layer. Connectivity between layers is straightforward: it corresponds to the inclusion relation between cities and countries, and between countries and ``the whole world'' ($\sim$CS). The resulting Qtree is given in Figure \ref{fig2:city-qtree-tiered}. Intuitively, it corresponds to the question of which city Jo grew up in, but such that this question is decomposed into two subquestions: first, which country Jo grew up in; then, knowing the country, which city Jo grew up in, in that country.
+
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.23\linewidth}
+		\centering
+		\scalebox{.85}{
+		\begin{forest}
+			[CS [\textcolor{orange}{\fbox{Paris}}] [\textcolor{orange}{$\neg$Paris}]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-polar}).}\label{fig2:city-qtree-polar}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.33\linewidth}
+		\centering		\scalebox{.85}{
+		\begin{forest}
+			[CS [\textcolor{orange}{\fbox{Paris}}] [\textcolor{orange}{Lyon}] [\textcolor{orange}{...}][\textcolor{orange}{Berlin}][\textcolor{orange}{...}]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-wh}).}\label{fig2:city-qtree-wh}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.38\linewidth}
+		\centering\scalebox{.85}{
+		\begin{forest}
+			[CS [\textcolor{blue}{France}[\textcolor{orange}{\fbox{Paris}}] [\textcolor{orange}{Lyon}] [\textcolor{orange}{...}]] [\textcolor{blue}{Germany}[\textcolor{orange}{Berlin}][\textcolor{orange}{...}]][\textcolor{blue}{...}]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-tiered}).}\label{fig2:city-qtree-tiered}
+	\end{subfigure}
+	\caption{Possible Qtrees evoked by the assertion (\ref{ex2:city-assertion})=\textit{Jo grew up in Paris}.}\label{fig2:city-qtrees}
+\end{figure}
+
+Of course, if more alternatives to (\ref{ex2:city-assertion}) had been posited in the first place, principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-tiered}) would have produced more Qtrees. For instance, if continent alternative had been considered, the tiered set of propositional alternatives to (\ref{ex2:city-assertion}), $\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\sim_g}$, would have been as in (\ref{ex2:city-tiered-alt-plus-continent}), and the Qtrees generated by principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-tiered}), would have been the one in Figure \ref{fig2:city-qtree-tiered}, plus the one in Figure \ref{fig2:city-qtree-tiered-plus-continent}.
+
+\begin{exe}
+	\ex {$\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\sim_g} = \lbrace \lbrace \textit{Paris}, \textit{Lyon}, ..., \textit{Berlin}, ...\rbrace, \lbrace\textit{France}, \textit{Germany}, ...\rbrace, \lbrace \textit{Europe}, \textit{Asia}, ...\rbrace\rbrace$\\
+		\phantom{$\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\sim_g}$} $=\lbrace\lbrace p \ | \ \exists l. \ \text{$l$ is a city} \wedge \ p = \lambda w. \ \text{Jo grew up in $l$ in $w$}\rbrace,$\\
+		\phantom{$\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\sim_g} = \lbrace$}$\lbrace p \ | \ \exists l. \ \text{$l$ is a country} \wedge \ p = \lambda w. \ \text{Jo grew up in $l$ in $w$}\rbrace$\\
+		\phantom{$\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\sim_g} = \lbrace$}$\lbrace p \ | \ \exists l. \ \text{$l$ is a continent} \wedge \ p = \lambda w. \ \text{Jo grew up in $l$ in $w$}\rbrace\rbrace$}\label{ex2:city-tiered-alt-plus-continent}
+\end{exe} 
+
+\begin{figure}[H]
+	\centering
+	\scalebox{.85}{
+		\begin{forest}
+			[CS [Europe [\textcolor{blue}{France}[\textcolor{orange}{\fbox{Paris}}] [\textcolor{orange}{Lyon}] [\textcolor{orange}{...}]] [\textcolor{blue}{Germany}[\textcolor{orange}{Berlin}][\textcolor{orange}{...}]][\textcolor{blue}{...}]][Asia [...]][...] ]
+	\end{forest}}
+	\caption{An extra Qtree for (\ref{ex2:city-assertion}), generated by principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-tiered}), assuming that (\ref{ex2:city-assertion})'s tiered set of propositional alternatives is as in (\ref{ex2:city-tiered-alt-plus-continent}). .}\label{fig2:city-qtree-tiered-plus-continent}
+\end{figure}
+
+For simplicity and ease of comparison, we will stick to a tiered set of alternatives involving city- and country-tiers, as defined in (\ref{ex2:city-tiered-alt}). Similarly, we can derive Qtrees for (\ref{ex2:country-assertion})=\textit{Jo grew up in France}. This assertion will in fact require less work, because it appears coarser-grained than (\ref{ex2:city-assertion}). To ensure that (\ref{ex2:city-assertion}) and (\ref{ex2:country-assertion}) are analyzed at the same level of approximation, we assume that (\ref{ex2:country-assertion})'s alternatives are also of the form \textit{Jo grew up in l}, with \textit{l} a city or a country. The tiered set of propositional alternatives to (\ref{ex2:country-assertion}) is therefore identical to that of (\ref{ex2:city-assertion}), and given in (\ref{ex2:country-tiered-alt}).
+
+\begin{exe}
+	\ex {$\mathcal{A}_{\textit{France}, (\ref{ex2:country-assertion})}^{\sim_g} = \lbrace \lbrace \textit{Paris}, \textit{Lyon}, ..., \textit{Berlin}, ...\rbrace, \lbrace\textit{France}, \textit{Germany}, ...\rbrace\rbrace$\\
+		\phantom{$\mathcal{A}_{\textit{France}, (\ref{ex2:country-assertion})}^{\sim_g}$} $=\lbrace\lbrace p \ | \ \exists l. \ \text{$l$ is a city} \wedge \ p = \lambda w. \ \text{Jo grew up in $l$ in $w$}\rbrace,$\\
+		\phantom{$\mathcal{A}_{\textit{France}, (\ref{ex2:country-assertion})}^{\sim_g} = \lbrace$}$\lbrace p \ | \ \exists l. \ \text{$l$ is a country} \wedge \ p = \lambda w. \ \text{Jo grew up in $l$ in $w$}\rbrace\rbrace$\\
+		\phantom{$\mathcal{A}_{\textit{France}, (\ref{ex2:country-assertion})}^{\sim_g}$}= $\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\sim_g}$}\label{ex2:country-tiered-alt}
+\end{exe} 
+
+
+First, we can generate a Qtree for (\ref{ex2:country-assertion}) using principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-polar}). This Qtree will have the CS as root, and two leaves corresponding to the propositions that \textit{Jo grew up in France}, and \textit{Jo did not grow up in France} (assuming this matter is not settled in the CS). This Qtree is depicted in Figure \ref{fig2:country-qtree-polar}. Intuitively, it corresponds to the question of whether or not Jo grew up in France.
+
+Second, we can use principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-wh}). To do so, we must determine the set of same-granularity alternatives to the prejacent proposition that \textit{Jo grew up in France}. This set, labeled $\mathcal{A}_{\textit{France}, (\ref{ex2:country-assertion})}^{\textit{France}}$, corresponds to the second element of the tiered set of propositional alternatives $\mathcal{A}_{\textit{France}, (\ref{ex2:country-assertion})}^{\sim_g}$. It is repeated in (\ref{ex2:country-gran-alt2}). This set is also equal to the set of same-granularity alternative to \textit{France}, when the prejacent was \textit{Paris} (see (\ref{ex2:country-gran-alt})). Thus, the alternatives in this set, once intersected with the CS, already form a partition of the CS. According to principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-wh}), this partition correspond to the leaves of the resulting Qtree. This Qtree is depicted in Figure \ref{fig2:country-qtree-wh}. Intuitively, it corresponds to the question of which country Jo grew up in.
+
+
+\begin{exe}
+	\ex {$\mathcal{A}_{\textit{France}, (\ref{ex2:country-assertion})}^{\textit{France}} = \lbrace \textit{France}, \textit{Germany}, ...\rbrace$\\
+		\phantom{$\mathcal{A}_{\textit{France}, (\ref{ex2:country-assertion})}^{\textit{France}}$} $=\lbrace p \ | \ \exists l. \ \text{$l$ is a city} \wedge \ p = \lambda w. \ \text{Jo grew up in $l$ in $w$}\rbrace$\\
+		\phantom{$\mathcal{A}_{\textit{France}, (\ref{ex2:country-assertion})}^{\textit{France}}$} $=\mathfrak{P}_{\lbrace \textit{France}, \textit{Germany}, ...\rbrace, CS}$\\
+		\phantom{$\mathcal{A}_{\textit{France}, (\ref{ex2:country-assertion})}^{\textit{France}}$} $=\mathcal{A}_{\textit{Paris}, (\ref{ex2:city-assertion})}^{\textit{France}}$}\label{ex2:country-gran-alt2}
+\end{exe} 
+
+Third and lastly, we could use principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-tiered}), but this principle would in fact give us nothing more than principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-wh}), given our assumptions about (\ref{ex2:country-assertion})'s tiered set of propositional alternatives. This is because no proposition in $\mathcal{A}_{\textit{France}, (\ref{ex2:country-assertion})}^{\sim_g}$ is weaker than $p$=\textit{$\lambda w. \ \textit{Jo grew up in France in $w$}$}, and therefore, the only $p$-chain available in the case of (\ref{ex2:country-assertion}), is made of simply $p$. This $p$-chain would generate one single country-layer beyond the CS root, and the resulting Qtree, would simply be the one in Figure \ref{fig2:country-qtree-wh}.\footnote{Of course, if we had considered continent-level alternatives as well, principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-tiered}) would have generated an extra Qtree for (\ref{ex2:country-assertion}), characterized by a continent-layer on top of a country-layer. But this would have led us to do the same move for (\ref{ex2:city-assertion}), and thus to generate the Qtree in Figure \ref{fig2:city-qtree-tiered-plus-continent} for that sentence.}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{blue}{\fbox{France}}] [\textcolor{blue}{$\neg$France}]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-polar}).}\label{fig2:country-qtree-polar}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering		\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{blue}{\fbox{France}}] [\textcolor{blue}{Germany}][\textcolor{blue}{...}]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-wh}).}\label{fig2:country-qtree-wh}
+	\end{subfigure}
+	\caption{Possible Qtrees evoked by the assertion (\ref{ex2:country-assertion})=\textit{Jo grew up in France}.}
+\end{figure}
+
+
+Before moving on to ``compositional'' Qtrees, let us take stock.
+
+First, the recipe in (\ref{ex2:qtree-simplex-def}) defines way to determine which parse of the CS assertive sentences evoke. We have discussed in Chapter \ref{chap:introduction} that questions typically correspond to partitions of the CS \textit{in the pragmatic domain}. Semantically, questions are taken to be sets of alternatives. In that sense, Qtrees evoked by sentences should be understood as a form of ``inquisitive pragmatics'' rather than ``inquisitive semantics''. Tiered sets of propositional alternatives may be closer to the latter concept.
+
+Second, the recipe in (\ref{ex2:qtree-simplex-def}) typically generates \textit{multiple} Qtrees out of one assertion. Under our current assumptions,  (\ref{ex2:city-assertion}) gives rise to three possible Qtrees, and (\ref{ex2:country-assertion}), to two. So there is some degree of uncertainty about which Qtree any given sentence actually answers. Very roughly, evoked Qtrees can be ``polar'' (principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-polar})), ``\textit{wh}'' (principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-wh})), or ``\textit{wh}-articulated'' (principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-tiered})). This optionality contrasts with frameworks like inquisitive semantics, in which any given sentence is mapped to a single nonempty downward-closed set of propositions. Given this, our recipe generates more Qtrees than intuitively assumed in the previous Sections.  Additionally, this leads us to define the oddness of a sentence as equivalent to the oddness of \textit{all} sentence-Qtree pairs to sentences can generate. This was already defined in (\ref{ex2:oddness-sentence}), repeated below.
+
+\begin{exe}
+	\exr{ex2:oddness-sentence} {\textsc{\textbf{Oddness of a sentence}}. A sentence $S$ is odd if any Qtree $T$ it evokes is odd given $S$.}
+\end{exe}
+
+
+Third, we mentioned that (\ref{ex2:city-assertion}) and (\ref{ex2:country-assertion}), beyond the fact that they are obviously in a relation of logical entailment, are such that (\ref{ex2:city-assertion}) feels more ``fine-grained'' than (\ref{ex2:country-assertion}). This is somehow cashed out by the kind of Qtrees these sentences evoke. Specifically, we observe that some Qtrees (\ref{ex2:city-assertion}) evokes (Figure \ref{fig2:city-qtree-tiered}) constitute refinements of some Qtree (\ref{ex2:country-assertion}) evokes (Figure \ref{fig2:country-qtree-wh}), where refinement is defined as in (\ref{ex2:qtree-refinement}), repeated below. This implication does not hold in the opposite direction: no Qtree (\ref{ex2:country-assertion}) evokes, constitutes a refinement of a Qtree (\ref{ex2:city-assertion}) evokes. So (in a very weak sense) finer-grained assertions evoke finer-grained Qtrees. This observation will be crucial in Chapter \ref{chap:hurford-sentences}.
+
+\begin{exe}
+	\exr{ex2:qtree-refinement} {\textsc{\textbf{Qtree refinement}}. Let $T$ and $T'$ be Qtrees. $T$ is a refinement of $T'$ (or: $T$ is finer-grained than $T'$), iff $T'$ can be obtained from $T$ by removing a subset $\mathcal{T}$ of $T$'s subtrees, s.t.:
+		\begin{itemize}
+			\item if $\mathcal{T}$ contains a subtree rooted in $N$, then, for each node $N'$ that is a sibling of $N$ in $T$, the subtree of $T$ rooted in $N'$, is also in $\mathcal{T}$.
+	\end{itemize}}
+\end{exe}
+
+We now proceed to define Qtree for complex sentences belonging to the $\lbrace \neg, \vee, \rightarrow\rbrace$-fragment of the language. We will do so inductively, using our recipe for simplex sentences (\ref{ex2:qtree-simplex-def}) as base case, along with specific combination rules corresponding to the inquisitive effect of each operator.
+
+
+\section{Compositional Qtrees: inductive step}
+
+In the previous Section, we have seen how to derive Qtrees from simplex sentences, containing no operator or connective. In this Section, we clarify how complex sentences, that may be equally informative, and may even have same propositional meaning, may end up packaging information differently from one another, in terms of their evoked Qtrees. This difference in information packaging, will allow us to derive different felicity profiles for these sentences. We start with Qtrees evoked by negated LFs, before moving on to Qtrees evoked by disjunctions and conditionals.
+
+\subsection{Questions evoked by negated LFs}\label{sec:neg}
+We assume negated LFs evoke questions that are structurally similar to those evoked by their non-negated counterpart. The only difference resides in the set of verifying nodes, which is ``flipped'' by negation. This is formalized in (\ref{ex2:qtree-neg-def}).\footnote{This approach is perhaps a bit naive; uttering $p$ vs. $\neg p$, does not seem to preferentially answer the same kind of question. More specifically, it seems that uttering negative statements in general conveys the idea that the original question was more likely to be a polar question of the form \textit{whether p?} -- as opposed to a \textit{wh} kind of question. We discuss this more in depth in Chapter \ref{chap:scalarity}.}
+
+\begin{exe}
+	\ex {\textsc{\textbf{Qtrees for negated LFs}}. Let $T$ be a Qtree evoked by a LF $X$. A Qtree $T_{\neg}$ for $\neg X$ is obtained from $T$ by:
+		\begin{itemize}
+			\item retaining $T$'s structure; i.e. if $T = (\mathcal{N}, \mathcal{E}, R)$,  then $T_{\neg} = (\mathcal{N}, \mathcal{E}, R)$, too;
+			\item defining $T_{\neg}$'s set of verifying nodes $\mathcal{N}^+(T_{\neg})$ as the set of $T_{\neg}$'s nodes $N$ that are not verifying in $T$ ($N \notin \mathcal{N}^+(T)$) but belong to a layer containing at least one verifying node $N'$ in $T$ ($N' \in \mathcal{N}^+(T)$). In other words:\\
+			$\mathcal{N}^+(T_\neg)$ = $\lbrace N \ | \ N \notin \mathcal{N}^+(T) \wedge \exists N' \in \mathcal{N}^+(T). \ d(N, T_\neg)=d(N', T_\neg) \rbrace$\\
+			With $d(N, T)$ the depth of a node $N$ in a tree $T$ (see (\ref{ex2:tree-depth})).\footnote{Because $T$ and $T_\neg$ have same structure, it does not matter which Qtree among $T$ and $T_\neg$ is passed as argument to the depth function; in that particular case, $\forall N \in \mathcal{N}. \ d(N, T)=d(N, T_\neg)$.}
+		\end{itemize} 
+	}\label{ex2:qtree-neg-def}
+\end{exe}
+
+The recipe in (\ref{ex2:qtree-neg-def}) is exemplified in the abstract Qtrees in Figure \ref{fig2:qtree-x-neg-x}. 
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[A[\fbox{B}[\fbox{E}][\fbox{F}]][C][\fbox{D}[G][H[J][K]][I]]]
+		\end{forest}
+		\caption{An abstract Qtree for $X$}\label{fig2:qtree-x}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[A[{B}[{E}][{F}]][\fbox{C}][{D}[\fbox{G}][\fbox{H}[J][K]][\fbox{I}]]]
+		\end{forest}
+		\caption{An abstract Qtree for $\neg X$, derived from Figure \ref{fig2:qtree-x}.}\label{fig2:qtree-neg-x}
+	\end{subfigure}
+	\caption{An abstract Qtree for $X$ and the abstract Qtree for $\neg X$ derived from it, \textit{via} (\ref{ex2:qtree-neg-def}).}\label{fig2:qtree-x-neg-x}
+\end{figure}
+
+
+It may not seem obvious at this point why and how verifying nodes would occur at intermediate levels in a Qtree; after all, all the Qtrees we have seen so far (derived from simplex sentences) had their verifying nodes at the leaf level. But we will see that Qtrees derived from complex sentences (typically, involving disjunctions and conditionals) can in principle feature intermediate verifying nodes, because such nodes are also derived compositionally.
+Now, granted that verifying nodes may indeed occur at different levels, the intuition behind the ``flipping'' algorithm in (\ref{ex2:qtree-neg-def}) is the following. If a node $N$ is verifying in a Qtree $T$ corresponding to an LF $X$, and $N$ is located at depth $k$ in $T$, then somehow the $k$-layer of $T$ is ``addressed'' by $X$. We aim for a pair $(\neg X, T_\neg)$ to address the same layers as $(X, T)$, so $T_\neg$'s verifying nodes should have similar a similar depth distribution as $T$'s verifying nodes. But of course, the two sets of nodes need to be distinct, because negation standardly flips truth values -- hence the by-layer flipping.
+
+It is additionally worth mentioning that, if all verifying nodes in the original Qtree $T$ are leaves, (\ref{ex2:qtree-neg-def}) is simplified: $T_\neg$'s set of verifying nodes is simply the set of leaves in $T$/$T_\neg$ that are not verifying in $T$. This is summarized in (\ref{ex2:qtree-neg-def-leaves}).
+
+\begin{exe}
+	\ex {\textsc{\textbf{Qtrees for negated LFs}} (leaf-only version, subcase of (\ref{ex2:qtree-neg-def})). Let $T$ be a Qtree evoked by a LF $X$ s.t. $\mathcal{N}^+(T) \subseteq \mathcal{L}(T)$, where $\mathcal{L}(T)$ refers to $T$'s leaves. A Qtree $T_{\neg}$ for $\neg X$ is obtained from $T$ by:
+		\begin{itemize}
+			\item retaining $T$'s structure;
+			\item defining $T_{\neg}$'s set of verifying nodes as the complement set of $\mathcal{N}^+(T)$ within $\mathcal{L}(T)$:
+			$\mathcal{N}^+(T_\neg) = \lbrace N \in \mathcal{L}(T)\ | \ N \notin \mathcal{N}^+(T)\rbrace$ 
+		\end{itemize} 
+	}\label{ex2:qtree-neg-def-leaves}
+\end{exe}
+
+Following this simplified recipe, Qtrees for (\ref{ex2:city-neg-assertion}), which correspond to the negation of (\ref{ex2:city-assertion}), are given below. They are obtained from Figure \ref{fig2:city-qtrees}, by simply flipping boxed nodes at the leaf level. These new Qtree capture the intuition that (\ref{ex2:city-neg-assertion}) can answer three kinds of question: a question about whether or not Jo grew up in Paris; a question about which city Jo grew up in; and a question about which city Jo grew up in question of which city Jo grew up in, but such that this question is decomposed into two subquestions: first, which country Jo grew up in; then, knowing the country, which city Jo grew up in, in that country. The nodes that get flagged as verifying, correspond to sets of worlds disjoint from $\lambda w. \ \textit{Jo grew up in Paris in $w$}.$ Interestingly, negation preserves Qtree granularity, simply because it preserves Qtree structure.
+
+\begin{exe}
+	\exr{ex2:city-assertion} {Jo grew up in Paris.}
+	\ex {Jo did not grow up in Paris.}\label{ex2:city-neg-assertion}
+\end{exe}
+
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.23\linewidth}
+		\centering
+		\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{orange}{{Paris}}] [\textcolor{orange}{\fbox{$\neg$Paris}}]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-polar}).}\label{fig2:neg-city-qtree-polar}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.33\linewidth}
+		\centering		\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{orange}{{Paris}}] [\textcolor{orange}{\fbox{Lyon}}] [\textcolor{orange}{\fbox{...}}][\textcolor{orange}{\fbox{Berlin}}][\textcolor{orange}{\fbox{...}}]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-wh}).}\label{fig2:neg-city-qtree-wh}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.38\linewidth}
+		\centering\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{blue}{France}[\textcolor{orange}{{Paris}}] [\textcolor{orange}{\fbox{Lyon}}] [\textcolor{orange}{\fbox{...}}]] [\textcolor{blue}{Germany}[\textcolor{orange}{\fbox{Berlin}}][\textcolor{orange}{\fbox{...}}]][\textcolor{blue}{...}]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-tiered}).}\label{fig2:neg-city-qtree-tiered}
+	\end{subfigure}
+	\caption{Possible Qtrees evoked by the assertion (\ref{ex2:city-neg-assertion})=\textit{Jo did not grow up in Paris}.}\label{fig2:neg-city-qtrees}
+\end{figure}
+
+
+\subsection{Questions evoked by disjunctive LFs}\label{sec:disjunctive-qtrees}
+
+Let us consider the disjunction in (\ref{ex2:city-disjunction}). Intuitively, this sentence is a good, non-maximal answer to a question like (\ref{ex2:city-question}), repeated below. It identifies two cities in which Jo could have grown up in, and conveys ignorance about which city Jo actually grew up in. Note that either disjunct taken in isolation, \textit{Jo grew up in Paris}, or \textit{Jo grew up in Lyon}, constitutes a \textit{maximal} answer to (\ref{ex2:city-question}).
+
+\begin{exe}
+	\exr{ex2:city-question} {In which city did Jo grow up?}
+	\ex {Jo grew up in Paris or Lyon.}\label{ex2:city-disjunction}
+\end{exe}
+
+This observation is consistent with the idea that, in a felicitous disjunction, both disjuncts must answer the same kind of question \parencite{Simons2001,Zhang2022}. Ou rephrasing of this observation is spelled out in (\ref{ex2:disjunction-same-q}). 
+
+\begin{exe}
+	\ex {\textsc{\textbf{Disjunctive answer}}. Let $X = Y \vee Z$ be a disjunctive LF. If $X$ is a felicitous assertion, then the set of questions $Y$ answers is equal to the set of questions $Z$ answers. Additionally, if $Y$/$Z$ answer a question, then $X$ answers it too.}\label{ex2:disjunction-same-q}
+\end{exe}
+
+
+A way to further specify this intuition in our model, is to assume that a Qtree for $X = Y \vee Z$, must contain a Qtree for $Y$ and a Qtree for $Z$. Containment is understood as the subgraph relation (defined in (\ref{ex2:subgraph})). This ensures that any node in $Y$'s Qtree is also in $X$'s Qtree, and any node in $Z$'s Qtree, is also in $X$'s Qtree. So, whatever answers $Y$ or $Z$, also answers $X$. This is modeled by assuming that the Qtrees evoked by a disjunction are all the possible well-formed unions of Qtrees evoked by each disjunct. This is spelled out in (\ref{ex2:disj-qtree}). In this definition, Qtree union builds on the notion of graph-union, as formalized in (\ref{ex2:graph-union}).\footnote{I thank Amir who helped me see this.} On top of this, Qtree union involves the union of verifying nodes, and the determination of a root node for the output Qtree, defined as the maximum between the two roots of the input Qtrees.
+
+
+\begin{exe}
+	\ex {\textsc{\textbf{Qtrees for disjunctive LFs}}. A Qtree $T_{\vee}$ for $X \vee Y$, if defined, is obtained from a Qtree $T_X$ for $X$ and a Qtree $T_Y$ for $Y$ by:
+		\begin{itemize}
+			\item graph-unioning $T_X$ and $T_Y$;
+			\item defining $T_{\vee}$'s root as the maximal element (i.e. the weaker proposition) between the root of $T_X$ and the root of $T_Y$. This will typically be the entire CS. If there is no such maximum, then the output cannot be a Qtree. \footnote{Indeed, suppose $R_X$ and $R_Y$ are the roots of respectively $T_X$ and $T_Y$, and that $R_X$ and $R_Y$ are not in any kind of inclusion relation. We show by contradiction that $T_X \cup T_Y$ cannot be a Qtree. If $T_X \cup T_Y$ were a Qtree, then, $R_X$ and $R_Y$ would not be in an ancestry relation, meaning, $R_X$ would not be an ancestor of $R_Y$, and $R_Y$ would not be an ancestor of $R_X$. So, neither $R_X$ nor $R_Y$ could be the root of $T_X \cup T_Y$, because the root is an ancestor of all the other nodes. Let's call $R$ this root. $R$ is a common ancestor of both $R_X$ and $R_Y$ in $T_X \cup T_Y$. So $R$ must be a strict superset of $R_X$ and $R_Y$. Also, because $T_X \cup T_Y$ is obtained \textit{via} node- and edge-union, we must have, in the input Qtrees: $R_X \stackrel{T_X}{\leadsto} R$ and $R_Y \stackrel{T_Y}{\leadsto} R$. In other words, $R_X$ is an ancestor of $R$ in $T_X$, and $R_Y$ is an ancestor of $R$ in $T_Y$. Because $T_X$ and $T_Y$ are Qtrees, this implies that $R$ is a strict subset of $R_X$, and also strict subset of $R_Y$. Contradiction.}
+			\item defining $T_{\vee}$'s verifying nodes as the union of $T_X$'s and $T_Y$'s verifying nodes: $\mathcal{N}^+(T_{\vee}) = \mathcal{N}^+(T_X) \cup \mathcal{N}^+(T_Y)$.
+			\item returning the output only if it is a Qtree.
+		\end{itemize}
+		In other words, $Qtrees(X \vee Y) = \lbrace T_X \cup T_Y \ | \ T_X \cup T_Y \text{ verifies (\ref{ex2:qtree-def})} \wedge (T_X, T_Y) \in Qtrees(X) \times Qtrees(Y) \rbrace$}\label{ex2:disj-qtree}
+\end{exe}
+\begin{exe}
+	\ex {\textsc{\textbf{Graph union}}. Let $G = (\mathcal{N}, \mathcal{E})$ and $G' = (\mathcal{N}', \mathcal{E}')$ be two graphs. The union of $G$ and $G'$, noted $G \cup G'$, is the graph $G'' = (\mathcal{N}'', \mathcal{E}'')$ s.t.:
+		\begin{itemize}
+			\item $\mathcal{N}'' = \mathcal{N} \cup \mathcal{N}'$
+			\item $\mathcal{E}'' = \mathcal{E} \cup \mathcal{E}'$
+	\end{itemize}}\label{ex2:graph-union}
+\end{exe}
+
+Figure \ref{fig2:qtree-x-y-z-disj-wellformed} below exemplifies Qtree union applied to two abstract Qtrees, represented in Figures \ref{fig2:qtree-y} and \ref{fig2:qtree-z}. In these Qtrees, nodes with different labels are assumed to correspond to a different propositions. By definition, $\lbrace B, C, D \rbrace$ partitions $A$; $\lbrace E, F \rbrace$ partitions $B$, $\lbrace L, M \rbrace$ partition $D$, and $\lbrace N, O \rbrace$ partition $M$. The disjunction of Figures \ref{fig2:qtree-y} and \ref{fig2:qtree-z} is shown in Figure \ref{fig2:qtree-x-disj-wellformed}. Nodes, edges, and  verifying nodes, are unioned, and the output is a Qtree, that contains the two input Qtrees. So, whatever answered either Qtree in Figures \ref{fig2:qtree-y} and \ref{fig2:qtree-z}, also answers their disjunction in Figure \ref{fig2:qtree-x-disj-wellformed}. 
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.3\linewidth}
+		\centering
+		\scalebox{.7}{
+			\begin{forest}
+				[A[\fbox{B}[\fbox{E}][\fbox{F}]][C][\fbox{D}]]
+		\end{forest}}
+		\caption{An abstract Qtree for $X$}\label{fig2:qtree-y}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.3\linewidth}
+		\centering\scalebox{.7}{
+			\begin{forest}
+				[A[{B}][\fbox{C}][{D}[L][M[\fbox{N}][\fbox{O}]]]]
+		\end{forest}}
+		\caption{An abstract Qtree for $Y$.}\label{fig2:qtree-z}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.3\linewidth}
+		\centering\scalebox{.7}{
+			\begin{forest}
+				[A[\fbox{B}[\fbox{E}][\fbox{F}]][\fbox{C}][\fbox{D} [{L}][{M}[\fbox{N}][\fbox{O}]]]]
+		\end{forest}}
+		\caption{An abstract Qtree for $X = Y \vee Z$, derived from Figures \ref{fig2:qtree-y} and \ref{fig2:qtree-z}.}\label{fig2:qtree-x-disj-wellformed}
+	\end{subfigure}
+	\caption{Successful attempt at deriving a Qtree from the union of two Qtrees.}\label{fig2:qtree-x-y-z-disj-wellformed}
+\end{figure}
+
+It can be shown that if a disjunctive Qtree $T_{\vee}$ is well-formed and results from the union of two Qtrees $T$ and $T'$ sharing the same root, $T_{\vee}$ will always constitute a refinement of both $T$ and $T'$.
+
+%\begin{exe}
+%	\ex {\textit{Qtree union and the refinement relation.} If a disjunctive Qtree $T_{\vee}$ is well-formed and results from the union of two Qtrees $T$ and $T'$ sharing the same root, $T_{\vee}$ will always constitute a refinement of both $T$ and $T'$.}
+%\end{exe}
+
+What about cases in which the union of two Qtrees, is not a well-formed Qtree? A prediction of (\ref{ex2:disj-qtree}) is that two Qtrees sharing the same root can be properly disjoined iff they do not involve a common node that gets partitioned in two different ways in the two different input Qtrees.\footnote{We show that if $T$ and $T'$ exhibit such a clash, their disjunction is not a Q-tree. Let's call $C$ and $C'$ the sets of nodes of resp. $T$ and $T'$ that induce a partition clash; by assumption, $C$ and $C'$ are s.t. $C\neq C'$, and have mothers $N$ and $N'$ s.t. $N=N'$. Because $\vee$ achieves graph-union, $T\vee T'$ will have a node $N$ with $C\cup C'$ as children, and because $C\neq C'$, $C\cup C' \supset C, C'$. Given that both $C$ and $C'$ are partitions of $N$, $C\cup C'$ cannot be a partition of $N$. Conversely, if two Q-trees $T$ and $T'$ sharing the same CS as root are s.t. their union $T \cup T'$ is not a Qtree, it must be because $T$ and $T'$ had a partition clash. Indeed, under those assumptions, $T \cup T'$ not being a Qtree means one node $N$ in $T \cup T'$ is not partitioned by its children. Given $N$ is in $T \cup T'$, $N$ is also in $T$, $T'$, or both. If $N$ was only in, say, $T$, then it means $N$'s children are also only in $T$, but then, $T$ itself would have had a node not partitionned by its children, contrary to the assumption $T$ is a Qtree. The same holds \textit{mutatis mutandis} for $T'$, so, $N$ must come from \textit{both} $T$ and $T'$. Let us call $C$ and $C'$ the partitioning introduced by $N$ in resp. $T$ and $T'$. The fact $C$, $C'$, but not $C \cup C'$ partition $N$ entails $C\neq C'$, i.e. $T$ and $T'$ feature a partition clash.} We call this problematic configuration a partition ``clash'' (or simply a clash). It is formally defined in (\ref{ex2:partition-clash}), and related to disjoinability in (\ref{ex2:partition-clash-disjoinability}).
+
+\begin{exe}
+	\ex {\textsc{\textbf{Partition clash}}. Let $T = (\mathcal{N}, \mathcal{E}, R)$ and $T' = (\mathcal{N'}, \mathcal{E'}, R')$ be two Qtrees. $T$ and $T'$ feature a partition clash iff there is $N \in \mathcal{N}$ and $N' \in \mathcal{N}'$ s.t. $N = N'$ but the sets of children of $N$ and $N'$ differ. }\label{ex2:partition-clash}
+	\ex {\textsc{\textbf{Partition clashes and Qtree disjoinability}}. Let $T = (\mathcal{N}, \mathcal{E}, R)$ and $T' = (\mathcal{N'}, \mathcal{E'}, R)$ be two Qtrees. $T$ and $T'$ are disjoinable (i.e., their union is a well-formed Qtre) iff $T$ and $T'$ do not exhibit any partition clash.}\label{ex2:partition-clash-disjoinability}
+\end{exe}
+
+So, under a recursive interpretation of nodes, two Qtrees with the same root can be disjoined iff, for each node $N$ present in both Qtrees, $N$'s recursive interpretation is the same across Qtrees, or one interpretation constitutes a refinement of the other. This means that, to be disjoinable Qtrees should not introduce different subquestions at the local level.
+
+Figure \ref{fig2:qtree-x-y-z-disj-degenerate} illustrates a degenerate case of Qtree union, arising from a partition clash between two abstract input Qtrees. The two input Qtrees, represented in Figures \ref{fig2:qtree-y'} and \ref{fig2:qtree-z'}, minimally differ from those in Figures \ref{fig2:qtree-y'} and \ref{fig2:qtree-z'}: Figures \ref{fig2:qtree-z} and \ref{fig2:qtree-z'} are the same, but, in Figure \ref{fig2:qtree-y'}, $\lbrace G, H, I \rbrace$ are extra nodes that partition $D$, and $\lbrace J, K \rbrace$ partitions $H$. The ``clash'' between the Qtrees in Figures \ref{fig2:qtree-y'} and \ref{fig2:qtree-z'} comes from the $\lbrace G, H, I \rbrace$ nodes in Figure \ref{fig2:qtree-y} and the $\lbrace L, M \rbrace$ nodes in Figure \ref{fig2:qtree-z}: these two sets partitions node $D$ in different ways. As a result, the union of these two sets of nodes \textit{cannot} partition $D$. Figure \ref{fig2:qtree-xy-disj-degenerate}, which represents the disjunction of Figures \ref{fig2:qtree-y'} and \ref{fig2:qtree-z'}, thus features nodes $\lbrace G, H, I, L, M \rbrace$ as children of node $D$, and this configuration violates the partition property of Qtrees. This prevents the tree in Figure \ref{fig2:qtree-xy-disj-degenerate} from being a well-formed Qtree. 
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.3\linewidth}
+		\centering
+		\scalebox{.7}{
+		\begin{forest}
+			[A[\fbox{B}[\fbox{E}][\fbox{F}]][C][\fbox{D}[G][H[J][K]][I]]]
+		\end{forest}}
+		\caption{An abstract Qtree for $Y$}\label{fig2:qtree-y'}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.3\linewidth}
+		\centering\scalebox{.7}{
+		\begin{forest}
+			[A[{B}][\fbox{C}][{D}[L][M[\fbox{N}][\fbox{O}]]]]
+		\end{forest}}
+		\caption{An abstract Qtree for $Z$.}\label{fig2:qtree-z'}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.3\linewidth}
+		\centering\scalebox{.7}{
+		\begin{forest}
+			[A[\fbox{B}[\fbox{E}][\fbox{F}]][\fbox{C}][\fbox{D} [\textcolor{red}{G}][\textcolor{red}{H}[J][K]][\textcolor{red}{I}] [\textcolor{red}{L}][\textcolor{red}{M}[\fbox{N}][\fbox{O}]]]]
+		\end{forest}}
+		\caption{An abstract Qtree for $X = Y \vee Z$, derived from Figures \ref{fig2:qtree-y'} and \ref{fig2:qtree-z'}.}\label{fig2:qtree-xy-disj-degenerate}
+	\end{subfigure}
+	\caption{Unsuccessful attempt at deriving a Qtree from the union of two Qtrees exhibiting a partition clash.}\label{fig2:qtree-x-y-z-disj-degenerate}
+\end{figure}
+
+The badness of this kind of configuration, captures the intuition that two disjoined Qtrees should not raise orthogonal issues locally. We call two issues (partitions) orthogonal if they involve two nodes/cells that strictly overlap; see (\ref{ex2:orthogonality}). This definition can be shown to be equivalent to that of a partition clash,\footnote{Let us show that if two partitions are different (i.e. involve different cells), then, there is one cell from the former partition and one cell from the latter partition that strictly overlap. Let us assume two partitions $P_1$ and $P_2$ are distinct. We show that there is a cell in $P_1$ and a cell in $P_2$ that strictly overlap. We consider $P_1'$ and $P_2'$ the partitions obtained from  $P_1$ and $P_2$ by removing the cells $P_1$ and $P_2$ have in common. $P_1'$ and $P_2'$ are not empty, because otherwise $P_1$ and $P_2$ would be identical. Moreover, there must be $2$ cells $c_1$ and $c_2$ in $P_1'$ and $P_2'$ that overlap, because $P_1'$ and $P_2'$ are partitions and as such must be fully covered by their cells. Moreover, $c_1$ and $c_2$ cannot be the same, otherwise, they would not be in $P_1'$ and $P_2'$ by construction. So $c_1$ and $c_2$ strictly overlap. The other direction of the proof is trivial: if two partitions of the same space $P_1$ and $P_2$ involve two strictly overlapping cells, then these two cells must be distinct, and so $P_1$ and $P_2$ must be different sets.} It is interesting, because it can be more directly related to some concept of \textsc{Relevance} discussed in Chapter \ref{chap:introduction}; see (\ref{ex2:orthogonality-relevance}).
+
+\begin{exe}
+	\ex {\textsc{\textbf{Orthogonal partitions}}. Let $T = (\mathcal{N}, \mathcal{E}, R)$ and $T' = (\mathcal{N}', \mathcal{E}, R)$ be two depth-$1$ Qtrees sharing the same root $R$ (equivalently, two partitions of the same CS). $T$ and $T'$ are orthogonal iff they involves two nodes that are strictly overlapping, i.e. $\exists (N, N') \in \mathcal{N}\times\mathcal{N'}. \ N \cap N' \neq \emptyset \wedge N \neq N'$. $T$ and $T'$ are orthogonal iff $T$ and $T'$ exhibit a partition clash.}\label{ex2:orthogonality}
+	\ex {\textsc{\textbf{Orthogonal partitions and Relevance}}. Let $T = (\mathcal{N}, \mathcal{E}, R)$ and $T' = (\mathcal{N}', \mathcal{E}, R)$ be two depth-$1$ Qtrees sharing the same root $R$. $T$ and $T'$ are orthogonal iff some maximal answer (leaf) of $T$ is not \textsc{Lewis-Relevant} to $T'$.}\label{ex2:orthogonality-relevance}
+\end{exe}
+
+Figure \ref{fig2:qtree-x-y-z-disj-degenerate2} illustrates yet another degenerate case, that may seem more subtle when looking at the two input Qtrees, but with more drastic consequences when looking at the output structure, that is not even a tree. In this example, the two input Qtrees, represented in Figures \ref{fig2:qtree-y''} and \ref{fig2:qtree-z''} clash again at the level of the $D$ node: both $\lbrace G, H, I \rbrace$ $\lbrace G, J, K, I \rbrace$ partition $D$, but in different ways, since the latter partition is finer grained ($\lbrace J, K\rbrace$ partitions $H$). This kind of clash, though subtle, generates a disjunctive Qtree that is not even a tree: in Figure \ref{fig2:qtree-xy-disj-degenerate2}, $J$/$K$ is connected to $D$ \textit{via} two distinct paths: directly, and \textit{via} $H$. So Figure \ref{fig2:qtree-xy-disj-degenerate2} is not acyclic. Zooming out, this degenerate configuration stems from the fact that Qtree union ``collapsed'' the $J$ and $K$ nodes from the two input Qtrees, and that these nodes, being located at different levels in the two Qtree, were connected differently to the other nodes. This example outlines the idea that, in order to be disjoinable, two Qtrees must match in terms of their layering, i.e. in terms of their degrees of granularity.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.3\linewidth}
+		\centering
+		\scalebox{.7}{
+			\begin{forest}
+				[A[\fbox{B}[\fbox{E}][\fbox{F}]][C][\fbox{D}[G][H[J][K]][I]]]
+		\end{forest}}
+		\caption{An abstract Qtree for $Y$}\label{fig2:qtree-y''}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.3\linewidth}
+		\centering\scalebox{.7}{
+			\begin{forest}
+				[A[{B}][\fbox{C}][{D}[G][J][K][I]]]
+		\end{forest}}
+		\caption{An abstract Qtree for $Z$.}\label{fig2:qtree-z''}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.3\linewidth}
+		\centering\scalebox{.7}{
+			\begin{forest}
+				[A[\fbox{B}[\fbox{E}][\fbox{F}]][\fbox{C}][\fbox{D} [\textcolor{red}{G}][\textcolor{red}{H}[\textcolor{red}{J}][\textcolor{red}{K}]][\textcolor{red}{I}] [~][~]]]
+				\draw[] (2.4, -2.45) to [out=-100,in=45] (0.5, -4);
+				\draw[] (2.95, -2.45) to [out=-100,in=45] (1.3, -3.95);
+		\end{forest}}
+		\caption{An abstract Qtree for $X = Y \vee Z$, derived from Figures \ref{fig2:qtree-y''} and \ref{fig2:qtree-z''}.}\label{fig2:qtree-xy-disj-degenerate2}
+	\end{subfigure}
+	\caption{Yet another unsuccessful attempt at deriving a Qtree from the union of two Qtrees exhibiting a partition clash.}\label{fig2:qtree-x-y-z-disj-degenerate2}
+\end{figure}
+
+
+
+Now that we have defined how disjunctive Qtrees are formed and what the well-formedness conditions for such trees are, we come back to our more concrete disjunctive example (\ref{ex2:city-disjunction}), repeated below. 
+
+\begin{exe}
+		\exr{ex2:city-disjunction} {Jo grew up in Paris or Lyon.}
+\end{exe}
+
+To derive the Qtrees evoked by this disjunctive LF, one must first derive the Qtrees evoked by its two disjuncts, abbreviated \textit{Paris} and \textit{Lyon}. This has been done already in Figure \ref{fig2:city-qtrees} (repeated in Figure \ref{fig2:paris-qtrees}) for \textit{Paris}. Additionally, \textit{Paris} and \textit{Lyon} have same granularity, and therefore, give rise to the same tiered set of propositional alternatives. This in turn ensures that both \textit{Paris} and \textit{Lyon} give rise to similar Qtrees, that mostly differ in terms of their verifying nodes: \textit{Paris} will flag \textit{Paris}-nodes, and \textit{Lyon}, \textit{Lyon}-nodes. The Qtrees evoked by \textit{Lyon} can be found in Figure \ref{fig2:lyon-qtrees}.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.23\linewidth}
+		\centering
+		\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{orange}{\fbox{Paris}}] [\textcolor{orange}{{$\neg$Paris}}]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-polar}).}\label{fig2:paris-qtree-polar}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.33\linewidth}
+		\centering		\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{orange}{\fbox{Paris}}] [\textcolor{orange}{{Lyon}}] [\textcolor{orange}{{...}}][\textcolor{orange}{{Berlin}}][\textcolor{orange}{{...}}]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-wh}).}\label{fig2:paris-qtree-wh}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.38\linewidth}
+		\centering\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{blue}{France}[\textcolor{orange}{\fbox{Paris}}] [\textcolor{orange}{{Lyon}}] [\textcolor{orange}{{...}}]] [\textcolor{blue}{Germany}[\textcolor{orange}{{Berlin}}][\textcolor{orange}{{...}}]][\textcolor{blue}{...}]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-tiered}).}\label{fig2:paris-qtree-tiered}
+	\end{subfigure}
+	\caption{Possible Qtrees evoked by the assertion (\ref{ex2:city-assertion})=\textit{Jo grew up in Paris}.}\label{fig2:paris-qtrees}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.23\linewidth}
+		\centering
+		\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{orange}{\fbox{Lyon}}] [\textcolor{orange}{{$\neg$Lyon}}]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-polar}).}\label{fig2:lyon-qtree-polar}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.33\linewidth}
+		\centering		\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{orange}{{Paris}}] [\textcolor{orange}{\fbox{Lyon}}] [\textcolor{orange}{{...}}][\textcolor{orange}{{Berlin}}][\textcolor{orange}{{...}}]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-wh}).}\label{fig2:lyon-qtree-wh}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.38\linewidth}
+		\centering\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{blue}{France}[\textcolor{orange}{{Paris}}] [\textcolor{orange}{\fbox{Lyon}}] [\textcolor{orange}{{...}}]] [\textcolor{blue}{Germany}[\textcolor{orange}{{Berlin}}][\textcolor{orange}{{...}}]][\textcolor{blue}{...}]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-tiered}).}\label{fig2:lyon-qtree-tiered}
+	\end{subfigure}
+	\caption{Possible Qtrees evoked by the assertion \textit{Jo grew up in Lyon}.}\label{fig2:lyon-qtrees}
+\end{figure}
+
+We could now compute all possible unions of the Qtrees in Figures \ref{fig2:paris-qtrees} and \ref{fig2:lyon-qtrees}, and retain those that are Qtrees. This would effectively yield the Qtree evoked by (\ref{ex2:city-disjunction}). But instead of computing all these unions, let us use the notion of a partition clash to retain the input Qtrees that will in fact give rise to well-formed disjunctive Qtrees. We now evaluate all pairs of Qtrees from Figures \ref{fig2:paris-qtrees} and \ref{fig2:lyon-qtrees} for partition clashes, and compute unions only if no clash is detected.
+
+Starting with the two ``polar'' Qtrees \ref{fig2:paris-qtree-polar} and \ref{fig2:lyon-qtree-polar}, we notice an obvious clash between the $2$-cells partitions $\lbrace \textit{Paris}, \neg\textit{Paris}\rbrace$ and $\lbrace \textit{Lyon}, \neg\textit{Lyon}\rbrace$. So we can ignore the union of these two Qtrees. Qtrees \ref{fig2:paris-qtree-polar} and \ref{fig2:lyon-qtree-wh} also clash, because $\lbrace \textit{Paris}, \neg\textit{Paris}\rbrace$ and $\lbrace \textit{Paris}, \textit{Lyon} ...\rbrace$ are different partitions. Again, we ignore this combination. Same holds for Qtrees \ref{fig2:paris-qtree-polar} and \ref{fig2:lyon-qtree-tiered}, because $\lbrace \textit{Paris}, \neg\textit{Paris}\rbrace$ and $\lbrace \textit{France}, \textit{Germany} ...\rbrace$ are different. We thus once again ignore this combination. From this, we conclude that the ``polar'' Qtree  for \textit{Paris} \ref{fig2:paris-qtree-polar} is not disjoinable with any Qtree \textit{Lyon} evokes. Reciprocally, the ``polar'' Qtree  for \textit{Lyon} \ref{fig2:lyon-qtree-polar} is not disjoinable with any Qtree \textit{Paris} evokes. 
+
+Moving on to the ``\textit{wh}'' Qtree for \textit{Paris} \ref{fig2:paris-qtree-wh}, it is structurally identical to the ``\textit{wh}'' Qtree for \textit{Lyon} \ref{fig2:lyon-qtree-wh}. Therefore, these two Qtrees do not clash, and can de disjoined. Their union is given in Figure \ref{fig2:paris-or-lyon-qtree-wh}. Because the two input Qtrees are structurally identical, the structure of the disjunctive output Qtree is also similar. The only difference between inputs and output, is that the nodes flagged as verifying by the output Qtree, are both the \textit{Paris} and the \textit{Lyon} nodes. Considering now the ``\textit{wh}'' Qtree for \textit{Paris} \ref{fig2:paris-qtree-wh}, and the ``\textit{wh}-articulated'' Qtree for \textit{Lyon} \ref{fig2:lyon-qtree-tiered}, we notice yet another partition clash: $\lbrace \textit{Paris}, \textit{Lyon}, ...\rbrace$ is different from $\lbrace\textit{France}, \textit{Germany}, ... \rbrace$. So these two Qtrees cannot be disjoined. Reciprocally, the ``\textit{wh}'' Qtree for \textit{Lyon} \ref{fig2:lyon-qtree-wh}, and the ``\textit{wh}-articulated'' Qtree for \textit{Paris} \ref{fig2:paris-qtree-tiered}, will not be disjoinable.
+
+This leaves us with one last pair to evaluate, namely the pair made by the two ``\textit{wh}-articulated'' Qtrees in Figures \ref{fig2:paris-qtree-tiered} and \ref{fig2:lyon-qtree-tiered}. These two Qtrees are structurally identical, and so can be disjoined. The result of their union is given in Figure \ref{fig2:paris-or-lyon-qtree-tiered}. Because the two input Qtrees are structurally identical, the output is also similar. The only difference between inputs and output, is that the nodes flagged as verifying by the output disjunctive Qtree, are both the \textit{Paris} and the \textit{Lyon} node.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{orange}{\fbox{Paris}}] [\textcolor{orange}{\fbox{Lyon}}] [\textcolor{orange}{{...}}][\textcolor{orange}{{Berlin}}][\textcolor{orange}{{...}}]]
+		\end{forest}}\caption{Qtree \ref{fig2:paris-qtree-wh} $\vee$ Qtree \ref{fig2:lyon-qtree-wh}}\label{fig2:paris-or-lyon-qtree-wh}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{blue}{France}[\textcolor{orange}{\fbox{Paris}}] [\textcolor{orange}{\fbox{Lyon}}] [\textcolor{orange}{{...}}]] [\textcolor{blue}{Germany}[\textcolor{orange}{{Berlin}}][\textcolor{orange}{{...}}]][\textcolor{blue}{...}]]
+		\end{forest}}
+		\caption{Qtree \ref{fig2:paris-qtree-tiered} $\vee$ Qtree \ref{fig2:lyon-qtree-tiered}}\label{fig2:paris-or-lyon-qtree-tiered}
+	\end{subfigure}
+	\caption{Possible Qtrees evoked by the assertion (\ref{ex2:city-disjunction})=\textit{Jo grew up in Paris or Lyon}.}\label{fig2:paris-or-lyon-qtrees}
+\end{figure}
+
+Figure \ref{fig2:paris-or-lyon-qtrees} capture the idea that a disjunction like (\ref{ex2:city-disjunction}), evokes the same Qtrees as the \textit{wh}-question \textit{In which city did Jo grow up?}: either a simple ``\textit{wh}'' Qtree partitioning the CS according to cities, or a more complex ``\textit{wh}-articulated'' Qtree corresponding to the question of which city Jo grew up in, but such that this question is decomposed into two subquestions: first, which country Jo grew up in; then, knowing the country, which city Jo grew up in, in that country.\footnote{One might wonder at this point why a condition on Qtree disjoinability should not involve structural equality between inputs. After all, the two Qtrees we just derived, depicted in Figure \ref{fig2:paris-or-lyon-qtrees}, were associated with structurally identical inputs. Chapter \ref{chap:hurford-disj} will discuss why this identity condition might be too strong, on top of being stipulative.} We will see more examples of Qtree disjunctions in the next Chapters, including pathological cases in which the disjuncts may not share the same degree of specificity. We now proceed to define Qtree evoked by conditionals. Crucially, the way such Qtrees will be defined, will not be a function of the ``recipes'' we just devised for negated and disjunctive LFs. In other words, conditional Qtrees will not be ``material''.
+
+
+\subsection{Questions evoked by conditional LFs}
+
+Material implication, defined in (\ref{ex2:material-implication}) is perhaps the simplest way to analyze natural language conditionals. 
+
+\begin{exe}
+	\ex {\textsc{\textbf{Material Implication}}. Let $X$ and $Y$ be two LFs denoting $p$ and $q$ respectively. Under the material analysis, $\llbracket \textit{ If } X \textit{ then } Y \rrbracket$ is true iff $\neg p \vee q$ is true. $\rightarrow$ is used as a shorthand for $\lambda p. \ \lambda q. \ \lambda w. \ \neg p \vee q$, s.t. $\neg p \vee q \equiv p \rightarrow q$.}\label{ex2:material-implication}
+\end{exe}
+
+It may be tempting to adapt this definition to the domain of Qtrees evoked by assertions. This tentative translation is given in (\ref{ex2:material-qtrees}). 
+
+\begin{exe}
+	\ex {\textsc{\textbf{``Material'' Conditional Qtrees}}. Let $X$ be an LF of the form \textit{If $Y$ then $Z$}. A Qtree for $X$ is a Qtree for $\neg Y \vee Z$.}\label{ex2:material-qtrees}
+\end{exe}
+
+Because we defined Qtrees for negated and disjunctive LFs in the previous Sections, we already have the tools to understand what (\ref{ex2:material-qtrees}) would predict for Qtrees evoked by natural language conditionals. In particular, we noted that negation preserves Qtree structure, and that disjunction forces the two disjuncts to evoke structurally similar Qtrees. These properties combined, predict that, under (\ref{ex2:material-qtrees}) the antecedent and consequent of a conditional, should evoke similar Qtrees, devoid of any partition clash. In other words, two Qtrees evoked by $X$ and $Y$ should be ``conditionalizable'' (in the material sense) iff they are disjoinable. This does not seem to match intuitions about conditionals. (\ref{ex2:conditional-unrelated}) for instance, sounds fine, even if the antecedent \textit{Jo is rude} and the consequent \textit{Jo grew up in Paris}, appear to evoke Qtrees with very different structures. The previous Section already detailed what the latter Qtrees for \textit{Jo grew up in Paris} should looks like, and Figure \ref{fig2:rude-qtrees} sketches how Qtrees for \textit{Jo is rude} should look like. Clearly, partitions of the CS induced by personality traits, are unlikely to match partitions induced by countries, so under the material analysis, a sentence like (\ref{ex2:conditional-unrelated}) should behave exactly like (\ref{ex2:material-conditional-underlated}) at the inquisitive level. Therefore, it should not give rise to any Qtree and should be deemed odd.
+
+\begin{exe}
+	\ex
+	\begin{xlist}
+		\ex[] {If Jo is rude, she grew up in Paris.}\label{ex2:conditional-unrelated}
+		\ex[\#] {Jo is not rude, or she grew up in Paris.}\label{ex2:material-conditional-underlated}
+	\end{xlist}
+\end{exe}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.2\linewidth}
+		\centering\scalebox{.85}{
+		\begin{forest}
+			[CS[Rude][$\neg$Rude]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-polar}).}\label{fig2:rude-qtree-polar}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.75\linewidth}
+		\centering\scalebox{.85}{
+		\begin{forest}
+			[CS[Rude$\wedge$Smart][$\neg$Rude$\wedge$Smart][Rude$\wedge$$\neg$Smart][$\neg$Rude$\wedge$$\neg$Smart]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-wh}).}\label{fig2:rude-qtree-wh}
+	\end{subfigure}
+	
+	\begin{subfigure}[t]{\linewidth}
+		\centering\scalebox{.85}{
+		\begin{forest}
+			[CS[Good traits [$\neg$Rude$\wedge$Smart]][Bad traits [Rude$\wedge$$\neg$Smart]][Mixed traits [Rude$\wedge$Smart][$\neg$Rude$\wedge$$\neg$Smart]]]
+		\end{forest}}
+		\caption{Following principle (\ref{ex2:qtree-simplex-def}\ref{pt2:simplex-qtree-tiered}).}
+	\end{subfigure}
+	\caption{Possible Qtrees evoked by the assertion \textit{Jo is rude}.}\label{fig2:rude-qtrees}
+\end{figure}
+
+
+This empirical difference between conditionals and disjunctions regarding the questions they evoke, motivates a non-material model of conditionals at the inquisitive level. Intuitively, what a conditional statement like (\ref{ex2:conditional-unrelated}) seems to convey, is that figuring out Jo's rudeness may help narrow down where Jo grew up. So, (\ref{ex2:conditional-unrelated}) seems to primarily answer a question about where Jo grew up, taking for granted that she is a rude person. This introduces an asymmetry between antecedent and consequent; it seems that the question evoked by the consequent gets \textit{restricted} to the CS updated with the antecedent. A Qtree for (\ref{ex2:conditional-unrelated}) would then look like the one in Figure \ref{fig2:rude-paris-qtree}. In this tree, the Qtree corresponding to the consequent, is ``plugged'' into the node corresponding to the \textit{Jo is rude} worlds.
+
+\begin{figure}[H]
+	\centering
+	\begin{forest}
+		[CS [Rude [Paris][Lyon][...][Berlin][...]] [$\neg$Rude]]
+	\end{forest}
+	\caption{An intuitive Qtree for (\ref{ex2:conditional-unrelated})= \textit{If Jo is rude, she grew up in Paris}.}\label{fig2:rude-paris-qtree}
+\end{figure} 
+
+We already have the tools to cash out this intuition in a compositional way. Recall that in Section \ref{sec:interpreting-qtrees}, we discussed how a subtree rooted in $N$ in a given Qtree, could be interpreted as the intersection between the entire Qtree and $N$, following (\ref{ex2:nodewise-inter}). The definition of this operation is repeated below.
+
+\begin{exe}
+	\exr{ex2:nodewise-inter} {\textsc{\textbf{Tree-node intersection}}. Let $T=(\mathcal{N}, \mathcal{E}, R)$ be a Qtree. Let $p$ be a proposition. The tree-node intersection between $T$ and $p$, noted $T \cap p$, is defined iff $R \cap p \neq \emptyset$ and, if so, is the Qtree $T'=(\mathcal{N}', \mathcal{E}', R')$ s.t.:
+		\begin{itemize}
+			\item $\mathcal{N}' = \lbrace N \cap p \ | \ N \in \mathcal{N} \wedge N \cap p \neq \emptyset\rbrace$
+			\item $\mathcal{E}' = \lbrace \lbrace N_1\cap p, N_2\cap p\rbrace \ | \ \lbrace N_1, N_2\rbrace \in \mathcal{E} \wedge (N_1\cap p) \neq (N_2\cap p) \wedge N_1\cap p \neq \emptyset \wedge N_2\cap p \neq \emptyset \rbrace$
+			\item $R' = R\cap p$
+	\end{itemize}}
+\end{exe} 
+
+Tree-node intersection, seen as a form of contextual restriction, in fact allows to ``plug'' specific Qtrees into the node(s) of another Qtree -- producing an output that is still a well-formed Qtree. This gives rise to the definition of conditional Qtrees in 
+(\ref{ex2:cond-qtree}). This definition defines a Qtree evoked by a conditional \textit{If $X$ then $Y$}, as a Qtree for $X$ whose verifying nodes get replaced by their intersection with a Qtree evoked by $Y$. 
+
+\begin{exe}
+	\ex {\textsc{\textbf{Qtrees for conditional LFs}}. A Qtree $T$ for $X \rightarrow Y$ is obtained from a Qtree $T_X$ for $X$ and a Qtree $T_Y$ for $Y$ by:
+		\begin{itemize}
+			\item replacing each node $N$ of $T_X$ that is in $\mathcal{N}^+(T_X)$ with $N \cap T_Y$ (see (\ref{ex2:nodewise-inter}));
+			\item returning the result only if it is a Qtree.
+		\end{itemize}
+		In other words, $Qtrees(X \rightarrow Y) = \lbrace T_X \cup \bigcup_{N\in \mathcal{N}^+(T_X)}(N\cap T_Y) | (T_X, T_Y) \in Qtrees(X) \times Qtrees(Y) \wedge T_X \cup \bigcup_{N\in \mathcal{N}^+(T_X)}(N\cap T_Y) \text{verifies (\ref{ex2:qtree-def})}  \rbrace$, and $\mathcal{N}^+(T_X \rightarrow T_Y) = \lbrace N\cap N' | (N, N') \in \mathcal{N}^+(T_X) \times \mathcal{N}^+(T_Y) \wedge N\cap N' \neq \emptyset \rbrace$.}\label{ex2:cond-qtree}
+\end{exe}
+
+Let us see what (\ref{ex2:cond-qtree}) predicts for a conditional Qtree corresponding to (\ref{ex2:if-france-not-paris}), assuming the input Qtrees for the antecedent \textit{France}, and the consequent \textit{not Paris}, are those in Figure \ref{fig2:qtrees-if-france-not-paris}.\footnote{Of course, more Qtrees are available for the antecedent and the consequent, and each pairings should be considered when generating Qtrees corresponding to the conditional. We focus on one possible pairing here.}
+
+\begin{exe}
+	\ex {If Jo grew up in France, she did not grow up in Paris}\label{ex2:if-france-not-paris}
+\end{exe}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{blue}{\fbox{France}}] [\textcolor{blue}{Germany}][\textcolor{blue}{...}]]
+		\end{forest}}
+	\caption{A Qtree for(\ref{ex2:country-assertion})=\textit{Jo grew up in France}, repeated from Figure \ref{fig2:country-qtree-wh}.}\label{fig2:country-qtree-wh2}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{blue}{France}[\textcolor{orange}{{Paris}}] [\textcolor{orange}{\fbox{Lyon}}] [\textcolor{orange}{\fbox{...}}]] [\textcolor{blue}{Germany}[\textcolor{orange}{\fbox{Berlin}}][\textcolor{orange}{\fbox{...}}]][\textcolor{blue}{...}]]
+		\end{forest}}
+	\caption{A Qtree for (\ref{ex2:city-neg-assertion})=\textit{Jo did not grow up in Paris}, repeated from Figure \ref{fig2:neg-city-qtree-tiered}.}\label{fig2:neg-city-qtree-tiered2}
+	\end{subfigure}
+	\caption{Qtrees corresponding to the antecedent and consequent of (\ref{ex2:if-france-not-paris}).}\label{fig2:qtrees-if-france-not-paris}
+\end{figure}
+
+According to definition (\ref{ex2:cond-qtree}), the conditional Qtree generated from Figure \ref{fig2:qtrees-if-france-not-paris}, should be Figure \ref{fig2:country-qtree-wh2}, whereby the \textit{France} verifying node gets replaced by its intersection with Figure  \ref{fig2:neg-city-qtree-tiered2}. This intersection is computed in Figure, following the tree-node intersection intersection principle (\ref{ex2:nodewise-inter}). The result of this operation, is the subtree of Figure \ref{fig2:neg-city-qtree-tiered2} rooted in \textit{France}, in other words, the recursive interpretation of the \textit{France}-node in Figure \ref{fig2:neg-city-qtree-tiered2} -- in line with property (\ref{ex2:recursive-interpretation-cs}).
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{\linewidth}
+		\centering
+		\scalebox{.85}{
+			\begin{forest}
+				[{CS$\wedge$\textcolor{blue}{France}} [\textcolor{blue}{France}$\wedge$\textcolor{blue}{France}[\textcolor{orange}{{Paris}}$\wedge$\textcolor{blue}{France}] [\textcolor{orange}{\fbox{Lyon}}$\wedge$\textcolor{blue}{France}] [\textcolor{orange}{\fbox{...}}$\wedge$\textcolor{blue}{France}]] [\textcolor{blue}{Germany}$\wedge$\textcolor{blue}{France}[\textcolor{orange}{\fbox{Berlin}}$\wedge$\textcolor{blue}{France}][\textcolor{orange}{\fbox{...}}$\wedge$\textcolor{blue}{France}]][\textcolor{blue}{...}$\wedge$\textcolor{blue}{France}]]
+		\end{forest}}
+	\caption{Intersecting all nodes of Figure \ref{fig2:neg-city-qtree-tiered2} with \textit{France}.}
+	\end{subfigure}
+	\begin{subfigure}[t]{\linewidth}
+		\centering
+		\scalebox{.85}{
+			\begin{forest}
+			[\textcolor{blue}{France}[\textcolor{orange}{{Paris}}] [\textcolor{orange}{\fbox{Lyon}}] [\textcolor{orange}{\fbox{...}}]]
+		\end{forest}}
+		\caption{Filtering out empty nodes and removing trivial edges.}
+	\end{subfigure}
+	\caption{A Qtree for (\ref{ex2:city-neg-assertion})=\textit{Jo did not grow up in Paris}, intersected with the \textit{France}-node.}\label{fig2:neg-city-qtree-tiered-inter-france}
+\end{figure}
+
+The Qtree in Figure \ref{fig2:neg-city-qtree-tiered-inter-france}, can then replace the original \textit{France}-node of Figure \ref{fig2:country-qtree-wh2} (the antecedent Qtree), to create a Qtree for the conditional assertion (\ref{ex2:if-france-not-paris}). This is done in Figure \ref{fig2:qtree-if-france-then-not-paris}.
+
+\begin{figure}[H]
+	\centering
+	\scalebox{.85}{
+		\begin{forest}
+			[CS [\textcolor{blue}{France}[\textcolor{orange}{{Paris}}] [\textcolor{orange}{\fbox{Lyon}}] [\textcolor{orange}{\fbox{...}}]] [\textcolor{blue}{Germany}][\textcolor{blue}{...}]]
+	\end{forest}}
+	\caption{A Qtree for (\ref{ex2:country-assertion})=\textit{Jo grew up in France}, whose verifying node gets replaced by its intersection with a Qtree for  (\ref{ex2:city-neg-assertion})=\textit{Jo did not grow up in Paris}. This creates a Qtree for (\ref{ex2:if-france-not-paris})=\textit{If Jo grew up in France, she did not grow up in Paris}. }\label{fig2:qtree-if-france-then-not-paris}
+\end{figure}
+
+
+It is worth noting that replacing the \textit{France}-node by its intersection with a consequent Qtree in the above example, ``erased'' the verifying character of the \textit{France}-node. In other words, the verifying nodes of a conditional Qtree, are inherited from its consequent only. The nodes that were verifying in the antecedent Qtree, but were not so in the consequent Qtree, are no longer verifying in the output conditional Qtree.
+
+The core idea behind this operation is that conditionals do not make antecedent and consequent QuDs at issue at the same time; rather, they introduce a hierarchy between these two objects, by raising the consequent QuD only in the cells of the CS (as defined by the antecedent QuD), where the antecedent holds. Yet another way to phrase this is by saying that, through the process of Qtree-conditionalization, the consequent Qtree gets \textit{restricted} by the antecedent Qtree. This view is consistent with influential finding in psychology, showing that when asked to verify the truth of a conditional statement, participants tend to massively overlook the eventualities falsifying the antecedent \parencite{Wason1968} It is also consistent with insights from the recent linguistic literature, which argues that zero-models should be disregarding by the semantic module \parencite{Aloni2022} -- a model where the antecedent of a conditional does not hold is an example of such a zero-model.
+
+Coming back to the example that motivated this non-material analysis of conditionals at the inquisitive level, a Qtree for (\ref{ex2:conditional-unrelated}), is given in Figure
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{\linewidth}
+		\centering
+		\scalebox{.85}{
+			\begin{forest}
+				[CS [Rude[\textcolor{orange}{\fbox{Paris}}$\wedge$Rude] [\textcolor{orange}{{Lyon}}$\wedge$Rude] [\textcolor{orange}{{Berlin}}$\wedge$Rude][\textcolor{orange}{{...}}$\wedge$Rude]] [$\neg$Rude]]
+		\end{forest}}
+	\caption{Conditional Qtree generated from Figure \ref{fig2:rude-qtree-polar} (antecedent) and \ref{fig2:city-qtree-wh} (consequent).}
+	\end{subfigure}
+	
+	\begin{subfigure}[t]{\linewidth}
+		\centering
+		\scalebox{.85}{
+			\begin{forest}
+				[CS [Rude[\textcolor{blue}{France}$\wedge$Rude[\textcolor{orange}{\fbox{Paris}}$\wedge$Rude] [\textcolor{orange}{{Lyon}}$\wedge$Rude] [\textcolor{orange}{{...}}$\wedge$Rude]][\textcolor{blue}{Germany}$\wedge$Rude][\textcolor{blue}{...}$\wedge$Rude]] [$\neg$Rude]]
+		\end{forest}}
+	\caption{Conditional Qtree generated from Figure \ref{fig2:rude-qtree-polar} (antecedent) and \ref{fig2:city-qtree-tiered} (consequent)}
+	\end{subfigure}
+	
+	\begin{subfigure}[t]{\linewidth}
+		\centering
+		\scalebox{.85}{
+			\begin{forest}
+				[CS [Rude$\wedge$Smart[\textcolor{orange}{\fbox{Paris}}$\wedge$R$\wedge$S] [\textcolor{orange}{{Lyon}}$\wedge$R$\wedge$S] [\textcolor{orange}{{...}}$\wedge$R$\wedge$S]] [$\neg$Rude$\wedge$Smart] [Rude$\wedge$$\neg$Smart[\textcolor{orange}{\fbox{Paris}}$\wedge$R$\wedge$$\neg$S] [\textcolor{orange}{{Lyon}}$\wedge$R$\wedge$$\neg$S] [\textcolor{orange}{{...}}$\wedge$R$\wedge$$\neg$S]][$\neg$Rude$\wedge$$\neg$Smart]]
+		\end{forest}}
+	\caption{Conditional Qtree generated from Figure \ref{fig2:rude-qtree-wh} (antecedent) and \ref{fig2:city-qtree-wh} (consequent)}
+	\end{subfigure}
+	\caption{Possible conditional Qtrees corresponding to (\ref{ex2:conditional-unrelated})=\textit{If Jo is rude, she grew up in Paris}. Other Qtrees are possible.}\label{fig2:qtree-if-rude-then-paris}
+\end{figure}
+
+
+Lastly, we observe that node-Qtree intersection between a (non-empty) node $N$ and a tree $T$, is ``vacuous'' (i.e., equal to $N$), iff $N$ entails a specific leaf in $T$.\footnote{Vacuousness is defined structurally only. The verifying status of $N$ will still depends on $T$'s verifying nodes.} 
+
+\begin{exe}
+	\ex {\textsc{\textbf{Vacuous tree-node intersection}}. Let $T$ be a Qtree whose leaves are $\mathcal{L}(T)$, and $N$ a (non-empty) node (set of worlds). $T\cap N = N$ iff $\exists N' \mathcal{L}(T). \ N \vDash N'$.}\label{ex2:vacuous-tree-node}
+	\ex {\textsc{\textbf{Proof of (\ref{ex2:vacuous-tree-node})}}. Let $T$ be a Qtree and $N$ a node entailing some leaf in $T$. $T$ being a Qtree, each node of $T$ is s.t. its ancestors are exactly the nodes entailed by it, its descendants are exactly the nodes entailing it, and other nodes are incompatible with it. If $N$ entailed two or more leaves in $T$, then $N$ would entail a contradiction, i.e. be empty. So $N$ entails a single leaf $L$, and all the nodes in $T$ entailed by $N$ must correspond to a path from CS root, to $L$. Intersecting all such nodes with $N$, yields $N$. Intersecting $N$ with any other node, yields the empty set. Therefore, intersecting $N$ with $T$ leads to a single $N$-root.\\
+	Let $T$ be a Qtree and $N$ a node s.t. $T \cap N = N$. We show that $N$ entails some leaf in $T$ by contradiction. If no leaf in $T$ were entailed by $N$, then at least some leaf in $T$, when intersected with $N$, would yield a node different from $N$. Therefore, $T \cap N$, cannot be equal to $N$. Contradiction. }
+\end{exe}
+
+
+
+
+%A general prediction of this definition is that, for an antecedent Qtree $T_X$ and a consequent Qtree $T_Y$ to be properly combined, the CS (root) of $T_Y$ should be a superset of each verifying node of $T_X$. In other words, anything the antecedent asserts to be true should be part of the CS of the consequent.\footnote{Indeed, if $T_X$ had a verifying node $N$ that were a strict superset of the CS of $T_Y$, then the intersected tree $N\cap T_Y$ replacing $N$ in $T_X$ by the effect of the Qtree conditionalization operation, would have a strict subset of $N$ as its root, which would entail a violation of the partition property on the resulting conditional Qtree (in particular, $N\cap CS_Y \subset N$ and its sisters would no longer fully cover the set denoted by their mother).\label{fn:cs-supeset}} Violations of this condition do not arise with the data at stake here, because we assume that antecedent and consequent Qtrees share the same CS. But this is to keep in mind for cases where the consequent is taken to introduce additional presuppositions further restricting the size of its ``local'' CS.\footnote{More specifically, if we assume the consequent Qtree's root denotes $CS\cap p$, CS being the root of the antecedent Qtree, the condition becomes $\forall N \in \mathbb{N}^+(T_X). \ N \subseteq CS\cap p$ which entails $\forall N \in \mathbb{N}^+(T_X). \ N \subseteq p$. In other words, we expect presuppositions carried by the consequent to be entailed by the local context defined by the antecedent Qtree (in the form of $\mathbb{N}^+(T_X)$).}
+
+The whole conditional Qtree formation process will then be vacuous if each verifying leaf in the antecedent Qtree entails a specific leaf of the consequent Qtree. This configuration is exemplified when considering a sentence like (\ref{ex2:if-paris-then-france}).
+
+\begin{exe}
+	\ex[??] {If Jo grew up in Paris, she grew up in France.}\label{ex2:if-paris-then-france}
+\end{exe}
+
+
+In that sentence, Qtrees corresponding to the antecedent stop at the city-level and mark the \textit{Paris}-node as verifying. Qtrees corresponding to the consequent stop at the country-level, and contain a \textit{France}-leaf. Because \textit{Paris} entails \textit{France}, intersecting a Qtree for the consequent with the ``restrictor'' \textit{Paris}-node from the antecedent, will simply yield the Paris node. This is shown in Figure \ref{fig2:country-qtree-wh-inter-paris}. In that case, the node resulting from the intersection operation inherits its verifying status from the \textit{France}-node, flagged by the input (consequent) Qtree. Replacing the verifying \textit{Paris}-node in the antecedent Qtree by this node, does not have any effect. Therefore, the output conditional Qtree will be identical to the antecedent Qtree.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{\linewidth}
+		\centering
+		\centering		\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{blue}{\fbox{France}}$\wedge$\textcolor{orange}{Paris}] [\textcolor{blue}{Germany}$\wedge$\textcolor{orange}{Paris}][\textcolor{blue}{...}$\wedge$\textcolor{orange}{Paris}]]
+		\end{forest}}
+		\caption{Intersecting all nodes of Figure \ref{fig2:country-qtree-wh} with \textit{Paris}.}
+	\end{subfigure}
+	\begin{subfigure}[t]{\linewidth}
+		\centering
+		\scalebox{.85}{
+			\begin{forest}
+				[\textcolor{orange}{\fbox{Paris}}]
+		\end{forest}}
+		\caption{Filtering out empty nodes and removing trivial edges.}
+	\end{subfigure}
+	\caption{A Qtree for (\ref{ex2:country-assertion})=\textit{Jo studied in France}, intersected with the \textit{Paris}-node, is just the \textit{Paris}-node itself.}\label{fig2:country-qtree-wh-inter-paris}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{.23\linewidth}
+		\centering
+		\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{orange}{\fbox{Paris}}] [\textcolor{orange}{{$\neg$Paris}}]]
+		\end{forest}}
+		\caption{.}\label{fig2:if-paris-then-france-qtree-polar}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.33\linewidth}
+		\centering		\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{orange}{\fbox{Paris}}] [\textcolor{orange}{{Lyon}}] [\textcolor{orange}{{...}}][\textcolor{orange}{{Berlin}}][\textcolor{orange}{{...}}]]
+		\end{forest}}
+		\caption{.}\label{fig2:if-paris-then-france-qtree-wh}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{.38\linewidth}
+		\centering\scalebox{.85}{
+			\begin{forest}
+				[CS [\textcolor{blue}{France}[\textcolor{orange}{\fbox{Paris}}] [\textcolor{orange}{{Lyon}}] [\textcolor{orange}{{...}}]] [\textcolor{blue}{Germany}[\textcolor{orange}{{Berlin}}][\textcolor{orange}{{...}}]][\textcolor{blue}{...}]]
+		\end{forest}}
+		\caption{.}\label{fig2:if-paris-then-france-qtree-tiered}
+	\end{subfigure}
+	\caption{Possible Qtrees evoked by the conditional assertion (\ref{ex2:if-paris-then-france})=\textit{If Jo grew up in Paris, she grew up in France}. Same as those evoked by (\ref{ex2:city-assertion})=\textit{Jo grew up in Paris}, due to tree-node intersection being vacuous across-the-board.}\label{fig2:if-paris-then-france-qtrees}
+\end{figure}
+
+ 
+Moreover, if each verifying leaf in the antecedent Qtree entails a specific \textit{non-verifying} leaf of the consequent Qtree, the output Qtree will be structurally identical to the antecedent Qtree but, will be left with \textit{no} verifying node. Such a tree will be deemed ill-formed as per principle (\ref{ex2:vacuous-flagging}) (pertaining to the empty labeling of verifying nodes).
+
+
+%ADD AN EXAMPLE ABOUT CONTRDICTORY ANTECEDENT AND CONSEQUENT, SHOWING HOW EMPTY LABELING TRIGGERS ODDNESS
+% This predicts a sentence like \textit{If Jo is at SuB then he is in Boston} = $S_p \rightarrow S_q$, in which the domain of the antecedent and that of the consequent are disjoint, to give rise to Qtrees without verifying nodes -- leading to \textsc{Empty Labeling} (see (\ref{ex:vacuous-flagging})), and in turn, oddness. This is shown in (\ref{ex:cond-empty}).
+%
+%\begin{exe}
+%	\ex {$S_p \rightarrow S_q$ (with $p$ and $q$ disjoint) triggers \textsc{Empty Labeling} and is thus odd. First, the consequent Qtree gets node-wise intersected with $p$ which leads to a reduced Qtree with only a $p$-root, that is non-verifying. This Qtree replaces the $p$-leaf in the antecedent, leading to no change in structure, except the $p$-leaf is no longer verifying. Using any other Qtrees for $S_p$ / $S_q$ as input leads to the same kind of result.}\label{ex:cond-empty}
+%\end{exe}\vspace{-5mm}
+%
+%\setlength{\tabcolsep}{3pt}
+% \setlength{\fboxsep}{1pt}
+%\begin{tabular}{ccccccccc}
+%	\scalebox{.8}{
+%		\begin{forest}
+%			[CS[\fbox{$p$}][$\neg p$]]
+%	\end{forest}}&\begin{tabular}{c}
+%		\\
+%		\\
+%		$\cap\uparrow$
+%	\end{tabular}&\scalebox{.8}{
+%		\begin{forest}
+%			[CS[\fbox{$q$}][{$\neg q$}]]
+%	\end{forest}}&\begin{tabular}{c}
+%		\\
+%		\\
+%		=
+%	\end{tabular}&\scalebox{.8}{
+%		\begin{forest}
+%			[CS[\fbox{$p$}][$\neg p$]]
+%	\end{forest}}&\begin{tabular}{c}
+%		\\
+%		\\
+%		$\cap\uparrow$
+%	\end{tabular}&\scalebox{.8}{
+%		\begin{forest}
+%			[{CS $\cap p = p$}[\fbox{$q \cap p = \emptyset$}][{$\neg q \cap p = p$}]]
+%	\end{forest}}&\begin{tabular}{c}
+%		\\
+%		\\
+%		=
+%	\end{tabular}&\scalebox{.8}{
+%		\begin{forest}
+%			[CS[{$p$}][$\neg p$]]
+%	\end{forest}}
+%\end{tabular}
+%
+%\vspace{3mm}
+%
+
+\section{Conceptual predecessors}\label{chap:lit-review}
+This Section compares the model of questions previously introduced, to two earlier approaches exploiting concepts close to Qtrees. It is shown that these earlier models differ from the current framework in three possible ways: (i) question semantics is taken to fully \textit{replace} standard propositional content (the Inquisitive Semantics framework); (ii) the core model is technically very similar, but at the conceptual level assertions are not taken to evoke full-fledged questions \parencite{Ippolito2019}, or (iii) the machinery proposed is based on evoked QuDs, but not fully compositional \parencite{Ippolito2019}.
+
+
+
+%STRESSS OPTIONALITY
+\subsection{Inquisitive Semantics}
+
+%
+%This mode differs from inquisitive semantics \parencite{Mascarenhas2008,Ciardelli2009,Groenendijk2009,Ciardelli2018} in at least two ways. First, Inquisitive Semantics proposes a \textit{unified} view of questions and assertions at the semantic level, while what is propoed here, is a form of inquisitive \textit{pragmatics}. Sentences are still assigned ``standard'' extensional/intensional meaning, but also have an inquisitive contribution at the pragmatic level, which, as we started to see, drives feelings of oddness (as opposed to falsity/contradiction).  The second dimension along which our view differs from inquisitive semantics, is that it makes directional predictions about how sentences may partition the context set: first, the partitioning must be nested; and second, its specificities depends on how the sentence is constructed, with a clear contrast between disjunctions and conditionals, and the property that negation preserves Qtree structure. Inquisitive Semantics on the other hand, is less restricted in the sense an inquisitive proposition in that framework, is a nonempty downward-closed set of information states (sets of worlds), which may not constitute a nested partition/Qtree. Additionally, negation is assumed to flatten the original topology of the prejacent inquisitive proposition, by collecting the information states incompatible with it.\\ 
+
+
+In Inquisitive Semantics (\citenp{Mascarenhas2008}; \citenp{Ciardelli2009}; \citenp{Groenendijk2009}; \citenp{Ciardelli2017}; \citenp{Ciardelli2018}; \citeauthor{Zhang2024}, to appear), assertive sentences and questions are fundamentally the same kinds of objects: sets of propositions, called ``inquisitive'' propositions. Inquisitive propositions are assumed to be downward closed, which means that, if $p$ is part of an inquisitive proposition, then any subset of $p$ different from the empty set also belongs to that inquisitive proposition. The elements of an inquisitive proposition are often called ``issues'': any declarative sentence then raises ``issues''. This core definition differs from that of Qtrees; let us see why with a simple example. Assuming the universe is made of four possible worlds ($w_1$, $w_2$, $w_3$, $w_4$), the set of proposition in (\ref{ex2:inqprop}) is a well-formed inquisitive proposition, because it contains all the subsets of its maximal element ($\lbrace w_1, w_2, w_3 \rbrace$). But this set could not be organized into a Qtree, since it contains two propositions, $\lbrace w_1, w_2 \rbrace$ and $\lbrace w_2, w_3 \rbrace$, that are overlapping, and contained in the same superset ($\lbrace w_1, w_2, w_3 \rbrace$). The partition property of Qtrees is therefore violated. The sets in (\ref{ex2:notinqprop1}) and (\ref{ex2:notinqprop2}) on the other hand, are not inquisitive propositions; but still, they could be organized into Qtrees, as shown in Figures \ref{fig2:notinqprop1} and \ref{fig2:notinqprop2} respectively. Lastly, the set in (\ref{ex2:notinqprop3}) is neither an inquisitive proposition (it is missing its singletons) nor a Qtree (the cardinal $2$ propositions violate the partition property). This example thus shows that inquisitive propositions and Qtrees are fundamentally distinct, at the structural level. Inquisitive propositions can be represented as directed acyclic graphs (sometimes called DAGs), while Qtrees are trees.
+
+\begin{exe}
+	\ex \begin{xlist}
+	 \ex {$\lbrace \lbrace w_1, w_2, w_3 \rbrace, \lbrace w_1, w_2 \rbrace, \lbrace w_2, w_3 \rbrace, \lbrace w_1, w_3 \rbrace, \lbrace w_1 \rbrace, \lbrace w_2 \rbrace, \lbrace w_3 \rbrace \rbrace$}\label{ex2:inqprop}
+	 \ex {$\lbrace \lbrace w_1, w_2, w_3 \rbrace, \lbrace w_1, w_2 \rbrace, \lbrace w_1 \rbrace, \lbrace w_2 \rbrace, \lbrace w_3 \rbrace \rbrace$}\label{ex2:notinqprop1}
+	 \ex {$\lbrace \lbrace w_1, w_2, w_3 \rbrace, \lbrace w_1, w_2 \rbrace, \lbrace w_3 \rbrace \rbrace$}\label{ex2:notinqprop2}
+	 \ex {$\lbrace \lbrace w_1, w_2, w_3 \rbrace, \lbrace w_1, w_2 \rbrace, \lbrace w_2, w_3 \rbrace, \lbrace w_1, w_3 \rbrace \rbrace$}\label{ex2:notinqprop3}
+	\end{xlist}
+\end{exe}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[{$\lbrace w_1, w_2, w_3 \rbrace$}[{$\lbrace w_1, w_2 \rbrace$}[{$\lbrace w_1 \rbrace$}][{$\lbrace w_2 \rbrace$}]][{$\lbrace w_3 \rbrace$}]]
+		\end{forest}
+		\caption{Built from (\ref{ex2:notinqprop1})}\label{fig2:notinqprop1}
+	\end{subfigure}
+	\hfil
+	\begin{subfigure}[b]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[{$\lbrace w_1, w_2, w_3 \rbrace$}[{$\lbrace w_1, w_2 \rbrace$}][{$\lbrace w_3 \rbrace$}]]
+		\end{forest}
+		\caption{Built from (\ref{ex2:notinqprop2})}\label{fig2:notinqprop2}
+	\end{subfigure}
+	\caption{Qtrees built from sets of propositions.}
+\end{figure}
+
+Beyond the structural level, Inquisitive Semantics and the current framework differ in how they treat certain logical operators. We will focus here on negation, for the sake of brevity. In the current framework, we have seen that negation \textit{retains} the structure of the input Qtree(s), and simply flips verifying nodes. In other words, Qtree negation is a form of complement set operation in the domain of verifying nodes, but not really at the structural level. By contrast, negation in Inquisitive Semantics affects the structure of the inquisitive proposition it takes as input. What negation does, is gather all the propositions (i.e. sets of worlds) which do not overlap with any proposition/issue that is part of the input inquisitive proposition. This is formalized in (\ref{ex2:inq-neg}).
+
+\begin{exe}
+	\ex {$\llbracket \neg \Phi\rrbracket = \lbrace p' \ | \ \forall p \in \Phi. \ p \cap p' = \emptyset\rbrace$}\label{ex2:inq-neg}
+\end{exe}
+
+(\ref{ex2:inq-neg}) implies that inquisitive negation is a proper complement operation \textit{at the structural level}. The question raised be a negated proposition is therefore \textit{related} to the one raised by its non-negated counterpart, but in no way identical. Additionally, in Inquisitive Semantics, the informational content of a sentence is tightly connected to the issues it raises (and thus, to how these issues get derived, i.e., by negation). The informational content of a sentence, is defined as the grand union of worlds contained in at least one issue making up the inquisitive proposition at stake. Alternatively, the informational content of a sentence can be seen as the grand union of the maximal elements of the inquisitive proposition. This is formalized in (\ref{ex2:inf-content}).
+
+\begin{exe}
+	\ex {\textsc{Info}($\Phi$) = $\lbrace w \ | \ \exists p \in \Phi. \ w \in p\rbrace$}\label{ex2:inf-content}
+\end{exe}
+
+This definition has two implications. First, informational content in Inquisitive Semantics is fully derived from inquisitive content (i.e. issues). If an operation (like negation) shifts inquisitive structure, so is inquisitive content. Second, informational content has the type of propositions; it is not ``fragmented'' like the various verifying nodes of a Qtree. We will however see in Chapters \ref{chap:hurford-sentences} and \ref{chap:scalarity} that disentangling content and structure (seen as verifying nodes and Qtree structure in our framework), as well as fragmenting content (into multiple verifying nodes) can be crucial to explain how negation interacts with other operations, e.g. conditionals. More broadly, under our view sentences retain a ``semantic'', truth-conditional component, and evoke Qtrees at a distinct ``inquisitive'' level. While the semantic module is sensitive to truth conditions, the pragmatic module is assumed to be sensitive to the interaction between form, meaning, and inquisitive content. So our approach may be seen as an ``inquisitive pragmatics''. 
+
+
+
+\subsection{Ippolito's Structured Sets of Alternatives}
+
+\textcite{Ippolito2019} proposes a model of alternatives that is very close in its core implementation to the Qtree model proposed in the first half of this Chapter. Under \citeauthor{Ippolito2019}'s view, the way alternatives are structured is also seen as a source of oddness. Still, this approach will be shown to differ from ours in two respect: first, sentences are not taken to evoke full-fledged questions (a mainly conceptual difference); second, it leaves unexplained when, and how, sets of alternatives can be combined, cross-sententially and in biclausal sentences.\footnote{A third issue will be raised in the upcoming Chapter, namely that under Ippolito's view, oddness arises from a purely structural constraint (the \textit{Specificity Constraint}), that appears independent from familiar competition-based pragmatic principles.} \\
+
+
+\textcite{Ippolito2019}'s goal was to provide a unified analysis of a number of seemingly independent instances of pragmatic oddness, taking the form of Sobel sequences (\ref{ex2:sobel}; \citenp{Lewis1973,Sobel1970}), sequences of superlatives (\ref{ex2:superlative}; \citenp{Dohrn2017}), and Hurford Disjunctions (\ref{ex2:hurford}; \citenp{Hurford1974,Singh2008b}). 
+
+\begin{exe}
+	\ex \label{ex2:sobel}
+	\begin{xlist}
+		\ex {If the USA had thrown their nuclear weapons into the sea, there would have been war. But if all the nuclear powers had thrown their weapons into the sea, there would have been peace.}\label{ex2:sobel-ws}
+		\ex[\#] {If all the nuclear powers had thrown their nuclear weapons into the sea, there would have been peace. But if the USA had thrown their weapons into the sea, there would have been war.}\label{ex2:sobel-sw}
+	\end{xlist}
+	\ex \label{ex2:superlative}
+	\begin{xlist}
+		\ex {The closest gas stations are crummy; but the closest Shell stations are great.}
+		\ex[\#] {The closest Shell stations are great; but the closest gas stations are crummy.}
+	\end{xlist}	
+	\ex \label{ex2:hurford}
+	\begin{xlist}
+		\ex {John ate some of the cookies or all of them.}\label{ex2:hurford-ws}
+		\ex[\#] {John ate all of the cookies or some of them.}\label{ex2:hurford-sw}
+	\end{xlist}
+\end{exe}
+
+These three classes of sentences share commonalities. In all three configurations, two sentences or fragments are being contrasted using connectives like \textit{but} and \textit{or}. For instance, in the Sobel case (\ref{ex2:sobel-ws}), \textit{If the USA had thrown their nuclear weapons into the sea, there would have been war} gets contrasted with \textit{If all the nuclear powers had thrown their nuclear weapons into the sea, there would have been peace}. Additionally, in all three cases, the two sentences being contrasted exhibit some degree of parallelism, in the sense that they each contain a subconstituent $C$/$C^+$, such that $\llbracket C^+ \rrbracket \vdash \llbracket C \rrbracket$. For instance, \textit{all the nuclear powers had thrown their nuclear weapons into the sea}, entails that \textit{the USA had thrown their nuclear weapons into the sea}. Lastly, all configurations are such that the a. examples, which start with the sentences containing the ``weaker'' $C$, appear more felicitous than the b. examples, which start with the sentences containing the ``stronger'' $C^+$. \\
+
+
+To account for these asymmetries, \textcite{Ippolito2019} proposes that the alternatives evoked by assertive sentences form ``structured sets''. Such sets, abbreviated SSAs, are defined in (\ref{ex2:ssa}). The kind of structures generated by this definition are in essence recursive partitions of the CS, or Qtrees, as defined in (\ref{ex2:qtree-def}).\footnote{This is what at least is argued in \textcite{Ippolito2019}. It is worth mentioning however, that the definition in (\ref{ex2:ssa}) does not in itself guarantee that any Structured Set of Alternatives should form a tree. Instead, it guarantees that any branching of the form $[_{\alpha} \beta_1 ... \beta_n]$ is s.t. $(\beta_i)_{i\in [1; n]}$ partitions $\alpha$. But nothing in principle guarantees the connectedness of the structure: if specific alternatives happen to be ``missing'' (for relevance/QuD-related reasons, or perhaps due to a missing lexicalization), then, the resulting Structured Set of Alternatives may end up being a forest, instead of a single tree.}
+
+\begin{exe}
+	\ex {\textsc{\textbf{Structured Set of Alternatives (SSA)}} \parencite{Ippolito2019}. ${T}_{\mathcal{A}}$ is a well-formed structured set of alternatives iff the following conditions are met:
+		\begin{itemize}
+			\item Strength: for any two alternatives $\alpha$, $\beta$ 
+			$\in \mathcal{A}$, $\beta$ is the daugther of $\alpha$ in ${T}_{\mathcal{A}}$ just in case $\llbracket\beta\rrbracket \subset \llbracket\alpha\rrbracket$.
+			\item Disjointness: for any two alternatives $\beta_1$, $\beta_2$ $\in \mathcal{A}$, if $\beta_1$ and $\beta_2$  are sisters in ${T}_{\mathcal{A}}$, then $\llbracket\beta_1\rrbracket \cap \llbracket\beta_2\rrbracket = \emptyset$
+			\item Exhaustivity: for any alternative $\alpha$ with daughters $\beta_1, ... \beta_n$, in ${T}_{\mathcal{A}}$, $\llbracket\beta_1\rrbracket \cup \llbracket\beta_2\rrbracket \cup ... \cup \llbracket\beta_n\rrbracket = \llbracket\alpha\rrbracket$
+		\end{itemize}	
+	}\label{ex2:ssa}
+\end{exe}
+
+Alternatives evoked by an assertion are modeled following \textcite{Rooth1992}, i.e. assumed to be obtained by substituting the original sentence's focused material by any expression of the same type. This is spelled out in (\ref{ex2:focus-alternatives2}). 
+
+\begin{exe}
+	\ex {\textsc{\textbf{Focus alternatives}} \parencite{Rooth1992}. Let $S$ be a sentence containing a focused element $\alpha$. The set of focus alternatives to $\llbracket S\rrbracket$ is the set of propositions $\llbracket S' \rrbracket$, where $S'$ is obtained from $S$ by substituting $\alpha$ with any element of the same type as $\alpha$.}\label{ex2:focus-alternatives2}
+\end{exe} 
+
+Figure \ref{fig2:ssa-simplex} illustrates SSAs for simple sentences containing scalar and non-scalar alternatives. It is worth noting that sentences associated with different degrees of granularity (e.g. \textit{Jo grew up in Pairs} vs. \textit{Jo grew up in France}) are not expected to give rise to different SSAs, as shown in Figure \ref{fig2:ssa-non-scalar}. Same holds for scalar sentences in an entailment relation (e.g. \textit{Jo ate some of the cookies} vs. \textit{Jo ate all of the cookies}).
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[[France[Paris][Lyon][...]][Germany[Berlin][...]][Italy[...]][...]]
+		\end{forest}
+		\caption{SSA associated with \textit{Jo grew up in Paris$_F$/France$_F$/Italy$_F$} etc.}\label{fig2:ssa-non-scalar}
+	\end{subfigure}\hfill
+	\begin{subfigure}[b]{.45\linewidth}
+		\centering
+		\begin{forest}
+			[[some[all][{some but not all}]][none]]
+		\end{forest}
+		\caption{SSA associated with \textit{Jo ate some$_F$/all$_F$/none$_F$ of the cookies}.}\label{fig2:ssa-scalar}
+	\end{subfigure}
+	\caption{SSAs for simple focused sentences.}
+	\label{fig2:ssa-simplex}
+\end{figure}
+
+
+Additionally, alternatives are assumed to be constrained by ``the'' QuD. This constitutes the first, conceptual difference with our account introduced earlier in this Chapter: under \citeauthor{Ippolito2019}'s view, assertions are not assumed to help determine ``the'' QuD; instead, they are assumed to evoke alternatives, which are themselves constrained by ``the'' QuD. In other words, SSAs are not expected to help determine what ``the'' QuD is--they are partially derived from it. This is far from an esoteric perspective, and appears in line with much past literature. What we want to propose instead, is the reverse perspective: assertions and their alternatives are the primitive, and help \textit{derive} potential QuDs (along with contrasts in pragmatic oddness).\\
+
+
+\textcite{Ippolito2019} then proposes that oddness arises from certain SSA configurations. In particular, sequences of sentences belonging to the same SSA are subject to a Specificity Constraint (henceforth \textbf{SC}), spelled out in (\ref{ex2:sc}). The SC states that the two alternatives in the sequence, should be dominated by the same number of nodes in their common SSA. This is equivalent to saying that two alternatives being contrasted should match in terms of their degree of specificity, or granularity.
+
+
+\begin{exe}
+	\ex {\textsc{\textbf{Specificity Condition}} \parencite{Ippolito2019}. A sequence $\Sigma = < [_{S_i}... \alpha_F ...], [_{S_j}... \beta_F ...] >$, s.t. both $S_i$ and $S_j$ are answers to the same QuD and $\beta$ is in the structured set of alternatives evoked by $\alpha$ ($T_{\mathcal{A}_{\alpha}}$), is felicitous if either:
+		\begin{itemize}
+			\item $\alpha$ or $\beta$ is the only node on its branch in $T_{\mathcal{A}_{\alpha}}$, or
+			\item  $\alpha$ and $\beta$ are dominated by the same number of nodes in $T_{\mathcal{A}_{\alpha}}$.
+		\end{itemize}
+	}\label{ex2:sc}
+\end{exe}
+
+A sentence like (\ref{ex2:hurford-sw}) then violates the SC, because its ``\textit{all}'' and its ``\textit{some}'' disjunct are respectively dominated by $2$, and $1$ node in the corresponding SSA from Figure \ref{fig2:ssa-scalar}. The SC therefore correctly predicts (\ref{ex2:hurford-sw}) to be odd. But, because (\ref{ex2:hurford-ws}) only differs from (\ref{ex2:hurford-sw}) in how the disjuncts are ordered, the SC also incorrectly predicts (\ref{ex2:hurford-ws}) to be odd--at least in the absence of any additional assumptions.
+
+The felicity of (\ref{ex2:hurford-ws}) is captured in \textcite{Ippolito2019}'s framework based on the familiar idea that violations of the SC can be avoided by strengthening the weaker alternative \parencite{Gazdar1979,Singh2008a,Singh2008b,Chierchia2009,Fox2018}. To retain the \textit{contrast} between  (\ref{ex2:hurford-sw}) and  (\ref{ex2:hurford-ws}), it is assumed that covert strengthening is governed by an economy condition, which disallows it in (\ref{ex2:hurford-sw}). This is shown to generalize to the a. and b. sequences in (\ref{ex2:sobel}-\ref{ex2:superlative}).
+
+
+Even though the SC appears like a reasonable constraint, the deep reason why contrast alternatives with different degrees of specificity should be disallowed, remains relatively mysterious. In particular, the account does not directly relate the SC to general pragmatic principles based on competition \textit{between} sentences: the SC is a constraint that is only sensitive to the SSA associated with the target sentence, independently of the sentence's competitors and their own SSAs. In that respect, it remains close to Hurford's original constraint. Moreover, the constraint amounts to counting the number of parent nodes for each contrasted alternative, and as such is not sensitive to the relative positions of the two alternatives within their common SSA. This perspective might be slightly reductive, and would not capture the observation that oddness gets stronger if the two alternatives are in a dominance relation, as shown by gradience of the judgments in (\ref{ex2:hurford-gradient}).
+
+\begin{exe}
+	\ex\label{ex2:hurford-gradient}
+	\begin{xlist}
+		\ex[\#] {Jo grew up in Paris or France. \hfill Different specificity, dominance}
+		\ex[?] {Jo grew up in Paris or Germany. \hfill Different specificity,no dominance}
+		\ex[] {Jo grew up in France or Germany. \hfill Same specificity,no dominance}
+	\end{xlist}
+\end{exe}
+
+
+In Chapter \ref{chap:redundancy}, we will propose a constraint akin in effect to the SC, but that will constitute a more direct extension of earlier \textsc{Redundancy}-based constraints used to capture Hurford Disjunctions. We will show in Chapter \ref{chap:hurford-disj} how it applies to basic (non-scalar) Hurford Disjunctions and extends to another challenging family of intuitively redundant sentences. Chapters \ref{chap:scalarity} and \ref{chap:scalarity} will discuss the particular case of scalar Hurford Disjunctions like (\ref{ex2:hurford}).
+
+
+
+
+%\subsection{Buring's and Zhang's (constrained) QuD trees}
+
+
+
+
+\section{Conclusion}
+In this Chapter, we have build a model of overt and evoked questions that incorporates the concept of specificity \textit{within} the formalism. We have defined how this model derives implicit questions evoked by simple, negated, disjunctive and conditional sentences, in a compositional way. Doing so, we attempted to maintain a few intuitions about the truth-conditional effect of negation, disjunction, and conditionals. For instance, negation ``flips'' verifying nodes as it would flip truth-values; disjunction forces some parallelism between disjuncts; and conditional act as questions ``restrictors''. We then discussed how this approach compared to earlier similar approaches: Inquisitive Semantics, Structured Sets of Alternatives, and QuD trees.\\
+
+From a conceptual perspective, the machinery presented is in fact closer in spirit to Dynamic Semantics \parencite{Heim1983a,Heim1983b}, where different operators give rise to different incremental updates of the Context Set. Under our view, different operators will give rise to different \textit{parses} of the Context Set, at the inquisitive level. This will eventually allow to capture a contrast between (\ref{ex2:non-red-followup}), (\ref{ex2:red-followup}) (see Chapter \ref{chap:redundancy}), and many other cases, including (\ref{ex2:if-france-not-paris}), (\ref{ex2:if-paris-then-france}) (see Chapter \ref{chap:hurford-sentences}).
+
+
+
+
+
